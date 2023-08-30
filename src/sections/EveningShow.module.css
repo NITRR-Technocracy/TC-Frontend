@@ -1,0 +1,84 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  
+  .carouselViewport {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carouselInner {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .carouselItem {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .image_class {
+    max-width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(128, 0, 128, 0.5);
+  }
+  
+  .carouselText {
+    font-size: 70px;
+    margin-left: 0px;
+    color: white;
+    text-shadow: 2px 2px 4px purple;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .adjacentImage {
+    max-width: 40%;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .activeAdjacent {
+    opacity: 1;
+  }
+  
+  .carouselIndicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128, 0, 128, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .active {
+    background-color: purple;
+  }
+  
