@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: var(--bs-body-font-family);
+    font-size: 1rem;
+    font-size: var(--bs-body-font-size);
+    font-weight: 400;
+    font-weight: var(--bs-body-font-weight);
+    line-height: 1.5;
+    line-height: var(--bs-body-line-height);
+    margin: 0;
+    text-align: var(--bs-body-text-align);
+}
+body,html{
+    background: #041429;
+    color: #fff;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    z-index: -1;
+}
+
+.about_main {
+    font-family: Apercu;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 3rem auto;
+    text-align: justify;
+    width: 70vw;
+}
+
+.title_with_bg {
+    background-image: url(../assets/images/About-image.webp); 
+    align-items: center;
+    background-position: 50%;
+    background-size: cover;
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    display: flex;
+    font-family: Brolink2;
+    font-size: 6rem;
+    height: 40vh;
+    justify-content: center;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding-top: 100px;
+    position: relative;
+    width: 100vw;
+    z-index: 0;
+}
+.about_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto 10vh;
+    width: 70vw;
+}
+.about_box{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 4rem;
+    width: 25%;
+}
+.abox_icon{
+    width: 40%;
+}
+.abox_Title{
+    font-family: Brolink2;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+.abox_num{
+    font-family: poppins;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 1.75rem;
+}
+@media screen and (max-width :1005px) {
+    .about_box{
+        width: 170px;
+    }
+    .abox_Title{
+    width: 170px;
+    text-align: center  ;
+    }
+}
+@media screen and (max-width:550px) {
+    .abox_icon{
+        width: 60%;
+    }
+    .abox_num{
+        width:100px ;
+        text-align: center;
+    }
+    .about_main{
+        font-size: 1.4rem;
+        width: 75vw;
+    }
+}
+@media screen and (max-width:500px) {
+    .about_main{
+        width: 80vw;
+        font-size: 1.3em;
+    }
+    .title_with_bg{
+        font-size: 5rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width:385px) {
+    .about_main{
+        width: 85vw;
+        font-size: 1.2rem;
+    }
+    .title_with_bg{
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width:330px) {
+    .about_main{
+        font-size: 1.1rem;
+    }
+    .title_with_bg{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+}
