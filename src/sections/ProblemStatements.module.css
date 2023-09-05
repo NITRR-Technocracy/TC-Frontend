@@ -33,13 +33,16 @@ color: #FFFFFF;
     width: 220px;
     height: 50px;
     font-size:18px;
+    background-clip: text;
+    background-image:linear-gradient(#4c90d5, #FE7BE5); ;
+    -webkit-text-fill-color: transparent;
     /* border-radius: 20px; */
     border: 4px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-weight: 500;
+    font-weight: 600;
     border-image: linear-gradient(to right, #4c90d5, #FE7BE5); /* Define your linear gradient colors here */
     border-image-slice: 1; /* Keeps the entire gradient within the border */
     border-image-repeat: stretch; 
@@ -48,7 +51,7 @@ color: #FFFFFF;
 
 
 .branch:hover{
- color: white;
+ -webkit-text-fill-color: white;
  background: linear-gradient(to right, #4c90d5, #FE7BE5);
  /* border: 2px solic;
  border-bottom-color:#FE7BE5 ;
