@@ -31,7 +31,7 @@ function Footer (){
 								<p className={styles.fsaidby}>- {curQuote.author}</p>
 							</div>
 						</div>
-						<div className={styles.footercol}>
+						<div className={styles.footercol} id="footercol1">
 							<h4>TECHNOCRACY</h4>
 							<ul>
 								<li><a href="/aavartan">Aavartan</a></li>

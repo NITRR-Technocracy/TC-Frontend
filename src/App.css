@@ -6578,8 +6578,17 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	border-top-color: #504099 ; */
     margin: 2rem 0rem 0rem 0;
 	text-decoration: none;
+	box-shadow: 2px 4px 15px white;
+	transition: 0.5s;
+}
+.metaportal_fn_button_3:hover{
+	transform: scale(1.1);
+	background: -webkit-linear-gradient(to right,#504099c5 20%,#fe7be6c8 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(250, 255, 253);
 	box-shadow: 2px 4px 15px black;
 }
+
 @media(width<600px){
 	.metaportal_fn_button_3{
 		width: 100%;

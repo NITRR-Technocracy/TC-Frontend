@@ -59,6 +59,7 @@ color: #FFFFFF;
 @media(max-width:768px){
     .ProblemStatements{
         margin: 3rem 2rem auto 2rem;
+        justify-content: center;
     }
     .branch{
         font-size: 20px;
