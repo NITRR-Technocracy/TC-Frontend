@@ -55,6 +55,11 @@ Engineer biosensors using synthetic biology techniques to detect disease-specifi
 A very important challenge that hopes to use biotechnology is to address food security objectives. There are many challenges in food safety, such as changes in environment leading to food contamination, changes in food production and supply, hazards such as microbiological, physical and chemical hazards. Design a food security program to overcome these challenges.
               </p>
             </div>
+            <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
           </div>
   )
 }

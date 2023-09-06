@@ -4,9 +4,9 @@ import Title from "../Title";
 const Arch = () => {
   return (
     <div className="sidebar_left">
-    <div className="single_title">
-      <Title color="ARCHITECTURE" />
+    <div className="single_title" >
       <br />
+      <Title color="ARCHITECTURE" />
     </div>
     <div className="single_desc">
       <p>
@@ -93,6 +93,11 @@ const Arch = () => {
         energy efficient.
       </p>
     </div>
+    <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
   </div>
   )
 }

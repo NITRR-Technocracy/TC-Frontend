@@ -1,8 +1,8 @@
 // import Counter from "components/counter";
 // import Button from "components/button";
 
-import prop1 from "../../assets/prop1.png";
-import prop2 from "../../assets/prop2.png";
+import prop1 from "../../assets/prop1.webp";
+import prop2 from "../../assets/prop2.webp";
 import dollorIcon from "../../assets/images/tcLogo.png"
 import rocketIcon from "../../assets/images/tcLogo.png"
 import ufoShape from "../../assets/images/tcLogo.png"

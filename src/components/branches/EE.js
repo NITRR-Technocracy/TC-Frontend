@@ -85,6 +85,11 @@ sensor in order to detect temp and pass on the datato the microcontroller
     </p>
     
     </div>
+    <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
 </div>
   )
 }

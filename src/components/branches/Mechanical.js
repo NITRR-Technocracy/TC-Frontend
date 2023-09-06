@@ -40,6 +40,11 @@ The candidates are required to construct voice-controlled robot car that should 
 Participants of this project need to construct a 360-degree fire protection system that offers advanced fire detection, suppression, and response capabilities. The 360-degree fire protector aims to address the challenges of detecting and combating fires in various environments, providing effective fire prevention, early detection, and swift suppression to minimize damage and ensure the safety of occupants. The project intends to revolutionize fire safety practices by integrating cutting-edge technologies and innovative design principles into a versatile and reliable fire protection solution.
 </p>
     </div>
+    <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
   </div>
   )
 }

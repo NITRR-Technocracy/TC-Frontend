@@ -4,10 +4,10 @@
 import planet from "../../assets/images/vighero/vig_planet.webp";
 import ring from "../../assets/images/vighero/planet_orbit.webp";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
-import prop6 from "../../assets/prop6.png";
-import prop7 from "../../assets/prop7.png";
-import prop8 from "../../assets/prop8.png";
-import prop5 from "../../assets/prop5.png";
+import prop6 from "../../assets/prop6.webp";
+import prop7 from "../../assets/prop7.webp";
+import prop8 from "../../assets/prop8.webp";
+import prop5 from "../../assets/prop5.webp";
 
 const VigyaanHero = () => {
   const scrollToRegistration = () => {
@@ -26,7 +26,7 @@ const VigyaanHero = () => {
         <img className="planet1" src={prop5} alt="pl1" />
         <img className="planet2" src={prop6} alt="pl2" />
         <img className="planet3" src={prop7} alt="pl3" />
-        <div className="vigyaan-font" >VIGYAAN</div>
+        <div className="vigyaan-font" ><p>VIGYAAN</p></div>
         <div className="vigyaan-desc">Vigyaan, the science exhibition organized during the tech fest, showcases groundbreaking innovations, cutting-edge technologies, and exciting projects, providing a platform for students to delve deeper into the world of science and explore limitless possibilities.</div>
         <img className="vigyaan-ring" src={ring} alt="name"/>
         <div className="btncontainer">

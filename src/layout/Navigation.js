@@ -91,70 +91,11 @@ const Navigation = ({ navigation, navigationToggle }) => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSubMenu("pages");
-                  }}
-                  className={`${subMenu == "pages" ? "active" : ""}`}
-                >
-                  <span className="creative_link">
-                    Team
-                    <img src="/svg/down.svg" alt="" className="fn__svg" />
-                  </span>
-                </a>
-                <ul className="sub-menu">
-                  <li>
-                    <a
-                      href="#"
-                      className="prev"
-                      onClick={() => setSubMenu(null)}
-                    >
-                      <span className="creative_link">
-                        <img src="/svg/down.svg" alt="" className="fn__svg" />
-                        Team
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <Link to="/team">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">
-                          Faculty Incharge
-                        </span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/team">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">Overall Coordinators</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/team">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">Head Coordinators</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/team">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">Core Coordinators</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/team">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">Executives</span>
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
+              <Link to="/team">
+                  <a onClick={() => navigationToggle(false)}>
+                    <span className="creative_link">Team</span>
+                  </a>
+                </Link>
               </li>
               <li>
                 <Link to="/sponsors">

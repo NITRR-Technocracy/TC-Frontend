@@ -2437,7 +2437,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	bottom: 0;
 	background-color: #130f15;
 	z-index: 9999;
-	padding: 70px 40px;
+	padding: 100px 40px;
 	transition: all .5s ease;
 	overflow-y: auto;
 }
@@ -2721,7 +2721,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 15;
+	z-index: 1;
 }
 .metaportal_fn_items .item:before{
 	right: 0;
@@ -2845,9 +2845,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     height: 50px;
     border-radius: 100%;
     background-color: #000;
-    z-index: 5;
     color: #bbb;
     position: fixed;
+    z-index: 10;
 	right: 40px;
 	top: 70px;
     cursor: pointer;
@@ -5568,7 +5568,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 		text-align: center;
 	}
 	.metaportal_fn_leftnav .social_icons ul{
-		justify-content: flex-start;
+		justify-content: center;
 	}
 	.fn__closer{display: block;}
 	.metaportal_fn_leftnav,
@@ -6567,4 +6567,29 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   }
 .custom-cursor {
 	cursor:url("./assets/images/cursor.svg"), auto;
+}
+
+.goodbtn{
+    width: 220px;
+    height: 50px;
+    font-size:18px;
+    /* border-radius: 20px; */
+    border: 4px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: 500;
+    border-image: linear-gradient(to right, #4c90d5, #FE7BE5); /* Define your linear gradient colors here */
+    border-image-slice: 1; /* Keeps the entire gradient within the border */
+    border-image-repeat: stretch; 
+    margin: 1rem 0rem;
+}
+.goodbtn:hover{
+ color: white;
+ background: linear-gradient(to right, #4c90d5, #FE7BE5);
+ /* border: 2px solic;
+ border-bottom-color:#FE7BE5 ;
+ border-top-color: #504099 ; */
+ cursor: pointer;
 }

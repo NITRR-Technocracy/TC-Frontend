@@ -41,6 +41,11 @@ const BioMed = () => {
                     In rural areas lacking access to electricity, the care and survival of low birth weight (LBW) babies pose a significant challenge. These infants are at heightened risk of health complications and require specialized care, often involving incubators, temperature regulation, and medical monitoring. The absence of reliable electricity sources hampers the provision of necessary medical interventions and technologies, leading to increased infant morbidity and mortality rates. Developing an effective and sustainable solution to maintain optimal conditions for LBW babies without electricity is essential to ensure their survival and well-being in resource-constrained rural settings. This problem requires innovative approaches that can provide consistent temperature control, nutritional support, and medical supervision, even in off-grid environments, to safeguard the health and future prospects of these vulnerable newborns.
                 </p>
             </div>
+            <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
         </div>
     )
 }

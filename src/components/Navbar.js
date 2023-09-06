@@ -81,10 +81,10 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                             </div>
                             
                         </li>
-                        <div className="responsive-close" onClick={() => setToggler(!toggler)}><MdClear id='bars' /></div>
+                        <div className="responsive-close" onClick={() => navigationToggle(true)}><MdClear id='bars' /></div>
                     </ul>
                 </div>
-                <div className="responsive-open" onClick={() => setToggler(!toggler)}>
+                <div className="responsive-open" onClick={() => navigationToggle(true)}>
                     <AiOutlineMenu id='bars' />
                 </div>
             </nav>

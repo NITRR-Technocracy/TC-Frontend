@@ -46,6 +46,11 @@ const Meta = () => {
     </p>
     
     </div>
+    <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
+      <div className="goodbtn" >
+            DOWNLOAD PDF
+          </div>
+      </div>
 </div>
   )
 }

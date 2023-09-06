@@ -1,21 +1,20 @@
-import img_1 from '../assets/spons_images/Bonzo_page-0001.jpg';
-import img_2 from '../assets/spons_images/CSPDCL.png';
-import img_3 from '../assets/spons_images/DABANG.jpeg';
-import img_4 from '../assets/spons_images/MCC New Logo - White.png';
-import img_5 from '../assets/spons_images/ONGO-BLUE.png';
-import img_6 from '../assets/spons_images/PAUGAM.jpeg';
-import img_7 from '../assets/spons_images/PicsArt_02-24-08.57.48.jpg';
-import img_8 from '../assets/spons_images/SPOT.jpeg';
-import img_9 from '../assets/spons_images/Saurum.png';
-import img_10 from '../assets/spons_images/WhatsApp Image 2023-02-02 at 9.08.32 PM.jpeg';
-import img_11 from '../assets/spons_images/cbc.jpg';
-import img_12 from '../assets/spons_images/comp-removebg-preview.png';
-import img_13 from '../assets/spons_images/grand news.png';
-import img_14 from '../assets/spons_images/hitavada bg.png';
-import img_15 from '../assets/spons_images/myfm logo (1).png';
-import img_16 from '../assets/spons_images/rahul_travels-removebg-preview.png';
-import img_17 from '../assets/spons_images/Quince.png';
-import img_18 from '../assets/spons_images/pahuja.png';
+import img_1 from '../assets/spons_images/sp1.webp';
+import img_2 from '../assets/spons_images/sp2.webp';
+import img_3 from '../assets/spons_images/sp3.webp';
+import img_4 from '../assets/spons_images/sp4.webp';
+import img_5 from '../assets/spons_images/sp5.webp';
+import img_6 from '../assets/spons_images/sp6.webp';
+import img_7 from '../assets/spons_images/sp7.webp';
+import img_8 from '../assets/spons_images/sp8.webp';
+import img_9 from '../assets/spons_images/sp9.webp';
+import img_10 from '../assets/spons_images/sp10.webp';
+import img_11 from '../assets/spons_images/sp11.webp';
+import img_12 from '../assets/spons_images/sp12.webp';
+import img_13 from '../assets/spons_images/sp13.webp';
+import img_14 from '../assets/spons_images/sp14.webp';
+import img_15 from '../assets/spons_images/sp15.webp';
+import img_16 from '../assets/spons_images/sp16.webp';
+import img_17 from '../assets/spons_images/sp17.webp';
 
 const Spons_data = [
     {
@@ -101,11 +100,6 @@ const Spons_data = [
         id: 17,
         dis: "img17",
         url: img_17,
-    },
-    {
-        id: 18,
-        dis: "img18",
-        url: img_18,
     },
 ];
 

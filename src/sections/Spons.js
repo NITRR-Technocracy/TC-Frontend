@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Spons_data from "../assets/spons_data";
 import PageBanner from "../layout/PageBanner";
 import Title from "../components/Title";
+import tsp from "../assets/spons_images/sp15.webp"
 
 const Spons = () => {
   useEffect(() => {
@@ -14,7 +15,10 @@ const Spons = () => {
   return (
     <div className="metaportal_fn_collectionpage" style={{paddingTop:"0"}}>
       <div data-aos="fade-down" className={styles.page}>
-        <div className={styles.top}></div>
+        <div className={styles.top}>
+          <h1>TITLE SPONSOR</h1>
+          <img src={tsp} alt="" />
+        </div>
       </div>
       <div className="container">
         <div className="metaportal_fn_collection">
@@ -28,7 +32,7 @@ const Spons = () => {
             {/* Result List */}
             <div className="metaportal_fn_result_list">
               <div className="metaportal_fn_drops">
-                <Title color="SPONSORSHIP" noncolor="" />
+                <Title color="SPONSORS" noncolor="" />
                 <ul className="grid">
                   {Spons_data.map((data) => {
                     return (
