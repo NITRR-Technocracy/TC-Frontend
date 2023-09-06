@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import urls from "../urls.json"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SampleAbstract from '../assets/sample_abstract/SampleAbstract.pdf'
 
 const backend = urls.backend
 
@@ -344,7 +345,8 @@ const VigyaanForm = () => {
                   that they will present on the exhibition day.
                 </p>
               </div>
-              <span className="metaportal_fn_button_4">Sample Abstract</span>
+              <a href={SampleAbstract}><span className="metaportal_fn_button_4">Sample Abstract</span></a>
+                   
             </div>
           </div>
         </div>

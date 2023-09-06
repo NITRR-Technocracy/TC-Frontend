@@ -33,7 +33,7 @@
   }
   
   .image{
-    filter: grayscale(.5);
+    filter: grayscale(.7);
     transition: all .3s ease;
     width: 100%;
     height: 100%;
