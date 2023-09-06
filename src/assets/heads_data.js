@@ -166,7 +166,7 @@ export const coordinatorsList = [
     name: "Arkita Dam",
     imgUrl: Arkita_Dam,
     linkedinUrl: "https://www.linkedin.com/in/arkita-dam-7865551a1/",
-    instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
+    instaUrl: "https://www.instagram.com/arkitadam/",
     facebookUrl : "#",
     githubUrl : "#",
     domain:"ECE"
