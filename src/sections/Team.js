@@ -7,10 +7,23 @@ import { executivesList } from "../assets/executives_data";
 import OCCard from "../components/OCCard";
 import Title from "../components/Title";
 import Domain from "./Domain";
+import teampic from "../assets/images/teampic.webp"
 
 const Team = () => {
   return (
     <div className={styles.container}>
+      <Title color={"TEAM"} noncolor={"TECHNOCRACY"} />
+      <div data-aos="fade-up" className="container">
+        <div className="fn_cs_news container" style={{paddingBottom:"4rem"}}>
+          <div className="news_part">
+            <div className="left_items">
+              <div  className="blog__item">
+                      <img src={teampic} width="100%" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Title color={"OVERALL"} noncolor={"COORDINATORS"} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {

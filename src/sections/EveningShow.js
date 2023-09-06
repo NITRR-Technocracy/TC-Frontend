@@ -155,8 +155,8 @@ const EveningShow = () => {
     return activeIndex;
   };
 
-  const color = "";
-  const noncolor = "EVENING SHOWS";
+  const color = "EVENING";
+  const noncolor = "SHOWS";
 
   return (
     <section id="home">
@@ -165,7 +165,7 @@ const EveningShow = () => {
         {/* <AnimatedDiv>
                     <img style={{position:"absolute", top:"220vh", right:"5%", animation: "${rocketAnimation} 5s infinite"}} height={200} src={prop3} alt="Rocket thumb" />
                     </AnimatedDiv> */}
-                    <RotatingImage style={{position:"absolute", top:"230vh", right:"5%"}} src={prop3} height={200} alt="Rocket thumb" />
+                    <RotatingImage style={{position:"absolute", top:"215vh", right:"5%"}} src={prop3} height={200} alt="Rocket thumb" />
         <div data-aos="fade-down" className="fn_cs_desc">
           <p style={{margin:"0"}}>
             The evening shows at Aavartan are a spectacle to behold, featuring
