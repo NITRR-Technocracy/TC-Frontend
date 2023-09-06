@@ -58,7 +58,7 @@ const AavartanStyleWrapper = styled.section`
   .gamfi_v2_hero_left {
     h2 {
       font-family: angora;
-      font-size: 10rem;
+      font-size: 8rem;
       color: #ffffff;
       text-shadow: 3px 3px 10px black;
       line-height: 70px;

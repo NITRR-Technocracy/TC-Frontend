@@ -1,3 +1,6 @@
+.about_container{
+    padding-top: 3rem;
+}
 .about_boxes{
     display: flex;
     flex-wrap: wrap;
