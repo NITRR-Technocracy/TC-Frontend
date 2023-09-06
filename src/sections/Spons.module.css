@@ -16,6 +16,7 @@
   font-size: 3rem;
   margin: 2rem;
   margin-top: 5rem;
+  font-family: 'angora';
 }
 .top img{
   width: 40%;
@@ -61,7 +62,7 @@
   padding: 0 12rem;
   padding-bottom: 5rem;
 }
-@media(width<700px){
+@media(width<769px){
   .TCard{
       height: 120px;
       width: 250px;

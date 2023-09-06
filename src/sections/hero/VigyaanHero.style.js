@@ -101,22 +101,27 @@ const VigyaanStyleWrapper = styled.section`
     width: 70vw;
     z-index: 1;
 }
+.vigyaan-font p{
+  font-family: angora;
+}
 .vigyaan-font {
+  
   // -webkit-animation: cosmos-animation 3s;
   // animation: cosmos-animation 3s;
-  left: 35%;
+  left: 32%;
   // opacity: .5;
   position: absolute;
   top: 35vh;
   // -webkit-transform: translateX(-50%);
   // transform: translateX(-50%);
   // width: 45vw;
-  font-size: 108px;
+  font-size: 5.5rem;
   color:white;
   z-index: 2;
   font-weight: 900;
   text-shadow: 2px 2px 5px #FE7BE5D1;
 }
+
 .vigyaan-desc{
   position:absolute;
   top: 53vh;
@@ -192,14 +197,14 @@ const VigyaanStyleWrapper = styled.section`
   .vigyaan-font {
     // -webkit-animation: cosmos-animation 3s;
     // animation: cosmos-animation 3s;
-    left: 35%;
+    left: 32%;
     // opacity: .5;
     position: absolute;
     top: 35vh;
     // -webkit-transform: translateX(-50%);
     // transform: translateX(-50%);
     // width: 45vw;
-    font-size: 108px;
+    font-size: 5.5rem;
     color:white;
     z-index: 2;
     font-weight: 900;
@@ -277,14 +282,14 @@ const VigyaanStyleWrapper = styled.section`
   .vigyaan-font {
     // -webkit-animation: cosmos-animation 3s;
     // animation: cosmos-animation 3s;
-    left: 30%;
+    left: 26%;
     // opacity: .5;
     position: absolute;
     top: 35vh;
     // -webkit-transform: translateX(-50%);
     // transform: translateX(-50%);
     // width: 45vw;
-    font-size: 90px;
+    font-size: 4.8rem;
     color:white;
     z-index: 2;
     font-weight: 900;
@@ -327,7 +332,7 @@ const VigyaanStyleWrapper = styled.section`
       left: 32%;
       position: absolute;
       top: 22vh;
-      font-size: 60px;
+      font-size: 2.8rem;
       color:white;
       z-index: 2;
       font-weight: 900;
@@ -393,10 +398,10 @@ const VigyaanStyleWrapper = styled.section`
       z-index: 1;
   }
     .vigyaan-font {
-      left: 27%;
+      left: 28%;
       position: absolute;
       top: 28vh;
-      font-size: 40px;
+      font-size: 1.8rem;
       color:white;
       z-index: 2;
       font-weight: 900;
@@ -463,10 +468,10 @@ const VigyaanStyleWrapper = styled.section`
       z-index: 1;
   }
     .vigyaan-font {
-      left: 28%;
+      left: 29%;
       position: absolute;
       top: 25vh;
-      font-size: 35px;
+      font-size: 1.6rem;
       color:white;
       z-index: 2;
       font-weight: 900;
@@ -526,7 +531,7 @@ const VigyaanStyleWrapper = styled.section`
       left: 28%;
       position: absolute;
       top: 22vh;
-      font-size: 30px;
+      font-size: 1.4rem;
       color:white;
       z-index: 2;
       font-weight: 900;

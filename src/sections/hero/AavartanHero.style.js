@@ -57,6 +57,7 @@ const AavartanStyleWrapper = styled.section`
 
   .gamfi_v2_hero_left {
     h2 {
+      font-family: angora;
       font-size: 10rem;
       color: #ffffff;
       text-shadow: 3px 3px 10px black;
@@ -67,6 +68,7 @@ const AavartanStyleWrapper = styled.section`
       img {
         margin: 0 15px;
       }
+      
     }
 
     p {
