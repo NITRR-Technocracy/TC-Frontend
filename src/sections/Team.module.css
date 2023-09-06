@@ -96,6 +96,7 @@ h1{
 }
 .fn_cs_steps .item{
 	height: 100%;
+    width: 300px;
 	padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);

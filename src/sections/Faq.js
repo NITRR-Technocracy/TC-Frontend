@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Title from "../components/Title";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import prop9 from "../assets/prop9.png"
 
 const Faq = () => {
   useEffect(() => {
@@ -93,9 +94,7 @@ const Faq = () => {
               </div>
             </div> */}
             <div className="desc">
-              <p data-aos="fade-down">
-              Our FAQ covers event registration, schedule, venue details, participant prerequisites, and volunteer opportunities. It also addresses accommodation options, transportation guidance, and sponsorship inquiries.
-              </p>
+              <img src={prop9} width="100%" alt="" />
               {/* <p>
               It also addresses inquiries about sponsorship opportunities, event schedules, and ways to engage with the club. With this comprehensive FAQ, we aim to ensure a seamless experience for everyone involved in our technical events.
               </p> */}

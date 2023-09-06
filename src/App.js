@@ -43,7 +43,6 @@ function CustomCursorContainer({ children }) {
 function App() {
   return (
     <div>
-
       <CustomCursorContainer>
         <ContentContainer>
           <BrowserRouter>

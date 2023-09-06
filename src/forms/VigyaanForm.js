@@ -154,7 +154,7 @@ const VigyaanForm = () => {
   };
 
   return (
-    <div className="metaportal_fn_mintpage" id="registration">
+    <div className="metaportal_fn_mintpage" id="registration" style={{position:"relative",zIndex:"0"}}>
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">

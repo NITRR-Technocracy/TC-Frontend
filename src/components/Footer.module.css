@@ -67,6 +67,10 @@ ul{
 .footercol ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+.footercol ul li{
+	display: flex;
+	justify-content: start;
+}
 .footercol ul li a{
 	font-size: 18px;
 	color: #ffffff;
@@ -109,12 +113,15 @@ ul{
 	justify-content: center;
 	width: 25%;
 	padding-top: 0;
+	padding: 1rem;
+}
+
+.logosec img{
+	width: 100%;
 }
 
 .fquotessec{
-	margin-top: 3rem;
-	margin-left: 2rem;
-
+	margin:1rem 1rem;
 }
 
 .fquotes{
@@ -206,6 +213,10 @@ background-clip: text;
 @media(width<900px){
 	.techteamlink{
 		padding-top: 2rem;
+	}
+	.footercol ul li{
+		display: flex;
+		justify-content: center;
 	}
 }
 

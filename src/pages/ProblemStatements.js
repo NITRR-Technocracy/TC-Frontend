@@ -13,8 +13,10 @@ import EE from "../components/branches/EE";
 import ECE from "../components/branches/ECE";
 import Chem from "../components/branches/Chem";
 import { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import PageBanner from "../layout/PageBanner";
 import ProblemStatement from "../sections/ProblemStatement";
+import StarFieldAnimation from "../layout/StarFieldAnimation";
 
 const ProblemStatements = (props) => {
   const { branch } = useParams();
@@ -24,6 +26,30 @@ const ProblemStatements = (props) => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    setActiveLink(location.pathname);
+                    // Add event listener for scroll
+                    window.addEventListener("scroll", handleScroll);
+
+                    // Cleanup the event listener on unmount
+                    return () => {
+                        window.removeEventListener("scroll", handleScroll);
+                    };
+}, [location.pathname]);
+
+const handleScroll = () => {
+    if (window.scrollY > 0) {
+        setScrolled(true); // User has scrolled down
+    } else {
+        setScrolled(false); // User is at the top
+    }
+};
 
   const handleCategoryClick = (newBranch) => {
     navigate(`/vigyaan/statements/${newBranch}`);
@@ -59,7 +85,11 @@ const ProblemStatements = (props) => {
   };
   const isActive = (category) => branch === category;
   return (
-    <div className="metaportal_fn_blog_single">
+    <div className={scrolled ? "Vigyaanscrolled" : "Vigyaannotscrolled"}>
+      <div className="dark-overlay2" style={{zIndex:"1"}}></div>
+          <StarFieldAnimation/>
+
+    <div className="metaportal_fn_blog_single" style={{position:"relative",zIndex:"2"}}>
       <PageBanner pageName={"statements"} prePageLink={"/vigyaan"} prePageName={"vigyaan"} />
       <div className="container small">
         <div className="metaportal_fn_wsidebar">
@@ -158,6 +188,7 @@ const ProblemStatements = (props) => {
       </div>
       <style jsx>
       </style>
+    </div>
     </div>
   );
 };

@@ -17,8 +17,8 @@
 :root{
 	--mc1: #cc00ff;
 	--mc2: #7000ff;
-	--hc: #ddd;
-	--bc: #9ba0b8;
+	--hc: #e6e6e6ef;
+	--bc: #d8dae6d2;
 	--hff: 'Heebo', sans-serif;
 	--bff: 'Nunito', sans-serif;
 }
@@ -195,9 +195,9 @@ body{
 	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
-	background: url("./assets/images/bgV2.png");
-	background-size: cover;
-	background-attachment: fixed;
+	background: url("./assets/images/bgV2.png") !important;
+	background-size: cover !important;
+	background-attachment: fixed !important;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);
 }
 body,
@@ -3463,7 +3463,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .metaportal_fn_mintbox .mint_time h4{
 	font-size: 16px;
-    color: #a35ad0;
+    color: #b579da;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -3485,6 +3485,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .metaportal_fn_mintbox .mright{
 	/* max-width: 275px; */
 	margin: 0 auto;
+
 }
 .metaportal_fn_mintbox .mint_checked{
 	margin-bottom: 37px;
@@ -5694,125 +5695,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	}
 }
 
-
-
-
-/* Since v3.0 */
-#roadmap{
-	padding: 144px 0 150px 0;
-}
-#roadmap .fn__maintitle {
-    margin-bottom: 140px;
-}
-.fn_cs_roadmap .step_holder{
-	padding: 50px;
-	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='%23CCCCCC' stroke-width='1' stroke-dasharray='9%2c7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-	border-radius: 15px;
-	margin-bottom: 40px;
-	overflow: hidden;
-}
-.fn_cs_roadmap .step_holder .fn__svg{
-	width: auto;
-	height: 15px;
-	position: absolute;
-}
-.fn_cs_roadmap .step_in{
-	width: 0;
-	height: 22px;
-	position: relative;
-	overflow: hidden;
-	transition: all .5s ease;
-	/* background-image: url(../img/roadmap.png); */
-	background-repeat: repeat-x;
-	max-width: 100% !important;
-}
-.fn_cs_roadmap .step_in .fn__svg{
-	display: none;
-}
-.fn_cs_roadmap .slider_holder{
-	position: relative;
-}
-.fn_cs_roadmap .slider_holder:after{
-	z-index: -1;
-	position: absolute;
-	top: 9px;
-	left: 0;
-	right: 0;
-	height: 1px;
-	background-color: rgba(255,255,255,.2);
-	content: '';
-}
-.fn_cs_roadmap .swiper-slide .item{
-	border: 1px solid rgba(255,255,255,.15);
-	border-radius: 10px;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
-	position: relative;
-}
-.fn_cs_roadmap .swiper-wrapper{
-	padding: 60px 0 20px;
-}
-.fn_cs_roadmap .swiper-slide .icon{
-	position: absolute;
-	display: block;
-	left: 40px;
-	width: 20px;
-	height: 20px;
-	background: -moz-linear-gradient(90deg,var(--mc1), var(--mc2));
-	background: -webkit-linear-gradient(90deg,var(--mc1), var(--mc2));
-	background: linear-gradient(to right,var(--mc1), var(--mc2));
-	border-radius: 100%;
-	bottom: 100%;
-	margin-bottom: 41px;
-}
-.fn_cs_roadmap .swiper-slide .icon:after{
-	content: '';
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-radius: 100%;
-	background-color: #1d1224;
-	top: 50%;
-	left: 50%;
-	margin: -5px 0 0 -5px;
-}
-.fn_cs_roadmap .swiper-slide .phase{
-	display: block;
-	width: fit-content;
-	max-width: 100%;
-	color: #9ba0b8;
-	font-family: var(--hff);
-	font-size: 16px;
-	font-weight: 500;
-	text-transform: uppercase;
-	padding: 0 40px;
-	background-color: rgba(255,255,255,.1);
-	border-bottom-right-radius: 10px;
-	border-top-left-radius: 10px;
-	height: 40px;
-	line-height: 40px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-}
-.fn_cs_roadmap .swiper-slide .item_in{
-	padding: 25px 40px 40px;
-}
-.fn_cs_roadmap .swiper-slide .date{
-	margin: 0;
-	margin-bottom: 7px;
-}
-.fn_cs_roadmap .swiper-slide .title{
-	font-size: 18px;
-	font-weight: 500;
-	margin: 0;
-	margin-bottom: 20px;
-}
-.fn_cs_roadmap .swiper-slide .desc{
-	margin: 0;
-}
-
-
-
 /* Since v4.0 */
 #home2{
 	padding-top: 179px;
@@ -6157,7 +6039,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .fn_cs_join{
 	border-radius: 20px;
 	background-color: rgba(255,255,255,.03);
-	padding: 117px 40px 100px;
+	padding: 50px 40px 50px;
 }
 .fn_cs_join .join_in{
 	max-width: 700px;
@@ -6168,7 +6050,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-bottom: 28px;
 }
 .fn_cs_join p{
-	margin-bottom: 42px;
+	/* margin-bottom: 42px; */
 }
 .fn_cs_join .buttons{
 	display: -webkit-flex;
@@ -6655,9 +6537,20 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(100px) !important;
 	transition: background-color 0.9s ease;
 }
 
+.dark-overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color 0.5s ease;
+	backdrop-filter: blur(5px); /* Add a transition */
+  }
 .dark-overlay {
 	position: absolute;
 	top: 0;
@@ -6665,7 +6558,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.5s ease; /* Add a transition */
+	transition: background-color 0.5s ease;
+	backdrop-filter: blur(1px);
   }
 
   .dark-overlay.active {
