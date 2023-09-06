@@ -118,6 +118,11 @@ ul{
 
 .logosec img{
 	width: 100%;
+	/* margin: 0 3rem; */
+}
+.logosec{
+	padding: 1rem;
+	/* margin: 0 3rem; */
 }
 
 .fquotessec{
