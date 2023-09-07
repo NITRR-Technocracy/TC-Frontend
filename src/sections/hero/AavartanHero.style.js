@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import bannerBG from "../../assets/images/bg2.png";
+import bannerBG from "../../assets/images/aavartanbg.webp";
 
 const rocketAnimation = keyframes`
     0%,

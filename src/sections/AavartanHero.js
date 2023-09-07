@@ -1,7 +1,5 @@
 import React from 'react';
 import './AavartanHero.css';
-import ParticlesBackground from '../layout/ParticlesBackground';
-import WaterWave from 'react-water-wave'; // Import react-water-wave
 
 const AavartanHero2 = () => {
   return (
@@ -28,7 +26,6 @@ const AavartanHero2 = () => {
             </div>
           </div>
         )}
-      </WaterWave>
     </section>
   );
 };

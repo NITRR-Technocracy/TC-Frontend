@@ -195,7 +195,7 @@ body{
 	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
-	background: url("./assets/images/bgV2.png") !important;
+	background: url("./assets/images/homebg.webp") !important;
 	background-size: cover !important;
 	background-attachment: fixed !important;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);
@@ -6514,28 +6514,28 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Aavartannotscrolled{
-	background: url("./assets/images/bg2.png");
+	background: url("./assets/images/aavartanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
 	transition: background-color 0.9s ease;
 }
 
 .Aavartanscrolled{
-	background: url("./assets/images/bg2.png");
+	background: url("./assets/images/aavartanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: background-color 0.9s ease;
 }
 .Vigyaannotscrolled{
-	background: url("./assets/images/bg1.png");
+	background: url("./assets/images/vigyaanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
 	transition: background-color 0.9s ease;
 }
 
 .Vigyaanscrolled{
-	background: url("./assets/images/bg1.png");
+	background: url("./assets/images/vigyaanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
