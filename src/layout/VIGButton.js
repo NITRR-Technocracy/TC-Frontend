@@ -10,7 +10,7 @@ const VIGButton = ({text}) => {
     };
     return (
         <div className={styles.wrap}>
-            <button className={styles.vigbutton} onClick={scrollToRegistration}>
+            <button className={styles.vigbutton}  onClick={scrollToRegistration}>
             {text}
             </button>
         </div>

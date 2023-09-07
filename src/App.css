@@ -6445,8 +6445,16 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     background: linear-gradient(to bottom, #504099c5 20%, #fe7be6c8 100%);
     margin: 3rem 0rem 0rem 2rem;
     text-decoration: none;
-    box-shadow: 2px 4px 15px black;
-    transition: color 0.3s ease, background 0.3s ease; /* Add transition for color and background */
+    box-shadow: 2px 4px 15px white;
+    /* transition: color 0.3s ease, background 0.3s ease; Add transition for color and background */
+	transition: 0.5s;
+}
+.metaportal_fn_button_3:hover{
+	transform: scale(1.1);
+	background: transparent ;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(250, 255, 253);
+	box-shadow: 2px 4px 15px black;
 }
 
 @media (max-width: 600px) { /* Correct the media query syntax */
@@ -6457,12 +6465,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     }
 }
 
-.metaportal_fn_button_3:hover {
+/* .metaportal_fn_button_3:hover {
     color: white;
 	background: linear-gradient(to bottom, #fe7be6c8 20%, #504099c5 100%);
     cursor: pointer;
 }
-
+ */
 
 
 .metaportal_fn_button_4{
@@ -6482,16 +6490,25 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     margin: 1.5rem 0rem;
 	position: relative;
 	z-index:1;
+	transition: 0.5s;
 }
 @media(width<600px){
 	.metaportal_fn_button_4{
 		width: 100%;
 	}
 }
-.metaportal_fn_button_4:hover{
+/* .metaportal_fn_button_4:hover{
 	color: white;
 	background: linear-gradient(to right, #4c90d5, #FE7BE5);
 	cursor: pointer;
+} */
+
+.metaportal_fn_button_4:hover{
+	transform: scale(1.1);
+	background: transparent ;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(250, 255, 253);
+	box-shadow: 2px 4px 15px black;
 }
 
 

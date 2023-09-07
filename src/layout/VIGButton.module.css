@@ -20,7 +20,13 @@ border: 2px solic;
 border-bottom-color:#FE7BE5 ;
 border-top-color: #504099 ;
 cursor: pointer;
-  }
+transition: 1s;
+}
+
+.vigbutton:hover{
+  box-shadow: 0 0 35px blue;
+  letter-spacing: 2px ;
+}
 
   .vigbutton::before {
 content: '';
@@ -40,9 +46,9 @@ content: '';
 /* .vigbutton:hover, .vigbutton:focus {
   color: #fff;
   transform: translateY(-6px);
-} */
+}
 
-/* .vigbutton:hover::before, .vigbutton:focus::before {
+.vigbutton:hover::before, .vigbutton:focus::before {
   opacity: 1;
 } */
 
