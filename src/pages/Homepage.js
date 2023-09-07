@@ -29,7 +29,7 @@ const Homepage = () => {
             <About/>
             {/* <RocketButton/> */}
             {/* <RoadMapSlider/> */}
-            {/* <OurJourney /> */}
+            <OurJourney />
             <Faq />
           </div>
         </div>

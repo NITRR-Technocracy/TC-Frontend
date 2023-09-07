@@ -72,7 +72,7 @@ function App() {
                   element={<ProblemStatements />}
                 />
                 <Route exact path="/sponsors" element={<SponsorsPage />} />
-                {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
+                <Route exact path="/ourjourney" element={<OurJourney />} />
               </Routes>
               <Footer />
           </BrowserRouter>
