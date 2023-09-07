@@ -8,6 +8,7 @@ import FullPageLoader from '../layout/FullPageLoader';
 import About from '../components/About';
 import RoadMapSlider from '../components/RoadMapStep';
 import RocketButton from '../components/RocketButton';
+import Timeline from '../sections/Timeline';
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,9 +28,7 @@ const Homepage = () => {
           <HomeHero />
           <div className="HomeContainer">
             <About/>
-            {/* <RocketButton/> */}
-            {/* <RoadMapSlider/> */}
-            {/* <OurJourney /> */}
+            <Timeline/>
             <Faq />
           </div>
         </div>

@@ -1,6 +1,6 @@
 .title{
   color:white;
-  margin:0px 0px 50px 0px;
+  margin:50px 0px 50px 0px;
   position:relative;
   text-align: center;
   z-index: 3;
@@ -36,7 +36,7 @@
     font-size: 1.8rem;
   }
   .title{
-    margin: 0;
+    margin-bottom: 0;
   }
 
 }
@@ -49,7 +49,7 @@
     font-size: 2.2rem;
   }
   .title{
-    margin: 0;
+    /* margin: 0; */
   }
 
 }
@@ -62,7 +62,7 @@
     font-size: 1.6rem;
   }
   .title{
-    margin: 0;
+    /* margin: 0; */
   }
 
 }
