@@ -217,6 +217,11 @@ const AavartanStyleWrapper = styled.section`
       transform: translate(-50%, -50%);
       z-index: 3;
      }
+    @media only screen and (max-width:500px){
+      .gamfi_v2_hero_left h2{
+        font-size:2rem;
+      }
+    }
     .gamfi_v2_hero_left {
     h2 {
       font-size: 4rem; /* Adjust font size for 768px */
@@ -263,6 +268,12 @@ const AavartanStyleWrapper = styled.section`
       transform: translate(-50%, -50%);
       z-index: 3;
      }
+     .gamfi_v2_hero_left {
+      h2{
+        font-size: 3rem;
+      }
+     }
+     
   }
   @media only screen and (max-width: 426px) {
     .gamfi_v2_hero_left {
@@ -341,10 +352,24 @@ const AavartanStyleWrapper = styled.section`
         width: 200px;
       }
     }
+    @media only screen and (max-width:310px){
+      .gamfi_v2_hero_left {
+        h2{
+          font-size:2rem;
+        }
+      }
+    }
     @media only screen and (max-width: 301px) {
       .btncontainer{
         top: 90%;
        }
+    }
+    @media only screen and (max-width:252px){
+      .gamfi_v2_hero_left {
+        h2{
+          font-size:1.8rem;
+        }
+      }
     }
   }
 `;

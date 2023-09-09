@@ -152,7 +152,7 @@ const Mining = () => {
         }}
       >
         <div className="goodbtn">
-        <a href={pdf}>DOWNLOAD PDF</a>
+        <a href={pdf}>|&nbsp; DOWNLOAD PDF &nbsp;|</a>
         </div>
       </div>
     </div>

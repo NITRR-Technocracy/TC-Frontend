@@ -70,7 +70,7 @@ The proposed model must incorporate deep learning architectures, such as recurre
             </div>
             <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
       <div className="goodbtn" >
-      <a href={pdf}>DOWNLOAD PDF</a>
+      <a href={pdf}>|&nbsp; DOWNLOAD PDF &nbsp;|</a>
           </div>
       </div>
           </div>

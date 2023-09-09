@@ -6548,13 +6548,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: #fff;
     font-weight: 500;
     border-image: linear-gradient(to right, #4c90d5, #FE7BE5); /* Define your linear gradient colors here */
     border-image-slice: 1; /* Keeps the entire gradient within the border */
     border-image-repeat: stretch; 
     margin: 1rem 0rem;
 }
+.goodbtn a{
+	color: #9de7c9dc;
+	text-decoration: none;
+}
+
 .goodbtn:hover{
  color: white;
  background: linear-gradient(to right, #4c90d5, #FE7BE5);
