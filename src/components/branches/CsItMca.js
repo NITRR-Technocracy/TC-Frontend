@@ -25,9 +25,18 @@ The practice of releasing domestic animals, such as cattle and livestock, during
               </p>
               <p>
                 <h3>MCSIT04: Designing an Integrated Care App for Alzheimer’s and Dementia Patients</h3>
-                Dharavi is the biggest slum cluster of Asia that lies on prime
-                property right in the middle of Mumbai. Design a plan and model
-                for a new Settlement at low cost.
+                Design and develop a comprehensive caretaking application targeting Alzheimer's
+                and dementia patients, with a primary focus on addressing their emergency needs.
+                <br />
+                <br />
+                The application should include essential features such as emergency contacts , to
+                provide quick and easy access to crucial contacts in case of any urgent situations
+                or medical emergencies. It should allow caregivers to maintain a detailed profile of
+                each patient, including their medical history, allergies, medications, and personal
+                preferences. To enhance patient safety, the application should integrate GPS
+                tracking functionality, enabling real-time monitoring of patients' whereabouts. This
+                feature will prove invaluable in preventing wandering incidents, a common concern
+                among Alzheimer's and dementia patients.
               </p>
               <p>
                 <h3>
