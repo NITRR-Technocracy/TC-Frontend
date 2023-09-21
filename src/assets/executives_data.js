@@ -270,12 +270,12 @@ export const executivesList = [
                         },
                         {
                           id: "65",
-                          Name: "Shubham Joshi",
+                          Name: "Shubhi Joshi",
                           Domain: "Vigyaan"
                         },
                             {
                               id: "66",
-                              Name: "Karan Joshi",
+                              Name: "Karan Singh",
                               Domain: "Tech"
                             },
                             {
