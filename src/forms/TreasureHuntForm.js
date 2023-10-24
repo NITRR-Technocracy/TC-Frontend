@@ -135,7 +135,7 @@ const TreasureHuntForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Mock CID"} noncolor={""} />
+      <Title color={"Mock "} noncolor={"CID"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
