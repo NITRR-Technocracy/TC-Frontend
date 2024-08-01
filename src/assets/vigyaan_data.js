@@ -14,7 +14,7 @@ import img_13 from '../assets/vigyaan_images/vigyaan_13.webp';
 import img_14 from '../assets/vigyaan_images/vigyaan_14.webp';
 import img_15 from '../assets/vigyaan_images/vigyaan_15.webp';
 import img_16 from '../assets/vigyaan_images/vigyaan_16.webp';
-
+import img_17 from '../assets/vigyaan_images/vigyaan_17.webp';
 const Vigyaan_data = [
     {
         id: 1,
@@ -94,6 +94,10 @@ const Vigyaan_data = [
         id: 16,
         dis: "img16",
         url: img_16,
+    },{
+        id: 7,
+        dis: "img17",
+        url: img_17,
     },
 ];
 
