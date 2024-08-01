@@ -95,7 +95,7 @@ const Vigyaan_data = [
         dis: "img16",
         url: img_16,
     },{
-        id: 7,
+        id: 17,
         dis: "img17",
         url: img_17,
     },
