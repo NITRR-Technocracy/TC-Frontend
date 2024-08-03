@@ -273,7 +273,6 @@ const VigyaanForm = () => {
               </div>
             )} */}
             <span style={{ fontSize: "0.7rem" }}>
-                    {" "}
                     * If from NIT Raipur then use institute Email ID if you have one.
                   </span>
           </li>
