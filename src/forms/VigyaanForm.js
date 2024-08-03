@@ -273,8 +273,9 @@ const VigyaanForm = () => {
               </div>
             )} */}
             <span style={{ fontSize: "0.7rem" }}>
-              * If from NIT Raipur then only institute id accepted.
-            </span>
+                    {" "}
+                    * If from NIT Raipur then use institute ID if you have one.
+                  </span>
           </li>
 
           <li>
@@ -353,9 +354,9 @@ const VigyaanForm = () => {
                   </label>
                 </li>
 
-                <span style={{ fontSize: "1rem" }}>
+                {/* <span style={{ fontSize: "1rem" }}>
                   * If selected Yes, then only institute mail id accepted.
-                </span>
+                </span> */}
                 <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
@@ -465,7 +466,7 @@ const VigyaanForm = () => {
                   )} */}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    * If from NIT Raipur then only institute id accepted.
+                    * If from NIT Raipur then use institute ID if you have one.
                   </span>
                 </li>
 
