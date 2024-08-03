@@ -274,7 +274,7 @@ const VigyaanForm = () => {
             )} */}
             <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    * If from NIT Raipur then use institute ID if you have one.
+                    * If from NIT Raipur then use institute Email ID if you have one.
                   </span>
           </li>
 
@@ -466,7 +466,7 @@ const VigyaanForm = () => {
                   )} */}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    * If from NIT Raipur then use institute ID if you have one.
+                    * If from NIT Raipur then use institute Email ID if you have one.
                   </span>
                 </li>
 
