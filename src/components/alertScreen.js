@@ -1,7 +1,7 @@
 import React from 'react';
 import './AlertScreen.css';
 
-const AlertScreen = ({ message, onClose, showAlert, type = 'error' }) => {
+const AlertScreen = ({ message, onClose, showAlert, type }) => {
     if (!showAlert) {
         return null;
     }

@@ -209,9 +209,14 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
+
+          if(res.data.ok){
+            setAlertType("success");
+          } else {
+            setAlertType("error");
+          }
           setAlertMessage(res.data.message);
           setShowAlert(true);
-          setAlertType("success");
         } catch (err) {
           console.error(err);
           setAlertMessage(err.response.data.message);
