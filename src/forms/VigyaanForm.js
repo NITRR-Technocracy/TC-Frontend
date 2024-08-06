@@ -24,7 +24,7 @@ const VigyaanForm = () => {
   const [phoneNumberError, setPhoneNumberError] = useState("");
   const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
     useState([true, true, true]);
-  const [isNITRR, setIsNITRR] = useState(null);
+  const [isNITRR, setIsNITRR] = useState(true);
   const [emailError, setEmailError] = useState("");
 
   const handleRadioChange = (event) => {
