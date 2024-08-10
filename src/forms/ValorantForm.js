@@ -47,7 +47,7 @@ const ValorantForm = () => {
   //     setFileError("File size must be <= 1 MB")
   //     return;
   //   }
-  //   if (file) {
+  //   if (file)  {
   //     setFileError(null);
   //     const newData = { ...form };
   //     newData["file"] = file;
