@@ -414,7 +414,9 @@ body {
 }
 
 .btncontainer {
-  width: 40%;
+  width: 100%;
+  gap:2rem;
+
 }
 
 
@@ -552,6 +554,7 @@ path.two {
 
   .btncontainer {
     width: 50%;
+    flex-direction: column;
   }
 }
 
