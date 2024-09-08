@@ -33,6 +33,7 @@ function Footer (){
 							<ul>
 								<li><a href="/aavartan">Aavartan</a></li>
 								<li><a href="/vigyaan">Vigyaan</a></li>
+								<li><a href="/ignite">Ignite</a></li>
 								<li><a href="/sponsors">Sponsors</a></li>
 								<li><a href="/team">Team</a></li>
 							</ul>

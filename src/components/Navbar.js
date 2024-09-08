@@ -71,6 +71,11 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                                 VIGYAAN
                             </NavLink>
                         </li>
+                        <li className={activeLink === "/ignite" ? "active-link" : ""}>
+                            <NavLink to="/ignite" activeclassname="active-link" onClick={closeNavbar}>
+                                igNITe
+                            </NavLink>
+                        </li>
                         <li className={activeLink === "/sponsors" ? "active-link" : ""}>
                             <NavLink to="/sponsors" activeclassname="active-link" onClick={closeNavbar}>
                                 SPONSORS

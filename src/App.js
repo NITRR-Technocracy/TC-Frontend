@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Aavartan from "./pages/Aavartan";
 import Vigyaan from "./pages/Vigyaan";
+import Ignite from "./pages/Ignite";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Navigation from "./layout/Navigation";
@@ -109,6 +110,7 @@ function App() {
                   element={<VigyaanGalleryPage />}
                 />
                 <Route exact="true" path="/vigyaan" element={<Vigyaan />} />
+                <Route exact="true" path="/ignite" element={<Ignite />} />
                 <Route exact="true" path="/team" element={<TeamPage />} />
                 <Route
                   exact="true"

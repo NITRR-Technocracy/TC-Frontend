@@ -6600,6 +6600,28 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
 }
+.Ignitescrolled{
+	background: url("./assets/images/vigyaanbg.webp");
+	background-size: cover;
+	background-attachment: fixed;
+	/* transition: background-color 0.9s ease; */
+}
+.Ignitescrolled::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity (last value) as needed */
+	z-index: 0; /* Ensure the overlay is above the background image */
+  }
+.Homescrolled{
+	background: url("./assets/images/spacebg.webp");
+	background-size: cover;
+	background-attachment: fixed;
+	/* transition: background-color 0.9s ease; */
+}
 .Homescrolled::before {
 	content: "";
 	position: absolute;
