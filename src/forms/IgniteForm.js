@@ -395,10 +395,10 @@ const IgniteForm = () => {
         style={{ paddingTop: "3rem" }}
       >
         <div className="metaportal_fn_mintbox" style={{ maxWidth: "100%" }}>
-          <div className="mint_left">
-            <div className="mint_title">
+          {/* <div className="mint_left"> */}
+            {/* <div className="mint_title">
               <span>REGISTER NOW</span>
-            </div>
+            </div> */}
 
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
@@ -418,13 +418,13 @@ const IgniteForm = () => {
                   </Link>
                 </div>
               )}*/}
-              <h3
+              {/* <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}
               >
                 Are You From NITRR?
-              </h3>
-              <ul style={{ listStyleType: "none", padding: 0 }}>
+              </h3> */}
+              {/* <ul style={{ listStyleType: "none", padding: 0 }}>
                 <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
@@ -435,12 +435,12 @@ const IgniteForm = () => {
                   <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
                     Yes
                   </label>
-                </li>
+                </li> */}
 
                 {/* <span style={{ fontSize: "1rem" }}>
                   * If selected Yes, then only institute mail id accepted.
                 </span> */}
-                <li style={{ marginBottom: "0.5rem" }}>
+                {/* <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
                     name="isNITRR"
@@ -457,9 +457,9 @@ const IgniteForm = () => {
                   Email accepted.
                 </span>
               </ul>
-            </div>
+            </div> */}
             {/* Important Details */}
-            <div className="mint_list">
+            {/* <div className="mint_list">
               <ul>
                 <li data-aos="fade-down">
                   <input
@@ -493,10 +493,10 @@ const IgniteForm = () => {
                     />
                   </li>
                 )}
-              </ul>
+              </ul> */}
 
               {/* Team Leader Details */}
-              <h3
+              {/* <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}
               >
@@ -541,16 +541,16 @@ const IgniteForm = () => {
                     placeholder="Leader Email ID"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
-                  />
+                  /> */}
                   {/* {emailError && (
                     <div style={{ color: "red", marginTop: "0.5rem" }}>
                       {emailError}
                     </div>
                   )} */}
-                  <span style={{ fontSize: "0.7rem" }}>
-                    {" "}
+                  {/* <span style={{ fontSize: "0.7rem" }}>
+                    {" "} */}
                     {/* * If from NIT Raipur then use institute Email ID if you have */}
-                    one.
+                    {/* one.
                   </span>
                 </li>
 
@@ -590,9 +590,9 @@ const IgniteForm = () => {
               >
                 Member Details
               </h3>
-              <ul>
+              <ul> */}
                 {/* Member's Field*/}
-                {renderMemberFields()}
+                {/* {renderMemberFields()}
                 <li
                   data-aos="fade-down"
                   style={{
@@ -662,11 +662,11 @@ const IgniteForm = () => {
                 </div>
               ) : (
                 <IgniteLoader />
-              )}
-              <p>* Read the Rules & Regulations before Submitting</p>
+              )} */}
+              {/* <p>* Read the Rules & Regulations before Submitting</p> */}
             </div>
-          </div>
-          <div className="mint_right">
+          {/* </div> */}
+          <div className="mint_right" style={{width:"100%"}}>
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
                 <h4>Vigyaan Ignite</h4>
