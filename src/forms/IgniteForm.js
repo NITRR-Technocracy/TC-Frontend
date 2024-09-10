@@ -787,6 +787,22 @@ const IgniteForm = () => {
             >
               <h4>VIGYAAN</h4>
               <h3 className="metaportal_fn_countdown">
+                EVALUATION CRITERIA
+              </h3>
+            </div>
+            <div data-aos="fade-down" className="mint_info" >
+             <p>
+             Relevance, feasibility and practical significance of the problem.
+             </p>
+            </div>
+            
+            <div
+              data-aos="fade-down"
+              style={{ paddingTop: "2rem" }}
+              className="mint_time"
+            >
+              <h4>VIGYAAN</h4>
+              <h3 className="metaportal_fn_countdown">
                 Certificates & REWARDS
               </h3>
             </div>
