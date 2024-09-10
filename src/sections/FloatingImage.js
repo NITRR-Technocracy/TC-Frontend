@@ -12,7 +12,9 @@ class SpaceAnimation extends Component {
             <span> TEAM TECHNOCRACY</span>
           </h1>
           <p>The Student Technical Committee of NIT Raipur</p>
+
           <div className="btncontainer" style={{ display: "flex" }}>
+
             <a className="cta" href="/vigyaan" style={{ width: "100%" }}>
               <span>VIGYAAN</span>
               <span>
@@ -48,6 +50,7 @@ class SpaceAnimation extends Component {
                 </svg>
               </span>
             </a>
+            
             <a className="cta" href="/ignite" style={{ width: "100%" }}>
               <span>igNITe</span>
               <span>
@@ -84,6 +87,7 @@ class SpaceAnimation extends Component {
               </span>
             </a>
           </div>
+
         </div>
         <div className="solar-system">
           <div className="sun"></div>
