@@ -24,8 +24,8 @@ const AavartanHero = () => {
                 </p>
               </div>
               <div className="btncontainer" style={{ display: "flex" }}>
-                 <a className="cta" href="/vigyaan">
-                <span>VIGYAAN</span>
+                 <a className="cta" href="/vigyaan" style={{marginLeft: "2.68rem", marginTop:"6rem" }}>
+                <span className="">VIGYAAN</span>
                 <span>
                   <svg
                     width="66px"
