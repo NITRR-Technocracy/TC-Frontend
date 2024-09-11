@@ -57,7 +57,7 @@ const AavartanStyleWrapper = styled.section`
   //   position:absolute;
   //   top:70%;
   //   left:40%;
-  //  }
+  // }
 
   .colmd {
     width: 85%;
