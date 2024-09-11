@@ -49,7 +49,7 @@ class SpaceAnimation extends Component {
               </span>
             </a>
             <a className="cta" href="/ignite" style={{ width: "100%" }}>
-              <span>IGNITe</span>
+              <span>igNITe</span>
               <span>
                 <svg
                   width="66px"
