@@ -71,26 +71,26 @@ const IgniteForm = () => {
 
   const cachedForm = JSON.parse(localStorage.getItem("IgniteForm")) || {
     isNITRR: "",
-    Team_name: "",
+    team_name: "",
     College_name: "",
-    Leader_name: "",
-    Leader_branch: "",
-    Leader_year: "",
-    Leader_email: "",
-    Leader_rollNo: "",
-    Leader_whatsapp: "",
-    Member2_name: "",
-    Member2_branch: "",
-    Member2_year: "",
-    Member2_email: "",
-    Member2_rollNo: "",
-    Member2_whatsapp: "",
-    Member3_name: "",
-    Member3_branch: "",
-    Member3_year: "",
-    Member3_email: "",
+    leader_name: "",
+    leader_branch: "",
+    leader_year: "",
+    leader_email: "",
+    leader_rollNo: "",
+    leader_whatsapp: "",
+    member2_name: "",
+    member2_branch: "",
+    member2_year: "",
+    member2_email: "",
+    member2_rollNo: "",
+    member2_whatsapp: "",
+    member3_name: "",
+    member3_branch: "",
+    member3_year: "",
+    member3_email: "",
     Member3_rollNo: "",
-    Member3_whatsapp: "",
+    member3_whatsapp: "",
     Problem_code: "",
   };
 
@@ -139,7 +139,7 @@ const IgniteForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
 
-    if (e.target.name === "Leader_whatsapp") {
+    if (e.target.name === "leader_whatsapp") {
       const phoneNumber = e.target.value;
       if (!/^\d{10}$/.test(phoneNumber)) {
         setPhoneNumberError("Enter a number of 10 digits only.");
@@ -190,22 +190,22 @@ const IgniteForm = () => {
     } else {
       let condition1 =
         form.isNITRR !== "" &&
-        form.Team_name !== "" &&
-        form.Leader_name !== "" &&
-        form.Leader_email !== "" &&
-        form.Leader_year !== "" &&
-        form.Leader_rollNo !== "" &&
-        form.Leader_whatsapp !== "" &&
-        form.Leader_branch !== "" &&
-        form.Member2_name !== "" &&
-        form.Member2_email !== "" &&
-        form.Member2_year !== "" &&
-        form.Member2_rollNo !== "" &&
-        form.Member2_whatsapp !== "" &&
-        form.Member2_branch !== "" &&
+        form.team_name !== "" &&
+        form.leader_name !== "" &&
+        form.leader_email !== "" &&
+        form.leader_year !== "" &&
+        form.leader_rollNo !== "" &&
+        form.leader_whatsapp !== "" &&
+        form.leader_branch !== "" &&
+        form.member2_name !== "" &&
+        form.member2_email !== "" &&
+        form.member2_year !== "" &&
+        form.member2_rollNo !== "" &&
+        form.member2_whatsapp !== "" &&
+        form.member2_branch !== "" &&
         form.Problem_code !== "" &&
         form.file &&
-        form.Member2_whatsapp.length === 10;
+        form.member2_whatsapp.length === 10;
 
       let isNITRRConditions =
         form.isNITRR === "No" ? form.College_name !== "" : true;
@@ -213,13 +213,13 @@ const IgniteForm = () => {
       let condition2 = true;
       if (memberCount === 2) {
         condition2 =
-          form.Member3_email !== "" &&
-          form.Member3_name !== "" &&
-          form.Member3_whatsapp !== "" &&
-          form.Member3_whatsapp.length === 10 &&
-          form.Member3_year !== "" &&
+          form.member3_email !== "" &&
+          form.member3_name !== "" &&
+          form.member3_whatsapp !== "" &&
+          form.member3_whatsapp.length === 10 &&
+          form.member3_year !== "" &&
           form.Member3_rollNo !== "" &&
-          form.Member3_branch !== "";
+          form.member3_branch !== "";
       }
 
       if (condition1 && condition2 && isNITRRConditions) {
@@ -463,12 +463,12 @@ const IgniteForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -507,40 +507,40 @@ const IgniteForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
+                    name="leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_year"
+                    name="leader_year"
                     id="leaderYear"
                     type="text"
                     placeholder="Leader Current Year"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_year}
+                    value={form.leader_year}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderEmail"
                     type="text"
-                    name="Leader_email"
+                    name="leader_email"
                     placeholder="Leader Email ID"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.leader_email}
                   />
                   {emailError && (
                     <div style={{ color: "red", marginTop: "0.5rem" }}>
@@ -556,28 +556,28 @@ const IgniteForm = () => {
 
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_rollNo"
+                    name="leader_rollNo"
                     id="rollNumber"
                     type="text"
                     placeholder="Leader Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_rollNo}
+                    value={form.leader_rollNo}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="leader_whatsapp"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.leader_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {form.leader_whatsapp !== "" &&
+                    form.leader_whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -749,7 +749,7 @@ const IgniteForm = () => {
                   </p>
                   <p>▪  File type: .ppt, .pptx or PDF</p>
                   <p>
-                  ▪  Document Name: Team_Name
+                  ▪  Document Name: Team_name
                   </p>
                 </p>
                 <p>
