@@ -32,7 +32,7 @@ const IgniteForm = () => {
     setIsNITRR(event.target.value === "Yes");
     set({ ...form, isNITRR: event.target.value });
     localStorage.setItem(
-      "IgniteForm",
+      "vigyaanForm",
       JSON.stringify({ ...form, isNITRR: event.target.value })
     );
   };
@@ -43,7 +43,7 @@ const IgniteForm = () => {
     const updatedForm = { ...form, [name]: value };
     set(updatedForm);
 
-    localStorage.setItem("IgniteForm", JSON.stringify(updatedForm));
+    localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
 
     if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
       setEmailError("Email must be from @nitrr.ac.in domain.");
@@ -52,9 +52,9 @@ const IgniteForm = () => {
     }
   };
 
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("error");
-  const [alertMessage, setAlertMessage] = useState("");
+  // const [showAlert, setShowAlert] = useState(false);
+  // const [alertType, setAlertType] = useState("error");
+  // const [alertMessage, setAlertMessage] = useState("");
   const [alert, setAlert] = useState({
     message: '',
     show: false,
@@ -69,28 +69,28 @@ const IgniteForm = () => {
     })
   };
 
-  const cachedForm = JSON.parse(localStorage.getItem("IgniteForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
-    team_name: "",
+    Team_name: "",
     College_name: "",
-    leader_name: "",
-    leader_branch: "",
-    leader_year: "",
-    leader_email: "",
-    leader_rollNo: "",
-    leader_whatsapp: "",
-    member2_name: "",
-    member2_branch: "",
-    member2_year: "",
-    member2_email: "",
-    member2_rollNo: "",
-    member2_whatsapp: "",
-    member3_name: "",
-    member3_branch: "",
-    member3_year: "",
-    member3_email: "",
+    Leader_name: "",
+    Leader_branch: "",
+    Leader_year: "",
+    Leader_email: "",
+    Leader_rollNo: "",
+    Leader_whatsapp: "",
+    Member2_name: "",
+    Member2_branch: "",
+    Member2_year: "",
+    Member2_email: "",
+    Member2_rollNo: "",
+    Member2_whatsapp: "",
+    Member3_name: "",
+    Member3_branch: "",
+    Member3_year: "",
+    Member3_email: "",
     Member3_rollNo: "",
-    member3_whatsapp: "",
+    Member3_whatsapp: "",
     Problem_code: "",
   };
 
@@ -131,7 +131,7 @@ const IgniteForm = () => {
 
       setMemberCount(memberCount - 1);
       localStorage.setItem("memberCount", memberCount - 1);
-      localStorage.setItem("IgniteForm", JSON.stringify(form));
+      localStorage.setItem("vigyaanForm", JSON.stringify(form));
     }
   };
 
@@ -139,35 +139,35 @@ const IgniteForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
 
-    if (e.target.name === "leader_whatsapp") {
-      const phoneNumber = e.target.value;
-      if (!/^\d{10}$/.test(phoneNumber)) {
-        setPhoneNumberError("Enter a number of 10 digits only.");
-      } else {
-        setPhoneNumberError("");
-      }
-    }
+    // if (e.target.name === "Leader_whatsapp") {
+    //   const phoneNumber = e.target.value;
+    //   if (!/^\d{10}$/.test(phoneNumber)) {
+    //     setPhoneNumberError("Enter a number of 10 digits only.");
+    //   } else {
+    //     setPhoneNumberError("");
+    //   }
+    // }
 
-    if (e.target.name.endsWith("whatsappno")) {
-      const memberIndex = parseInt(e.target.name.match(/\d+/)[0]) - 1;
-      const memberPhoneNumbers = [...memberPhoneNumberValidations];
-      const memberPhoneNumber = e.target.value;
+    // if (e.target.name.endsWith("whatsappno")) {
+    //   const memberIndex = parseInt(e.target.name.match(/\d+/)[0]) - 1;
+    //   const memberPhoneNumbers = [...memberPhoneNumberValidations];
+    //   const memberPhoneNumber = e.target.value;
 
-      memberPhoneNumbers[memberIndex] = /^\d{10}$/.test(memberPhoneNumber);
-      setMemberPhoneNumberValidations(memberPhoneNumbers);
-    }
+    //   memberPhoneNumbers[memberIndex] = /^\d{10}$/.test(memberPhoneNumber);
+    //   setMemberPhoneNumberValidations(memberPhoneNumbers);
+    // }
 
     set(update);
-    localStorage.setItem("IgniteForm", JSON.stringify(update));
+    localStorage.setItem("vigyaanForm", JSON.stringify(update));
   };
 
   const submit = async () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      setAlertMessage("Human verification is mandatory");
-      setShowAlert(true);
-      setAlertType("error");
+      // setAlertMessage("Human verification is mandatory");
+      // setShowAlert(true);
+      // setAlertType("error");
       setAlert({
         message: "Human verification is mandatory",
         show: true,
@@ -178,9 +178,9 @@ const IgniteForm = () => {
 
     setSubmit(true);
     if (memberCount < 1) {
-      setAlertMessage("Minimum Team Size: 2");
-      setShowAlert(true);
-      setAlertType("error");
+      // setAlertMessage("Minimum Team Size: 2");
+      // setShowAlert(true);
+      // setAlertType("error");
       setAlert({
         message: "Minimum Team Size: 2",
         show: true,
@@ -190,22 +190,22 @@ const IgniteForm = () => {
     } else {
       let condition1 =
         form.isNITRR !== "" &&
-        form.team_name !== "" &&
-        form.leader_name !== "" &&
-        form.leader_email !== "" &&
-        form.leader_year !== "" &&
-        form.leader_rollNo !== "" &&
-        form.leader_whatsapp !== "" &&
-        form.leader_branch !== "" &&
-        form.member2_name !== "" &&
-        form.member2_email !== "" &&
-        form.member2_year !== "" &&
-        form.member2_rollNo !== "" &&
-        form.member2_whatsapp !== "" &&
-        form.member2_branch !== "" &&
+        form.Team_name !== "" &&
+        form.Leader_name !== "" &&
+        form.Leader_email !== "" &&
+        form.Leader_year !== "" &&
+        form.Leader_rollNo !== "" &&
+        form.Leader_whatsapp !== "" &&
+        form.Leader_branch !== "" &&
+        form.Member2_name !== "" &&
+        form.Member2_email !== "" &&
+        form.Member2_year !== "" &&
+        form.Member2_rollNo !== "" &&
+        form.Member2_whatsapp !== "" &&
+        form.Member2_branch !== "" &&
         form.Problem_code !== "" &&
         form.file &&
-        form.member2_whatsapp.length === 10;
+        form.Member2_whatsapp.length === 10;
 
       let isNITRRConditions =
         form.isNITRR === "No" ? form.College_name !== "" : true;
@@ -213,13 +213,13 @@ const IgniteForm = () => {
       let condition2 = true;
       if (memberCount === 2) {
         condition2 =
-          form.member3_email !== "" &&
-          form.member3_name !== "" &&
-          form.member3_whatsapp !== "" &&
-          form.member3_whatsapp.length === 10 &&
-          form.member3_year !== "" &&
+          form.Member3_email !== "" &&
+          form.Member3_name !== "" &&
+          form.Member3_whatsapp !== "" &&
+          form.Member3_whatsapp.length === 10 &&
+          form.Member3_year !== "" &&
           form.Member3_rollNo !== "" &&
-          form.member3_branch !== "";
+          form.Member3_branch !== "";
       }
 
       if (condition1 && condition2 && isNITRRConditions) {
@@ -228,14 +228,14 @@ const IgniteForm = () => {
           delete formData.College_name;
         }
         try {
-          const res = await axios.post(`${backend}/ignite-reg`, formData, {
+          const res = await axios.post(`${backend}/vigyaanReg`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
           });
-          setAlertMessage(res.data.message);
-          setShowAlert(true);
-          setAlertType("success");
+          // setAlertMessage(res.data.message);
+          // setShowAlert(true);
+          // setAlertType("success");
           setAlert({
             message: res.data.message,
             show: true,
@@ -243,9 +243,9 @@ const IgniteForm = () => {
           });
         } catch (err) {
           console.error(err);
-          setAlertMessage(err.response.data.message);
-          setShowAlert(true);
-          setAlertType("error");
+          // setAlertMessage(err.response.data.message);
+          // setShowAlert(true);
+          // setAlertType("error");
           setAlert({
             message: err.response.data.message,
             show: true,
@@ -253,9 +253,9 @@ const IgniteForm = () => {
           });
         }
       } else {
-        setAlertMessage("Please fill all the necessary details correctly");
-        setShowAlert(true);
-        setAlertType("error");
+        // setAlertMessage("Please fill all the necessary details correctly");
+        // setShowAlert(true);
+        // setAlertType("error");
         setAlert({
           message: "Please fill all the necessary details correctly",
           show: true,
@@ -332,13 +332,13 @@ const IgniteForm = () => {
               onChange={(e) => handle(e)}
               value={form[`Member${i + 1}_email`]}
             />
-            {emailError && (
+            {/* {emailError && (
               <div style={{ color: "red", marginTop: "0.5rem" }}>
                 {emailError}
               </div>
-            )}
+            )} */}
             <span style={{ fontSize: "0.7rem" }}>
-              * If from NIT Raipur then use institute Email ID if you have one.
+              {/* * If from NIT Raipur then use institute Email ID if you have one. */}
             </span>
           </li>
 
@@ -402,7 +402,7 @@ const IgniteForm = () => {
 
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
-              {isNITRR && (
+              {/*{isNITRR && (
                 <div style={{ paddingBottom: "1rem" }}>
                   <h3
                     className="metaportal_fn_countdown"
@@ -417,7 +417,7 @@ const IgniteForm = () => {
                     https://ldap.nitrr.ac.in/
                   </Link>
                 </div>
-              )}
+              )}*/}
               <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}
@@ -437,9 +437,9 @@ const IgniteForm = () => {
                   </label>
                 </li>
 
-                <span style={{ fontSize: "1rem" }}>
+                {/* <span style={{ fontSize: "1rem" }}>
                   * If selected Yes, then only institute mail id accepted.
-                </span>
+                </span> */}
                 <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
@@ -458,17 +458,17 @@ const IgniteForm = () => {
                 </span>
               </ul>
             </div>
-            Important Details
+            {/* Important Details */}
             <div className="mint_list">
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="team_name"
+                    name="Team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.team_name}
+                    value={form.Team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -495,7 +495,7 @@ const IgniteForm = () => {
                 )}
               </ul>
 
-              Team Leader Details
+              {/* Team Leader Details */}
               <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}
@@ -507,77 +507,77 @@ const IgniteForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="leader_name"
+                    name="Leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.leader_name}
+                    value={form.Leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="leader_branch"
+                    name="Leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.leader_branch}
+                    value={form.Leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="leader_year"
+                    name="Leader_year"
                     id="leaderYear"
                     type="text"
                     placeholder="Leader Current Year"
                     onChange={(e) => handle(e)}
-                    value={form.leader_year}
+                    value={form.Leader_year}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderEmail"
                     type="text"
-                    name="leader_email"
+                    name="Leader_email"
                     placeholder="Leader Email ID"
                     onChange={(e) => handle(e)}
-                    value={form.leader_email}
+                    value={form.Leader_email}
                   />
-                  {emailError && (
+                  {/* {emailError && (
                     <div style={{ color: "red", marginTop: "0.5rem" }}>
                       {emailError}
                     </div>
-                  )}
+                  )} */}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    * If from NIT Raipur then use institute Email ID if you have
+                    {/* * If from NIT Raipur then use institute Email ID if you have */}
                     one.
                   </span>
                 </li>
 
                 <li data-aos="fade-down">
                   <input
-                    name="leader_rollNo"
+                    name="Leader_rollNo"
                     id="rollNumber"
                     type="text"
                     placeholder="Leader Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.leader_rollNo}
+                    value={form.Leader_rollNo}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="leader_whatsapp"
+                    name="Leader_whatsapp"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.leader_whatsapp}
+                    value={form.Leader_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.leader_whatsapp !== "" &&
-                    form.leader_whatsapp.length !== 10 && (
+                  {form.Leader_whatsapp !== "" &&
+                    form.Leader_whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -591,7 +591,7 @@ const IgniteForm = () => {
                 Member Details
               </h3>
               <ul>
-                Member's Field
+                {/* Member's Field*/}
                 {renderMemberFields()}
                 <li
                   data-aos="fade-down"
@@ -663,7 +663,7 @@ const IgniteForm = () => {
               ) : (
                 <IgniteLoader />
               )}
-              <p>* Read the Rules & Regulations before Submitting</p>
+              {/* <p>* Read the Rules & Regulations before Submitting</p> */}
             </div>
           </div>
           <div className="mint_right" style={{width:"100%"}}>
@@ -749,7 +749,7 @@ const IgniteForm = () => {
                   </p>
                   <p>▪  File type: .ppt, .pptx or PDF</p>
                   <p>
-                  ▪  Document Name: Team_name
+                  ▪  Document Name: Team_Name
                   </p>
                 </p>
                 <p>
@@ -841,22 +841,22 @@ const IgniteForm = () => {
 
         <div className="metaportal_fn_nft_cats">
           <ul data-aos="fade-down">
-            <li>
+            {/* <li>
               <div className="item">
                 <h4 className="parent_category">9th & 10th September</h4>
                 <h3 className="child_category" title="Black Yukata">
                   Presentation Round (Expected)
                 </h3>
               </div>
-            </li> 
-             <li>
+            </li> */}
+            {/* <li>
               <div className="item">
                 <h4 className="parent_category">15th & 16th October</h4>
                 <h3 className="child_category" title="Daydreaming">
                   Prototype Round (Expected)
                 </h3>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
