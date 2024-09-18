@@ -6,7 +6,7 @@ import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
-import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
+import IGNITE_Template from "../assets/Ignite_Idea_Submission_Template/IGNITE_Template.pdf";
 import IgniteLoader from "../layout/IgniteLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -802,32 +802,11 @@ const IgniteForm = () => {
               style={{ paddingTop: "2rem" }}
               className="mint_time"
             >
-
-              <h4>VIGYAAN</h4>
-              <h3 className="metaportal_fn_countdown">
-                EVALUATION CRITERIA
-              </h3>
-            </div>
-            <div data-aos="fade-down" className="mint_info" >
-             <p>
-             Relevance, feasibility and practical significance of the problem.
-             </p>
-            </div>
-            
-            <div
-              data-aos="fade-down"
-              style={{ paddingTop: "2rem" }}
-              className="mint_time"
-            >
-              <h4>VIGYAAN</h4>
-              <h3 className="metaportal_fn_countdown">
-                EVALUATION CRITERIA
-              </h3>
-            </div>
-            <div data-aos="fade-down" className="mint_info" >
-             <p>
-             Relevance, feasibility and practical significance of the problem.
-             </p>
+             <a style={{ textDecoration: "none" }} href={IGNITE_Template}>
+                <span className="metaportal_fn_button_4">
+                  Idea Submission Template
+                </span>
+              </a>
             </div>
             
             <div
