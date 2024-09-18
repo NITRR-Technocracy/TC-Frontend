@@ -193,8 +193,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
       });
     } else if (memberPhoneNumberValidations.includes(false)) {
     } else {
-      let condition1 =
-        form.isnitrr === "yes" &&
+      let condition1 =true&&
         form.team_name !== "" &&
         form.leader_name !== "" &&
         form.leader_email !== "" &&
@@ -206,9 +205,23 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
         form.member2_year !== "" &&
         form.member2_whatsapp !== "" &&
         form.member2_branch !== "" ;
-
-      let isnitrrConditions =
-        form.isnitrr === "No" ? form.College_name !== "" : true;
+        console.log(form.team_name);
+        console.log(form.leader_name);
+        console.log(form.leader_email);
+        console.log(form.leader_year);
+        console.log(form.leader_whatsapp);
+        console.log(form.leader_branch);
+        console.log(form.member2_name);
+        console.log(form.member2_email);
+        console.log(form.member2_year);
+        console.log(form.member2_whatsapp);
+        console.log(form.member3_branch);
+        console.log(form.member3_name);
+        console.log(form.member3_email);
+        console.log(form.member3_year);
+        console.log(form.member3_whatsapp);
+        console.log(form.member3_branch);
+      let isnitrrConditions = true;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -219,7 +232,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
           form.member3_year !== "" &&
           form.member3_branch !== "";
       }
-
+      console.log(condition1);
       if (condition1 && condition2 && isnitrrConditions) {
         const formData = { ...form };
         if (formData.isnitrr === "yes") {
@@ -240,8 +253,6 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
             type: "success"
           });
         } catch (err) {
-          localStorage.removeItem("igniteForm");
-          console.log("data is deleted");
           console.error(err);
           // setAlertMessage(err.response.data.message);
           // setShowAlert(true);
@@ -292,45 +303,45 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
         <div key={i}>
           <li>
             <input
-              name={`Member${i + 1}_name`}
+              name={`member${i + 1}_name`}
               className="memberName"
               type="text"
               placeholder={`Member ${i} Name`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_name`]}
+              value={form[`member${i + 1}_name`]}
             />
           </li>
 
           <li>
             <input
-              name={`Member${i + 1}_branch`}
+              name={`member${i + 1}_branch`}
               className="memberName"
               type="text"
               placeholder={`Member ${i}'s Branch`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_branch`]}
+              value={form[`member${i + 1}_branch`]}
             />
           </li>
 
           <li>
             <input
-              name={`Member${i + 1}_year`}
+              name={`member${i + 1}_year`}
               className="memberName"
               type="text"
               placeholder={`Member ${i}'s Current Year`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_year`]}
+              value={form[`member${i + 1}_year`]}
             />
           </li>
 
           <li>
             <input
-              name={`Member${i + 1}_email`}
+              name={`member${i + 1}_email`}
               className="memberName"
               type="text"
               placeholder={`Member ${i} Email ID`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_email`]}
+              value={form[`member${i + 1}_email`]}
             />
             {/* {emailError && (
               <div style={{ color: "red", marginTop: "0.5rem" }}>
@@ -355,18 +366,18 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
 
           <li>
             <input
-              name={`Member${i + 1}_whatsapp`}
+              name={`member${i + 1}_whatsapp`}
               className="memberNumber"
               type="text"
-              placeholder={`Member ${i} Whatsapp Number`}
+              placeholder={`member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_whatsapp`] || ""}  
+              value={form[`member${i + 1}_whatsapp`] || ""}  
             />
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
             </span>
-            {form[`Member${i + 1}_whatsapp`] &&
-              form[`Member${i + 1}_whatsapp`].length !== 10 && (
+            {form[`member${i + 1}_whatsapp`] &&
+              form[`member${i + 1}_whatsapp`].length !== 10 && (
                 <p style={{ color: "red" }}>
                   Enter a number of 10 digits only.
                 </p>
