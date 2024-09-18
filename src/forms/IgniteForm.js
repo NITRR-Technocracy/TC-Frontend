@@ -193,35 +193,27 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
       });
     } else if (memberPhoneNumberValidations.includes(false)) {
     } else {
-      let condition1 =true&&
-        form.team_name !== "" &&
-        form.leader_name !== "" &&
-        form.leader_email !== "" &&
-        form.leader_year !== "" &&
-        form.leader_whatsapp !== "" &&
-        form.leader_branch !== "" &&
-        form.member2_name !== "" &&
-        form.member2_email !== "" &&
-        form.member2_year !== "" &&
-        form.member2_whatsapp !== "" &&
-        form.member2_branch !== "" ;
-        console.log(form.team_name);
-        console.log(form.leader_name);
-        console.log(form.leader_email);
-        console.log(form.leader_year);
-        console.log(form.leader_whatsapp);
-        console.log(form.leader_branch);
-        console.log(form.member2_name);
-        console.log(form.member2_email);
-        console.log(form.member2_year);
-        console.log(form.member2_whatsapp);
-        console.log(form.member3_branch);
-        console.log(form.member3_name);
-        console.log(form.member3_email);
-        console.log(form.member3_year);
-        console.log(form.member3_whatsapp);
-        console.log(form.member3_branch);
-      let isnitrrConditions = true;
+      let condition1 =
+        form.isNITRR !== "" &&
+        form.Team_name !== "" &&
+        form.Leader_name !== "" &&
+        form.Leader_email !== "" &&
+        form.Leader_year !== "" &&
+        form.Leader_rollNo !== "" &&
+        form.Leader_whatsapp !== "" &&
+        form.Leader_branch !== "" &&
+        form.Member2_name !== "" &&
+        form.Member2_email !== "" &&
+        form.Member2_year !== "" &&
+        form.Member2_rollNo !== "" &&
+        form.Member2_whatsapp !== "" &&
+        form.Member2_branch !== "" &&
+        form.Problem_code !== "" &&
+        form.file &&
+        form.Member2_whatsapp.length === 10;
+
+      let isNITRRConditions =
+        form.isNITRR === "No" ? form.College_name !== "" : true;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -232,8 +224,8 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
           form.member3_year !== "" &&
           form.member3_branch !== "";
       }
-      console.log(condition1);
-      if (condition1 && condition2 && isnitrrConditions) {
+
+      if (condition1 && condition2 && isNITRRConditions) {
         const formData = { ...form };
         if (formData.isnitrr === "yes") {
           delete formData.College_name;
@@ -253,6 +245,8 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
             type: "success"
           });
         } catch (err) {
+          localStorage.removeItem("igniteForm");
+          console.log("data is deleted");
           console.error(err);
           // setAlertMessage(err.response.data.message);
           // setShowAlert(true);
@@ -371,13 +365,13 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               type="text"
               placeholder={`member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
-              value={form[`member${i + 1}_whatsapp`] || ""}  
+              value={form[`Member${i + 1}_whatsapp`]}
             />
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
             </span>
-            {form[`member${i + 1}_whatsapp`] &&
-              form[`member${i + 1}_whatsapp`].length !== 10 && (
+            {form[`Member${i + 1}_whatsapp`] !== "" &&
+              form[`Member${i + 1}_whatsapp`].length !== 10 && (
                 <p style={{ color: "red" }}>
                   Enter a number of 10 digits only.
                 </p>
