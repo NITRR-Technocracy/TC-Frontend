@@ -824,11 +824,6 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               ▪ A digital Certificate of Appreciation will be awarded to all teams who presented their project 
               in the VIGYAAN Exhibition. 
               </p>
-              <p>
-              ▪ A digital Certificate of Participation will be awarded to teams that qualified the presentation 
-              round but narrowly missed clearing the prototype round subject to the approval of concerned 
-              faculty in-charges.
-              </p>
             </div>
           </div>
         </div>
