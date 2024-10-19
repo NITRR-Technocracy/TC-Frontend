@@ -4,14 +4,14 @@ import HeadCard from "../components/HeadCard";
 import { coordinatorsList } from "../assets/heads_data";
 import { coresList } from "../assets/cores_data";
 import OCCard from "../components/OCCard";
-import Title from "../components/Title";
+// import Title from "../components/Title";
 import Domain from "./Domain";
 import teampic from "../assets/images/teampic.webp"
-
+import PTitle from "../components/PokemonTitle";
 const Team = () => {
   return (
     <div className={styles.container}>
-      <Title color={"TEAM"} noncolor={"TECHNOCRACY"} />
+      <PTitle color={""} noncolor={"TEAM TECHNOCRACY"} />
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">
           <div className="news_part">
@@ -23,7 +23,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <Title color={"OVERALL"} noncolor={"COORDINATORS"} />
+      <PTitle color={""} noncolor={"OVERALL COORDINATORS"} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id <= 4) {
@@ -41,7 +41,7 @@ const Team = () => {
           return null;
         })}
       </div>
-      <Title color={"HEAD"} noncolor={"COORDINATORS"} />
+      <PTitle color={""} noncolor={"HEAD COORDINATORS"} />
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id > 4) {
@@ -59,7 +59,7 @@ const Team = () => {
           return null;
         })}
       </div>
-      <Title color={"CORE"} noncolor={"COORDINATORS"} />
+      <PTitle color={""} noncolor={"CORE COORDINATORS"} />
       <div className={styles.CoreSection}>
         {coresList.map((heads) => {
           return (
@@ -83,7 +83,7 @@ const Team = () => {
           );
         })}
       </div>
-      <Title color={"EXECUTIVES"} noncolor={""} />
+      <PTitle color={""} noncolor={"EXECUTIVES"} />
       <Domain name1={"Event Management"} name2={"Media And Public Relation"} name3={"Sponsorship"}/>
       <Domain name1={"Design And Editing"} name2={"Vigyaan"} name3={"Tech"}/>
       <Domain name1={"Documentation"}/>

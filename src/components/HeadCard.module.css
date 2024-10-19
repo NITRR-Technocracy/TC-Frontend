@@ -6,23 +6,29 @@
   cursor: pointer;
   width:  18vw;
   height: 22vw;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  background-color: #ece938;
+  /* border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  border-radius: 20px;
+}
+.card:hover{
+  box-shadow: 0 50px 70px rgb(212, 215, 39); /* Blue shadow */
 
 }
 
 .parentcard{
   backdrop-filter: blur(10px) saturate(200%);
   -webkit-backdrop-filter: blur(7px) saturate(200%);
-  background-color: rgba(150, 61, 185, 0.151);
+  background-color: #daf912;
     padding: 0.25rem;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  border-radius: 20px;
   margin: 2rem 1rem;
 }
 
 .card::after{
-  background: linear-gradient(180deg,transparent 65%,#000000);
+  background: linear-gradient(180deg,transparent 65%,#b7ab45);
   content: "";
   height: 100%;
   left: 0;
@@ -30,6 +36,7 @@
   top: 0;
   width: 100%;
   z-index: 3;
+  /* background-color: #ece938; */
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -47,6 +54,7 @@
 }
 
 .content {
+  /* background-color: #ece938; */
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -72,7 +80,7 @@
 }
 
 .position{
-  color: #8f6cc9;
+  color: #ece938;
   font-weight: 600;
   font-family: "kanit";
   font-variation-settings: "wght" 500;
@@ -254,4 +262,6 @@ i{
     margin: 0.8rem 0.7rem;
     padding: 0.1rem;
   }
-}
+} 
+
+
