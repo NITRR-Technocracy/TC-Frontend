@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { BiLogoGithub ,BiLogoLinkedinSquare ,BiLogoGmail,BiLogoInstagram } from "react-icons/bi";
 import VanillaTilt from 'vanilla-tilt';
-import styles from './TechTeamCard.module.css'
-
+import styles from './TechTeamCard.module.css'; // Correctly import the CSS module
+import { BiLogoGithub ,BiLogoLinkedinSquare ,BiLogoGmail,BiLogoInstagram } from "react-icons/bi";
 function TeamMemberCard(props) {
   const cardRef = useRef(null);
 
   useEffect(() => {
-  
     if (cardRef.current) {
       VanillaTilt.init(cardRef.current, {
         max: 12,
@@ -16,31 +14,37 @@ function TeamMemberCard(props) {
         'max-glare': 0.2,
       });
     }
-      return () => {
-        
-        if (cardRef.current) {
-          cardRef.current.vanillaTilt.destroy();
-        }
-  
-      };
-    }, []);
+
+    return () => {
+      if (cardRef.current) {
+        cardRef.current.vanillaTilt.destroy();
+      }
+    };
+  }, []);
 
   return (
-    <>
-<div ref={cardRef} className={styles.card}>
-        <img src={props.imgSrc} className={styles.cardImage} alt="..." />
-        <div className={styles.cardBody}>
-          <div className={styles.cardTitle}>{props.name}</div>
-          <div className={styles.cardText}>{props.desi}</div>
+    <div className={styles['tech-team-card']} ref={cardRef}>
+      <div className={styles['card-content']}>
+        <img src={props.imgSrc} alt={props.name} className={styles['profile-photo']} />
+        <h2>{props.name}</h2>
+        <p>{props.desi}</p>
+        <div className={styles['social-links']}>
+          <a href={props.InstaId} target="_blank" rel="noopener noreferrer">
+            <BiLogoInstagram className="styles.icon"/>
+          </a>
+          <a href={props.LinkedinId} target="_blank" rel="noopener noreferrer">
+            <BiLogoLinkedinSquare className="styles.icon"/>
+          </a>
+          <a href={props.GithubId} target="_blank" rel="noopener noreferrer">
+            <BiLogoGithub className="styles.icon"/>
+          </a>
+          <a href={`mailto:${props.email}`}>
+            <BiLogoGmail className="styles.icon"/>
+          </a>
         </div>
-        <div className={styles.social}>
-       <a href={props.GithubId}><BiLogoGithub className={styles.icon}/></a>
-       <a href={props.LinkedinId}><BiLogoLinkedinSquare className={styles.icon}/></a>
-       <a href=''><BiLogoGmail className={styles.icon}/></a>
-       <a href={props.InstaId}><BiLogoInstagram className={styles.icon}/></a>
-        </div>
+      </div>
     </div>
-    </>
   );
 }
+
 export default TeamMemberCard;

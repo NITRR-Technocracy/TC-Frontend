@@ -6,7 +6,7 @@ import Title from "../components/Title";
 
 function TechTeamSec() {
   return (
-    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+    <div className='Homescrolled' style={{position:"relative", zIndex:"-1" , background: 'transparent'}}>
     <div className={styles.Container} style={{position:"relative", zIndex:"0"}}>
       <Title color={"TECH"} noncolor={"TEAM"} />
       <h4 style={{color:"white"}}>
