@@ -1,9 +1,11 @@
 import React from "react";
-import EventSec from "../sections/EventSec";
-
+// import EventSec from "../sections/EventSec";
+import Event from "../components/EventCard";
+import { div } from "three/webgpu";
 const EventPage = ()=>{
     return(
-        <EventSec/>
+        <Event/>
+        // <div>hi</div>
     )
 }
 

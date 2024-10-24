@@ -1,55 +1,164 @@
-.Container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5rem;   
-}
-
-.begin{
-    color: white;
-}
-h1{
-    color: #fff;
-    font-size: 3rem;
-}
-
-h4{
-    font-size: 25px;
-    margin-bottom: 30px;
-    color: #9D44C0;
-}
-
-.CardContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 30px;
-    row-gap: 50px;
-}
-
-@media (max-width:1200px){
-    .CardContainer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 5vw;
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../assets/font/Pokemon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  
+  .carousel {
+      height: 100vh; /* Full viewport height */
+      width: 100vw;  /* Full viewport width */
+      overflow: hidden;
+      position: relative;
+      /* padding: 30px; */
     }
-    .Container{
-        padding-left: 50px;
-        padding-right: 50px;
+    
+    .carousel .list {
+      position: relative;
+      display: flex;
+      gap: 30px;
+      height: 100%; /* Ensures the carousel maintains full height */
     }
-}
+    
+    .carousel .list .item {
+      min-width: 100%; /* Ensure each item takes up the full width */
+      min-height: 100%; /* Full height for each item */
+      position: relative; /* Required for absolute positioning of content */
+    }
+    
+    .carousel .list .item img {
+      top: 5%;
+      width: 100%; 
+      height: 100%; /* Full height */
+      min-height: 100vh; /* Full height of the viewport */
+      object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    }
+    .carousel .list .item .carousel .button{
+      padding: 10px;
+      background: #bf1e1e;
+    }
+  
+  
+    .carousel .list .item .content {
+      position: absolute; /* Overlay the content on the image */
+      top: 18%; /* Position it at 10% from the top of the image */
+      left: 10%; /* Position it 10% from the left of the image */
+      z-index: 10; /* Ensure the content is on top of the image */
+      color: #dfdee6; /* White text for visibility */
+      /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background for readability */
+      /* background: black; */
+      background: transparent;
+      padding: 20px; /* Padding inside the content */
+      border-radius: 10px; /* Optional: rounded corners */
+      font-family: "Pokemon";
+      font-size: x-large;
+      
+    }
 
-@media (max-width:900px){
-    .CardContainer{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        row-gap: 3rem;
+
+    .carousel .list .item .content button{
+        border-radius: 12px;
+        background: #06c35b;
+        padding: 5px;
     }
-}
-@media(max-width:550px){
-    h4{
-        font-size: 25px;
+    
+    .carousel .list .item .content button a{
+        text-decoration: none;
+        color: black;
     }
-}
+
+
+    .thumbnail {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      display: flex;
+      gap: 20px;
+      bottom: 25%;
+      /* transform: translateX(15%); */
+    }
+    
+    .thumbnail .item {
+      width: 150px;
+      height: 220px;
+    }
+    
+    .thumbnail .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    
+    .arrows {
+      position: absolute;
+      top: 80%;
+      display: flex;
+      gap: 10px;
+      left: 50px;
+      transform: translateY(-50%);
+    }
+    
+    .arrows button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      /* background-color: rgba(15, 225, 47, 0.984); */
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+    
+    .arrows button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      .carousel {
+        padding: 0; /* Remove padding for mobile for a cleaner look */
+      }
+    
+      .carousel .list .item {
+        min-height: 100vh; /* Full screen height on mobile */
+      }
+    
+      .carousel .list .item img {
+        min-height: 100vh; /* Ensure image takes up the full screen height */
+        object-fit: cover; /* Cover the image while maintaining aspect ratio */
+      }
+    
+      .carousel .list .item .content {
+        top: 10%; /* Adjust positioning for mobile */
+        left: 5%;
+        padding: 15px;
+        background: transparent;
+        font-size: smaller;
+      }
+    
+      .thumbnail .item {
+        bottom: 5%;
+        width: 100px;
+        height: 150px;
+      }
+    
+      .arrows {
+        left: 5px; /* Move navigation arrows closer to the edge on mobile */
+      }
+      .arrows button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        /* background-color: rgba(15, 33, 225, 0.984); */
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    }
