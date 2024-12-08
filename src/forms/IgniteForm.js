@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, {  useEffect, useRef, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import urls from "../keys.json";
 import AOS from "aos";
@@ -11,8 +11,6 @@ import IgniteLoader from "../layout/IgniteLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import AlertScreen from "../components/alertScreen";
-
-
 
 
 const backend = urls.backend;
@@ -396,275 +394,277 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
         style={{ paddingTop: "3rem" }}
       >
         <div className="metaportal_fn_mintbox" style={{ maxWidth: "100%" }}>
-         {/* <div className="mint_left"> */}
-  {/* Title section with the text "REGISTER NOW" */}
-  {/* <div className="mint_title">
-    <span>REGISTER NOW</span>
-  </div> */}
+          <div className="mint_left">
+            <div className="mint_title">
+              <span>REGISTER NOW</span>
+            </div>
 
-  {/* Section for checking if the user is from NITRR */}
-  {/* <div style={{ paddingBottom: "1rem" }}> */}
-    {/* Conditional rendering for NITRR users. Uncomment if needed */}
-    {/*{isnitrr && (
-      <div style={{ paddingBottom: "1rem" }}>
-        <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>
-          To generate NITRR college email ID, go to:
-        </h3>
-        <Link to="https://ldap.nitrr.ac.in/" style={{ color: "lightblue" }}>
-          https://ldap.nitrr.ac.in/
-        </Link>
-      </div>
-    )}*/}
+            {/* From NITRR or not */}
+            <div style={{ paddingBottom: "1rem" }}>
+              {/*{isnitrr && (
+                <div style={{ paddingBottom: "1rem" }}>
+                  <h3
+                    className="metaportal_fn_countdown"
+                    style={{ paddingBottom: "1rem" }}
+                  >
+                    To generate NITRR college email ID, go to:
+                  </h3>
+                  <Link
+                    to="https://ldap.nitrr.ac.in/"
+                    style={{ color: "lightblue" }}
+                  >
+                    https://ldap.nitrr.ac.in/
+                  </Link>
+                </div>
+              )}*/}
+              {/* <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Are You From NITRR?
+              </h3> */}
+              {/* <ul style={{ listStyleType: "none", padding: 0 }}>
+                <li style={{ marginBottom: "0.5rem" }}>
+                  <input
+                    type="radio"
+                    name="isnitrr"
+                    value="Yes"
+                    onChange={handleRadioChange}
+                  />
+                  <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
+                    Yes
+                  </label>
+                </li> */}
 
-    {/* Radio buttons to ask if the user is from NITRR. Uncomment if needed */}
-    {/* <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>
-      Are You From NITRR?
-    </h3>
-    <ul style={{ listStyleType: "none", padding: 0 }}>
-      <li style={{ marginBottom: "0.5rem" }}>
-        <input
-          type="radio"
-          name="isnitrr"
-          value="Yes"
-          onChange={handleRadioChange}
-        />
-        <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
-      </li>
-      <span style={{ fontSize: "1rem" }}>
-        * If selected Yes, then only institute mail id accepted.
-      </span>
-      <li style={{ marginBottom: "0.5rem" }}>
-        <input
-          type="radio"
-          name="isnitrr"
-          value="No"
-          onChange={handleRadioChange}
-        />
-        <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
-      </li>
-      <span style={{ fontSize: "1rem" }}>
-        * If selected No, then write your College Name and any type of Email accepted.
-      </span>
-    </ul> */}
-  {/* </div> */}
+                {/* <span style={{ fontSize: "1rem" }}>
+                  * If selected Yes, then only institute mail id accepted.
+                </span> */}
+                {/* <li style={{ marginBottom: "0.5rem" }}>
+                  <input
+                    type="radio"
+                    name="isnitrr"
+                    value="No"
+                    onChange={handleRadioChange}
+                  />
+                  <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>
+                    No
+                  </label>
+                </li>
 
-  {/* Form input fields for registration */}
-  {/* <div className="mint_list">
-    <ul> */}
-      {/* Input for Team Name */}
-      {/* <li data-aos="fade-down">
-        <input
-          name="team_name"
-          id="teamName"
-          type="text"
-          placeholder="Team Name"
-          onChange={(e) => handle(e)}
-          value={form.team_name}
-        />
-      </li> */}
+                <span style={{ fontSize: "1rem" }}>
+                  * If selected No, then write your College Name and any type of
+                  Email accepted.
+                </span>
+              </ul> */}
+            </div>
+            {/* Important Details */}
+            <div className="mint_list">
+              <ul>
+                <li data-aos="fade-down">
+                  <input
+                    name="team_name"
+                    id="teamName"
+                    type="text"
+                    placeholder="Team Name"
+                    onChange={(e) => handle(e)}
+                    value={form.team_name}
+                  />
+                </li>
+                {/* <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="Problem_code"
+                    placeholder="Problem Code"
+                    onChange={(e) => handle(e)}
+                    value={form.Problem_code}
+                  />
+                </li> */}
+                {/* {!isnitrr && (
+                  <li data-aos="fade-down">
+                    <input
+                      name="College_name"
+                      id="collegeName"
+                      type="text"
+                      placeholder="College Name"
+                      onChange={(e) => handle(e)}
+                      value={form.College_name}
+                    />
+                  </li>
+                )} */}
+              </ul>
 
-      {/* Uncomment if the problem code input is needed */}
-      {/* <li data-aos="fade-down">
-        <input
-          id="leaderName"
-          type="text"
-          name="Problem_code"
-          placeholder="Problem Code"
-          onChange={(e) => handle(e)}
-          value={form.Problem_code}
-        />
-      </li> */}
+              {/* Team Leader Details */}
+              <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Team Leader Details
+              </h3>
+              <ul>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="leader_name"
+                    placeholder="Leader Name"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="leader_branch"
+                    id="leaderBranch"
+                    type="text"
+                    placeholder="Leader Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="leader_year"
+                    id="leaderYear"
+                    type="text"
+                    placeholder="Leader Current Year"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_year}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderEmail"
+                    type="text"
+                    name="leader_email"
+                    placeholder="Leader Email ID"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_email}
+                  />
+                  {/* {emailError && (
+                    <div style={{ color: "red", marginTop: "0.5rem" }}>
+                      {emailError}
+                    </div>
+                  )} */}
+                  <span style={{ fontSize: "0.7rem" }}>
+                    {" "}
+                    *  Use institute Email ID if you have
+                    one.
+                  </span>
+                </li>
 
-      {/* Uncomment if the College Name field is needed for non-NITRR users */}
-      {/* {!isnitrr && (
-        <li data-aos="fade-down">
-          <input
-            name="College_name"
-            id="collegeName"
-            type="text"
-            placeholder="College Name"
-            onChange={(e) => handle(e)}
-            value={form.College_name}
-          />
-        </li>
-      )} */}
-    {/* </ul> */}
+                {/* <li data-aos="fade-down">
+                  <input
+                    name="Leader_rollNo"
+                    id="rollNumber"
+                    type="text"
+                    placeholder="Leader Roll Number"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_rollNo}
+                  />
+                </li> */}
+                <li data-aos="fade-down">
+                <input
+                  id="leaderNumber"
+                  type="text"
+                  name="leader_whatsapp"
+                  placeholder="Leader Whatsapp Number"
+                  onChange={(e) => handle(e)}
+                  value={form.leader_whatsapp || ""}  
+                />
+                <span style={{ fontSize: "0.7rem" }}>
+                  * Don't include +91 or 0.
+                </span>
+                {form.leader_whatsapp && form.leader_whatsapp.length !== 10 && (
+                  <p style={{ color: "red" }}>
+                    Enter a number of 10 digits only.
+                  </p>
+                )}
+              </li>
 
-    {/* Section for Team Leader Details */}
-    {/* <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>
-      Team Leader Details
-    </h3>
-    <ul> */}
-      {/* Input for Leader Name */}
-      {/* <li data-aos="fade-down">
-        <input
-          id="leaderName"
-          type="text"
-          name="leader_name"
-          placeholder="Leader Name"
-          onChange={(e) => handle(e)}
-          value={form.leader_name}
-        />
-      </li> */}
-
-      {/* Input for Leader Branch */}
-      {/* <li data-aos="fade-down">
-        <input
-          name="leader_branch"
-          id="leaderBranch"
-          type="text"
-          placeholder="Leader Branch"
-          onChange={(e) => handle(e)}
-          value={form.leader_branch}
-        />
-      </li> */}
-
-      {/* Input for Leader Year */}
-      {/* <li data-aos="fade-down">
-        <input
-          name="leader_year"
-          id="leaderYear"
-          type="text"
-          placeholder="Leader Current Year"
-          onChange={(e) => handle(e)}
-          value={form.leader_year}
-        />
-      </li> */}
-
-      {/* Input for Leader Email ID */}
-      {/* <li data-aos="fade-down">
-        <input
-          id="leaderEmail"
-          type="text"
-          name="leader_email"
-          placeholder="Leader Email ID"
-          onChange={(e) => handle(e)}
-          value={form.leader_email}
-        /> */}
-        {/* Uncomment and add error handling if needed */}
-        {/* {emailError && (
-          <div style={{ color: "red", marginTop: "0.5rem" }}>
-            {emailError}
+              </ul>
+              <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Member Details
+              </h3>
+              <ul>
+                {/* Member's Field*/}
+                {renderMemberFields()}
+                <li
+                  data-aos="fade-down"
+                  style={{
+                    padding: "0",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    margin: "0",
+                  }}
+                >
+                  {memberCount < 2 && (
+                    <li className="add-remove" onClick={handleAddMember}>
+                      + Add Member
+                    </li>
+                  )}
+                  {memberCount > 0 && (
+                    <li className="add-remove" onClick={handleRemoveMember}>
+                      - Remove
+                    </li>
+                  )}
+                </li>
+              </ul>
+              <input
+                accept="application/pdf"
+                style={{ display: "none" }}
+                id="file-input"
+                type="file"
+                onChange={handleFileChange}
+              />
+              <label
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                }}
+                htmlFor="file-input"
+              >
+                <span className="metaportal_fn_button_2">
+                  Upload Idea Submission PPT
+                </span>
+                {uploadedFileName && (
+                  <p style={{ color: "white", paddingTop: "1rem" }}>
+                    Uploaded File: {uploadedFileName}
+                  </p>
+                )}
+              </label>
+            </div>
+            <div className="hcap" style={{ paddingTop: "3rem" }}>
+              <HCaptcha
+                sitekey={keys.hcaptcha}
+                onClick={onLoad}
+                onVerify={setToken}
+                ref={captchaRef}
+                className="custom-captcha"
+              />
+            </div>
+            <div className="mint_desc" style={{ paddingTop: "3rem" }}>
+              {!isSubmitting ? (
+                <div
+                  target="_blank"
+                  rel="noreferrer"
+                  className="metaportal_fn_button"
+                  style={{ cursor: "pointer" }}
+                  onClick={submit}
+                  disabled={isSubmitting}
+                >
+                  <span>Submit</span>
+                </div>
+              ) : (
+                <IgniteLoader />
+              )}
+              {/* <p>* Read the Rules & Regulations before Submitting</p> */}
+            </div>
           </div>
-        )} */}
-        {/* <span style={{ fontSize: "0.7rem" }}>
-          * Use institute Email ID if you have one.
-        </span>
-      </li> */}
-
-      {/* Input for Leader Whatsapp Number */}
-      {/* <li data-aos="fade-down">
-        <input
-          id="leaderNumber"
-          type="text"
-          name="leader_whatsapp"
-          placeholder="Leader Whatsapp Number"
-          onChange={(e) => handle(e)}
-          value={form.leader_whatsapp || ""}
-        />
-        <span style={{ fontSize: "0.7rem" }}>
-          * Don't include +91 or 0.
-        </span>
-        {form.leader_whatsapp && form.leader_whatsapp.length !== 10 && (
-          <p style={{ color: "red" }}>
-            Enter a number of 10 digits only.
-          </p>
-        )}
-      </li>
-    </ul>
-
-    {/* Section for Member Details */}
-    {/* <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>
-      Member Details
-    </h3>
-    <ul> */}
-      {/* Member fields rendering dynamically */}
-      {/* {renderMemberFields()} */}
-
-      {/* Add and Remove Member buttons */}
-      {/* <li
-        data-aos="fade-down"
-        style={{
-          padding: "0",
-          display: "flex",
-          justifyContent: "space-between",
-          margin: "0",
-        }} 
-      >* */}
-        {/* {memberCount < 2 && (
-          <li className="add-remove" onClick={handleAddMember}>
-            + Add Member
-          </li>
-        )} */}
-        {/* {memberCount > 0 && (
-          <li className="add-remove" onClick={handleRemoveMember}>
-            - Remove
-          </li>
-        )}
-      </li>
-    </ul> */}
-
-    {/* File Upload for Idea Submission PPT */}
-    {/* <input
-      accept="application/pdf"
-      style={{ display: "none" }}
-      id="file-input"
-      type="file"
-      onChange={handleFileChange}
-    />
-    <label
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-      htmlFor="file-input"
-    >
-      <span className="metaportal_fn_button_2">
-        Upload Idea Submission PPT
-      </span> */}
-      {/* Display the uploaded file name */}
-      {/* {uploadedFileName && (
-        <p style={{ color: "white", paddingTop: "1rem" }}>
-          Uploaded File: {uploadedFileName}
-        </p>
-      )}
-    </label>
-  </div> */}
-
-  {/* Captcha for verification */}
-  {/* <div className="hcap" style={{ paddingTop: "3rem" }}>
-    <HCaptcha
-      sitekey={keys.hcaptcha}
-      onClick={onLoad}
-      onVerify={setToken}
-      ref={captchaRef}
-      className="custom-captcha"
-    />
-  </div> */}
-
-  {/* Submit button with loader */}
-  {/* <div className="mint_desc" style={{ paddingTop: "3rem" }}>
-    {!isSubmitting ? (
-      <div
-        target="_blank"
-        rel="noreferrer"
-        className="metaportal_fn_button"
-        style={{ cursor: "pointer" }}
-        onClick={submit}
-        disabled={isSubmitting}
-      >
-        <span>Submit</span>
-      </div>
-    ) : (
-      <IgniteLoader />
-    )} */}
-    {/* Uncomment to add a message to read the rules */}
-    {/* <p>* Read the Rules & Regulations before Submitting</p> */}
-  {/* </div>
-</div> */}
-
-
           <div className="mint_right" style={{width:"100%"}}>
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
@@ -682,7 +682,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 className="mint_time"
               >
                 <h4>VIGYAAN IGNITE</h4>
-                <h3 className="metaportal_fn_countdown">RULES</h3> 
+                <h3 className="metaportal_fn_countdown">RULES</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>▪ A team can have 2-3 members (including team leader). </p>

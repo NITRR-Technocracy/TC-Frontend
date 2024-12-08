@@ -1,22 +1,32 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Team from '../sections/Team'
 import Contact from '../sections/Contact';
-// import FullPageLoader from '../layout/FullPageLoader';
+import Team from '../sections/Team';
+import SpheresBackground from './SpheresBackground'; // Import the updated SpheresBackground
+
 const TeamPage = () => {
 
   useEffect(() => {
-    AOS.init({ duration: 1000, });
-    window.scrollTo(0, 0)
-   
-  }, [])
-  return (
-    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
-       <div style={{position:"relative", zIndex:"0"}}><Team/></div>
-       <Contact/>
-    </div>
-  )
-}
+    AOS.init({ duration: 1000 });
+    window.scrollTo(0, 0);
+  }, []);
 
-export default TeamPage
+  return (
+    <div className='Homescrolled' style={{ position: 'relative' ,zIndex: '1' , background: 'transparent'}}>
+      {/* Render Spheres in the background */}
+      <div style={{}}>
+      <SpheresBackground style={{opacity: '1'}}/>
+      </div>
+      
+      <div style={{ position: 'relative' , background: 'transparent'}}> {/* Adjust z-index to be above the spheres */}
+        <Team />
+      </div>
+      <div style={{ position: 'relative' , background: 'transparent' }}> {/* Adjust z-index to be above the spheres */}
+        <Contact />
+      </div>
+    </div>
+  );
+};
+
+export default TeamPage;        

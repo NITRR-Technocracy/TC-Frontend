@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../assets/font/Pokemon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  .title{
+    /* color:white; */
+    color: rgba(233, 215, 15, 0.838);
+    /* text-decoration-color: yellow; */
+    margin:50px 0px 50px 0px;
+    position:relative;
+    text-align: center;
+    z-index: 3;
+    font-family: 'Pokemon';
+  }
+  
+  .title h1{
+    font-size: 2.8rem;
+    color: yellow;
+    text-decoration: solid blue 2px;
+    font-family: 'Pokemon';
+  }
+  
+  .heading {
+    font-size: 4rem;
+    color: yellow;
+    font-family: "Pokemon";
+    padding-top: 20px;
+  }
+  .heading span {
+    
+              font-family: 'Pokemon';
+              /* font-style: yellow;  */
+              
+              color: rgb(213, 213, 23);
+              text-decoration: solid rgb(240, 202, 75);
+  
+  }
+  
+  @media(width<769px){
+    .heading{
+      padding: 0;
+      margin: 0;
+    }
+    .title h1{
+      font-size: 1.8rem;
+    }
+    .title{
+      margin-bottom: 0;
+    }
+  
+  }
+  @media(width<600px){
+    .heading{
+      padding: 0;
+      margin: 0;
+    }
+    .title h1{
+      font-size: 2.2rem;
+    }
+    .title{
+      /* margin: 0; */
+    }
+  
+  }
+  @media(width<426px){
+    .heading{
+      padding: 0;
+      margin: 0;
+    }
+    .title h1{
+      font-size: 1.6rem;
+    }
+    .title{
+      /* margin: 0; */
+    }
+  
+  }

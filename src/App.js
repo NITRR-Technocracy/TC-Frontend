@@ -17,7 +17,7 @@ import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
 
-import StarFieldAnimation from "./layout/StarFieldAnimation";
+// import StarFieldAnimation from "./layout/StarFieldAnimation";
 import TechTeam from "./pages/TechTeam";
 import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
@@ -204,8 +204,12 @@ function App() {
           </BrowserRouter>
         </ContentContainer>
         <BackgroundContainer>
-          {/* <ParticlesBackground /> */}
-          <StarFieldAnimation />
+//           {/* <ParticlesBackground /> */}
+// <<<<<<< main
+// //           <StarFieldAnimation />
+// =======
+//           {/* <StarFieldAnimation/> */}
+// >>>>>>> dev
         </BackgroundContainer>
       </CustomCursorContainer>
     </div>

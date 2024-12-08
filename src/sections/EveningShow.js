@@ -3,6 +3,7 @@ import sqrimg from "../assets/images/1x1-min.webp";
 import Title from "../components/Title";
 import left from "../assets/svgs/leftarrow.svg"
 import right from "../assets/svgs/rightarrow.svg"
+import prop19 from "../assets/Aavartan New/FRIENDS_202304_1821x1355_KeyArt02_Characters-2-1536x1143.png"
 
 // import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 // import AOS from "aos";
@@ -168,7 +169,7 @@ const EveningShow = () => {
         {/* <AnimatedDiv>
                     <img style={{position:"absolute", top:"220vh", right:"5%", animation: "${rocketAnimation} 5s infinite"}} height={200} src={prop3} alt="Rocket thumb" />
                     </AnimatedDiv> */}
-        <RotatingImage className="rimageaav"  src={prop3} alt="Rocket thumb" />
+        <RotatingImage className="rimageaav"  src={prop19} alt="Rocket thumb" />
         <div data-aos="fade-down" className="fn_cs_desc">
           <p style={{margin:"0"}}>
             The evening shows at Aavartan are a spectacle to behold, featuring
@@ -362,3 +363,4 @@ const EveningShow = () => {
   );
 };
 export default EveningShow;
+
