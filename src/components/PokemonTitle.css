@@ -6,7 +6,7 @@
   }
   
   
-  .pptitle{
+  .ptitle{
     /* color:white; */
     color: rgba(233, 215, 15, 0.838);
     /* text-decoration-color: yellow; */
@@ -17,7 +17,7 @@
     font-family: 'Pokemon';
   }
   
-  .pptitle h1{
+  .ptitle h1{
     font-size: 2.8rem;
     color: yellow;
     text-decoration: solid blue 2px;
@@ -48,7 +48,7 @@
       padding: 0;
       margin: 0;
     }
-    .pptitle h1{
+    .ptitle h1{
       font-size: 1.8rem;
     }
     .ptitle{
