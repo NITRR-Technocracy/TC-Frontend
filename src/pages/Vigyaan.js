@@ -39,7 +39,6 @@ const handleScroll = () => {
 
 
   return (
-    
     <div className="Vigyaanscrolled"> 
       <div className={scrolled ? "dark-overlay" : ""}></div>
           <VigyaanHero />

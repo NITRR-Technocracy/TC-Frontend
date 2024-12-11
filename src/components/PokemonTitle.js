@@ -1,5 +1,5 @@
 import React from 'react'
-import "./PokemonTitle.css"
+import "./PokemonTitle.module.css"
 // import { Line } from './Line'
 
 const PTitle = (props) => {

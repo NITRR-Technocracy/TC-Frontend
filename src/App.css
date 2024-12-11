@@ -1585,11 +1585,12 @@ a.full_link {
 
 .fn_cs_desc p {
 	margin: 0;
-	color: rgba(255, 255, 255, 0.851);
-	font-weight: 400;
-	letter-spacing: 1px;
-	/* text-shadow: px 2px 5px black; */
-	font-size: 20px;
+	color: rgba(255, 255, 255, 1);
+	font-weight: 200;
+	font-family: "AavartanFont";
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 5px rgb(168, 10, 10);
+	font-size: 25px;
 	line-height: 30px;
 	margin-bottom: 41px;
 	z-index: 2;
@@ -7686,7 +7687,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Vigyaanscrolled {
-	background: url("./assets/images/vigyaanbg.webp");
+	background: url("./assets/new-vigyaanbg.png");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
@@ -7818,6 +7819,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     font-family: 'AavartanFont';
     src: url('./assets/font/IrishGrover-Regular.ttf') format('truetype');
 }
+@font-face {
+	font-family: 'VigyaanFont';
+	src: url('./assets/font/Minecraftia-Regular.ttf') format('truetype')
+}
 
 
 @media(width<600px) {
@@ -7832,15 +7837,17 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .rimageaav {
 	position: absolute;
-	top: 240vh;
+	top: 237vh;
 	right: 0%;
-	height: 200px;
+	height: 250px;
+	filter:grayscale(0.5);
+
 }
 
 @media (max-width: 769px) {
 	.rimageaav {
 		position: absolute;
-		height: 150px;
+		height: 180px;
 		top: 250vh;
 		margin-right: 25%;
 	}
@@ -7849,7 +7856,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 @media (max-width: 426px) {
 	.rimageaav {
 		position: absolute;
-		height: 100px;
+		height: 130px;
 		top: 250vh;
 		margin-right: 15%;
 	}
