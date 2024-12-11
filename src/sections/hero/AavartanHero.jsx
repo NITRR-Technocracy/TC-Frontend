@@ -5,7 +5,7 @@ import prop1 from "../../assets/Aavartan New/angrybirds-ade9044e69a24e018f493bfb
 import prop2 from "../../assets/Aavartan New/DREAMBLAST_MainKeyArt_Birds2.png";
 import AAVARTAN from '../../assets/Aavartan New/AAVARTAN-10-17-2024 (1).png';
 import Stars from '../../assets/ThreeStars.png';
-// import Cloud from '.';
+import Cloud from '../../assets/Aavartan New/clouds.png'
 
 import AavartanStyleWrapper from "./AavartanHero.style";
 // import { NavLink } from "react-router-dom";
@@ -14,8 +14,8 @@ const AavartanHero = () => {
   return (
     <>
       <AavartanStyleWrapper>
-        {/* Cloud Container */}
-        {/* <div className="moving-cloud-container">
+        {/* Cloud Container  */}
+       {/* <div className="moving-cloud-container">
           <img src={Cloud} alt="Moving Cloud" className="moving-cloud" />
         </div> */}
 
@@ -79,7 +79,6 @@ const AavartanHero = () => {
                   the banner of our annual Tech-Fest “Aavartan”. We also
                   undertake technical projects and research initiatives.
                 </p>
-
               </div>
             </div>
           </div>

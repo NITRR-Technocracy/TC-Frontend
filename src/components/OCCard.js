@@ -1,21 +1,21 @@
 import React, { useRef } from 'react';
 import linkedin from "../assets/svgs/linkedin.svg";
 import insta from "../assets/svgs/insta.svg";
-import hoverSound from "../assets/audio/pika-pikachu-14757.mp3"
+// import hoverSound from "../assets/audio/pika-pikachu-14757.mp3"
 import styles from './OCCard.module.css'; 
 
 function OCCard(props) {
-  const audioRef = useRef(null); 
+  // const audioRef = useRef(null); 
 
-  const handleMouseEnter = () => {
-    if (audioRef.current) {
-      audioRef.current.play(); 
-    }
-  };
+  // const handleMouseEnter = () => {
+  //   if (audioRef.current) {
+  //     audioRef.current.play(); 
+  //   }
+  // };
 
   return (
-    <div className={styles.card} onMouseEnter={handleMouseEnter}>
-      <audio ref={audioRef} src={hoverSound} />
+    <div className={styles.card} >
+      {/* <audio ref={audioRef} src={hoverSound} /> */}
       
       <div className={styles['card-inner']}>
         <div className={styles['card-front']}>

@@ -30,7 +30,6 @@ const rotate360 = keyframes`
   right: 10%;
 } 
 `;
-
 const RotatingImage = styled.img`
   animation: ${rotate360} 5s linear infinite;
 `;

@@ -4,8 +4,8 @@ import "./PokemonTitle.css"
 
 const PTitle = (props) => {
   return (
-    <div className="title" >
-        <h1 className="heading">
+    <div className="ptitle" >
+        <h1 className="pheading">
            <span>{props.color}</span> {props.noncolor}
         </h1>
         {/* <Line/> */}

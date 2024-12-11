@@ -11,7 +11,7 @@ import PTitle from "../components/PokemonTitle";
 const Team = () => {
   return (
     <div className={styles.container}>
-      <PTitle color={""} noncolor={"TEAM TECHNOCRACY"} />
+      <PTitle  color={"TEAM"} noncolor={" TECHNOCRACY"} />
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">
           <div className="news_part">
@@ -23,7 +23,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <PTitle color={""} noncolor={"OVERALL COORDINATORS"} />
+      <PTitle color={"OVERALL"} noncolor={" COORDINATORS"} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id <= 4) {
@@ -41,7 +41,7 @@ const Team = () => {
           return null;
         })}
       </div>
-      <PTitle color={""} noncolor={"HEAD COORDINATORS"} />
+      <PTitle color={"HEAD"} noncolor={" COORDINATORS"} />
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id > 4) {
@@ -59,7 +59,7 @@ const Team = () => {
           return null;
         })}
       </div>
-      <PTitle color={""} noncolor={"CORE COORDINATORS"} />
+      <PTitle color={"CORE"} noncolor={" COORDINATORS"} />
       <div className={styles.CoreSection}>
         {coresList.map((heads) => {
           return (

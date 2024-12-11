@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Contact from '../sections/Contact';
 import Team from '../sections/Team';
-import SpheresBackground from './SpheresBackground'; // Import the updated SpheresBackground
+// import SpheresBackground from './SpheresBackground';
 
 const TeamPage = () => {
 
@@ -16,7 +16,7 @@ const TeamPage = () => {
     <div className='Homescrolled' style={{ position: 'relative' ,zIndex: '1' , background: 'transparent'}}>
       {/* Render Spheres in the background */}
       <div style={{}}>
-      <SpheresBackground style={{opacity: '1'}}/>
+      {/* <SpheresBackground style={{opacity: '1'}}/> */}
       </div>
       
       <div style={{ position: 'relative' , background: 'transparent'}}> {/* Adjust z-index to be above the spheres */}

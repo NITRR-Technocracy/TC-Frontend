@@ -1,4 +1,5 @@
-import Title from '../components/Title';
+// import Title from '../components/Title';
+import PTitle from '../components/PokemonTitle';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -13,7 +14,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className={styles.ContactContainer}>
-        <Title color={color} noncolor={noncolor}/>
+        <PTitle id ="title"color={color} noncolor={noncolor}/>
       
         <div className="fn_cs_contact_form">
           <form

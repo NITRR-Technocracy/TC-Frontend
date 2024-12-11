@@ -12,7 +12,19 @@ const rocketAnimation = keyframes`
         bottom: 3rem;
     }
 `;
-
+const popIn = keyframes`
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 const rocketAnimation2 = keyframes`
     0%,
     100% {
@@ -33,6 +45,7 @@ const AavartanStyleWrapper = styled.section`
   height: 100vh;
   padding: 250px 0;
   overflow: hidden;
+  animation: ${popIn} 2s ease forwards; 
 
   .btncontainer {
     position: absolute;
@@ -48,6 +61,25 @@ const AavartanStyleWrapper = styled.section`
     left: 10%;
     z-index: 0;
   }
+  ${'' /* .moving-cloud-container {
+  position: relative;
+  height: 100vh;
+}
+
+.moving-cloud {
+  position: relative;
+  animation: moveCloud 180s linear infinite; 
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-80%); 
+  }
+  50% {
+    transform: translateX(5vw); 
+  }
+} */}
+
 
   .row {
     display: flex;

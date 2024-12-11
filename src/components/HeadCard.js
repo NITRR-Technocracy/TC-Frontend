@@ -5,25 +5,25 @@ import insta from "../assets/svgs/insta.svg";
 import hoverSound from "../assets/audio/pika-pikachu-14757.mp3"; // Import the hover sound
 
 function HeadCard(props) {
-  const audioRef = useRef(null); // Create a ref for the audio element
+  // const audioRef = useRef(null);  Create a ref for the audio element
 
-  const handleMouseEnter = () => {
-    if (audioRef.current) {
-      // Play only if audio is allowed to autoplay after user interaction
-      const playPromise = audioRef.current.play();
+  // const handleMouseEnter = () => {
+  //   if (audioRef.current) {
+  //      Play only if audio is allowed to autoplay after user interaction
+  //     const playPromise = audioRef.current.play();
       
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Autoplay prevented. User interaction required before playing audio.");
-        });
-      }
-    }
-  };
+  //     if (playPromise !== undefined) {
+  //       playPromise.catch(error => {
+  //         console.log("Autoplay prevented. User interaction required before playing audio.");
+  //       });
+  //     }
+  //   }
+  // };
 
   return (
-    <div className={styles.parentcard} onMouseEnter={handleMouseEnter}>
+    <div className={styles.parentcard} >
       {/* Hidden audio element */}
-      <audio ref={audioRef} src={hoverSound} />
+      {/* <audio ref={audioRef} src={hoverSound} /> */}
 
       <div className={styles.card}>
         <img className={styles.image} src={props.img} alt={props.name} />

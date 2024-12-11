@@ -1,0 +1,39 @@
+.executives_data{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 30px;
+    color:antiquewhite;
+}
+.executives_data h3{
+   font-size: 32px;
+   margin-bottom: 2rem;
+}
+
+
+
+.executives_data ul{
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+}
+
+.executives_data li{
+    list-style: none;
+    margin: 0.1rem 0;
+}
+
+@media (max-width: 1024px) {
+    .executives_data{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+        margin: 30px;
+    }
+
+    .child_data{
+        margin: 15px 0px;
+    }
+  }
+  
