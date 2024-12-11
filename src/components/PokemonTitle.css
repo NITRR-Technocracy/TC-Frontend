@@ -4,8 +4,6 @@
     font-weight: normal;
     font-style: normal;
   }
-  
-  
   .ptitle{
     /* color:white; */
     color: rgba(233, 215, 15, 0.838);
@@ -16,16 +14,12 @@
     z-index: 3;
     font-family: 'Pokemon';
   }
-  
-
-  
   .ptitle h1{
     font-size: 2.8rem;
     color: yellow;
     text-decoration: solid blue 2px;
     font-family: 'Pokemon';
   }
-  
   .pheading {
     font-size: 4rem;
     color: yellow;
@@ -44,7 +38,6 @@
 
   
   }
-  
   @media(width<769px){
     .heading{
       padding: 0;
