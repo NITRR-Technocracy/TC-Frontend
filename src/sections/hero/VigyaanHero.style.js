@@ -35,6 +35,19 @@ const Circle = keyframes`
     transform: rotate(30deg);
   }
 `; 
+const popIn = keyframes`
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const VigyaanStyleWrapper = styled.section`
 
@@ -42,6 +55,8 @@ const VigyaanStyleWrapper = styled.section`
   height: 100vh;
   padding: 0;
   overflow: hidden;
+  animation: ${popIn} 2s ease forwards; 
+   
 
   .asto {
     position: absolute;
