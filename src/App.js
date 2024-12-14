@@ -69,8 +69,8 @@ function App() {
           <BrowserRouter>
             <Navigation />
             <Login />
-            <ScrollTop />
-            <HailTechno />
+            {/* <ScrollTop /> */}
+            {/* <HailTechno /> */}
             <Navbar />
             <Routes>
               <Route exact="true" path="/" element={<Homepage />} />

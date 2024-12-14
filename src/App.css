@@ -7815,15 +7815,35 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-family: 'kanit';
 	src: url('./assets/font/Kanit-Regular.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'AavartanFont';
-    src: url('./assets/font/IrishGrover-Regular.ttf') format('truetype');
+	font-family: 'AavartanFont';
+	src: url('./assets/font/IrishGrover-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'VigyaanFont';
 	src: url('./assets/font/Minecraftia-Regular.ttf') format('truetype')
 }
 
+@font-face {
+	font-family: 'Kung Fu Panda';
+	src: url("./assets/font/KungFuPandaRegular-xYjV.ttf");
+}
+
+@font-face {
+	font-family: 'Blood Crow';
+	src: url("./assets/font/bloodcrow.ttf");
+}
+
+@font-face {
+	font-family: 'carve';
+	src: url("./assets/font/WoodCarving-ZpJmK.ttf");
+}
+
+@font-face {
+	font-family: 'chisled';
+	src: url("./assets/font/Chiseled-KExl.ttf");
+}
 
 @media(width<600px) {
 	.blog__item {
@@ -7840,7 +7860,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	top: 237vh;
 	right: 0%;
 	height: 250px;
-	filter:grayscale(0.5);
+	filter: grayscale(0.5);
 
 }
 
