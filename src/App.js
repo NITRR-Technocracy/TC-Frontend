@@ -204,11 +204,11 @@ function App() {
           </BrowserRouter>
         </ContentContainer>
         <BackgroundContainer>
-//           {/* <ParticlesBackground /> */}
+           {/* <ParticlesBackground /> */}
 
-// =======
-//           {/* <StarFieldAnimation/> */}
-//dev
+
+           {/* <StarFieldAnimation/> */}
+
         </BackgroundContainer>
       </CustomCursorContainer>
     </div>

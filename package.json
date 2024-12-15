@@ -28,7 +28,8 @@
     "styled-components": "^6.0.7",
     "swiper": "^10.3.1",
     "three": "^0.169.0",
-    "vanilla-tilt": "^1.8.1"
+    "vanilla-tilt": "^1.8.1",
+    "vanta": "^0.5.24"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Spons_data from "../assets/spons_data";
 import Title from "../components/Title";
 import tsp from "../assets/spons_images/sp15.webp"
+// import Card from "../components/SponsCard"
 
 const Spons = () => {
   useEffect(() => {
@@ -55,3 +56,4 @@ const Spons = () => {
 };
 
 export default Spons;
+

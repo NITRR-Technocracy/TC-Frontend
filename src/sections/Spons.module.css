@@ -1,7 +1,7 @@
 .top {
   backdrop-filter: blur(8px) saturate(178%);
   -webkit-backdrop-filter: blur(8px) saturate(178%);
-  background-color: rgba(98, 74, 156, 0.485);
+  /* background-color: #9ddc89a8; */
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   /* border: 1px solid rgba(255, 255, 255, 0.125); */
@@ -95,4 +95,4 @@
     width: 90%;
     margin: 3rem 0;
   }
-}
+} 
