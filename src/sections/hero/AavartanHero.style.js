@@ -1,6 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import stylebg from '../../assets/Aavartan New/AB2.webp';
-import bannerBG from "../../assets/Aavartan New/aavartanbg.webp";
 
 const rocketAnimation = keyframes`
     0%,
@@ -54,6 +52,9 @@ const AavartanStyleWrapper = styled.section`
     transform: translate(-50%, -50%);
     z-index: 3;
   }
+  .container{
+    z-index:100;
+  }
    
   .ufo_shape {
     position: absolute;
@@ -61,14 +62,19 @@ const AavartanStyleWrapper = styled.section`
     left: 10%;
     z-index: 0;
   }
-  ${'' /* .moving-cloud-container {
-  position: relative;
-  height: 100vh;
+  .moving-cloud-container {
+    position: absolute; /* Ensure it's positioned explicitly */
+  top: -15vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1
 }
 
 .moving-cloud {
-  position: relative;
-  animation: moveCloud 180s linear infinite; 
+  position: absolute;
+  animation: moveCloud 180s linear infinite;
+  z-index: 1;
 }
 
 @keyframes moveCloud {
@@ -78,8 +84,11 @@ const AavartanStyleWrapper = styled.section`
   50% {
     transform: translateX(5vw); 
   }
-} */}
+}
+.plants{
+  position:relative;
 
+}
 
   .row {
     display: flex;
@@ -93,6 +102,8 @@ const AavartanStyleWrapper = styled.section`
   .gamfi_v2_hero_left {
     display: flex;
     flex-direction: column;
+    z-index:2;
+    position:relative;
 
     .metaportal_fn_button_3 {
       position: absolute;
@@ -108,6 +119,26 @@ const AavartanStyleWrapper = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position:absolute;
+      right:30rem;
+      .aavartan-font { 
+       position:relative;
+       height: 15vh;
+       width: 25vw;
+       top:-20vh;
+      .star{
+        position:absolute;
+        top:-7vh;
+        left:0;
+        height:100%;
+        width:100%;
+      }
+      // background-color: red;
+
+      .font{
+         height:100%;
+         width:100%;
+      }
 
       .rocket_thumb {
         position: absolute;
@@ -134,38 +165,21 @@ const AavartanStyleWrapper = styled.section`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    .aavartan-font { 
-       position:relative;
-       height: 18vh;
-      width: 30vw;
-      .star{
-        position:absolute;
-        top:-55px;
-        left:0;
-        height:100%;
-        width:100%;
-      }
-      // background-color: red;
-
-      .font{
-         height:100%;
-         width:100%;
-      }
 }
   
   .decrp {
       color:#993d3d;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 18px;
       line-height: 35px;
       margin-top: 60px;
       text-align: center;
       text-shadow: 1px 0px 3px white;
       font-family: "AavartanFont";
       position: absolute;
-      top:45vh;
-      right: 3vw;
-      width: 45vw;
+      top:27vh;
+      right: 35vw;
+      width: 30vw;
       z-index: 2;
         background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
     color: #fff; /* White text for contrast */
@@ -299,6 +313,7 @@ const AavartanStyleWrapper = styled.section`
         display:flex;
         align-self:center;
         height:15vh !important;
+        
     }
 
     .gamfi_v2_hero_right .metaportal_fn_button_3 {

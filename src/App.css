@@ -7664,13 +7664,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 
 .Aavartanscrolled {
-	background: url("./assets/Aavartan New/AB2_202208_5000x3000_KeyArt_Flying-e1709633452581.png");
-	background-size: cover;
-	background-attachment: fixed;
-	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.9s ease;
-	z-index: 2;
+    background: url("./assets/Aavartan New/bgavartan.jpg") no-repeat center center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    transition: background-color 0.9s ease;
+    z-index: 2;
 }
+
 
 .Aavartanscrolled::before {
 	content: "";

@@ -6,6 +6,7 @@ import prop2 from "../../assets/Aavartan New/DREAMBLAST_MainKeyArt_Birds2.png";
 import AAVARTAN from '../../assets/Aavartan New/AAVARTAN-10-17-2024 (1).png';
 import Stars from '../../assets/ThreeStars.png';
 import Cloud from '../../assets/Aavartan New/clouds.png'
+import plants from '../../assets/Aavartan New/Plants.png'
 
 import AavartanStyleWrapper from "./AavartanHero.style";
 // import { NavLink } from "react-router-dom";
@@ -15,9 +16,14 @@ const AavartanHero = () => {
     <>
       <AavartanStyleWrapper>
         {/* Cloud Container  */}
-       {/* <div className="moving-cloud-container">
+       <div className="moving-cloud-container">
           <img src={Cloud} alt="Moving Cloud" className="moving-cloud" />
-        </div> */}
+        </div>
+
+        {/* plants Container */}
+        <div className="plants">
+            <img src={plants} alt="plant image"/>
+          </div>
 
         <div className="container">
        
@@ -25,7 +31,19 @@ const AavartanHero = () => {
             <div className="colmd">
               <div className="gamfi_v2_hero_left">
                 <div className="gamfi_v2_hero_thumb">
-                  <img
+                <div className="aavartan-font">
+                   <img src={Stars} alt="" className="star" />
+                   <img src={AAVARTAN} alt="" className="font" />
+                </div>
+                <p className="decrp">
+                  Team Technocracy organizes a wide range of events, including
+                  hackathons, coding competitions, technical workshops,
+                  seminars, and technical talks by industry experts all under
+                  the banner of our annual Tech-Fest “Aavartan”. We also
+                  undertake technical projects and research initiatives.
+                </p>
+                
+                  {/* <img
                     className="rocket_thumb"
                     src={prop2}
                     alt="Rocket thumb"
@@ -34,7 +52,7 @@ const AavartanHero = () => {
                     className="rocket_thumb2"
                     src={prop1}
                     alt="Rocket thumb"
-                  />
+                  /> */}
                 </div>
               </div>
               <div className="btncontainer" style={{ display: "flex" }}>
@@ -66,23 +84,14 @@ const AavartanHero = () => {
                 </a>
               </div>
             </div>
-            <div className="colmd2">
+            {/* <div className="colmd2">
               <div className="gamfi_v2_hero_right">
-              <div className="aavartan-font">
-                   <img src={Stars} alt="" className="star" />
-                  <img src={AAVARTAN} alt="" className="font" />
-               </div>
-               <p className="decrp">
-                  Team Technocracy organizes a wide range of events, including
-                  hackathons, coding competitions, technical workshops,
-                  seminars, and technical talks by industry experts all under
-                  the banner of our annual Tech-Fest “Aavartan”. We also
-                  undertake technical projects and research initiatives.
-                </p>
               </div>
-            </div>
+            </div> */}
           </div>
+          
         </div>
+       
       </AavartanStyleWrapper>
     </>
   );
