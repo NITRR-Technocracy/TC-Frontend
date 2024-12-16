@@ -102,7 +102,7 @@ const AavartanStyleWrapper = styled.section`
   .gamfi_v2_hero_left {
     display: flex;
     flex-direction: column;
-    z-index:2;
+    z-index:4;
 
 
     .metaportal_fn_button_3 {
