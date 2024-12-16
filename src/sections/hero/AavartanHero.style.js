@@ -104,7 +104,6 @@ const AavartanStyleWrapper = styled.section`
     flex-direction: column;
     z-index:4;
 
-
     .metaportal_fn_button_3 {
       position: absolute;
       bottom: 20vh;
