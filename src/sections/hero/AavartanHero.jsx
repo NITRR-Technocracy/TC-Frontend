@@ -16,14 +16,14 @@ const AavartanHero = () => {
     <>
       <AavartanStyleWrapper>
         {/* Cloud Container  */}
-       <div className="moving-cloud-container">
+       {/* <div className="moving-cloud-container">
           <img src={Cloud} alt="Moving Cloud" className="moving-cloud" />
-        </div>
+        </div> */}
 
         {/* plants Container */}
-        <div className="plants">
+        {/* <div className="plants">
             <img src={plants} alt="plant image"/>
-          </div>
+          </div> */}
 
         <div className="container">
        
