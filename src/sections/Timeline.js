@@ -7,7 +7,7 @@ import kai from "../assets/images/HomePage/kai.png";
 import poDad from "../assets/images/HomePage/po-dad.png";
 import leftArrow from "../assets/svgs/leftarrow.svg";
 import rightArrow from "../assets/svgs/rightarrow.svg";
-import { Navigation,Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,11 +15,10 @@ import "swiper/css";
 
 export default function App() {
   const handleInteraction = (swiper) => {
-   
     swiper.autoplay.stop();
     setTimeout(() => {
-      swiper.autoplay.start();
-    }, 7000); 
+      if (swiper.autoplay) swiper.autoplay.start();
+    }, 7000);
   };
 
   const slides = [
@@ -90,8 +89,8 @@ export default function App() {
           <div className="innn-swipe-cont">
             <Swiper
               navigation={{ nextEl: ".btn-next", prevEl: ".btn-prev" }}
-              modules={[Navigation,Autoplay]}
-              autoplay={{delay:3000,disableOnInteraction:false}}
+              modules={[Navigation, Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               loop={false}
               speed={1000}
               direction="horizontal"

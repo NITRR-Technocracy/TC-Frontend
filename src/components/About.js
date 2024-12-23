@@ -3,6 +3,7 @@ import styles from "./About.module.css";
 import prizeIcon from "../assets/images/HomePage/trophy.png";
 import eventsIcon from "../assets/images/HomePage/events.png";
 import participantsIcon from "../assets/images/HomePage/participants.png";
+import footfallIcon from "../assets/images/HomePage/footfall.png";
 import collegesIcon from "../assets/images/HomePage/colleges.png";
 import shifu from "../assets/images/HomePage/shifu.png";
 import CountUp from "react-countup";
@@ -49,7 +50,7 @@ function About() {
         </div>
         <div className={styles.about_boxes} data-aos="fade-up">
           <div className={styles.about_box}>
-            <img className={styles.abox_icon} src={eventsIcon} alt="icon" />
+            <img className={styles.abox_icon} src={footfallIcon} alt="icon" />
             {/* <div className={styles.abox_num}> 10,000 +</div> */}
             <CountUp
               start={0}
