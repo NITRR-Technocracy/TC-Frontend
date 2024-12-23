@@ -1,173 +1,77 @@
-import {React ,useEffect, useRef, useState }from 'react';
-import EventCard from '../components/EventCard'
-import {EventsList} from '../assets/Events_data';
-import styles from './EventSec.module.css'; 
-import Title from "../components/Title";
-import aerofilia from "../assets/eventsPoster/aerofilia.webp"
-// import aerofilia from "../assets/eventsposters/aerofilia.webp"
+import React, { useEffect, useRef } from 'react';
+import styles from './EventSec.module.css';
+import { EventsList } from '../assets/Events_data';
+import EventCard from '../components/Events/EventCard';
+import Thumbnail from '../components/Events/Thumbnail';
 
+const EventSec = () => {
+    const carouselRef = useRef(null);
+    const sliderRef = useRef(null);
+    const thumbnailRef = useRef(null);
+    const nextRef = useRef(null);
+    const prevRef = useRef(null);
 
-function EventSec() {
+    useEffect(() => {
+        const carouselDom = carouselRef.current;
+        const sliderDom = sliderRef.current;
+        const thumbnailDom = thumbnailRef.current;
+        const nextDom = nextRef.current;
+        const prevDom = prevRef.current;
 
-  return (
-    <div style={{position:"relative", zIndex:"-1", paddingTop:"5rem"}}>
-    <div className={styles.Container} style={{position:"relative", zIndex:"0"}}>
-      <Title color={"Events"} noncolor={""} />
-      <div className={styles.carousel}>
+        const timeRunning = 3000;
 
-      <div className={styles.list}>
+        const syncSliderAndThumbnails = (type) => {
+            const sliderItems = Array.from(sliderDom.children);
+            const thumbnailItems = Array.from(thumbnailDom.children);
 
-        <div className={styles.item}>
-        <div className="img" style={{backgroundImage:`url(${aerofilia})`}}>
-        </div>
-          <div className={styles.content}>
-            {/* <div className={styles.title}>ROBOWAR</div> */}
-            {/* <div className={styles.name}>OWL</div> */}
-            {/* <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div> */}
-            <div className={styles.btn}>
-              <button>Register</button>
-              {/* <button>Subscribe</button> */}
+            if (type === 'next') {
+                sliderDom.appendChild(sliderItems[0]);
+                thumbnailDom.appendChild(thumbnailItems[0]);
+            } else {
+                sliderDom.prepend(sliderItems[sliderItems.length - 1]);
+                thumbnailDom.prepend(thumbnailItems[thumbnailItems.length - 1]);
+            }
+
+            carouselDom.classList.add(type === 'next' ? styles.next : styles.prev);
+
+            setTimeout(() => {
+                carouselDom.classList.remove(styles.next);
+                carouselDom.classList.remove(styles.prev);
+            }, timeRunning);
+        };
+
+        const handleNext = () => syncSliderAndThumbnails('next');
+        const handlePrev = () => syncSliderAndThumbnails('prev');
+
+        nextDom.addEventListener('click', handleNext);
+        prevDom.addEventListener('click', handlePrev);
+
+        return () => {
+            nextDom.removeEventListener('click', handleNext);
+            prevDom.removeEventListener('click', handlePrev);
+        };
+    }, []);
+
+    return (
+        <div className={styles.carousel} ref={carouselRef}>
+            <div className={styles.list} ref={sliderRef}>
+                {EventsList.map(event => (
+                    <EventCard key={event.id} props={event} />
+                ))}
             </div>
-          </div>
-        </div>
 
-        <div className={styles.item}>
-        <div className="img" style={{backgroundImage:`url(${aerofilia})`}}></div>
-          <div className={styles.content}>
-            {/* <div className={styles.title}>ROBOWAR</div> */}
-            {/* <div className={styles.name}>OWL</div> */}
-            {/* <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div> */}
-            <div className={styles.btn}>
-              <button>Register</button>
-              {/* <button>Subscribe</button> */}
+            <div className={styles.thumbnail} ref={thumbnailRef}>
+                {EventsList.map(event => (
+                    <Thumbnail key={event.id} props={event} />
+                ))}     
             </div>
-          </div>
-        </div>
 
-        <div className={styles.item} style={{ backgroundImage: `url(image/crow.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>CROW</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
+            <div className={styles.arrows}>
+                <button id="prev" ref={prevRef}>{'<'}</button>
+                <button id="next" ref={nextRef}>{'>'}</button>
             </div>
-          </div>
         </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/butterfly1.jpeg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>BUTTERFLY</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/owl2.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>OWL</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/eagel3.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>EAGLE</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/kingfirser2.jpeg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>KINGFISHER</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/parrot2.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>PARROT</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/heron.jpeg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>HERON</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/butterfly2.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>BUTTERFLY</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.item} style={{ backgroundImage: `url(image/parrot2.jpg)` }}>
-          <div className={styles.content}>
-            <div className={styles.title}>SLIDER</div>
-            <div className={styles.name}>PARROT</div>
-            <div className={styles.des}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-            <div className={styles.btn}>
-              <button>See More</button>
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Navigation buttons */}
-      <div className={styles.arrows}>
-        <button className={styles.prev}>&lt;</button>
-        <button className={styles.next}>&gt;</button>
-      </div>
-
-      {/* Time running */}
-      <div className={styles.timeRunning}></div>
-
-    </div>
-    </div>
-    </div>
-  );
-}
+    );
+};
 
 export default EventSec;
-

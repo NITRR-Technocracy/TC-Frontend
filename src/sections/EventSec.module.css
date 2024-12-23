@@ -1,272 +1,127 @@
-/* .Container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5rem;   
-}
-
-.begin{
-    color: white;
-}
-h1{
-    color: #fff;
-    font-size: 3rem;
-}
-
-h4{
-    font-size: 25px;
-    margin-bottom: 30px;
-    color: #9D44C0;
-}
-
-.CardContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 30px;
-    row-gap: 50px;
-}
-
-@media (max-width:1200px){
-    .CardContainer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 5vw;
-    }
-    .Container{
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
-@media (max-width:900px){
-    .CardContainer{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        row-gap: 3rem;
-    }
-}
-@media(max-width:550px){
-    h4{
-        font-size: 25px;
-    }
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
 
-/* Header section */
 
-header{
-    width: 100%; 
-    max-width: 100%;
-    padding-left: 100px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1000;
+@font-face {
+    font-family: 'Ben10'; 
+    src: url('../assets//font/GROBOLD.ttf') format('truetype'); 
 }
-
-header nav a{
-    color: #fff;
-    margin-right: 5px;
-    padding: 5px 10px;
-    font-size: 16px;
-    transition: 0.2s;
-    text-decoration: none;
-}
-
-a.active{
-    background: #14ff72cb;
-    border-radius: 2px;
-}
-
-a:hover{
-    background: #14ff72cb;
-    border-radius: 2px;
-}
-
-/* Header section */
-
-
-
-/* carousel */
 
 .carousel{
-    width: 100vw;
     height: 100vh;
-    margin-top: -50px;
+    margin-top: 0;
+    width: 100vw;
     overflow: hidden;
     position: relative;
 }
-
 .carousel .list .item{
-    width: 180px;
-    height: 250px;
-    position: absolute;
-    top: 80%;
-    transform: translateY(-70%);
-    left: 70%;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    background-position: 50% 50%;
-    background-size: cover;
-    z-index: 100;
-    transition: 1s;
-}
-
-.carousel .list .item:nth-child(1),
-.carousel .list .item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    border-radius: 0;
     width: 100%;
     height: 100%;
-}
-
-.carousel .list .item:nth-child(3){
-    left: 67%;
-}
-
-.carousel .list .item:nth-child(4){
-    left: calc(67% + 200px);
-}
-
-.carousel .list .item:nth-child(5){
-    left: calc(67% + 400px);
-}
-
-.carousel .list .item:nth-child(6){
-    left: calc(67% + 600px);
-}
-
-.carousel .list .item:nth-child(n+7){
-    left: calc(67% + 800px);
-    opacity: 0;
-}
-
-
-
-.item{
-    display: flex;
-    flex-direction: row;
-}
-
-.list .item .content{
     position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%);
-    width: 400px;
-    text-align: left;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
     color: #fff;
-    display: none;
+    text-shadow: 0 5px 10px #0004;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 20px; 
+    border-radius: 10px;
+}
+.carousel .list .item .author{
+    letter-spacing: 10px;
+    font-family: 'Ben10';
 }
 
-.list .item:nth-child(2) .content{
-    display: block;
+.carousel .list .item .des{
+    font-family: 'poppins';
 }
 
-.content .title{
-    font-size: 100px;
-    width: 35rem;
-    text-transform: uppercase;
-    color: #14ff72cb;
+.carousel .list .item .title{
+    font-size: 2rem;
+    font-family: 'ben10', sans-serif;
     font-weight: bold;
-    line-height: 1;
-
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    line-height: 3rem;
+    color: #f1683a;
+    letter-spacing: 5px;
 }
-
-.content .name{
-    font-size: 100px;
-    text-transform: uppercase;
+.carousel .list .item .topic{
+    font-size: 1.2rem;
     font-weight: bold;
-    line-height: 1;
-    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
-
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    line-height: 1.2;
+    font-family: 'poppins';
+    display: grid;
+    grid-template-columns: 120px 200px;
 }
-
-.content .des{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    margin-left: 5px;
-
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.9s 1 forwards;
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
 }
-
-.content .btn{
-    margin-left: 5px;
-
-    opacity: 0;
-    animation: animate 1s ease-in-out 1.2s 1 forwards;
-}
-
-.content .btn button{
-    padding: 10px 20px;
+.carousel .list .item .buttons button{
     border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border: 2px solid #fff;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
 }
-
-.content .btn button:nth-child(1){
-    margin-right: 15px;
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
 }
-
-.content .btn button:nth-child(2){
-    background: transparent;
-    color: #14ff72cb;
-    border: 2px solid #fff;
-    transition: 0.3s;
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
 }
-
-.content .btn button:nth-child(2):hover{
-    background-color: #14ff72cb;
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
     color: #fff;
-    border-color: #14ff72cb;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    visibility: hidden;
 }
-
-
-@keyframes animate {
-    
-    from{
-        opacity: 0;
-        transform: translate(0, 100px);
-        filter: blur(33px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
-    }
+.thumbnail .item .content .title{
+    font-weight: 500;
 }
-
-/* Carousel */
-
-
-
-
-
-
-/* next prev arrows */
-
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
 .arrows{
     position: absolute;
     top: 80%;
@@ -278,86 +133,176 @@ a:hover{
     gap: 10px;
     align-items: center;
 }
-
 .arrows button{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
-    color: #fff;
+    background-color: rgba(238, 238, 238, 0.552);
     border: none;
-    outline: none;
-    font-size: 16px;
+    color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
-    cursor: pointer;
 }
-
 .arrows button:hover{
-    background: #fff;
+    background-color: #fff;
     color: #000;
 }
 
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
 
-/* time running */
-.carousel .timeRunning{
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
     position: absolute;
     z-index: 1000;
     width: 0%;
-    height: 4px;
-    background-color: #14ff72cb;
+    height: 3px;
+    background-color: #f1683a;
     left: 0;
     top: 0;
-    animation: runningTime 7s linear 1 forwards;
 }
 
-@keyframes runningTime {
-    
-    from{width: 0%;}
-    to{width: 100%;}
-
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
 }
 
 
-/* Responsive Design */
+/* prev click */
 
-@media screen and (max-width: 999px){
-    
-    header{
-        padding-left: 50px;
-    }
-
-    .list .item .content{
-        left: 50px;
-    }
-
-    .content .title, .content .name{
-        font-size: 70px;
-    }
-
-    .content .des{
-        font-size: 16px;
-    }
-
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
 }
 
-@media screen and (max-width: 690px){
-    header nav a{
-        font-size: 14px;
-        margin-right: 0;
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
     }
+}
 
-    .list .item .content{
-        top: 40%;
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
     }
-
-    .content .title, .content .name{
-        font-size: 45px;
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
     }
-
-    .content .btn button{
-        padding: 10px 15px;
-        font-size: 14px;
+    .carousel .list .item .content .title{
+        font-size: 30px;
     }
 }
