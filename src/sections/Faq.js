@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import Title from "../components/Title";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import prop9 from "../assets/prop31.webp"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import doubt from "../assets/images/HomePage/doubt.png"
+import zhen from "../assets/images/HomePage/zhen.png"
 
 const Faq = () => {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   const faqs1 = [
     {
       title: "What is Team Technocracy?",
@@ -22,7 +22,8 @@ const Faq = () => {
       dec: "Joining Team Technocracy comes with several benefits, including: Opportunities to enhance your technical skills through workshops and hands-on projects, Networking with like-minded individuals and industry professionals, Leadership and teamwork experience by organizing and participating in events, The chance to make a positive impact on society.",
     },
     {
-      title: "What kind of events and activities does Team Technocracy organize?",
+      title:
+        "What kind of events and activities does Team Technocracy organize?",
       dec: "Team Technocracy organizes a wide range of events, including hackathons, coding competitions, technical workshops, seminars, and technical talks by industry experts all under the banner of our annual Tech-Fest “Aavartan” . We also undertake technical projects and research initiatives.",
     },
   ];
@@ -32,7 +33,8 @@ const Faq = () => {
       dec: "Team Technocracy offers a unique blend of technical and practical experience. By joining us, you can expect a strong focus on technical development, networking, and hands-on learning. We have a vibrant and dynamic team that is passionate about technology and innovation, making it an ideal platform to pursue your technical interests.",
     },
     {
-      title: "Can I join Team Technocracy if I am from a non-technical background?",
+      title:
+        "Can I join Team Technocracy if I am from a non-technical background?",
       dec: "Yes, Team Technocracy welcomes students from all backgrounds. While some of our activities may be more technical in nature, we also value diversity and encourage non-technical students to bring their unique perspectives and skills to our committee.",
     },
     {
@@ -59,7 +61,11 @@ const Faq = () => {
               setActive(`${index + i}` === active ? null : `${index + i}`)
             }
           >
-            <h3 style={{fontSize:"1rem"}} className="" data-text={data.title}>
+            <h3
+              style={{ fontSize: "1rem" }}
+              className=""
+              data-text={data.title}
+            >
               {data.title}
             </h3>
             <span className="icon">
@@ -67,44 +73,48 @@ const Faq = () => {
             </span>
           </div>
           <div
-            className="acc_content"
-            style={{
-              display: `${index + i === active ? "block" : "none"}`,
-            }}
+            className={`acc_content ${index + i === active ? "active" : ''}`}
           >
-            <p style={{fontSize:"0.9rem"}}>{data.dec}</p>
+            <p style={{ fontSize: "0.9rem" }}>{data.dec}</p>
           </div>
         </div>
       </div>
     ));
   };
 
-  const color="";
-  const noncolor="FAQ"
   return (
     <section id="faq">
-      <div className="">
-        <div className="fn_cs_faq">
-          <div className="faq_col">
-            <Title color={color} noncolor={noncolor}/>
-            {/* <div className="fn_cs_divider">
-              <div className="divider">
-                <span />
-                <span />
+      <div className="fn_cs_faq">
+        <h1 className="hm-title faq-title" data-aos="fade-up">
+          <div>
+            <span>F</span>
+            <span>A
+              <img src={zhen} alt="" />
+              <div className="quote-cont">
+                <div className="quote shadow bottom">
+                  <p>
+                    Every step leaves a footprint. No matter how small.
+                  </p>
+                </div>
               </div>
-            </div> */}
-            <div className="desc">
-              <img src={prop9} width="100%" alt="" />
+            </span>
+            <span>Q</span>
+          </div>
+        </h1>
+        <div className="faq_col_cont">
+          <div className="faq_col">
+            <div className="desc" data-aos="fade-up">
+              <img src={doubt} alt="" />
               {/* <p>
               It also addresses inquiries about sponsorship opportunities, event schedules, and ways to engage with the club. With this comprehensive FAQ, we aim to ensure a seamless experience for everyone involved in our technical events.
               </p> */}
             </div>
           </div>
-          <div className="faq_col" >
+          <div className="faq_col">
             <div className="fn_cs_accordion">{faqMap(faqs1, "a")}</div>
           </div>
           <div className="faq_col">
-            <div  className="fn_cs_accordion">{faqMap(faqs2, "b")}</div>
+            <div className="fn_cs_accordion">{faqMap(faqs2, "b")}</div>
           </div>
         </div>
       </div>

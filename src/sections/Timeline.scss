@@ -1,0 +1,136 @@
+$white: #fff;
+$black: #000;
+$primary: #ffffff;
+$gray: #616161;
+
+.timeline-cont {
+  width: 100%;
+}
+.timeline-cont-inn {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.swip-cont {
+  width: 100%;
+  border: black solid 2px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timeline-right {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.slide-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Blood Crow";
+  color: rgb(251, 255, 0);
+  text-shadow: #000 2px 2px;
+}
+.year {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Blood Crow";
+  color: rgb(251, 255, 0);
+  text-shadow: #000 2px 2px;
+}
+.slide-content {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  // max-width: 300px;
+  font-size: 1.5rem;
+  text-shadow: #000000 2px 2px;
+  font-family: "chisled";
+}
+
+.timeline {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.timeline-left {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeline-left > img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.timeline-year {
+  cursor: pointer;
+}
+
+.btn-prev,
+.btn-next {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  transform: scale(1.2);
+}
+
+.btn-prev > img,
+.btn-next > img {
+  height: 100%;
+  width: 100%;
+}
+
+.innn-swipe-cont{
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+  .slide-title {
+    font-size: 1.5rem;
+  }
+  .slide-content {
+    font-size: 1rem;
+  }
+  .timeline-left > img {
+    height: 150px;
+    width: 150px;
+  }
+  .btn-prev,
+  .btn-next {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 425px) {
+  .innn-swipe-cont{
+    width: 80%;
+  }
+  .slide-title {
+    font-size: 1.2rem;
+  }
+  .slide-content {
+    font-size: .8rem;
+  }
+}

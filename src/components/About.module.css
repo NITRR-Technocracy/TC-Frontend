@@ -1,16 +1,8 @@
 .about_container{
-    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-image: url("../assets/images/HomePage/about-bg-3.jpeg");
-    background-color: rgb(203,85,75); */
-    /* background-image: linear-gradient(to top right, rgb(203, 85, 75), #6a2e29); */
-    /* background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
     scroll-snap-align: start;
 }
 
@@ -22,50 +14,9 @@
     align-items: center;
 }
 
-.about_title{
-    font-family: 'kung fu panda';
-    font-size: 13vh;
-    /* margin-bottom: 40px; */
-    color: #e91006;
-    text-shadow: #330000 5px 5px;
-}
-
-@media (max-width: 768px) {
-    .about_title{
-        font-size: 18vw;
-    }
-}
-
-@keyframes titleAnim {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-20%);
-    }
-}
-
-.about_title>span{
-    display: inline-block;
-    transform-origin: bottom;
-    animation: titleAnim 1s linear infinite;
-    animation-delay: calc(var(--i) * 0.15s);
-    position: relative;
-}
-
-.about_title>span>img{
-    position: absolute;
-    height: 80%;
-    top: -50%;
-    left: 0;
-}
-
 
 .about_des_out {
 	border-radius: 20px;
-	/* background-color: rgba(0, 0, 0, 0.1); */
-	padding: 50px 40px 50px;
-    backdrop-filter: blur(3px);
 }
 
 .about_des_in {
@@ -89,21 +40,21 @@
 }
 
 @keyframes shadowAnim {
-    0%{
-        box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
-    }
-    25%{
-        box-shadow: 0px 5px 20px rgba(135, 255, 155, 0.8);
-    }
-    50%{
-        box-shadow: 0px 5px 20px rgba(255, 255, 135, 0.8);
-    }
-    75%{
-        box-shadow: 0px 5px 20px rgba(255, 213, 135, 0.8);
-    }
-    100%{
-        box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
-    }
+	0%{
+			box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
+	}
+	25%{
+			box-shadow: 0px 5px 20px rgba(135, 255, 155, 0.8);
+	}
+	50%{
+			box-shadow: 0px 5px 20px rgba(255, 255, 135, 0.8);
+	}
+	75%{
+			box-shadow: 0px 5px 20px rgba(255, 213, 135, 0.8);
+	}
+	100%{
+			box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
+	}
 }
 
 .about_box{
@@ -142,6 +93,7 @@
     font-weight: 900;
     /* margin-top: 1rem; */
     text-shadow: 1px 1px 5px black;
+    text-align: center;
 }
 
 @media screen and (max-width :1005px) {
@@ -151,6 +103,12 @@
     .abox_Title{
     width: 170px;
     text-align: center  ;
+    }
+    .abox_icon{
+        width: 40%;
+    }
+    .abox_num{
+        font-size: 2rem;
     }
 }
 @media screen and (max-width:550px) {

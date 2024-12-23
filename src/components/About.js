@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./About.module.css";
-import Title from "./Title";
-import FireAnimation from "./FlameAnimation";
 import prizeIcon from "../assets/images/HomePage/trophy.png";
 import eventsIcon from "../assets/images/HomePage/events.png";
 import participantsIcon from "../assets/images/HomePage/participants.png";
 import collegesIcon from "../assets/images/HomePage/colleges.png";
-import mantis from "../assets/images/HomePage/mantis-about.png";
+import shifu from "../assets/images/HomePage/shifu.png";
 import CountUp from "react-countup";
 
 function About() {
@@ -18,16 +16,27 @@ function About() {
         {/* </div> */}
         {/* <Title color={"ABOUT"} noncolor={"US"} /> */}
         {/* <h1 className={styles.about_title}>ABOUT</h1> */}
-        <div className={styles.about_title}>
-          <span style={{ "--i": 0 }}>A</span>
-          <span style={{ "--i": 1 }}>B</span>
-          <span style={{ "--i": 2 }}>O</span>
-          <span style={{ "--i": 3 }}>U</span>
-          <span style={{ "--i": 4 }}>
-            T <img src={mantis} alt="" />
-          </span>
+        <div className="hm-title about-title" data-aos="fade-up">
+          <div>
+            <span>A</span>
+            <span>B</span>
+            <span>O</span>
+            <span>
+              U
+              <img src={shifu} alt="" />
+              <div className="quote-cont">
+                <div className="quote shadow bottom">
+                  <p>
+                    The measure of a real champion is not whether they can
+                    triumph, but whether they can overcome defeat.
+                  </p>
+                </div>
+              </div>
+            </span>
+            <span>T</span>
+          </div>
         </div>
-        <div className={styles.about_des_out}>
+        <div className={styles.about_des_out} data-aos="fade-up">
           <div className={styles.about_des_in}>
             <p>
               Team Technocracy is the official technical committee of NIT
@@ -48,7 +57,7 @@ function About() {
               suffix="+"
               delay={0}
               enableScrollSpy="true"
-              scrollSpyOnce='true'
+              scrollSpyOnce="true"
             >
               {({ countUpRef }) => (
                 <div className={styles.abox_num}>

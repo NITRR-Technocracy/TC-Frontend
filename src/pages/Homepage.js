@@ -6,12 +6,12 @@ import FullPageLoader from "../layout/FullPageLoader";
 import About from "../components/About";
 import Timeline from "../sections/Timeline";
 import Section1 from "../sections/Home/Section1";
-import "../sections/Home/Home.css";
+import "../sections/Home/Home.scss";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, offset: 200, once: true });
     window.scrollTo(0, 0);
     setTimeout(() => {
       setIsLoading(false);

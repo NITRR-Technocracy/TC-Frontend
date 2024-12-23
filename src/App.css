@@ -23,6 +23,7 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .metaportal_fn_content {
@@ -7153,10 +7154,22 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 
 #faq {
-	padding: 150px 0 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .fn_cs_faq {
+	width: 90%;
+}
+
+.fn_cs_faq .faq_col {
+	width: 33.3333%;
+	padding-left: 60px;
+	margin-bottom: 60px;
+}
+
+.faq_col_cont {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -7166,14 +7179,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	flex-wrap: wrap;
 }
 
-.fn_cs_faq .faq_col {
-	width: 33.3333%;
-	padding-left: 60px;
-	margin-bottom: 60px;
-}
-
 .fn_cs_faq .fn__maintitle {
 	margin-bottom: 15px;
+}
+
+.desc>img {
+	max-height: 50vh;
+	width: 100%;
+	object-fit: contain;
 }
 
 .fn_cs_faq .fn_cs_divider {
@@ -7198,15 +7211,38 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	#faq {
 		padding: 0px 0 0px;
 	}
+
+	.desc>img {
+		max-height: 30vh;
+	}
 }
 
+@keyframes shadowAnim {
+	0% {
+		box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
+	}
 
+	25% {
+		box-shadow: 0px 5px 20px rgba(135, 255, 155, 0.8);
+	}
 
+	50% {
+		box-shadow: 0px 5px 20px rgba(255, 255, 135, 0.8);
+	}
+
+	75% {
+		box-shadow: 0px 5px 20px rgba(255, 213, 135, 0.8);
+	}
+
+	100% {
+		box-shadow: 0px 5px 20px rgba(135, 223, 255, 0.8);
+	}
+}
 
 .fn_cs_accordion .acc_item {
 	padding: 7px 30px 5px;
 	border: 1px solid rgba(255, 255, 255, .15);
-	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+	animation: shadowAnim 2s infinite;
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
@@ -7230,6 +7266,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
+	/* text-shadow: 1px 1px black; */
+}
+
+.acc_header h3{
+	color: white;
 }
 
 .fn_cs_accordion .icon {
@@ -7277,12 +7318,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	bottom: 0;
 	border-radius: 100%;
 	border: 3px solid transparent;
-	background: -moz-linear-gradient(to bottom, #504099 0%,
-			#FE7BE5 100%) border-box;
-	background: -webkit-linear-gradient(to bottom, #504099 0%,
-			#FE7BE5 100%) border-box;
-	background: linear-gradient(to bottom, #504099 0%,
-			#FE7BE5 100%) border-box;
+	background: linear-gradient(to bottom, #00aaff 0%,
+			#ff9500 100%) border-box;
 	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	-webkit-mask-composite: source-out;
@@ -7293,11 +7330,20 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .fn_cs_accordion .acc_content {
-	display: none;
 	overflow: hidden;
 	padding-top: 26px;
 	padding-bottom: 27px;
 	position: relative;
+	display: none;
+}
+
+.fn_cs_accordion .active .acc_content {
+	display: block;
+}
+
+.acc_content>p {
+	color: #9FA0FF;
+	text-shadow: 1px 1px 5px black;
 }
 
 .fn_cs_accordion .active .acc_header:after {
@@ -7309,7 +7355,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	position: absolute;
 	content: '';
 	height: 1px;
-	background-color: #35334e;
+	background-color: #7C77B9;
 	bottom: -1px;
 	right: 0;
 	display: block;
@@ -7813,6 +7859,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-family: 'AavartanFont';
 	src: url('./assets/font/IrishGrover-Regular.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'VigyaanFont';
 	src: url('./assets/font/Minecraftia-Regular.ttf') format('truetype')
