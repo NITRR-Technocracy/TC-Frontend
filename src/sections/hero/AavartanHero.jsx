@@ -6,7 +6,6 @@ import prop2 from "../../assets/Aavartan New/DREAMBLAST_MainKeyArt_Birds2.png";
 import AAVARTAN from '../../assets/Aavartan New/AAVARTAN-10-17-2024 (1).png';
 import Stars from '../../assets/ThreeStars.png';
 import Cloud from '../../assets/Aavartan New/clouds.png'
-import plants from '../../assets/Aavartan New/Plants.png'
 
 import AavartanStyleWrapper from "./AavartanHero.style";
 // import { NavLink } from "react-router-dom";
@@ -20,22 +19,9 @@ const AavartanHero = () => {
           <img src={Cloud} alt="Moving Cloud" className="moving-cloud" />
         </div>
 
-        {/* plants Container */}
-        <div className="plants">
-            <img src={plants} alt="plant image"/>
-          </div>
+  
 
-        {/* plants Container */}
-        {/* <div className="plants">
-            <img src={plants} alt="plant image"/>
-          </div> */}
-
-        {/* plants Container */}
-        {/* <div className="plants">
-            <img src={plants} alt="plant image"/>
-          </div> */}
-
-        <div className="container">
+        <div className="container" >
        
           <div className="row">
             <div className="colmd">

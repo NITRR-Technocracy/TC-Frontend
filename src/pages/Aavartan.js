@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 // import StarFieldAnimation from '../layout/StarFieldAnimation';
 import Merchandise from '../sections/Merchandise';
 
+
 const Aavartan = () => {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
@@ -41,6 +42,9 @@ const handleScroll = () => {
 
   return (
     <div className="Aavartanscrolled">
+      {/* <div className='plant-container'>
+        <img src={plant} alt="plant" className='plant'/>  
+        </div> */}
       <div className={scrolled ? "dark-overlay" : ""}></div>
           {/* <StarFieldAnimation/> */}
           {/* <Events/> */}
@@ -51,6 +55,7 @@ const handleScroll = () => {
             <EventsGallery />
             <Merchandise/>
           </div>
+        
         </div>
    
   )
