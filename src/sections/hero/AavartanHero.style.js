@@ -64,18 +64,21 @@ const AavartanStyleWrapper = styled.section`
   }
   .moving-cloud-container {
     position: absolute; /* Ensure it's positioned explicitly */
-  top: -15vh;
+  top: -18vh;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1
+  z-index: 3;
+  user-select: none;
 }
 
 .moving-cloud {
   position: absolute;
-  animation: moveCloud 180s linear infinite;
-  z-index: 1;
+  animation: moveCloud 200s linear infinite;
+  repeat:infinite;
+  z-index: 3;
 }
+
 
 @keyframes moveCloud {
   0% {
@@ -120,7 +123,8 @@ const AavartanStyleWrapper = styled.section`
       align-items: center;
       position:absolute;
       right:30rem;
-      .aavartan-font { 
+
+    .aavartan-font { 
        position:relative;
        height: 15vh;
        width: 25vw;

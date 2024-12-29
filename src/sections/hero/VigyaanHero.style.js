@@ -104,7 +104,7 @@ const VigyaanStyleWrapper = styled.section`
   .vigyaan-font {
     left: 32%;
     position: absolute;
-    top: 30vh;
+    top: 25vh;
     font-size: 5.5rem;
     color: black;
     font-family:;
@@ -115,7 +115,7 @@ const VigyaanStyleWrapper = styled.section`
 
   .vigyaan-desc {
     position: absolute;
-    top: 53vh; left:18vw;
+    top: 52vh; left:18vw;
     text-align:center;
     z-index: 2;
     font-family: 'VigyaanFont';
@@ -145,7 +145,7 @@ const VigyaanStyleWrapper = styled.section`
 
   .btncontainer2 {
     position: absolute;
-    top: 73%;
+    top: 71%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;

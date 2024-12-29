@@ -7714,7 +7714,50 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     background-size: cover; 
     background-attachment: fixed; 
     transition: background-color 0.9s ease;
-    z-index: 2;
+	animation: rain 0.3s linear infinite;
+    z-index:-3;
+}
+
+.Aavartanscrolled::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("./assets/Aavartan New/lightining.png");
+    top: -100px;
+    transform: rotate(180deg);
+    animation: lightining 4s linear infinite;
+    opacity: 0.3;
+}
+
+
+@keyframes lightining{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 0.4;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    31%{
+        opacity: 0.4;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 
