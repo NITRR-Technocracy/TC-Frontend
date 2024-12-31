@@ -50,7 +50,7 @@ const AavartanStyleWrapper = styled.section`
     top: 75%;
     left: 45%;
     transform: translate(-50%, -50%);
-    z-index: 500;
+    z-index: 600;
   }
 
   .container{
@@ -82,7 +82,7 @@ const AavartanStyleWrapper = styled.section`
   position: absolute;
   animation: moveCloud 200s linear infinite;
   repeat:infinite;
-  z-index: 3;
+  z-index: 400;
 }
 
 
@@ -103,6 +103,7 @@ const AavartanStyleWrapper = styled.section`
     width: 100%;
     position:relative;
     margin: 0;
+    z-index:-1;
   }
 
     .metaportal_fn_button_3 {
@@ -114,11 +115,11 @@ const AavartanStyleWrapper = styled.section`
 
    .aavartan-font { 
        position:absolute;
-       top:0vh;
+       top:-8vh;
        left:30%;
        height: 28vh;
        width: 40vw;
-       z-index: 400;
+       z-index: -400;
     }
 
 
@@ -145,29 +146,30 @@ const AavartanStyleWrapper = styled.section`
         height: 25vw;
       }
   
-  .decrp {
-      color:#993d3e;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 35px;
-      margin-top: 60px;
-      text-align: center;
-      text-shadow: 1px 0px 3px black;
-      font-family: "AavartanFont";
-      position: absolute;
-      top:40vh;
-      left:22vw;
-      width: 55vw;
-      z-index: 2;
-        background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
-      color:white; /* White text for contrast */
-    backdrop-filter: blur(10px); /* Transparent background blur */
+.decrp {
+    color: white; /* White text for contrast */
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 35px;
+    margin-top: 60px;
+    width:80vw;
+    text-align: center;
+    text-shadow: 1px 0px 3px black;
+    font-family: "AavartanFont";
+    position: absolute;
+    top: 43vh;
+    left: 10%; /* Syncs with background's left */
+    right: 10%; /* Syncs with background's right */
+    z-index: 2;
+    background: rgba(61, 3, 22, 0.6); /* Slightly transparent black with more opacity */
+    backdrop-filter: blur(5px); /* Increased blur effect */
     padding: 10px; /* Space around the content */
     border-radius: 5px; /* Smooth rounded corners */
-    }
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Slightly visible shadow */
+}
 
   
-    }
+    
   }
 
   @media only screen and (max-width: 1441px) {
@@ -188,45 +190,16 @@ const AavartanStyleWrapper = styled.section`
   }
 
   @media only screen and (max-width: 1025px) {
-    .gamfi_v2_hero_left h2 {
-      font-size: 6rem; /* Adjust font size for 1024px */
-    }
-    
-    .gamfi_v2_hero_thumb .rocket_thumb2 {
-  position: absolute;
-  top: 30%;
-  left: 1rem;
-  animation: jxHqgd 5s infinite;
-  z-index: 0;
-  height: 25vw;
-
-    .gamfi_v2_hero_left .gamfi_v2_hero_thumb {
-      .rocket_thumb {
-        height: 300px;
-      }
-      .rocket_thumb2 {
-        height: 160px;
-      }
-
-    }
-      .decrp{
-        font-size:1rem !important;
-      }
-    .btncontainer{
-      top:40% !important;
-    }
-
-  }
-    // @media only screen and(max-width:460px){
-    //    .row{
-    //      flex-direction:column;
-    //    }
-    // }
-
-  @media only screen and (max-width: 861px) {
     .btncontainer {
-      top: 90%;
+      top:95% !important;
       left:10%;
+    }
+
+    .aavartan-font {
+    top: 15% !important;
+    height: 19vh !important;
+    width: 65vw !important;
+    left: 17% !important;
     }
   .gamfi_v2_hero_left .gamfi_v2_hero_thumb .rocket_thumb2 {
   position: absolute;
@@ -236,119 +209,154 @@ const AavartanStyleWrapper = styled.section`
   z-index: 0;
   height: 25vw;
    } 
-  .gamfi_v2_hero_right .decrp {
+.decrp {
   color: black;
   font-weight: 300;
-  font-size: 1.5rem !important;
-  line-height: 30px;
+  font-size: 2.1rem !important;
+  line-height: 3.5rem !important;
   margin-top: 10px;
   text-align: center;
-  text-shadow: 1px 1px 5px #970000;
+  text-shadow: 1px 1px 5pxrgb(73, 6, 6);
   font-family: "AavartanFont";
   position: absolute;
-  top: 30vh;
-  right: 2vw;
-  width: 50vw;
+  background: rgba(149, 8, 8, 0.6);
+  top: 60% !important;
+  left:3.5vw !important;
+  width: 90vw !important;
+  z-index: 2;
+  }
+     }
+
+  @media only screen and (max-width: 861px) {
+    .btncontainer {
+      top:90% !important;
+      left:10%;
+    }
+
+    .aavartan-font {
+    top: 10% !important;
+    height: 19vh !important;
+    width: 65vw !important;
+    left: 15% !important;
+    }
+  .gamfi_v2_hero_left .gamfi_v2_hero_thumb .rocket_thumb2 {
+  position: absolute;
+  top: 30%;
+  left: 1rem;
+  animation: jxHqgd 5s infinite;
+  z-index: 0;
+  height: 25vw;
+   } 
+.decrp {
+  color: black;
+  font-weight: 300;
+  font-size: 1.8rem !important;
+  line-height: 3rem !important;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 5pxrgb(73, 6, 6);
+  font-family: "AavartanFont";
+  position: absolute;
+  background: rgba(149, 8, 8, 0.6);
+  top: 55% !important;
+  left:3vw !important;
+  width: 90vw !important;
   z-index: 2;
   }
 }
 
   @media only screen and (max-width: 769px) {
 
-    // .row{
-    //    dispaly:flex;
-    //    flex-direction:column;
-    // }
     .btncontainer {
-      top: 75% !important;
-    }
-    .colmd{
-       width:0 !important;
-    }
-    .colmd2{
-       width:100vw !important;
+      top:88% !important;
+      left:10%;
     }
 
-    .decrp{
-      color:#e6d0cb ;
-      font-weight: 600;
-      padding-top:3rem  !important;
-      margin-right:2rem !important;
-      padding-bottom:6rem !important;
-      font-size:28px !important;
-      line-height: 28px !important;
-      margin-top: 60px !important;
-      text-shadow: 1px 1px 5px #970000;
-      font-family: "AavartanFont";
-      position: absolute;
-      top:35% !important;
-      width: 86vw !important;
+    .aavartan-font {
+    top: 10% !important;
+    height: 19vh !important;
+    width: 65vw !important;
+    left: 15% !important;
     }
-
-    .aavartan-font{
-        width:50vw !important;
-        display:flex;
-        align-self:center;
-        height:15vh !important;
-        
-    }
-
-    .gamfi_v2_hero_right .metaportal_fn_button_3 {
-      left: 35%;
-      width: 250px;
-    }
-
-    .gamfi_v2_hero_thumb .rocket_thumb {
-      height: 150px !important;
-    }
-
-    .rocket_thumb2 {
-      bottom: vh !important;
-      height: 200px !important;
-    }
+  .gamfi_v2_hero_left .gamfi_v2_hero_thumb .rocket_thumb2 {
+  position: absolute;
+  top: 30%;
+  left: 1rem;
+  animation: jxHqgd 5s infinite;
+  z-index: 0;
+  height: 25vw;
+   } 
+.decrp {
+  color: black;
+  font-weight: 300;
+  font-size: 1.8rem !important;
+  line-height: 3rem !important;
+   padding:0 5px !important;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 5pxrgb(73, 6, 6);
+  font-family: "AavartanFont";
+  position: absolute;
+  background: rgba(149, 8, 8, 0.6);
+  top: 51% !important;
+  left:4vw !important;
+  width: 90vw !important;
+  z-index: 2;
+  }
   }
 
   @media only screen and (max-width: 571px) {
-    .btncontainer {
-      top: 82% !important;
+    .btncontainer{
+       top:80vh !important;
+       left:43% !important;
     }
-    .decrp{
-      font-size:1.3rem !important;
-      padding-left:1.5rem !important;
+    .decrp {
+      font-size:1.5rem !important;
+      line-height:2.2rem !important;
+      padding:0 5px !important;
+      top:35% !important;
+      left:5% !important;
+      width:100vw;
     }
-
-    .gamfi_v2_hero_right .rocket_thumb {
-      height: 100px;
-      right: 0px;
+    .aavartan-font{
+      top:3% !important;
+      left:12% !important;
+      width:80vw !important;
+      height:20vh !important;
+    }
+    .gamfi_v2_hero_left .rocket_thumb {
+      height: 80px !important;
     }
 
     .rocket_thumb2 {
-      top: 15rem;
-      left:40%;
-      height:30vh;
+      height: 80px;
+    }
+    
+    .colmd2{
+      width:100vw;
     }
   }
 
-  @media only screen and (max-width: 426px) {
+  @media (max-width: 426px) {
 
     .btncontainer{
-       top:90vh !important;
+       top:80vh !important;
        left:43% !important;
     }
-    .colmd2 .gamfi_v2_hero_right .decrp {
-      font-size:1.3rem !important;
-      margin-top:10px;
-      margin:0;
-      // margin:2px !important;
-      // margin-left:rem !important;
-      top:20%;
+    .decrp {
+      font-size:1.5rem !important;
+      line-height:2.2rem !important;
+      padding:0 5px !important;
+      top:25% !important;
+      left:5% !important;
       width:100vw;
     }
-      .decrp{
-         top:50%;
-         margin-left:2vw;
-      }
-
+    .aavartan-font{
+      top:5% !important;
+      left:12% !important;
+      width:80vw !important;
+      height:20vh !important;
+    }
     .gamfi_v2_hero_left .rocket_thumb {
       height: 80px !important;
     }
@@ -366,33 +374,32 @@ const AavartanStyleWrapper = styled.section`
     .gamfi_v2_hero_left h2 {
       font-size: 2.5rem;
     }
- 
-    colmd2{
-    width:100%;
-    margin:0 !important;
-    }
 
-  .gamfi_v2_hero_right .aavartan-font {
-  position: relative;
+
+  .aavartan-font {
   height: 15vh;
-  width: 77vw;
+  top: 3%;
+  width: 70vw;
 }
   .btncontainer{
     top:80% !important:
   }
 
-    .metaportal_fn_button_3 {
-      bottom: 15vh !important;
-    }
+ 
       .decrp{
-        font-size:3px !important;
-        line-height:1.4rem !important;
+        top: 30% !important;
+        font-size:1.2rem !important;
+        line-height:1.8rem !important;
         margin-left:-2px !important;
          text-align:center
       }
+         .btncontainer{
+            top:75% !important;
+            left:43% !important;
+         }
+}
     
-  }
- 
+
 
   @media only screen and (max-width: 321px) {
     .gamfi_v2_hero_left h2 {
