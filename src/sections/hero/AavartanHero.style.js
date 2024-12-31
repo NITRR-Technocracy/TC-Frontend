@@ -47,13 +47,19 @@ const AavartanStyleWrapper = styled.section`
 
   .btncontainer {
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 75%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 500;
   }
+
   .container{
     z-index:100;
+    height:100vh !important;
+    widht:100vw;
+    margin:0;
+    position:relative;
+    top:-20vh;
   }
    
   .ufo_shape {
@@ -93,19 +99,11 @@ const AavartanStyleWrapper = styled.section`
 
 }
 
-  .row {
-    display: flex;
-  }
-
-  .colmd, .colmd2 {
-    width: 50%;
+  .colmd2 {
+    width: 100%;
+    position:relative;
     margin: 0;
   }
-
-  .gamfi_v2_hero_left {
-    display: flex;
-    flex-direction: column;
-    z-index:4;
 
     .metaportal_fn_button_3 {
       position: absolute;
@@ -114,29 +112,15 @@ const AavartanStyleWrapper = styled.section`
       width: 300px;
     }
 
-    .gamfi_v2_hero_thumb {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position:absolute;
-      right:30rem;
+   .aavartan-font { 
+       position:absolute;
+       top:0vh;
+       left:30%;
+       height: 28vh;
+       width: 40vw;
+       z-index: 400;
+    }
 
-    .aavartan-font { 
-       position:relative;
-       height: 15vh;
-       width: 25vw;
-       top:-20vh;
-      .star{
-        position:absolute;
-        top:-7vh;
-        left:0;
-        height:100%;
-        width:100%;
-      }
-      // background-color: red;
 
       .font{
          height:100%;
@@ -160,36 +144,26 @@ const AavartanStyleWrapper = styled.section`
         z-index: 0;
         height: 25vw;
       }
-    }
-  }
-
-  .gamfi_v2_hero_right {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-}
   
   .decrp {
-      color:#993d3d;
+      color:#993d3e;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 25px;
       line-height: 35px;
       margin-top: 60px;
       text-align: center;
-      text-shadow: 1px 0px 3px white;
+      text-shadow: 1px 0px 3px black;
       font-family: "AavartanFont";
       position: absolute;
-      top:27vh;
-      right: 35vw;
-      width: 30vw;
+      top:40vh;
+      left:22vw;
+      width: 55vw;
       z-index: 2;
         background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
-    color: #fff; /* White text for contrast */
+      color:white; /* White text for contrast */
+    backdrop-filter: blur(10px); /* Transparent background blur */
     padding: 10px; /* Space around the content */
     border-radius: 5px; /* Smooth rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  
     }
 
   

@@ -224,18 +224,14 @@ const VigyaanStyleWrapper = styled.section`
      max-height:20vh !important;
   }
       .vigyaan-desc{
-        top:40% !important;
+        top:43% !important;
         left:3vw !important;
-        line-height:7vw;
+        height:30vh;
+        line-height:8vw;
          width:90% !important;
-         font-size:3vw !important;
+         font-size:max(15px,3.5vw) !important;
        margin-left:10px !important;
        padding:0 4px !important;
-    //  background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
-    // color: #fff; /* White text for contrast */
-    // padding: 10px; /* Space around the content */
-    // border-radius: 5px; /* Smooth rounded corners */
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
     .vigyaan-planet{
       top:10%;
@@ -258,6 +254,28 @@ const VigyaanStyleWrapper = styled.section`
       .vigyaan-font img{
         height:20vh;
         width:80vw;
+      }
+    }
+
+   @media (max-width:1024px){
+      .vigyaan-desc{
+        width:80%; 
+        font-size:2.5vw !important;
+        top:43% !important;
+        padding:0;
+      }
+      .vigyaan-font img{
+        height:20vh;
+        width:100vw;
+} 
+    }
+
+    @media(max-width:600px){
+      .vigyaan-desc{
+        width:80% !important; 
+        font-size:2.3vw !important;
+        top:43% !important;
+        padding:0;
       }
     }
 
