@@ -30,11 +30,14 @@ const Circle = keyframes`
   0% {
     transform: rotate(0deg);
   }
-  100% {
+  50% {
     transform: translate(80px, -80px);
     transform: rotate(30deg);
   }
-`; 
+  100%{
+    transform: rotate(0deg);
+  }
+`;
 const popIn = keyframes`
   0% {
     transform: scale(0.5);
@@ -52,12 +55,18 @@ const popIn = keyframes`
 const VigyaanStyleWrapper = styled.section`
 
   position: relative;
-  height: 100vh;
+  // min-height: 100vh;
   padding: 0;
   overflow: hidden;
   animation: ${popIn} 2s ease forwards; 
    
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+  }
   .asto {
     position: absolute;
     top: 110vh;
@@ -69,31 +78,35 @@ const VigyaanStyleWrapper = styled.section`
     position: absolute;
     top: 10vh;
     right: 0%;
-    height: 100px;
+    height: 10vmax;
     animation: ${rotate360} 15s linear infinite;
   }
 
   .planet2 {
     animation: ${quarterCircle} 4s linear infinite;
     left: 0%;
-    height: 200px;
+    height: 10vmax;
   }
 
   .planet3 {
     position: absolute;
     top: 30vh;
     left: 2vw;
-    height: 200px;
-    animation: ${Circle} 3s linear infinite;
+    height: 10vmax;
+    animation: ${Circle} 6s linear infinite;
   }
 
   .vigyaan-planet {
-    left: 50%;
-    top: 20vh;
     position: relative;
-    transform: translateX(-50%);
     width: 35vw;
     z-index: 1;
+    margin-top: 100px;
+  }
+  .vigyaan-planet>img{
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
   }
 
   .vigyaan-font img {
@@ -102,9 +115,10 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-font {
-    left: 32%;
+    left: 50%;
     position: absolute;
-    top: 25vh;
+    transform: translateX(-50%);
+    top: 25%;
     font-size: 5.5rem;
     color: black;
     font-family:;
@@ -114,8 +128,9 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-desc {
-    position: absolute;
-    top: 52vh; left:18vw;
+    // position: absolute;
+    // top: 52vh; left:50%;
+    // transform: translateX(-50%);
     text-align:center;
     z-index: 2;
     font-family: 'VigyaanFont';
@@ -144,40 +159,46 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .btncontainer2 {
-    position: absolute;
-    top: 71%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+    margin-top: 50px;
   }
+
 
   .cta2 {
-    display: flex;
-    padding: 5px 45px;
-    text-decoration: none;
-    font-family: "Minecraftia", sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    color: white;
-    background: #6225e6;
-    transition: 0.5s;
-    box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
-    justify-content: center;
-    align-items: center;
+    // height: 100px;
+    // // width: calc(var(--btn-size) * 10);
+    min-width: 30vw;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    background: #999 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center/cover;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+    font-family: 'Minecraftia';
   }
 
-  .cta2:focus {
-    outline: none;
-  }
 
-  .cta2:hover {
-    transition: 0.5s;
-    box-shadow: 10px 10px 0 #fbc638;
-  }
+  .cta2:hover span {
+  background-color: rgba(100, 100, 255, 0.45);
+  text-shadow: 2px 2px #202013CC;
+  color: #FFFFA0;
+}
+
+  .cta2:active span {
+  box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+}
 
   .cta2 span {
-    transform: skewX(15deg);
+    width: 100%;
+    height: 100%;
+    padding: .5rem 1rem;
+    padding-bottom: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DDD;
+    text-shadow: 2px 2px #000A;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
   }
 
   .cta2 span:nth-child(2) {
@@ -199,90 +220,10 @@ const VigyaanStyleWrapper = styled.section`
     }
   }
 
-  @media (max-width: 1232px) {
-    .vigyaan-font {
-      font-size: 4rem;
-    }
-
-    .vigyaan-desc {
-      padding: 0 5rem;
-    }
-
-    .btncontainer2 {
-      top: 70%;
-    }
-  }
-   @media (max-width: 435px){
-
-     .vigyaan-font{
-        left:3vw !important;
-        top:20% !important;
-     }
-    .vigyaan-font img {
-      
-     width:95% !important;
-     max-height:20vh !important;
-  }
-      .vigyaan-desc{
-        top:43% !important;
-        left:3vw !important;
-        height:30vh;
-        line-height:8vw;
-         width:90% !important;
-         font-size:max(15px,3.5vw) !important;
-       margin-left:10px !important;
-       padding:0 4px !important;
-}
-    .vigyaan-planet{
-      top:10%;
-      right:2vw;
-    }
-    .planet1{
-    display:none}
-      }
-      .btncontainer2{
-        top:95%;
-      }
-   }
-    @media (max-width: 800px){
-      .vigyaan-desc{
-        width:80%; 
-        font-size:2.5vw !important;
-        top:43% !important;
-        padding:0;
-      }
-      .vigyaan-font img{
-        height:20vh;
-        width:80vw;
-      }
-    }
-
-   @media (max-width:1024px){
-      .vigyaan-desc{
-        width:80%; 
-        font-size:2.5vw !important;
-        top:43% !important;
-        padding:0;
-      }
-      .vigyaan-font img{
-        height:20vh;
-        width:100vw;
-} 
-    }
-
-    @media(max-width:600px){
-      .vigyaan-desc{
-        width:80% !important; 
-        font-size:2.3vw !important;
-        top:43% !important;
-        padding:0;
-      }
-    }
+  
 
   // Add remaining media queries and other styles
 
 `;
-
-
 
 export default VigyaanStyleWrapper;
