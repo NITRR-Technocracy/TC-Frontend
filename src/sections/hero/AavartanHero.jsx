@@ -23,8 +23,8 @@ const AavartanHero = () => {
 
         <div className="container" >
        
-          <div className="row">
-            <div className="colmd">
+          {/* <div className="row"> */}
+            {/* <div className="colmd"> */}
               {/* <div className="gamfi_v2_hero_left">
                 <div className="gamfi_v2_hero_thumb"> */}
                 <div className="aavartan-font">
@@ -38,8 +38,8 @@ const AavartanHero = () => {
                   the banner of our annual Tech-Fest “Aavartan”. We also
                   undertake technical projects and research initiatives.
                 </p>
-                </div>
-              </div>
+                {/* </div> */}
+              {/* </div> */}
               <div className="btncontainer" style={{ display: "flex" }}>
                 <a className="cta" href="/vigyaan" style={{ marginLeft: "2.68rem", marginTop: "6rem" }}>
                   <span className="">VIGYAAN</span>
