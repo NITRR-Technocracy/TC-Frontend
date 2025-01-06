@@ -80,7 +80,7 @@ const AavartanStyleWrapper = styled.section`
 
 .moving-cloud {
   position: absolute;
-  animation: moveCloud 300s linear infinite ;
+  animation: moveCloud 200s linear infinite;
   repeat:infinite;
   z-index: 400;
 }
@@ -91,10 +91,7 @@ const AavartanStyleWrapper = styled.section`
     transform: translateX(-80%); 
   }
   50% {
-    transform: translateX(1vw); 
-  }
-  100%{
-    transform: translateX(-80%); 
+    transform: translateX(5vw); 
   }
 }
 .plants{
@@ -118,10 +115,11 @@ const AavartanStyleWrapper = styled.section`
 
    .aavartan-font { 
        position:absolute;
+       user-select: none;
        top:-8vh;
        left:30%;
-       height: 28vh;
-       width: 40vw;
+       height: 22vh;
+       width: 35vw;
        z-index: -400;
     }
 
@@ -152,23 +150,25 @@ const AavartanStyleWrapper = styled.section`
 .decrp {
     color: white; /* White text for contrast */
     font-weight: 300;
-    font-size: 25px;
+    font-size:3vh;
     line-height: 35px;
     margin-top: 60px;
     width:80vw;
+    user-select: none;
     text-align: center;
     text-shadow: 1px 0px 3px black;
     font-family: "AavartanFont";
     position: absolute;
-    top: 43vh;
+    top: 47vh;
     left: 10%; /* Syncs with background's left */
     right: 10%; /* Syncs with background's right */
     z-index: 2;
-    background: rgba(61, 3, 22, 0.6); /* Slightly transparent black with more opacity */
+    border-radius:20px;
+    background: rgba(96, 31, 19, 0.6); /* Slightly transparent black with more opacity */
     backdrop-filter: blur(5px); /* Increased blur effect */
-    padding: 10px; /* Space around the content */
+    padding:; /* Space around the content */
     border-radius: 5px; /* Smooth rounded corners */
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Slightly visible shadow */
+    // box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Slightly visible shadow */
 }
 
   
@@ -190,19 +190,39 @@ const AavartanStyleWrapper = styled.section`
         }
       }
     }
+   .btncontainer{
+       top:85% !important;
+       left:50% !important;
+       translate:transform(-50%,-50%);
+    }
+    .decrp {
+      font-size:max(1.2vh,1.5rem) !important;
+      line-height:3rem !important;
+      padding:0 5px !important;
+      top:58% !important;
+      left:10% !important;
+      width:95vw;
+    }
+    .aavartan-font{
+      top:5% !important;
+      left:20% !important;
+      width:60vw !important;
+      height:20vh !important;
+    }
   }
 
   @media only screen and (max-width: 1025px) {
-    .btncontainer {
-      top:95% !important;
+    .btncontainer{
+      top:90% !important;
       left:10%;
+      transform:translate(-50%,-50%);
     }
 
     .aavartan-font {
-    top: 15% !important;
-    height: 19vh !important;
-    width: 65vw !important;
-    left: 17% !important;
+     top:10% !important;
+    height: 18vh !important;
+    width: 60vw !important;
+    left: 18% !important;
     }
   .gamfi_v2_hero_left .gamfi_v2_hero_thumb .rocket_thumb2 {
   position: absolute;
@@ -215,8 +235,8 @@ const AavartanStyleWrapper = styled.section`
 .decrp {
   color: black;
   font-weight: 300;
-  font-size: 2.1rem !important;
-  line-height: 3.5rem !important;
+  font-size:1vh rem !important;
+  line-height: 3rem !important;
   margin-top: 10px;
   text-align: center;
   text-shadow: 1px 1px 5pxrgb(73, 6, 6);
@@ -251,18 +271,13 @@ const AavartanStyleWrapper = styled.section`
   height: 25vw;
    } 
 .decrp {
-  color: black;
   font-weight: 300;
-  font-size: 1.8rem !important;
   line-height: 3rem !important;
   margin-top: 10px;
   text-align: center;
-  text-shadow: 1px 1px 5pxrgb(73, 6, 6);
-  font-family: "AavartanFont";
   position: absolute;
-  background: rgba(149, 8, 8, 0.6);
-  top: 55% !important;
-  left:3vw !important;
+  top: 60% !important;
+  left:4% !important;
   width: 90vw !important;
   z-index: 2;
   }
@@ -271,15 +286,15 @@ const AavartanStyleWrapper = styled.section`
   @media only screen and (max-width: 769px) {
 
     .btncontainer {
-      top:88% !important;
+      top:90% !important;
       left:10%;
     }
 
     .aavartan-font {
     top: 10% !important;
     height: 19vh !important;
-    width: 65vw !important;
-    left: 15% !important;
+    width: 68vw !important;
+    left: 18% !important;
     }
   .gamfi_v2_hero_left .gamfi_v2_hero_thumb .rocket_thumb2 {
   position: absolute;
@@ -290,39 +305,27 @@ const AavartanStyleWrapper = styled.section`
   height: 25vw;
    } 
 .decrp {
-  color: black;
-  font-weight: 300;
-  font-size: 1.8rem !important;
-  line-height: 3rem !important;
-   padding:0 5px !important;
-  margin-top: 10px;
-  text-align: center;
-  text-shadow: 1px 1px 5pxrgb(73, 6, 6);
-  font-family: "AavartanFont";
-  position: absolute;
-  background: rgba(149, 8, 8, 0.6);
-  top: 51% !important;
-  left:4vw !important;
-  width: 90vw !important;
-  z-index: 2;
+    position:absolute;
+    top:58% !important;
+    left:4% !important;
   }
   }
 
   @media only screen and (max-width: 571px) {
     .btncontainer{
-       top:80vh !important;
+       top:90% !important;
        left:43% !important;
     }
     .decrp {
-      font-size:1.5rem !important;
+      // font-size:1.4rem !important;
       line-height:2.2rem !important;
       padding:0 5px !important;
-      top:35% !important;
+      top:60% !important;
       left:5% !important;
       width:100vw;
     }
     .aavartan-font{
-      top:3% !important;
+      // top:10% !important;
       left:12% !important;
       width:80vw !important;
       height:20vh !important;
@@ -343,19 +346,20 @@ const AavartanStyleWrapper = styled.section`
   @media (max-width: 426px) {
 
     .btncontainer{
-       top:80vh !important;
+       top:90% !important;
        left:43% !important;
     }
     .decrp {
-      font-size:1.5rem !important;
-      line-height:2.2rem !important;
+      line-height:2rem !important;
+      padding-bottom:2px !important;
       padding:0 5px !important;
-      top:25% !important;
+      bottom:13% !important;
       left:5% !important;
       width:100vw;
     }
+
     .aavartan-font{
-      top:5% !important;
+      // top:3% !important;
       left:12% !important;
       width:80vw !important;
       height:20vh !important;
@@ -374,30 +378,23 @@ const AavartanStyleWrapper = styled.section`
   }
 
   @media only screen and (max-width: 376px) {
-    .gamfi_v2_hero_left h2 {
-      font-size: 2.5rem;
-    }
-
 
   .aavartan-font {
-  height: 15vh;
-  top: 3%;
-  width: 70vw;
+       height: 15vh;
+    //  top:0.8% !important;
+     width: 70vw;
 }
-  .btncontainer{
-    top:80% !important:
-  }
 
- 
       .decrp{
-        top: 30% !important;
-        font-size:1.2rem !important;
-        line-height:1.8rem !important;
+        bottom:18% !important;
+        font-size:1rem !important;
+        line-height:1.5rem !important;
         margin-left:-2px !important;
-         text-align:center
+        padding:10px 5px !important;
+         text-align:center;
       }
          .btncontainer{
-            top:75% !important;
+            top:90% !important;
             left:43% !important;
          }
 }
