@@ -80,7 +80,7 @@ const AavartanStyleWrapper = styled.section`
 
 .moving-cloud {
   position: absolute;
-  animation: moveCloud 200s linear infinite;
+  animation: moveCloud 300s linear infinite ;
   repeat:infinite;
   z-index: 400;
 }
@@ -91,7 +91,10 @@ const AavartanStyleWrapper = styled.section`
     transform: translateX(-80%); 
   }
   50% {
-    transform: translateX(5vw); 
+    transform: translateX(1vw); 
+  }
+  100%{
+    transform: translateX(-80%); 
   }
 }
 .plants{
