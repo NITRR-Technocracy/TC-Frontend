@@ -36,67 +36,72 @@ const rocketAnimation2 = keyframes`
 
 const AavartanStyleWrapper = styled.section`
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
   height: 100vh;
-  padding: 250px 0;
+  background-repeat:no-repeat;
   overflow: hidden;
-  animation: ${popIn} 2s ease forwards; 
+  background-size: cover;
+
+  .moving-cloud-container {
+    position: absolute;
+    top: -18vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .moving-cloud {
+    animation: moveCloud 300s linear infinite;
+    z-index: 4;
+  }
+
+  .container {
+    z-index: 1000;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .aavartan-font {
+    position: absolute;
+    top: 5% !important;
+    left: 30%;
+    width: 40%;
+    z-index: 2;
+  }
+
+  .decrp {
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    background: rgba(96, 42, 33, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 5;
+  }
 
   .btncontainer {
     position: absolute;
-    top: 75%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    z-index: 600;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
   }
 
-  .container{
-    z-index:100;
-    height:100vh !important;
-    width:100vw;
-    margin:0;
-    position:relative;
-    top:-20vh;
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
-   
-  /* .ufo_shape {
-    position: absolute;
-    top: 2%;
-    left: 10%;
-    z-index: 0;
-  } */
-  .moving-cloud-container {
-    position: absolute;
-  top: -18vh;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  user-select: none;
-}
 
-.moving-cloud {
-  position: absolute;
-  animation: moveCloud 300s linear infinite ;
-  repeat:infinite;
-  z-index: 400;
-}
-
-
-@keyframes moveCloud {
-  0% {
-    transform: translateX(-80%); 
-  }
-  50% {
-    transform: translateX(1vw); 
-  }
-  100%{
-    transform: translateX(-80%); 
-  }
-}
 .plants{
   position:relative;
 
@@ -119,7 +124,7 @@ const AavartanStyleWrapper = styled.section`
    .aavartan-font { 
        position:absolute;
        user-select: none;
-       top:-8vh;
+       top:-2.5%;
        left:30%;
        height: 22vh;
        width: 35vw;
@@ -162,7 +167,7 @@ const AavartanStyleWrapper = styled.section`
   text-shadow: 1px 0px 3px black;
   font-family: "AavartanFont";
   position: absolute;
-  top: 47vh;
+  top: 50vh;
   left: 10%;
   right: 10%;
   z-index: 2;
@@ -316,3 +321,4 @@ const AavartanStyleWrapper = styled.section`
 `;
 
 export default AavartanStyleWrapper;
+
