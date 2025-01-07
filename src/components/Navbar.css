@@ -12,7 +12,7 @@ nav {
   z-index: 1;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 2000;
 }
 .navlogo {
   height: 65px;
