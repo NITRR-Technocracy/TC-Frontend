@@ -92,6 +92,27 @@ const AavartanStyleWrapper = styled.section`
     transform: translateX(-50%);
     z-index: 6;
   }
+  .cta {
+  display: flex;
+  padding: 5px 45px;
+  text-decoration: none;
+  font-family: 'kanit', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  background: #540303;
+  transition: 0.5s;
+  box-shadow: 6px 6px 0 rgb(251, 167, 12);
+  transform: skewX(-15deg);
+  justify-content: center;
+  align-items: center;
+}
+
+.cta svg {
+  display: block; 
+  pointer-events: auto; 
+}
+
 
   @keyframes moveCloud {
     0% {
