@@ -413,7 +413,7 @@ body {
   // font-family: 'Bravest';
 }
 
-.btncontainer {
+.btncontainer22 {
   width: 100%;
   gap:2rem;
 
@@ -428,9 +428,9 @@ body {
   font-size: 25px;
   font-weight: 600;
   color: white;
-  background: #6225E6;
+  background: #540303;
   transition: 0.5s;
-  box-shadow: 6px 6px 0 black;
+  box-shadow: 6px 6px 0 rgb(251, 167, 12);
   transform: skewX(-15deg);
   justify-content: center;
   align-items: center;
@@ -552,14 +552,14 @@ path.two {
     font-size: 1rem;
   }
 
-  .btncontainer {
+  .btncontainer2 {
     width: 50%;
     flex-direction: column;
   }
 }
 
 @media (max-width: 677px) {
-  .btncontainer {
+  .btncontainer2 {
     width: 60%;
   }
 }
@@ -578,12 +578,12 @@ path.two {
   .heroContent h1 span {
     font-size: 1.5rem;
   }
-  .btncontainer {
+  .btncontainer2 {
     width: 70%;
   }
 }
 @media (max-width: 338px) {
-  .btncontainer {
+  .btncontainer2 {
     width: 80%;
   }
 }
@@ -594,7 +594,7 @@ path.two {
   .heroContent p {
     font-size: 0.8rem;
   }
-  .btncontainer {
+  .btncontainer2 {
     width: 90%;
   }
   .cta {
