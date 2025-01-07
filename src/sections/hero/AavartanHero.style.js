@@ -108,6 +108,7 @@ const AavartanStyleWrapper = styled.section`
   align-items: center;
 }
 
+
 .cta svg {
   display: block; 
   pointer-events: auto; 
