@@ -119,7 +119,7 @@ const AavartanStyleWrapper = styled.section`
    .aavartan-font { 
        position:absolute;
        user-select: none;
-       top:-8vh;
+       top:-2%;
        left:30%;
        height: 22vh;
        width: 35vw;
@@ -162,7 +162,7 @@ const AavartanStyleWrapper = styled.section`
   text-shadow: 1px 0px 3px black;
   font-family: "AavartanFont";
   position: absolute;
-  top: 47vh;
+  top: 50vh;
   left: 10%;
   right: 10%;
   z-index: 2;

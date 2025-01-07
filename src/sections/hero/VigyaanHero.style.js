@@ -110,8 +110,8 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-font img {
-     width:40vw;
-     max-height:20vw;
+     width:max(40vw,35vh);
+     max-height:22vw;
   }
 
   .vigyaan-font {
@@ -136,9 +136,10 @@ const VigyaanStyleWrapper = styled.section`
     font-family: 'VigyaanFont';
     font-weight:700;
     font-size:1rem;
+    line-height:2rem;
     color: white;
     z-index: 2;
-    width:70%;
+    width:80%;
     letter-spacing:2px;
     background: rgba(75, 0, 130, 0.3); /* Slightly transparent black */
     color: #fff; /* White text for contrast */
@@ -219,6 +220,7 @@ const VigyaanStyleWrapper = styled.section`
       fill: white;
     }
   }
+    
 
   
 
