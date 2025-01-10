@@ -64,7 +64,7 @@ const AavartanStyleWrapper = styled.section`
 
   .aavartan-font {
     position: absolute;
-    top: 5% !important;
+    top: 6% !important;
     left: 30%;
     width: 40%;
     z-index: 2;
@@ -72,13 +72,13 @@ const AavartanStyleWrapper = styled.section`
 
   .decrp {
     position: absolute;
-    top: 60% !important;
+    top: 63% !important;
     left: 50% !important;
     transform: translate(-50%, -50%);
     width: 80%;
     text-align: center;
     background: rgba(96, 42, 33, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -87,7 +87,7 @@ const AavartanStyleWrapper = styled.section`
 
   .btncontainer {
     position: absolute;
-    bottom: 10%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 6;

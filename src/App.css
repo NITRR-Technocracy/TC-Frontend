@@ -8012,9 +8012,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-size: 25px;
 	font-weight: 600;
 	color: white;
-	background: #6225E6;
+	background: #540303;
 	transition: 1s;
-	box-shadow: 6px 6px 0 black;
+	box-shadow: 6px 6px 0 rgb(251, 167, 12);
 	transform: skewX(-15deg);
 	justify-content: center;
 	align-items: center;
