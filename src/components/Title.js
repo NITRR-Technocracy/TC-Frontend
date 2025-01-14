@@ -6,7 +6,7 @@ const Title = (props) => {
   return (
     <div className="title">
         <h1 className="heading">
-           <span>{props.color}</span> {props.noncolor}
+           <span>{props.color}  {props.noncolor}</span> 
         </h1>
         <Line/>
       </div>

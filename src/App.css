@@ -7866,17 +7866,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	align-items: center;
 	color: #FFF;
 	font-weight: 500;
-	border-image: linear-gradient(to right, #4c90d5, #FE7BE5);
+	border-image: linear-gradient(to right, #d58e4c, #380303);
 	/* Define your linear gradient colors here */
 	border-image-slice: 1;
 	/* Keeps the entire gradient within the border */
+	background-color: #610707;
 	border-image-repeat: stretch;
 	margin: 1rem 0rem;
 }
 
 .goodbtn:hover {
 	color: white;
-	background: linear-gradient(to right, #4c90d5, #FE7BE5);
+	background: linear-gradient(to right, #040100, #230101);
 	/* border: 2px solic;
  border-bottom-color:#FE7BE5 ;
  border-top-color: #504099 ; */

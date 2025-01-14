@@ -195,7 +195,7 @@ const EventsGallery = () => {
               className="goodbtn"
               target="_blank"
               rel="noreferrer"
-              style={{ margin: "2rem 0", position: "relative", zIndex: "1" }}
+              style={{ margin: "2rem 0",backgroundColor:"#210c75", borderColor:"white", position: "relative", zIndex: "1" }}
             >
               <span>Show More</span>
             </div>

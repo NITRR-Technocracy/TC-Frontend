@@ -24,8 +24,8 @@ function Footer (){
 						<div className={styles.footercol + " " + styles.logosec}>
 							<img src={logo} height="80px" alt="" />
 							<div className={styles.fquotessec}>
-								<p className={styles.fquotes}>{curQuote.quote}</p>
-								<p className={styles.fsaidby}>- {curQuote.author}</p>
+								<p className={styles.fquotes} style={{color:"white", fontWeight:"bold"}}>{curQuote.quote}</p>
+								<p className={styles.fsaidby} style={{color:"#ffff", fontStyle:"italic"}}>- {curQuote.author}</p>
 							</div>
 						</div>
 						<div className={styles.footercol}>
