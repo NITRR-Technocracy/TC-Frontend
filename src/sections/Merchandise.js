@@ -25,7 +25,7 @@ const Merchandise = () => {
 
 Tech would flow through your blood and come out through your sweat as  Team Technocracy launches its very own Merchandise for you all! 🚀 
 
-Be a part of the gigantic Tech Fest AAVARTAN'23-24 (Cosmoscape) and have some imprints of it on yourselves! 
+Be a part of the gigantic Tech Fest AAVARTAN'24-25 and have some imprints of it on yourselves! 
 
 The comfortable and trendy attire awaits you! Hurry up and Order now through the given link! 🔗
 <br />
@@ -34,7 +34,7 @@ The comfortable and trendy attire awaits you! Hurry up and Order now through the
 Price: Rs 350
 
           </p>
-          <div className="btn-container" style={{ display: "flex" }}>
+          <div className="btn-container" style={{ display: "flex",zIndex:2000 }}>
                  <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
                 <span>BUY NOW</span>
                 <span>

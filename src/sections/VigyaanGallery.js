@@ -43,15 +43,13 @@ const EventsGallery = () => {
   return (
     <section id="collection">
       <div className="container collectionContainer">
-        {/* <Title color={color} noncolor={noncolor} /> */}
-        <h1 className="vigyaan-title">VIGYAAN GALLERY</h1>
-        <Line/>
+        <Title color={color} noncolor={noncolor} />
         <div className="fn_cs_desc">
           <p>
             Vigyaan, the science exhibition organized during the tech fest,
             showcases groundbreaking innovations, cutting-edge technologies, and
             exciting projects, providing a platform for students to delve deeper
-            into the world of science and explore limitless possibilities.
+            into the world of science and explore limitless possibilities.
           </p>
         </div>
         <div className="fn_cs_collection">
@@ -198,7 +196,7 @@ const EventsGallery = () => {
               className="goodbtn"
               target="_blank"
               rel="noreferrer"
-              style={{ margin: "2rem 0", position: "relative", zIndex: "1" }}
+              style={{ margin: "2rem 0",backgroundColor:"#210c75", borderColor:"white", position: "relative", zIndex: "1" }}
             >
               <span>Show More</span>
             </div>

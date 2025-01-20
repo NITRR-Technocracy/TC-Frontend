@@ -41,14 +41,20 @@ const VigyaanHero = () => {
           </div>
           {/* <img className="vigyaan-ring" src={ring} alt="name" /> */}
 
+
           <div className="btncontainer2" style={{ display: "flex" }}>
             {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
             <a className="cta2">
               <span>CLICK TO REGISTER</span>
               {/* <span >Registration Closed</span> */}
               {/* <span>Registrations open</span> */}
+            <a className="cta2">
+              <span>CLICK TO REGISTER</span>
+              {/* <span >Registration Closed</span> */}
+              {/* <span>Registrations open</span> */}
             </a>
           </div>
+
 
           {/* <div className="row">
             <div className="col-md-6">
