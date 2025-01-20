@@ -30,7 +30,7 @@ const VigyaanHero = () => {
               <img src={font} alt="" />
             </div>
           </div>
-          <img className="asto" src={prop8} alt="asto" />
+          {/* <img className="asto" src={prop8} alt="asto" /> */}
           <img className="planet1" src={prop5} alt="pl1" />
           <img className="planet3" src={prop7} alt="pl3" />
           <div className="vigyaan-desc">

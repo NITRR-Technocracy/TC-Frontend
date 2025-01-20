@@ -1,7 +1,7 @@
 import React from 'react';
 import prop1 from "../../assets/Aavartan New/angrybirds-ade9044e69a24e018f493bfb8e6e86c9_prev_ui.png";
 import prop2 from "../../assets/Aavartan New/DREAMBLAST_MainKeyArt_Birds2.png";
-import AAVARTAN from '../../assets/Aavartan New/Aavartan-font.png';
+import AAVARTAN from '../../assets/Aavartan New/AAVARTAN-10-17-2024 (1).png';
 import Stars from '../../assets/ThreeStars.png';
 import Cloud from '../../assets/Aavartan New/clouds.png';
 

@@ -11,7 +11,7 @@ const VigyaanGalleryPage = () => {
     window.scrollTo(0,0)
   }, [])
   return (
-    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+    <div className='Vigyaanscrolled' style={{position:"relative", zIndex:"-1"}}>
       <div className="metaportal_fn_collectionpage" style={{position:"relative", zIndex:"0"}}>
         <div className="container">
           <div className="metaportal_fn_collection">
@@ -29,9 +29,9 @@ const VigyaanGalleryPage = () => {
                   <Title color="VIGYAAN" noncolor="GALLERY"/>
                   <ul className="grid">
 
-                  {Vigyaan_data.map((data)=>{
+                  {Vigyaan_data.map((data, index)=>{
                     return(
-                      <li data-aos="fade-down"
+                      <li key={index} data-aos="flip-up"
                       >
                         <div className="nft__item">
                           <div className="img_holder">

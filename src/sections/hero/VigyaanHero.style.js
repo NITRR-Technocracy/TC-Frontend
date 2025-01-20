@@ -101,6 +101,7 @@ const VigyaanStyleWrapper = styled.section`
     width: 35vw;
     z-index: 1;
     margin-top: 100px;
+    margin-bottom: 20px;
   }
   .vigyaan-planet>img{
     object-fit: contain;
@@ -110,8 +111,8 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-font img {
-     width:max(40vw,35vh);
-     max-height:22vw;
+     max-height:25vmin;
+     max-width: 80vw;
   }
 
   .vigyaan-font {
@@ -136,10 +137,9 @@ const VigyaanStyleWrapper = styled.section`
     font-family: 'VigyaanFont';
     font-weight:700;
     font-size:1rem;
-    line-height:2rem;
     color: white;
     z-index: 2;
-    width:80%;
+    width:70%;
     letter-spacing:2px;
     background: rgba(75, 0, 130, 0.3); /* Slightly transparent black */
     color: #fff; /* White text for contrast */
@@ -220,7 +220,6 @@ const VigyaanStyleWrapper = styled.section`
       fill: white;
     }
   }
-    
 
   
 

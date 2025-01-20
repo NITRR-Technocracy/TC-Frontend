@@ -10,6 +10,7 @@ import v6 from "../assets/images/vigyaan/v6.webp";
 import v7 from "../assets/images/vigyaan/v7.webp";
 import v8 from "../assets/images/vigyaan/v8.webp";
 import { Link } from "react-router-dom";
+import { Line } from "../components/Line";
 
 const EventsGallery = () => {
   // useEffect(() => {
@@ -192,7 +193,7 @@ const EventsGallery = () => {
           >
             <div
               href="/"
-              className="goodbtn"
+              className="goodbtn gallery-btn"
               target="_blank"
               rel="noreferrer"
               style={{ margin: "2rem 0",backgroundColor:"#210c75", borderColor:"white", position: "relative", zIndex: "1" }}
