@@ -101,6 +101,7 @@ const VigyaanStyleWrapper = styled.section`
     width: 35vw;
     z-index: 1;
     margin-top: 100px;
+    margin-bottom: 20px;
   }
   .vigyaan-planet>img{
     object-fit: contain;
@@ -110,8 +111,8 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-font img {
-     width:40vw;
-     max-height:20vw;
+     max-height:25vmin;
+     max-width: 80vw;
   }
 
   .vigyaan-font {

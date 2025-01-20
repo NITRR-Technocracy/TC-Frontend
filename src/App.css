@@ -2207,8 +2207,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	padding: 10px;
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, .5);
-	background-color: rgba(255, 255, 255, .05);
+	background-color: rgba(33, 33, 33, .15);
 	position: relative;
+	backdrop-filter: blur(5px);
 }
 
 .fn_cs_collection .item_in:after {
@@ -4269,10 +4270,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	padding: 20px;
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, .5);
-	background-color: rgba(255, 255, 255, .05);
-	background-color: rgba(37, 37, 37, 0.05);
+	/* background-color: rgba(255, 255, 255, .05); */
+	background-color: rgba(37, 37, 37, 0.15);
 	position: relative;
 	text-align: center;
+	backdrop-filter: blur(5px);
 }
 
 .nft__item:after {
@@ -7269,7 +7271,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	/* text-shadow: 1px 1px black; */
 }
 
-.acc_header h3{
+.acc_header h3 {
 	color: white;
 }
 
@@ -7710,12 +7712,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 
 .Aavartanscrolled {
-    background: url("./assets/Aavartan New/bgavartan.jpg") no-repeat center center;
-    background-size: cover; 
-    background-attachment: fixed; 
-    transition: background-color 0.9s ease;
+	background: url("./assets/Aavartan New/bgavartan.jpg") no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: background-color 0.9s ease;
 	animation: rain 0.3s linear infinite;
-    z-index:-3;
+	z-index: -3;
 }
 
 .Aavartanscrolled::before {
@@ -7726,38 +7728,45 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 	height: 100%;
 	background-image: url("./assets/Aavartan New/lightining.png");
-    top: -100px;
-    transform: rotate(180deg);
-    animation: lightining 4s linear infinite;
-    opacity: 0.3;
+	top: -100px;
+	transform: rotate(180deg);
+	animation: lightining 4s linear infinite;
+	opacity: 0.3;
 }
 
 
-@keyframes lightining{
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 0;
-    }
-    21%{
-        opacity: 0.4;
-    }
-    25%{
-        opacity: 0;
-    }
-    30%{
-        opacity: 0;
-    }
-    31%{
-        opacity: 0.4;
-    }
-    35%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0;
-    }
+@keyframes lightining {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	21% {
+		opacity: 0.4;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	31% {
+		opacity: 0.4;
+	}
+
+	35% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
 
@@ -7776,9 +7785,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Vigyaanscrolled {
-	background: url("./assets/images/vighero/minecraft-bg.png");
+	background: url("./assets/images/vigyaanbg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: top;
 	/* transition: background-color 0.9s ease; */
 }
 
@@ -7789,14 +7799,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.25);
 	/* Adjust the opacity (last value) as needed */
 	z-index: 0;
 	/* Ensure the overlay is above the background image */
 }
 
 .Ignitescrolled {
-	background: url("./assets/images/vigyaanbg.webp");
+	background: url("./assets/images/vigyaanbg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
@@ -7815,25 +7825,25 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	/* Ensure the overlay is above the background image */
 }
 
-/* .Homescrolled { */
-	/* background: url("./assets/images/spacebg.webp"); */
-	/* background-size: cover;
-	background-attachment: fixed; */
+.Homescrolled {
+	background: url("./assets/images/vigyaanbg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
-/* } */
+}
 
 /* .Homescrolled::before { */
-	/* content: "";
+/* content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.65); */
-	/* Adjust the opacity (last value) as needed */
-	/* z-index: 0; */
-	/* Ensure the overlay is above the background image */
-	/* backdrop-filter: brightness(1) blur(0px); */
+/* Adjust the opacity (last value) as needed */
+/* z-index: 0; */
+/* Ensure the overlay is above the background image */
+/* backdrop-filter: brightness(1) blur(0px); */
 /* } */
 
 .dark-overlay {
@@ -7928,6 +7938,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	src: url("./assets/font/Chiseled-KExl.ttf");
 }
 
+@font-face {
+	font-family: 'Minecraft-title';
+	src: url("./assets/font/MinecraftTen-VGORe.ttf");
+}
+
 @media(width<600px) {
 	.blog__item {
 		padding: 5px;
@@ -8000,7 +8015,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	left: 100%;
 }
 
-
+.vigyaan-title {
+	text-align: center;
+	font-size: 4rem;
+	margin: 50px 0px 0 0px;
+	font-family: 'Minecraft-title';
+	z-index: 3;
+	/* background: linear-gradient(to bottom, #4c90d5 20%,
+			#FE7BE5 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text; */
+	text-shadow: 3px 5px 5px rgb(133, 133, 133);
+}
 
 
 

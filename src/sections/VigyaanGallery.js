@@ -10,6 +10,7 @@ import v6 from "../assets/images/vigyaan/v6.webp";
 import v7 from "../assets/images/vigyaan/v7.webp";
 import v8 from "../assets/images/vigyaan/v8.webp";
 import { Link } from "react-router-dom";
+import { Line } from "../components/Line";
 
 const EventsGallery = () => {
   // useEffect(() => {
@@ -42,13 +43,15 @@ const EventsGallery = () => {
   return (
     <section id="collection">
       <div className="container collectionContainer">
-        <Title color={color} noncolor={noncolor} />
+        {/* <Title color={color} noncolor={noncolor} /> */}
+        <h1 className="vigyaan-title">VIGYAAN GALLERY</h1>
+        <Line/>
         <div className="fn_cs_desc">
           <p>
             Vigyaan, the science exhibition organized during the tech fest,
             showcases groundbreaking innovations, cutting-edge technologies, and
             exciting projects, providing a platform for students to delve deeper
-            into the world of science and explore limitless possibilities.
+            into the world of science and explore limitless possibilities.
           </p>
         </div>
         <div className="fn_cs_collection">
