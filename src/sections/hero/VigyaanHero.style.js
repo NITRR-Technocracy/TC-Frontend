@@ -31,14 +31,9 @@ const Circle = keyframes`
     transform: rotate(0deg);
   }
   50% {
-  50% {
     transform: translate(80px, -80px);
     transform: rotate(30deg);
   }
-  100%{
-    transform: rotate(0deg);
-  }
-`;
   100%{
     transform: rotate(0deg);
   }
@@ -61,7 +56,6 @@ const VigyaanStyleWrapper = styled.section`
 
   position: relative;
   // min-height: 100vh;
-  // min-height: 100vh;
   padding: 0;
   overflow: hidden;
   animation: ${popIn} 2s ease forwards; 
@@ -71,13 +65,7 @@ const VigyaanStyleWrapper = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
-  }
   }
   .asto {
     position: absolute;
@@ -91,7 +79,6 @@ const VigyaanStyleWrapper = styled.section`
     top: 10vh;
     right: 0%;
     height: 10vmax;
-    height: 10vmax;
     animation: ${rotate360} 15s linear infinite;
   }
 
@@ -99,15 +86,12 @@ const VigyaanStyleWrapper = styled.section`
     animation: ${quarterCircle} 4s linear infinite;
     left: 0%;
     height: 10vmax;
-    height: 10vmax;
   }
 
   .planet3 {
     position: absolute;
     top: 30vh;
     left: 2vw;
-    height: 10vmax;
-    animation: ${Circle} 6s linear infinite;
     height: 10vmax;
     animation: ${Circle} 6s linear infinite;
   }
@@ -153,10 +137,9 @@ const VigyaanStyleWrapper = styled.section`
     font-family: 'VigyaanFont';
     font-weight:700;
     font-size:1rem;
-    line-height:2rem;
     color: white;
     z-index: 2;
-    width:80%;
+    width:70%;
     letter-spacing:2px;
     background: rgba(75, 0, 130, 0.3); /* Slightly transparent black */
     color: #fff; /* White text for contrast */

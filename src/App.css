@@ -3449,7 +3449,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .metaportal_fn_pagetitle p a:hover {
-	color: #e67bfe;
+	color: rgb(58, 211, 58);
 }
 
 .metaportal_fn_pagetitle p {
@@ -3466,6 +3466,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .metaportal_fn_pagetitle .divider {
 	margin: 0 10px;
+	color: rgb(58, 211, 58);
+}
+
+.metaportal_fn_pagetitle .text{
+	color: rgb(58, 211, 58);
 }
 
 
@@ -7883,15 +7888,24 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-color: #610707;
 	border-image-repeat: stretch;
 	margin: 1rem 0rem;
+	transition: transform .2s ease;
 }
 
 .goodbtn:hover {
 	color: white;
 	background: linear-gradient(to right, #040100, #230101);
+	transform: scale(1.1);
 	/* border: 2px solic;
  border-bottom-color:#FE7BE5 ;
  border-top-color: #504099 ; */
 	cursor: pointer;
+}
+.gallery-btn{
+	border-image: none;
+	border: none;
+}
+.goodbtn:active{
+	transform: scale(.9);
 }
 
 @font-face {
