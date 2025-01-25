@@ -212,6 +212,7 @@ function App() {
            {/* <StarFieldAnimation/> */}
 
         </BackgroundContainer>
+        <ScrollTop/>
       </CustomCursorContainer>
     </div>
   );
