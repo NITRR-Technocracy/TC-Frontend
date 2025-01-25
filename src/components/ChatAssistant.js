@@ -6,6 +6,13 @@ const ChatAssistant = () => {
     const divElement = document.createElement("div");
     const iframe = document.createElement("iframe");
 
+    divElement.style.position = "fixed"; 
+    divElement.style.bottom = "0"; 
+    divElement.style.right = "0"; 
+    divElement.style.height = "0";
+    divElement.style.width = "0"; 
+    divElement.style.overflow = "hidden";
+
     // Append iframe to the div and then div to the body
     divElement.appendChild(iframe);
     document.body.appendChild(divElement);

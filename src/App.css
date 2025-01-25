@@ -637,7 +637,7 @@ a.full_link {
 
 /* Social Icons */
 #social {
-	z-index: 5;
+	z-index: 100;
 	position: fixed;
 	left: 50px;
 	top: 50%;
@@ -841,7 +841,7 @@ a.full_link {
 	padding: 0;
 	text-decoration: none;
 	position: fixed;
-	z-index: 5;
+	z-index: 10000;
 	right: 30px;
 	bottom: 30px;
 	width: 50px;
