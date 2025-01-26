@@ -10,7 +10,7 @@ import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const ReverseCodingForm = () => {
+const TechClashForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,7 +21,6 @@ const ReverseCodingForm = () => {
     Leader_gender: "",
     Leader_email: "",
     Leader_whatsapp: "",
-    Leader_college: "",
     Leader_program_of_study: "",
     Leader_branch: "",
     Leader_sem: "",
@@ -46,7 +45,7 @@ const ReverseCodingForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("reverseCodingForm", JSON.stringify(update));
+    localStorage.setItem("techClashForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -81,7 +80,6 @@ const ReverseCodingForm = () => {
       form.Leader_email !== "" &&
       form.Leader_gender !== "" &&
       form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_sem !== "" &&
       form.Leader_program_of_study !== "" &&
@@ -101,7 +99,7 @@ const ReverseCodingForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=ReverseCoding`, form, {
+        const res = await axios.post(`/server/register?event=TechClash`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -127,7 +125,7 @@ const ReverseCodingForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"REVERSE CODING"} noncolor={""} />
+      <Title color={"TECH CLASH"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -136,7 +134,7 @@ const ReverseCodingForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+              <li data-aos="fade-down">
                   <input
                     id="teamName"
                     type="text"
@@ -193,16 +191,6 @@ const ReverseCodingForm = () => {
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_college"
-                    id="leaderBranch"
-                    type="text"
-                    placeholder="Leader College"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_college}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -388,38 +376,42 @@ const ReverseCodingForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Reverse Coding</h4>
+                <h4>Tech Clash</h4>
                 <h3 className="metaportal_fn_countdown">
                 DESCRIPTION
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                Reverse Coding is a unique coding competition designed to challenge participant's problem-solving skills by presenting coding challenges that require them to work backward from a given output to the original code. The event aims to foster creative thinking, logical reasoning, and algorithmic understanding among participants.
+                Tech Clash is a stimulating debate competition where the participants will be engaged in the discussion of topics in the world of technology. Topics can cover areas like AI, Blockchain, data privacy etc.
                 </p>
               </div>
+              
               <div style={{ paddingTop: "2rem" }} data-aos="fade-down" className="mint_time">
-                <h4>Reverse Coding</h4>
+                <h4>Tech Clash</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. 4 members should be there in the team.
+                  1. The team must have 4 members and have a team name.
                 </p>
-                <p>2. No external help allowed.</p>
+                <p>2. There will be a supporting team and an opposing team, it will be decided by the committee members based on chits.</p>
                 <p>
-                  3. Time limit should not exceed 30 minutes.
-                </p>
-                <p>
-                  4. Panel decision shall be final.
+                  3. At a time 2 teams (supporting + opposing) will be called and the topic will be provided on the spot.
                 </p>
                 <p>
-                  5. 4-5 rounds should be there.
+                  4. Debate will last long for 10 minutes.
                 </p>
                 <p>
-                  6. The team completing all the rounds shall be declared as winner.
+                  5. Only English language is allowed.
+                </p>
+                <p>
+                  6. Use of mobile phones is strictly prohibited.
+                </p>
+                <p>
+                  7. Strictly no use of any abusive language, violence, personal attack, or disrespecting the opposite team or judges, it will directly lead to disqualification.
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
@@ -433,4 +425,4 @@ const ReverseCodingForm = () => {
   );
 };
 
-export default ReverseCodingForm;
+export default TechClashForm;

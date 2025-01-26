@@ -53,6 +53,10 @@ import OrigamiForm from "./forms/OrigamiForm.js";
 import CosplayForm from "./forms/CosplayForm.js";
 import GiantKerplunkForm from "./forms/GiantKerplunk.js";
 import ReverseCodingForm from "./forms/ReverseCodingForm.js";
+import TechClashForm from "./forms/TechClash.js";
+import TechnoGraphixForm from "./forms/TechnoGraphixForm.js";
+import WorkShopForms from "./forms/WorkshopForms.js";
+import RoboWarsForm from "./forms/RoboWarsForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -237,6 +241,27 @@ function App() {
                 path="/events/reverseCodingForm"
                 element={<ReverseCodingForm />}
               />
+              <Route
+                exact="true"
+                path="/events/techClashForm"
+                element={<TechClashForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/technoGraphixForm"
+                element={<TechnoGraphixForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/workshopsForm"
+                element={<WorkShopForms />}
+              />
+              <Route
+                exact="true"
+                path="/events/roboWarsForm"
+                element={<RoboWarsForm/>}
+              />
+
 
               <Route
                 exact="true"

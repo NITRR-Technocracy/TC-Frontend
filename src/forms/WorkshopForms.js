@@ -10,7 +10,7 @@ import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const TechnoGraphixForm = () => {
+const WorkShopForms = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -31,7 +31,7 @@ const TechnoGraphixForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("technoGraphixForm", JSON.stringify(update));
+    localStorage.setItem("workshopsForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -71,7 +71,7 @@ const TechnoGraphixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=TechnoGraphics`, form, {
+        const res = await axios.post(`/server/register?event=Workshops`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -97,7 +97,7 @@ const TechnoGraphixForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"TECHNO GRAPHIX"} noncolor={""} />
+      <Title color={"WORKSHOPS"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -147,7 +147,7 @@ const TechnoGraphixForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Program_of_study"
+                    name="Leader_program_of_study"
                     id="leaderProgramOfStudy"
                     type="text"
                     placeholder="Program of Study"
@@ -209,53 +209,17 @@ const TechnoGraphixForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Techno Graphix</h4>
+                <h4>Workshops</h4>
                 <h3 className="metaportal_fn_countdown">
                 DESCRIPTION
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                An Event based on Graphic designing/poster making based on the theme of the fest.
+                A work shop can be organised for Python Learning, AI/ML Learning, Ethical Hacking etc. In which we can collaborate with renewed organization like of GFG etc for a paid 2-day workshop for the participants meanwhile the participants will also get the certificate for the workshop from the organization in collaboration with NIT Raipur.
                 </p>
               </div>
               
-              <div style={{ paddingTop: "2rem" }} data-aos="fade-down" className="mint_time">
-                <h4>TECHNO Graphix</h4>
-                <h3 className="metaportal_fn_countdown">
-                  Rules and Regulations
-                </h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>
-                  1. Participation will be individual.
-                </p>
-                <p>2. Registration will be online through google form and spot registration is allowed too. </p>
-                <p>
-                  3. Event will contain two sections namely research and execution sections.
-                </p>
-                <p>
-                  4. Poster has to be designed according to the theme only.
-                </p>
-                <p>
-                  5. All the participants will be given 15 minutes to collect the resources from any source possible and organise the structure of the design.
-                </p>
-                <p>
-                  6. After 15 minutes, collecting any further resources from any sources will be restricted.
-                </p>
-                <p>
-                  7. Time duration of 1hr will be allocated to complete the design page.
-                </p>
-                <p>
-                  8. Allowed platforms are CANVA and ADOBE ILLUSTRATOR only (pro version is not allowed).
-                </p>
-                <p>
-                  9. After completion of the round the designed poster has to be submitted through email.
-                </p>
-                <p>
-                  10. Decision regarding final judgement shall rest on Team Technocracy.
-                </p>
-              </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a>
@@ -267,4 +231,4 @@ const TechnoGraphixForm = () => {
   );
 };
 
-export default TechnoGraphixForm;
+export default WorkShopForms;
