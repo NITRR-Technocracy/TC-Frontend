@@ -1,117 +1,191 @@
-
 .card {
-  width: 300px;
-  height: 420px;
-  perspective: 1000px;
+  position: relative;
+  height: 300px;
+  width: 230px;
+}
+
+.boxshadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(0, 217, 255);
+  transform: scale(0.8);
+  box-shadow: rgb(0, 217, 255) 0px 30px 70px 0px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.main {
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
+  background: rgb(0, 255, 149);
+  background: linear-gradient(0deg, yellow 0%, rgb(0, 247, 255) 60%, rgb(255, 153, 0) 100%);
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  box-shadow: rgb(0, 132, 255) 0px 7px 29px 0px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  border-top: 115px solid black;
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 101%;
+  background: black;
+  clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  transform: translateX(50%) scale(-1, 1);
+}
+
+.profileImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  border: 2px solid rgb(0, 217, 255);
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.2s ease-out 0s;
+  text-align: center;
+  width: 90%;
+}
+
+.domain {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  font-size: 14px;
+  color: rgb(40, 4, 4);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.2s ease-out 0s;
+  text-align: center;
+  width: 90%;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.button {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+  background: black;
+  border: none;
+  color: rgb(0, 217, 255);
+  display: grid;
+  place-content: center;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   cursor: pointer;
 }
 
-.card-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s, box-shadow 0.3s ease-in-out;
-  transform-style: preserve-3d;
+.svg {
+  width: 15px;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.button:nth-child(1) {
+  bottom: 300px;
+  transition-delay: 0.4s;
 }
 
-.card:hover {
-  animation: shake 0.5s;
-  box-shadow: 0 10px 20px rgba(255, 255, 0); /* Add blue shadow */
+.button:nth-child(2) {
+  bottom: 300px;
+  transition-delay: 0.6s;
 }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.card-front {
-  background-color: #ffd700;
-  border: 8px solid #b8860b;
-}
-
-.card-back {
-  /* background-color: #4169e1; */
-  /* border: 8px solid #000080; */
-  background-color: #39330c;
-  transform: rotateY(180deg);
-}
-
-.card-frame {
-  background-color: #ffffe0;
-  border-radius: 8px;
-  padding: 10px;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.team-member-name {
-  
-  font-size: 24px;
-  margin: 10px 0;
-  color: #010008;
-}
-
-.team-member-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 5px solid #ffd700;
-}
-
-.team-member-role {
-  background-color: #ffd700;
-  color: #000;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icon {
-  font-size: 40px;
-  margin: 0 20px;
-  color: #ffd700;
-  text-decoration: none;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  color: #fff;
+.button:hover .svg {
   transform: scale(1.2);
 }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+.button:active .svg {
+  transform: scale(0.7);
 }
+
+.card:hover .main {
+  transform: scale(1.1);
+}
+
+.card:hover .main .top {
+  top: -65px;
+}
+
+.card:hover .main .left {
+  left: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card:hover .main .right {
+  right: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card:hover .main .title,
+.card:hover .main .domain {
+  opacity: 1;
+  transition: all 0.2s ease-out 1.3s;
+}
+
+.card:hover .main .button-container .button:nth-child(1) {
+  bottom: 40px;
+  transition-delay: 0.8s;
+}
+
+.card:hover .main .button-container .button:nth-child(2) {
+  bottom: 0;
+  transition-delay: 0.6s;
+}
+
+
