@@ -1,115 +1,73 @@
-import Rishav_Gandhi from '../assets/images/TechTeam/Rishav_Gandhi.webp'
-import Aniket_Kumar from '../assets/images/TechTeam/Aniket_Kumar.webp'
-import Vibhuti_Chandrakar from '../assets/images/TechTeam/Vibhuti_Chandrakar.webp'
+
 import Piyush_Kumar from '../assets/images/TechTeam/Piyush_Kumar.webp'
-import Ankit_Kumar_Lakra from '../assets/images/TechTeam/Ankit_Kumar_Lakra.webp'
 import B_Deewakar_Rao from '../assets/images/TechTeam/B_Deewakar_Rao.webp'
 import Nehil_Sahu from '../assets/images/TechTeam/Nehil_Sahu.webp'
-import Prabhat_Sharma from '../assets/images/TechTeam/Prabhat_Sharma.webp'
-import Mayank_Sahu from '../assets/images/TechTeam/Mayank_Sahu.webp'
-import Karan_Singh from '../assets/images/TechTeam/Karan_Singh.webp'
+import Ayush_Patel from '../assets/images/TechTeam/Ayush_Patel.webp'
+import Devesh_Agarwal from '../assets/images/TechTeam/Devesh_Agarwal.webp'
+import Gourav_Deep_Shahni from '../assets/images/TechTeam/Gourav_Deep_Shahni.webp'
 //import Anupam_Malviya from '../assets/images/TechTeam/Anupam_Malviya.jpg'
 
 export const techteamList = [
     {
       id: 1,
-      name: "Rishav Gandhi ",
-      imgUrl: Rishav_Gandhi,
-      githubUrl: "https://github.com/rishavgn",
-      linkedinUrl: "https://www.linkedin.com/in/rishav-gandhi-998a74211/",
-      instaUrl: "https://www.instagram.com/___rishav._/",
+      name: "Piyush Kumar",
+      imgUrl: Piyush_Kumar,
+      githubUrl:"https://github.com/Piyush-onGIT",
+      linkedinUrl: "https://www.linkedin.com/in/piyush-in/",
+      instaUrl: "https://www.instagram.com/sahu_piyush_/",
       gmail:"",
       desi: "Head Coordinator"
+      
     },
     {
         id: 2,
-        name: "Aniket Kumar",
-        imgUrl: Aniket_Kumar,
-        githubUrl: "https://github.com/Kraniket901",
-        linkedinUrl: "https://www.linkedin.com/in/kraniket901/",
-        instaUrl: "https://www.instagram.com/kraniket901/",
-        gmail:"",
+        name: "Nehil Sahu",
+        imgUrl: Nehil_Sahu,
+        githubUrl: "https://github.com/Nehilsa2",
+        linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
+        instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
+        gmail: "nehilsahu281@gmail.com",
         desi: "Core Coordinator"
     },
     {
-        id: 3,
-        name: "Ankit Kumar Lakra",
-        imgUrl: Ankit_Kumar_Lakra,
-        githubUrl:"https://github.com/ankitklakra",
-        linkedinUrl: "https://www.linkedin.com/in/ankitklakra/",
-        instaUrl: "https://www.instagram.com/ankitklakra/",
-        gmail:"",
-        desi: "Core Coordinator"
-
-    },
-    {
-        id: 4,
-        name: "Piyush Kumar",
-        imgUrl: Piyush_Kumar,
-        githubUrl:"https://github.com/Piyush-onGIT",
-        linkedinUrl: "https://www.linkedin.com/in/piyush-in/",
-        instaUrl: "https://www.instagram.com/sahu_piyush_/",
-        gmail:"",
-        desi: "Core Coordinator"
-    },
-    {
-        id: 5,
-        name: "Vibhuti Chandrakar",
-        imgUrl: Vibhuti_Chandrakar,
-        githubUrl:"https://github.com/VC6378",
-        linkedinUrl: "https://www.linkedin.com/in/vibhuti-chandrakar-4b1bb024b",
-        instaUrl: "https://www.instagram.com/vibhuti_.01/",
-        gmail:"",
-        desi: "Core Coordinator"
-    },  
-    {
-      id: 6,
+      id:3,
       name: "B. Deewakar Rao",
       imgUrl: B_Deewakar_Rao,
       githubUrl: "https://github.com/deewakar28",
       linkedinUrl: "https://www.linkedin.com/in/b-deewakar-rao-960438280/",
       instaUrl: "https://www.instagram.com/dxxwakr/",
       gmail:"deewakarrao59@gmailcom",
-      desi:"Executive"
+        desi: "Core Coordinator"
+
+    }, 
+    {
+      id: 4,
+      name: "Ayush Patel",
+      imgUrl: Ayush_Patel,
+      githubUrl:"https://github.com/ayush-patel1",
+      linkedinUrl: "https://www.linkedin.com/in/ayush-patel05",
+      instaUrl: "https://www.instagram.com/ayusshpatel_/",
+      gmail:"ayush005rkt@gmail.com",
+      desi: "Executive"
     },
     {
-      id: 7,
-      name: "Karan Singh",
-      imgUrl: Karan_Singh,
-      githubUrl:"https://github.com/Karan741187",
-      linkedinUrl: "https://www.linkedin.com/in/karan-singh-037194260/",
-      instaUrl: "#",
+      id: 5,
+      name: "Gourav Deep Shahni",
+      imgUrl: Gourav_Deep_Shahni,
+      githubUrl:"https://www.github.com/maxcillius",
+      linkedinUrl: "https://www.linkedin.com/in/gouravdeep",
+      instaUrl: "",
       gmail:"",
       desi: "Executive"
     },
     {
-      id: 8,
-      name: "Mayank Sahu",
-      imgUrl: Mayank_Sahu,
-      githubUrl:"https://github.com/student-mayank",
-      linkedinUrl: "https://www.linkedin.com/in/mayank-sahu-273410234",
-      instaUrl: "https://www.instagram.com/mayank_sahu1005/",
-      gmail:"mayanksahu1005@gmail.com",
-      desi: "Executive"
-    },
-    {
-      id: 9,
-    name: "Nehil Sahu",
-    imgUrl: Nehil_Sahu,
-    githubUrl: "https://github.com/Nehilsa2",
-    linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
-    instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
-    gmail: "nehilsahu281@gmail.com",
-    desi: "Executive"
-    },
-    {
-      id: 10,
-      name: "Prabhat Sharma",
-      imgUrl: Prabhat_Sharma,
-      githubUrl:"https://github.com/probot-codes",
-      linkedinUrl: "https://www.linkedin.com/in/prabhatsharma2508/",
-      instaUrl: "https://www.instagram.com/prabhat_sharma2508/",
-      gmail:"ps25082005@gmail.com",
+      id:6,
+      name: "Devesh Agarwal",
+      imgUrl: Devesh_Agarwal,
+      githubUrl:"https://github.com/CodeWithDevesh",
+      linkedinUrl: "https://www.linkedin.com/in/devesh-agarwal-736888292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instaUrl: "https://www.instagram.com/deveshhh_652/",
+      gmail:"",
       desi: "Executive"
     },
     /*{
