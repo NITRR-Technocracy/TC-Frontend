@@ -16,13 +16,13 @@ const DimensionsForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("dimensionsform")) || {
-    name: "",
+    leader_name: "",
     email: "",
-    whatsapp: "",
-    sem: "",
-    branch: "",
+    whatsapp_number: "",
+    leader_sem: "",
+    leader_branch: "",
     gender: "",
-    program_of_Study :""
+    program_of_study :""
     
   };
   const [form, set] = useState(cachedForm);
@@ -63,13 +63,13 @@ const DimensionsForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.name !== "" &&
+      form.leader_name !== "" &&
       form.email !== "" &&
-      form.whatsapp !== "" &&
-      form.sem !== "" &&
-      form.branch !== "" &&
+      form.whatsapp_number !== "" &&
+      form.leader_sem !== "" &&
+      form.leader_branch !== "" &&
       form.gender !== "" &&
-      form.program_of_Study !== "" &&
+      form.program_of_study !== "" &&
       form.whatsapp.length == 10;
 
     if (condition) {
@@ -111,10 +111,10 @@ const DimensionsForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="name"
+                    name="leader_name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -131,16 +131,16 @@ const DimensionsForm = () => {
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="whatsapp"
+                    name="whatsapp_number"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -148,22 +148,22 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="sem"
-                    id="Sem"
+                    name="leader_sem"
+                    id="leader_sem"
                     type="text"
-                    placeholder="Semester"
+                    placeholder="leader_semester"
                     onChange={(e) => handle(e)}
-                    value={form.sem}
+                    value={form.leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="branch"
-                    id="leaderBranch"
+                    name="leader_branch"
+                    id="leaderleader_branch"
                     type="text"
-                    placeholder="Branch"
+                    placeholder="leader_branch"
                     onChange={(e) => handle(e)}
-                    value={form.branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -178,12 +178,12 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="program_of_Study"
+                    name="program_of_study"
                     id="program_of_Study"
                     type="text"
                     placeholder="program of Study"
                     onChange={(e) => handle(e)}
-                    value={form.program_of_Study}
+                    value={form.program_of_study}
                   />
                 </li>
               </ul>

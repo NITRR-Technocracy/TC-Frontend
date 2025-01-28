@@ -102,78 +102,78 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/valorantForm"
+                path="/events/ValorantForm"
                 element={<ValorantForm />}
               />
               <Route
                 exact="true"
-                path="/events/treasureHuntForm"
+                path="/events/TreasureHuntForm"
                 element={<TreasureHuntForm />}
               />
               <Route
                 exact="true"
-                path="/events/ecopolisForm"
+                path="/events/EcopolisForm"
                 element={<EcopolisForm />}
               />
               <Route
                 exact="true"
-                path="/events/dimensionsForm"
+                path="/events/DimensionsForm"
                 element={<DimensionsForm />}
               />
               <Route
                 exact="true"
-                path="/events/octoberSkyForm"
+                path="/events/OctoberSkyForm"
                 element={<OctoberSkyForm />}
               />
               <Route
                 exact="true"
-                path="/events/pixelplaygroundform"
+                path="/events/Pixelplaygroundform"
                 element={<PixelPlaygroundForm />}
               />
               <Route
                 exact="true"
-                path="/events/technographixForm"
+                path="/events/TechnographixForm"
                 element={<TechnoGraphixForm />}
               />
 
               <Route
                 exact="true"
-                path="/events/codesprintrelayForm"
+                path="/events/CodesprintrelayForm"
                 element={<CodeSprintRelayForm />}
               />
                <Route
                 exact="true"
-                path="/events/openMicForm"
+                path="/events/OpenMicForm"
                 element={<OpenMicForm />}
               />
               <Route
                 exact="true"
-                path="/events/dsaMarathonForm"
+                path="/events/DsaMarathonForm"
                 element={<DsaMarathonForm />}
               />
               <Route
                 exact="true"
-                path="/events/droneraceForm"
+                path="/events/DroneraceForm"
                 element={<DroneRaceForm />}
               />
               <Route
                 exact="true"
-                path="/events/reverseCodingForm"
+                path="/events/ReverseCodingForm"
                 element={<ReverseCodingForm />}
               />
               <Route
                 exact="true"
-                path="/events/caseopsForm"
+                path="/events/CaseopsForm"
                 element={<CaseOpsForm />}
               />
               <Route
                 exact="true"
-                path="/events/escapeTheMatrixForm"
+                path="/events/EscapeTheMatrixForm"
                 element={<EscapeTheMatrixForm />}
               />
               <Route
                 exact="true"
-                path="/events/workshopsForm"
+                path="/events/WorkshopsForm"
                 element={<WorkshopsForm/>}
               />
               <Route
@@ -183,22 +183,22 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/jengaForm"
+                path="/events/JengaForm"
                 element={<JengaForm />}
               />
               <Route
                 exact="true"
-                path="/events/roboRaceForm"
+                path="/events/RoboRaceForm"
                 element={<RoboRaceForm />}
               />
               <Route
                 exact="true"
-                path="/events/cornholeForm"
+                path="/events/CornholeForm"
                 element={<CornholeGameForm />}
               />
               <Route
                 exact="true"
-                path="/events/workshopVDAForm"
+                path="/events/WorkshopVDAForm"
                 element={<WorkshopVDAForm />}
               />
 
