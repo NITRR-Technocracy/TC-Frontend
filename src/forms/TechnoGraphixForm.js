@@ -71,7 +71,7 @@ const TechnoGraphixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=TechnoGraphics`, form, {
+        const res = await axios.post(`${backend}/register?event=TechnoGraphics`, form, {
           headers: {
             "Content-Type": "application/json",
           },
