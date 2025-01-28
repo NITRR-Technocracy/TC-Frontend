@@ -108,7 +108,7 @@ export const EventsList = [
       time:"11:30 AM- 1:00 PM",
       venue:"Outdoors",
       des: "A fun and exhilarating event, where participants will bring their own small robots for an epic death match.",
-      link:"/events/roboWarsForm",
+      link:"/events/RoboWarsForm",
       deadline:"31/01/2025"
     },
     {
@@ -229,7 +229,7 @@ export const EventsList = [
     time:"11:00 AM",
     venue:"Left Garden",
     des: "Cube solving competition.",
-    link:"/events/speedCubingForm",
+    link:"/events/SpeedCubingForm",
     deadline:"31/01/2025"
   },
   {
