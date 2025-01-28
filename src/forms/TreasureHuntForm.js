@@ -14,25 +14,19 @@ const TreasureHuntForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("treasureHuntForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_whatsapp: "",
-    Leader_branch: "",
-    Leader_sem: "",
-    Leader_gender: "",
-    Leader_Program_of_Study: "",
-    P2_name: "",
-    P2_sem: "",
-    P2_branch: "",
-    P3_name: "",
-    P3_sem: "",
-    P3_branch: "",
-    P4_name: "",
-    P4_sem: "",
-    P4_branch: "",
-    P5_name: "",
-    P5_sem: "",
-    P5_branch: "",
+    team_name: "",
+    username: "",
+    whatsapp_number: "",
+    branch: "",
+    curr_semester: "",
+    gender: "",
+    program_of_study: "",
+    member1_name: "",
+    member1_sem: "",
+    member1_branch: "",
+    member2_name: "",
+    member2_sem: "",
+    member2_branch: "",
   };
 
   const [form, set] = useState(cachedForm);
@@ -66,7 +60,7 @@ const TreasureHuntForm = () => {
 
     const isFormValid =
       Object.values(form).every((value) => value.trim() !== "") &&
-      form.Leader_whatsapp.length === 10;
+      form.whatsapp_number.length === 10;
 
     if (isFormValid) {
       try {
@@ -103,34 +97,34 @@ const TreasureHuntForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     type="text"
                     placeholder="Team Name"
                     onChange={handle}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_name"
+                    name="username"
                     type="text"
                     placeholder="Leader Name"
                     onChange={handle}
-                    value={form.Leader_name}
+                    value={form.username}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_whatsapp"
+                    name="whatsapp_number"
                     type="text"
                     placeholder="Leader WhatsApp"
                     onChange={handle}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp.length > 10 && (
+                  {form.whatsapp_number.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -138,65 +132,65 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="branch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={handle}
-                    value={form.Leader_branch}
+                    value={form.branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_sem"
+                    name="curr_semester"
                     type="text"
                     placeholder="Leader Semester"
                     onChange={handle}
-                    value={form.Leader_sem}
+                    value={form.curr_semester}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_gender"
+                    name="gender"
                     type="text"
                     placeholder="Leader Gender"
                     onChange={handle}
-                    value={form.Leader_gender}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_Program_of_Study"
+                    name="program_of_study"
                     type="text"
                     placeholder="Leader Program of Study"
                     onChange={handle}
-                    value={form.Leader_Program_of_Study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
+                    name="member1_name"
                     type="text"
                     placeholder="Participant 2 Name"
                     onChange={handle}
-                    value={form.P2_name}
+                    value={form.member1_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_sem"
+                    name="member1_sem"
                     type="text"
                     placeholder="Participant 2 Semester"
                     onChange={handle}
-                    value={form.P2_sem}
+                    value={form.member1_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_branch"
+                    name="member1_branch"
                     type="text"
                     placeholder="Participant 2 Branch"
                     onChange={handle}
-                    value={form.P2_branch}
+                    value={form.member1_branch}
                   />
                 </li>
                 {/* Add similar fields for other participants */}
@@ -227,7 +221,7 @@ const TreasureHuntForm = () => {
           <div className="mint_right">
             <div className="mright">
             <div data-aos="fade-down" className="mint_time">
-                <h4>Treasure Hunt</h4>
+                <h4>Mock CID</h4>
                 <h3 className="metaportal_fn_countdown">
                   Description
                 </h3>
@@ -236,7 +230,7 @@ const TreasureHuntForm = () => {
                 <p>A thriller version of Treasure Hunt.</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Treasure Hunt</h4>
+                <h4>Mock CID</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
@@ -244,15 +238,10 @@ const TreasureHuntForm = () => {
               <div data-aos="fade-down" className="mint_info">
                 <p>• An interesting on-campus murder story can be created.</p>
                 <p>• Clues are left behind all around the campus.</p>
-                <p>• Some volunteers and team members can act as witnesses.</p>
                 <p>• The one who finds out the real murderer first wins.</p>
-                <p>• Multiple participating teams (5-6 teams).</p>
+                <p>• Multiple participating teams (3-membered teams).</p>
                 <p>
-                  • Clues can be left behind all around the campus (left garden,
-                  central garden, parking area, in Mandir area, etc.).
-                </p>
-                <p>
-                  • A quiz round first for the selection of participating teams.
+                  • Clues can be left behind all around the campus (SAC, Bihan Canteen, Workshops etc.).
                 </p>
                 <p>• Online registrations.</p>
                 <p>
