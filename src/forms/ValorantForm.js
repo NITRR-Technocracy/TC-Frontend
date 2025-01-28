@@ -9,7 +9,7 @@ import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import qr from "../assets/eventsAssets/valorantQr.png";
 
-const backend = keys.backend;
+// const backend = keys.backend;
 
 const ValorantForm = () => {
   useEffect(() => {
@@ -17,37 +17,37 @@ const ValorantForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("valoForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_whatsapp: "",
-    Leader_branch: "",
-    Leader_gender: "",
-    Leader_sem: "",
-    Leader_program_of_study: "",
-    Leader_email: "",
-    Leader_college: "",
-    Leader_game_id: "",
-    Leader_discord: "",
-    P2_name: "",
-    P2_email: "",
-    P2_game_id: "",
-    P2_branch: "",
-    P2_sem: "",
-    P3_name: "",
-    P3_email: "",
-    P3_game_id: "",
-    P3_branch: "",
-    P3_sem: "",
-    P4_name: "",
-    P4_email: "",
-    P4_game_id: "",
-    P4_branch: "",
-    P4_sem: "",
-    P5_name: "",
-    P5_email: "",
-    P5_game_id: "",
-    P5_branch: "",
-    P5_sem: "",
+    team_name: "",
+    username: "",
+    whatsapp_number: "",
+    branch: "",
+    gender: "",
+    curr_semester: "",
+    program_of_study: "",
+    leader_email: "",
+    curr_institution: "",
+    leader_game_id: "",
+    discord: "",
+    member1_name: "",
+    member1_email: "",
+    member1_game_id: "",
+    member1_branch: "",
+    member1_sem: "",
+    member2_name: "",
+    member2_email: "",
+    member2_game_id: "",
+    member2_branch: "",
+    member2_sem: "",
+    member3_name: "",
+    member3_email: "",
+    member3_game_id: "",
+    member3_branch: "",
+    member3_sem: "",
+    member4_name: "",
+    member4_email: "",
+    member4_game_id: "",
+    member4_branch: "",
+    member4_sem: "",
   };
   const [form, set] = useState(cachedForm);
   // const [uploadedFileName, setUploadedFileName] = useState("");
@@ -108,41 +108,41 @@ const ValorantForm = () => {
     setSubmit(true);
     console.log(form);
     let condition1 =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_branch !== "" &&
+      form.team_name !== "" &&
+      form.username !== "" &&
+      form.whatsapp_number !== "" &&
+      form.branch !== "" &&
       form.Leader_yog !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_game_id !== "" &&
-      form.Leader_whatsapp.length === 10;
+      form.leader_email !== "" &&
+      form.curr_institution !== "" &&
+      form.leader_game_id !== "" &&
+      form.whatsapp_number.length === 10;
 
     let condition2 = false;
-    if (form.P2_game_id === form.P2_number && form.P2_number === "") {
+    if (form.member1_game_id === form.member1_number && form.member1_number === "") {
       condition2 = true;
-    } else if (form.P2_game_id !== "" && form.P2_number !== "") {
+    } else if (form.member1_game_id !== "" && form.member1_number !== "") {
       condition2 = true;
     }
 
     let condition3 = false;
-    if (form.P3_game_id === form.P3_number && form.P3_number === "") {
+    if (form.member2_game_id === form.member2_number && form.member2_number === "") {
       condition3 = true;
-    } else if (form.P3_game_id !== "") {
+    } else if (form.member2_game_id !== "") {
       condition3 = true;
     }
 
     let condition4 = false;
-    if (form.P4_game_id === form.P4_number && form.P4_number === "") {
+    if (form.member3_game_id === form.member3_number && form.member3_number === "") {
       condition4 = true;
-    } else if (form.P4_game_id !== "" && form.P4_number !== "") {
+    } else if (form.member3_game_id !== "" && form.member3_number !== "") {
       condition4 = true;
     }
 
     let condition5 = false;
-    if (form.P5_game_id === form.P5_number && form.P5_number === "") {
+    if (form.member4_game_id === form.member4_number && form.member4_number === "") {
       condition5 = true;
-    } else if (form.P5_game_id !== "" && form.P5_number !== "") {
+    } else if (form.member4_game_id !== "" && form.member4_number !== "") {
       condition5 = true;
     }
 
@@ -181,37 +181,37 @@ const ValorantForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
+                    name="username"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.username}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp_number"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp.length > 10 && (
+                  {form.whatsapp_number.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -219,282 +219,282 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
+                    name="curr_institution"
                     id="leaderCollege"
                     type="text"
                     placeholder="Leader's College"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.curr_institution}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_gender"
+                    name="gender"
                     id="leaderGender"
                     type="text"
                     placeholder="Leader's Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_gender}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_sem"
+                    name="curr_semester"
                     id="leaderSem"
                     type="text"
                     placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_sem}
+                    value={form.curr_semester}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_program_of_study"
+                    name="program_of_study"
                     id="leaderProgramOfStudy"
                     type="text"
                     placeholder="Leader's Program of Study"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_program_of_study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_email"
+                    name="leader_email"
                     id="leaderEmail"
                     type="text"
                     placeholder="Leader's Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_game_id"
+                    name="leader_game_id"
                     id="P1Id"
                     type="text"
                     placeholder="Leader Game ID "
                     onChange={(e) => handle(e)}
-                    value={form.Leader_game_id}
+                    value={form.leader_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_discord"
+                    name="discord"
                     id="leaderDiscord"
                     type="text"
                     placeholder="Leader's Discord"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_discord}
+                    value={form.discord}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="P2Name"
+                    name="member1_name"
+                    id="member1Name"
                     type="text"
                     placeholder="Player 2 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P2_name}
+                    value={form.member1_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_email"
-                    id="P2Email"
+                    name="member1_email"
+                    id="member1Email"
                     type="text"
                     placeholder="Player 2 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P2_email}
+                    value={form.member1_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_game_id"
-                    id="P2Id"
+                    name="member1_game_id"
+                    id="member1Id"
                     type="text"
                     placeholder="Player 2 Game ID"
                     onChange={(e) => handle(e)}
-                    value={form.P2_game_id}
+                    value={form.member1_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_branch"
-                    id="P2Branch"
+                    name="member1_branch"
+                    id="member1Branch"
                     type="text"
                     placeholder="Player 2 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P2_branch}
+                    value={form.member1_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_sem"
-                    id="P2Sem"
+                    name="member1_sem"
+                    id="member1Sem"
                     type="text"
                     placeholder="Player 2 Semester"
                     onChange={(e) => handle(e)}
-                    value={form.P2_sem}
+                    value={form.member1_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="P3Name"
+                    name="member2_name"
+                    id="member2Name"
                     type="text"
                     placeholder="Player 3 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.member2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_email"
-                    id="P3Email"
+                    name="member2_email"
+                    id="member2Email"
                     type="text"
                     placeholder="Player 3 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P3_email}
+                    value={form.member2_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_game_id"
-                    id="P3Id"
+                    name="member2_game_id"
+                    id="member2Id"
                     type="text"
                     placeholder="Player 3 Game ID"
                     onChange={(e) => handle(e)}
-                    value={form.P3_game_id}
+                    value={form.member2_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_branch"
-                    id="P3Branch"
+                    name="member2_branch"
+                    id="member2Branch"
                     type="text"
                     placeholder="Player 3 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P3_branch}
+                    value={form.member2_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_sem"
-                    id="P3Sem"
+                    name="member2_sem"
+                    id="member2Sem"
                     type="text"
                     placeholder="Player 3 Semester"
                     onChange={(e) => handle(e)}
-                    value={form.P3_sem}
+                    value={form.member2_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_name"
-                    id="P4Name"
+                    name="member3_name"
+                    id="member3Name"
                     type="text"
                     placeholder="Player 4 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P4_name}
+                    value={form.member3_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_email"
-                    id="P4Email"
+                    name="member3_email"
+                    id="member3Email"
                     type="text"
                     placeholder="Player 4 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P4_email}
+                    value={form.member3_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_game_id"
-                    id="P4Id"
+                    name="member3_game_id"
+                    id="member3Id"
                     type="text"
                     placeholder="Player 4 Game ID"
                     onChange={(e) => handle(e)}
-                    value={form.P4_game_id}
+                    value={form.member3_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_branch"
-                    id="P4Branch"
+                    name="member3_branch"
+                    id="member3Branch"
                     type="text"
                     placeholder="Player 4 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P4_branch}
+                    value={form.member3_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_sem"
-                    id="P4Sem"
+                    name="member3_sem"
+                    id="member3Sem"
                     type="text"
                     placeholder="Player 4 Semester"
                     onChange={(e) => handle(e)}
-                    value={form.P4_sem}
+                    value={form.member3_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_name"
-                    id="P5Name"
+                    name="member4_name"
+                    id="member4Name"
                     type="text"
                     placeholder="Player 5 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P5_name}
+                    value={form.member4_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_email"
-                    id="P5Email"
+                    name="member4_email"
+                    id="member4Email"
                     type="text"
                     placeholder="Player 5 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P5_email}
+                    value={form.member4_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_game_id"
-                    id="P5Id"
+                    name="member4_game_id"
+                    id="member4Id"
                     type="text"
                     placeholder="Player 5 Game ID"
                     onChange={(e) => handle(e)}
-                    value={form.P5_game_id}
+                    value={form.member4_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_branch"
-                    id="P5Branch"
+                    name="member4_branch"
+                    id="member4Branch"
                     type="text"
                     placeholder="Player 5 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P5_branch}
+                    value={form.member4_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_sem"
-                    id="P5Sem"
+                    name="member4_sem"
+                    id="member4Sem"
                     type="text"
                     placeholder="Player 5 Semester"
                     onChange={(e) => handle(e)}
-                    value={form.P5_sem}
+                    value={form.member4_sem}
                   />
                 </li>
               </ul>
