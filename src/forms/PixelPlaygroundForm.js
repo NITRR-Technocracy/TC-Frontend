@@ -280,7 +280,8 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_branch}
                   />
-                  <li data-aos="fade-down">
+                </li>
+                <li data-aos="fade-down">
                   <input
                     name="member2_sem"
                     id="P3_name"
@@ -289,7 +290,6 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_sem}
                   />
-                </li>
                 </li>
               </ul>
             </div>
