@@ -16,12 +16,14 @@ const WorkshopVDAForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("workshopsForm")) || {
-    Name: "",
-    Email: "",
-    Whatsapp: "",
-    Program_of_study: "",
-    Branch: "",
-    Sem: ""
+    leader_name: "",
+    email: "",
+    whatsapp_number: "",
+    program_of_study: "",
+    leader_branch: "",
+    leader_sem: "",
+    gender:"",
+    domain_of_Interest:""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -62,12 +64,14 @@ const WorkshopVDAForm = () => {
     setSubmit(true);
     let condition =
       form.Name !== "" &&
-      form.Email !== "" &&
-      form.Whatsapp !== "" &&
-      form.Branch !== "" &&
-      form.Sem !== "" &&
-      form.Program_of_study !== "" &&
-      form.Whatsapp.length == 10;
+      form.email !== "" &&
+      form.whatsapp_number !== "" &&
+      form.leader_branch !== "" &&
+      form.leader_sem !== "" &&
+      form.gender !== "" && 
+      form.program_of_study !== "" &&
+      form.domain_of_Interest !== "" && 
+      form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
@@ -110,26 +114,26 @@ const WorkshopVDAForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="Name"
+                    name="leader_name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Whatsapp"
+                    name="whatsapp_number"
                     placeholder="Contact Number"
                     onChange={(e) => handle(e)}
-                    value={form.Whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.Whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -137,42 +141,62 @@ const WorkshopVDAForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderEmail"
+                    id="leaderemail"
                     type="text"
-                    name="Email"
-                    placeholder="Email Address"
+                    name="email"
+                    placeholder="email Address"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Program_of_study"
+                    name="program_of_study"
                     id="leaderProgramOfStudy"
                     type="text"
                     placeholder="Program of Study"
                     onChange={(e) => handle(e)}
-                    value={form.Program_of_study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Branch"
-                    id="leaderBranch"
+                    name="gender"
+                    id="gender"
                     type="text"
-                    placeholder="Branch"
+                    placeholder="gender"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Sem"
-                    id="leaderSem"
+                    name="leader_branch"
+                    id="leaderleader_branch"
                     type="text"
-                    placeholder="Semester"
+                    placeholder="branch"
                     onChange={(e) => handle(e)}
-                    value={form.Sem}
+                    value={form.leader_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="leader_sem"
+                    id="leaderleader_sem"
+                    type="text"
+                    placeholder=" semester"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="domain_of_Interest"
+                    id="domain_of_Interest"
+                    type="text"
+                    placeholder=" Domain of interest"
+                    onChange={(e) => handle(e)}
+                    value={form.domain_of_Interest}
                   />
                 </li>
                 
