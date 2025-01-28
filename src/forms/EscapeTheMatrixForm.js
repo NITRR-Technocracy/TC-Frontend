@@ -101,7 +101,7 @@ const EscapeTheMatrixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=EscapeTheMatrix`, form, {
+        const res = await axios.post(`${backend}/register?event=EscapeTheMatrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },
