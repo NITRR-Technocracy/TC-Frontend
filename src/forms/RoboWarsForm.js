@@ -23,6 +23,7 @@ const RoboWarsForm = () => {
     leader_name: "",
     gender: "",
     email: "",
+    curr_institution: "",
     whatsapp_number: "",
     program_of_study: "",
     leader_branch: "",
@@ -106,6 +107,7 @@ const RoboWarsForm = () => {
         form.leader_name !== "" &&
         form.email !== "" &&
         form.gender !== "" &&
+        form.curr_institution !== "" &&
         form.whatsapp_number !== "" &&
         form.leader_branch !== "" &&
         form.leader_sem !== "" &&
@@ -297,6 +299,16 @@ const RoboWarsForm = () => {
                     placeholder="Leader Email ID"
                     onChange={(e) => handle(e)}
                     value={form.email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="curr_institution"
+                    id="currInstitution"
+                    type="text"
+                    placeholder="Leader Current Institution"
+                    onChange={(e) => handle(e)}
+                    value={form.curr_institution}
                   />
                 </li>
                 <li data-aos="fade-down">
