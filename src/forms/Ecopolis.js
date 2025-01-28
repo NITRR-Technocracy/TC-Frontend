@@ -16,16 +16,26 @@ const EcopolisForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("ecopolisform")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
-    P2_name: "",
-    P3_name: "",
-    P4_name: "",
+    team_name: "",
+    leader_name: "",
+    email: "",
+    whatsapp_number: "",
+    program_of_study: "",
+    leader_branch: "",
+    leader_sem:"",
+    gender: "",
+    member1_name: "",
+    member1_email:"",
+    member1_sem:"",
+    member1_branch:"",
+    member2_name: "",
+    member2_email: "",
+    member2_sem:"",
+    member2_branch:"",
+    member3_name: "",
+    member3_email: "",
+    member3_sem: "",
+    member3_branch: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -65,14 +75,27 @@ const EcopolisForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.team_name !== "" &&
+      form.leader_name !== "" &&
+      form.email !== "" &&
+      form.whatsapp_number !== "" &&
+      form.program_of_study !== "" &&
+      form.leader_branch !== "" &&
+      form.leader_sem !== "" &&
+      form.gender !== "" &&
+      form.member1_name !== "" && 
+      form.member1_email !== "" &&
+      form.member1_sem !== "" &&
+      form.member1_branch  !== "" &&
+      form.member2_name !== "" &&
+      form.member2_email !== "" &&
+      form.member2_sem !== "" &&
+      form.member2_branch !== "" &&
+      form.member3_name !== "" &&
+      form.member3_email !== "" &&
+      form.member3_sem !== "" &&
+      form.member3_branch !== "" &&
+      form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
@@ -111,48 +134,48 @@ const EcopolisForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
+                    name="leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_email"
+                    name="email"
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp_number"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.Leader_whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -160,62 +183,152 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
+                    name="program_of_study"
+                    id="program_of_study"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="program of study "
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="gender"
+                    id="gender"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="leaderYog"
+                    name="member1_name"
+                    id="member1_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P2_name}
+                    value={form.member1_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="leaderYog"
+                    name="member1_branch"
+                    id="member1_branch"
                     type="text"
-                    placeholder="Team Member 3 Name"
+                    placeholder="Team Member 2 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.member1_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_name"
-                    id="leaderYog"
+                    name="member1_email"
+                    id="member1_email"
                     type="text"
-                    placeholder="Team Member 4 Name"
+                    placeholder="Team Member 2 email"
                     onChange={(e) => handle(e)}
-                    value={form.P4_name}
+                    value={form.member1_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member1_sem"
+                    id="member1_sem"
+                    type="text"
+                    placeholder="Team Member 2 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.member1_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_name"
+                    id="member2_name"
+                    type="text"
+                    placeholder="Team Member 3 name"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_branch"
+                    id="member2_branch"
+                    type="text"
+                    placeholder="Team Member 3 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_sem"
+                    id="member2_sem"
+                    type="text"
+                    placeholder="Team Member 3 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_email"
+                    id="member2_email"
+                    type="text"
+                    placeholder="Team Member 3 email"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_name"
+                    id="member3_name"
+                    type="text"
+                    placeholder="Team Member 4 name"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_branch"
+                    id="member3_branch"
+                    type="text"
+                    placeholder="Team Member 4 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_sem"
+                    id="member3_sem"
+                    type="text"
+                    placeholder="Team Member 4 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_email"
+                    id="member3_email"
+                    type="text"
+                    placeholder="Team Member 4 email"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_email}
                   />
                 </li>
               </ul>

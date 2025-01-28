@@ -31,7 +31,7 @@ export const EventsList = [
       time:"4:00 PM - 5:00 PM",
       venue:"G-4",
       des: "An Event based on Graphic designing/poster making based on the theme of the fest.",
-      link:"/events/technoGraphixForm",
+      link:"/events/TechnoGraphixForm",
       deadline:"31/01/2025"
     },
     {
@@ -42,7 +42,7 @@ export const EventsList = [
       time:"11:30 AM - 1:00 PM",
       venue:"S-4",
       des: "An event based on quick selection and solving maximum questions from a set of 30 Standard DSA questions.",
-      link:"/events/dsaMarathonForm",
+      link:"/events/DsaMarathonForm",
       deadline:"31/01/2025"
     },
     {
@@ -53,7 +53,7 @@ export const EventsList = [
       time:"2:30 PM -4:00 PM",
       venue:"Outdoors",
       des: "Each Teams have to bring their own drone and complete the given track in minimum time.",
-      link:"/events/droneRaceForm",
+      link:"/events/DroneRaceForm",
       deadline:"31/01/2025"
     },
     /*{
@@ -75,7 +75,7 @@ export const EventsList = [
       time:"11:30 AM - 1:00 PM",
       venue:"CCC Lab",
       des: "A team-based coding challenge testing teamwork, creativity, and problem-solving.",
-      link:"/events/codeSprintRelayForm",
+      link:"/events/CodeSprintRelayForm",
       deadline:"31/01/2025"
     },
     {
@@ -86,7 +86,7 @@ export const EventsList = [
       time:"11:30 AM - 1:00 PM",
       venue:"Any Classroom",
       des: "AUTOCAD enthusiasts can showcase their talent by creating designs.",
-      link:"/events/dimensionsForm",
+      link:"/events/DimensionsForm",
       deadline:"31/01/2025"
     },
     {
@@ -97,7 +97,7 @@ export const EventsList = [
       time:"2:30 PM - 4:00 PM",
       venue:"G-4",
       des: "Design with Creativity tackles real-life architectural challenges in India, We'll focus on the real problems of our own country.",
-      link:"/events/ecopolisForm",
+      link:"/events/EcopolisForm",
       deadline:"31/01/2025"
     },
     {
@@ -119,7 +119,7 @@ export const EventsList = [
       time:"All day",
       venue:"Online",
       des: "A fast-paced video editing competition where participants create a short film of the 2-day fest.",
-      link:"/events/pixelPlaygroundForm",
+      link:"/events/PixelPlaygroundForm",
       deadline:"31/01/2025"
     },
     {
@@ -130,7 +130,7 @@ export const EventsList = [
       time:"2:30 PM - 3:30 PM",
       venue:"Outdoors",
       des: "Self-made rocket launching event.",
-      link:"/events/octoberSkyForm",
+      link:"/events/OctoberSkyForm",
       deadline:"31/01/2025"
     },
     {
@@ -141,7 +141,7 @@ export const EventsList = [
       time:"11:00 AM - 1:00 PM + 2:30 PM -3:30 PM",
       venue:"Lecture Hall",
       des: "A survival quiz testing knowledge, problem-solving, and quick thinking to escape the virtual matrix.",
-      link:"/events/escapeTheMatrixForm",
+      link:"/events/EscapeTheMatrixForm",
       deadline:"31/01/2025"
     },
     // {
@@ -163,7 +163,7 @@ export const EventsList = [
       time:"3:00 PM - 5:00 PM",
       venue:"CCC",
       des: "Reverse Coding is a competition where participants work backward from the output, testing creativity, logic, and problem-solving skills.",
-      link:"/events/reverseCodingForm",
+      link:"/events/ReverseCodingForm",
       deadline:"31/01/2025"
     },
     // {
@@ -185,7 +185,7 @@ export const EventsList = [
       time:"comming soon",
       venue:"E-Hall, NIT Raipur",
       des: "A Certified workshop on the basics of CAN (Controller Area Network) protocol, teaching participants to communicate with vehicle networks, collect data, and analyze it effectively.",
-      link:"/events/workshopVDAForm",
+      link:"/events/WorkshopVDAForm",
       deadline:"31/01/2025"
     },
     {
@@ -196,7 +196,7 @@ export const EventsList = [
       time:"10:30 AM- 3:30 PM",
       venue:"Amul Parlor",
       des: "A thriller version of Treasure Hunt.",
-      link:"/events/treasureHuntForm",
+      link:"/events/TreasureHuntForm",
       deadline:"31/01/2025"
     },
     {
@@ -207,7 +207,7 @@ export const EventsList = [
     time:"comming soon",
     venue:"Central Garden",
     des: "Cornhole is a popular lawn game where players or teams take turns throwing bags filled with sand at a raised platform with a hole in it. The objective is to score points by landing the bags either on the platform or through the hole.",
-    link:"/events/cornHoleForm",
+    link:"/events/CornHoleForm",
     deadline:"31/01/2025"
   },
   {
@@ -218,7 +218,7 @@ export const EventsList = [
     time:"2:00 PM - 5:00 PM",
     venue:"AMUL PARLOUR",
     des: "An event where participants showcase singing, poetry, mimicry, or any act, with group performances welcome.",
-    link:"/events/openMicForm",
+    link:"/events/OpenMicForm",
     deadline:"31/01/2025"
   },
   {
@@ -240,7 +240,7 @@ export const EventsList = [
     time:"2:30 PM onwards",
     venue:"CCC",
     des: "Valorant Gaming competition.",
-    link:"/events/valorantForm",
+    link:"/events/ValorantForm",
     deadline:"31/01/2025"
   },
   {
@@ -262,7 +262,7 @@ export const EventsList = [
     time:"comming soon",
     venue:"Outdoors",
     des: "",
-    link:"/events/roboRaceForm",
+    link:"/events/RoboRaceForm",
     deadline:"31/01/2025"
   }
   ];

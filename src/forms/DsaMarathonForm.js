@@ -16,29 +16,29 @@ const DsaMarathonForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("dsamarathonform")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_sem: "",
-    Leader_gender: "",
-    Leader_program_Of_Study: "",
-    P2_email: "",
-    P2_sem: "",
-    P2_branch: "",
-    P2_name: "",
-    P3_name: "",
-    P3_email: "",
-    P3_sem: "",
-    P3_branch: "",
-    Leader_Hackerrank: "",
-    Leader_Hackerearth: "",
-    P2_Hackerrank: "",
-    P2_Hackerearth: "",
-    P3_Hackerrank: "",
-    P3_Hackerearth: "",
+    team_name: "",
+    leader_name: "",
+    email: "",
+    whatsapp_number: "",
+    curr_institution: "",
+    leader_branch: "",
+    leader_sem: "",
+    gender: "",
+    program_of_study: "",
+    member1_email: "",
+    member1_sem: "",
+    member1_branch: "",
+    member1_name: "",
+    member2_name: "",
+    member2_email: "",
+    member2_sem: "",
+    member2_branch: "",
+    leader_hacker_rank_id: "",
+    leader_hacker_earth_id: "",
+    member1_hacker_rank_id: "",
+    member1_hacker_earth_id: "",
+    member2_hacker_rank_id: "",
+    member2_hacker_earth_id: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -78,30 +78,30 @@ const DsaMarathonForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_sem !== "" &&
-      form.Leader_program_Of_Study !== "" &&
-      form.Leader_gender !== "" &&
-      form.Leader_Hackerearth !== "" &&
-      form.Leader_Hackerrank !== "" &&
-      form.P2_name !== "" &&
-      form.P2_sem !== "" &&
-      form.P2_branch !== "" &&
-      form.P2_email !== "" &&
-      form.P2_Hackerearth !== "" &&
-      form.P2_Hackerrank !== "" &&
-      form.P3_name !== "" &&
-      form.P3_email !== "" &&
-      form.P3_branch !== "" &&
-      form.P3_sem !== "" &&
-      form.P3_Hackerearth !== "" &&
-      form.P3_Hackerrank !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.team_name !== "" &&
+      form.leader_name !== "" &&
+      form.email !== "" &&
+      form.whatsapp_number !== "" &&
+      form.curr_institution !== "" &&
+      form.leader_branch !== "" &&
+      form.leader_sem !== "" &&
+      form.program_of_study !== "" &&
+      form.gender !== "" &&
+      form.leader_hacker_earth_id !== "" &&
+      form.leader_hacker_rank_id !== "" &&
+      form.member1_name !== "" &&
+      form.member1_sem !== "" &&
+      form.member1_branch !== "" &&
+      form.member1_email !== "" &&
+      form.member1_hacker_earth_id !== "" &&
+      form.member1_hacker_rank_id !== "" &&
+      form.member2_name !== "" &&
+      form.member2_email!== "" &&
+      form.member2_branch !== "" &&
+      form.member2_sem!== "" &&
+      form.member2_hacker_earth_id !== "" &&
+      form.member2_hacker_rank_id !== "" &&
+      form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
@@ -144,48 +144,48 @@ const DsaMarathonForm = () => {
               <ul>
             <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
+                    name="leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderEmail"
                     type="text"
-                    name="Leader_email"
+                    name="email"
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp_number"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.Leader_whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -193,170 +193,190 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
+                    name="curr_institution"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader College"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.curr_institution}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_sem"
+                    name="leader_sem"
                     id="leadersem"
                     type="text"
                     placeholder="semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_sem}
+                    value={form.leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_Hackerrank"
-                    id="Leader_Hackerrank"
+                    name="gender"
+                    id="gender"
+                    type="text"
+                    placeholder="Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="program_of_study"
+                    id="program_of_study"
+                    type="text"
+                    placeholder="Program of study"
+                    onChange={(e) => handle(e)}
+                    value={form.program_of_study}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="leader_hacker_rank_id"
+                    id="leader_hacker_rank_id"
                     type="text"
                     placeholder="Leader's Hackerrank ID"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerrank}
+                    value={form.leader_hacker_rank_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_Hackerearth"
-                    id="Leader_Hackerearth"
+                    name="leader_hacker_earth_id"
+                    id="leader_hacker_earth_id"
                     type="text"
                     placeholder="Leader's HackerEarth ID"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerearth}
+                    value={form.leader_hacker_earth_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="P2_name"
+                    name="member1_name"
+                    id="member1_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P2_name}
+                    value={form.member1_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_branch"
-                    id="P2_branch"
+                    name="member1_branch"
+                    id="member1_branch"
                     type="text"
                     placeholder="Team Member 2 branch"
                     onChange={(e) => handle(e)}
-                    value={form.P2_branch}
+                    value={form.member1_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_email"
-                    id="P2_email"
+                    name="member1_email"
+                    id="member1_email"
                     type="text"
                     placeholder="Team Member 2 email"
                     onChange={(e) => handle(e)}
-                    value={form.P2_email}
+                    value={form.member1_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_sem"
-                    id="P2_sem"
+                    name="member1_sem"
+                    id="member1_sem"
                     type="text"
                     placeholder="Team Member 2 semester"
                     onChange={(e) => handle(e)}
-                    value={form.P2_sem}
+                    value={form.member1_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_Hackerrank"
-                    id="P2_Hackerrank"
+                    name="member1_hacker_rank_id"
+                    id="member1_hacker_rank_id"
                     type="text"
                     placeholder="Team Member 2 Hackerrank ID"
                     onChange={(e) => handle(e)}
-                    value={form.P2_Hackerrank}
+                    value={form.member1_hacker_rank_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_Hackerearth"
-                    id="P2_Hackerearth"
+                    name="member1_hacker_earth_id"
+                    id="member1_hacker_earth_id"
                     type="text"
                     placeholder="Team Member 2 HackerEarth ID"
                     onChange={(e) => handle(e)}
-                    value={form.P2_Hackerearth}
+                    value={form.member1_hacker_earth_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="P3_name"
+                    name="member2_name"
+                    id="member2_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.member2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_sem"
-                    id="P3_sem"
+                    name="member2_sem"
+                    id="member2_sem"
                     type="text"
                     placeholder="Team Member 3 sem"
                     onChange={(e) => handle(e)}
-                    value={form.P3_sem}
+                    value={form.member2_sem}
                   />
                 </li><li data-aos="fade-down">
                   <input
-                    name="P3_branch"
-                    id="P3_branch"
+                    name="member2_branch"
+                    id="member2_branch"
                     type="text"
                     placeholder="Team Member 3 branch"
                     onChange={(e) => handle(e)}
-                    value={form.P3_branch}
+                    value={form.member2_branch}
                   />
                 </li><li data-aos="fade-down">
                   <input
-                    name="P3_email"
-                    id="P3_email"
+                    name="member2_email"
+                    id="member2_email"
                     type="text"
                     placeholder="Team Member 3 email"
                     onChange={(e) => handle(e)}
-                    value={form.P3_email}
+                    value={form.member2_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_Hackerrank"
-                    id="P3_Hackerrank"
+                    name="member2_hacker_rank_id"
+                    id="member2_hacker_rank_id"
                     type="text"
                     placeholder="Team Member 3 Hackerrank ID"
                     onChange={(e) => handle(e)}
-                    value={form.P3_Hackerrank}
+                    value={form.member2_hacker_rank_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_Hackerearth"
-                    id="P3_Hackerearth"
+                    name="member2_hacker_earth_id"
+                    id="member2_hacker_earth_id"
                     type="text"
                     placeholder="Team Member 3 HackerEarth ID"
                     onChange={(e) => handle(e)}
-                    value={form.P3_Hackerearth}
+                    value={form.member2_hacker_earth_id}
                   />
                 </li>
               </ul>
