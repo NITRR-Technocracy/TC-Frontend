@@ -16,13 +16,13 @@ const OctoberSkyForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("octoberskyform")) || {
-    Name: "",
-    Email: "",
-    Phone: "",
-    Branch: "",
-    Gender: "",
-    Program_of_study: "",
-    Sem: "",
+    leader_name: "",
+    gender: "",
+    whatsapp_number: "",
+    email: "",
+    leader_branch: "",
+    program_of_study: "",
+    leader_sem: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -62,14 +62,14 @@ const OctoberSkyForm = () => {
     }
     setSubmit(true);
     let condition =
-    form.Name !== "" &&
-    form.Email !== "" &&
-    form.Phone !== "" &&
-    form.Gender !== "" &&
-    form.Branch !== "" &&
-    form.Sem !== "" &&
-    form.Program_of_study !== "" &&
-    form.Phone.length == 10;
+    form.leader_name !== "" &&
+    form.email !== "" &&
+    form.whatsapp_number !== "" &&
+    form.gender !== "" &&
+    form.leader_branch !== "" &&
+    form.leader_sem !== "" &&
+    form.program_of_study !== "" &&
+    form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
@@ -112,37 +112,37 @@ const OctoberSkyForm = () => {
               <ul>
               <li data-aos="fade-down">
                   <input
-                    name="Name"
+                    name="leader_name"
                     id="participantName"
                     type="text"
                     placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="emailId"
                     type="text"
-                    name="Email"
+                    name="email"
                     placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="whatsappNumber"
                     type="text"
-                    name="Phone"
+                    name="whatsapp_number"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Phone}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  { form.Phone.length > 10 && (
+                  { form.whatsapp_number.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -150,42 +150,42 @@ const OctoberSkyForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Gender"
+                    name="gender"
                     id="gender"
                     type="text"
                     placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Gender}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Program_of_study"
+                    name="program_of_study"
                     id="program_of_study"
                     type="text"
                     placeholder="Program of study"
                     onChange={(e) => handle(e)}
-                    value={form.Program_of_study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Branch"
+                    name="leader_branch"
                     id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Sem"
+                    name="leader_sem"
                     id="sem"
                     type="text"
                     placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Sem}
+                    value={form.leader_sem}
                   />
                 </li>
               </ul>

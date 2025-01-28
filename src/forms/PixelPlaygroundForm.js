@@ -15,14 +15,22 @@ const PixelPlaygroundForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("pixelplayground")) || {
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
-    P2_name: "",
-    P3_name: "",
+    leader_name: "",
+    gender: "",
+    whatsapp_number: "",
+    email: "",
+    program_of_study: "",
+    leader_branch: "",
+    leader_sem: "",
+    team_name: "",
+    member1_name: "",
+    member1_email: "",
+    member1_sem: "",
+    member1_branch: "",
+    member2_name: "",
+    member2_email: "",
+    member2_sem: "",
+    member2_branch: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -62,13 +70,22 @@ const PixelPlaygroundForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+    form.leader_name !== ""&&
+    form.gender!== ""&&
+    form.whatsapp_number!== "" &&
+    form.email!== "" && 
+    form.program_of_study!== "" &&
+    form.leader_branch!== ""&&
+    form.leader_sem!== ""&&
+    form.team_name!== ""&&
+    form.member1_name!== ""&&
+    form.member1_email!== ""&&
+    form.member1_sem!== ""&&
+    form.fmember1_branch!== ""&&
+    form.member2_name!== ""&&
+    form.member2_email!== ""&&
+    form.member2_sem!== ""&&
+    form.member2_branch!== ""
 
     if (condition) {
       try {
@@ -105,34 +122,54 @@ const PixelPlaygroundForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+              <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
-                    placeholder="Full Name"
+                    name="team_name"
+                    placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_email"
+                    name="leader_name"
+                    placeholder="Leader Name"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="gender"
+                    placeholder="Leader Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="email"
                     placeholder="Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp_number"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
@@ -146,53 +183,113 @@ const PixelPlaygroundForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
+                    name="program_of_study"
                     id="leaderBranch"
                     type="text"
-                    placeholder="College"
+                    placeholder="Program of Study"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Branch"
+                    placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
+                    name="leader_sem"
                     id="leaderYog"
                     type="text"
-                    placeholder="Year of Graduation"
+                    placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
+                    name="member1_name"
                     id="P2_name"
+                    type="text"
+                    placeholder="Team Member 1 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.member1_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member1_email"
+                    id="P2_name"
+                    type="text"
+                    placeholder="Team Member 1 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.member1_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member1_branch"
+                    id="P2_name"
+                    type="text"
+                    placeholder="Team Member 1 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member1_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member1_sem"
+                    id="P2_name"
+                    type="text"
+                    placeholder="Team Member 1 Sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member1_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_name"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P2_name}
+                    value={form.member2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
+                    name="member2_email"
                     id="P3_name"
                     type="text"
-                    placeholder="Team Member 3 Name"
+                    placeholder="Team Member 2 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.member2_email}
                   />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_branch"
+                    id="P3_name"
+                    type="text"
+                    placeholder="Team Member 2 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_branch}
+                  />
+                  <li data-aos="fade-down">
+                  <input
+                    name="member2_sem"
+                    id="P3_name"
+                    type="text"
+                    placeholder="Team Member 2 Sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_sem}
+                  />
+                </li>
                 </li>
               </ul>
             </div>
