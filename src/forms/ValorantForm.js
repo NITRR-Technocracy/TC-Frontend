@@ -9,7 +9,7 @@ import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import qr from "../assets/eventsAssets/valorantQr.png";
 
-// const backend = keys.backend;
+const backend = keys.backend;
 
 const ValorantForm = () => {
   useEffect(() => {

@@ -8,7 +8,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-// const backend = keys.backend;
+const backend = keys.backend;
 
 const CaseOpsForm = () => {
   useEffect(() => {
