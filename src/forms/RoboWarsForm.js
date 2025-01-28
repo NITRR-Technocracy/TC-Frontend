@@ -18,32 +18,31 @@ const RoboWarsForm = () => {
 
   const [memberCount, setMemberCount] = useState(0);
 
-  const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_gender: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_program_of_study: "",
-    Leader_branch: "",
-    Leader_sem: "",
-    Member2_name: "",
-    Member2_email: "",
-    Member2_branch: "",
-    Member2_sem: "",
-    Member3_name: "",
-    Member3_email: "",
-    Member3_branch: "",
-    Member3_sem: "",
-    Member4_name: "",
-    Member4_email: "",
-    Member4_branch: "",
-    Member4_sem: "",
-    Member5_name: "",
-    Member5_email: "",
-    Member5_branch: "",
-    Member5_sem: "",
+  const cachedForm = JSON.parse(localStorage.getItem("roboWarsForm")) || {
+    team_name: "",
+    leader_name: "",
+    gender: "",
+    email: "",
+    whatsapp_number: "",
+    program_of_study: "",
+    leader_branch: "",
+    leader_sem: "",
+    member1_name: "",
+    member1_email: "",
+    member1_branch: "",
+    member1_sem: "",
+    member2_name: "",
+    member2_email: "",
+    member2_branch: "",
+    member2_sem: "",
+    member3_name: "",
+    member3_email: "",
+    member3_branch: "",
+    member3_sem: "",
+    member4_name: "",
+    member4_email: "",
+    member4_branch: "",
+    member4_sem: "",
   };
 
   useEffect(() => {
@@ -103,40 +102,39 @@ const RoboWarsForm = () => {
       alert("Minimum Team Size: 3");
     } else {
       let condition1 =
-        form.Team_name !== "" &&
-        form.Leader_name !== "" &&
-        form.Leader_email !== "" &&
-        form.Leader_gender !== "" &&
-        form.Leader_college !== "" &&
-        form.Leader_whatsapp !== "" &&
-        form.Leader_branch !== "" &&
-        form.Leader_sem !== "" &&
-        form.Leader_program_of_study !== "" &&
-        form.Member2_name !== "" &&
-        form.Member2_email !== "" &&
-        form.Member2_sem !== "" &&
-        form.Member2_branch !== "" &&
-        form.Member3_name !== "" &&
-        form.Member3_email !== "" &&
-        form.Member3_sem !== "" &&
-        form.Member3_branch !== ""
+        form.team_name !== "" &&
+        form.leader_name !== "" &&
+        form.email !== "" &&
+        form.gender !== "" &&
+        form.whatsapp_number !== "" &&
+        form.leader_branch !== "" &&
+        form.leader_sem !== "" &&
+        form.program_of_study !== "" &&
+        form.member1_name !== "" &&
+        form.member1_email !== "" &&
+        form.member1_sem !== "" &&
+        form.member1_branch !== "" &&
+        form.member2_name !== "" &&
+        form.member2_email !== "" &&
+        form.member2_sem !== "" &&
+        form.member2_branch !== ""
 
       let condition2 = true;
       if (memberCount > 2) {
         condition2 =
-        form.Member4_name !== "" &&
-        form.Member4_email !== "" &&
-        form.Member4_sem !== "" &&
-        form.Member4_branch !== ""
+        form.member3_name !== "" &&
+        form.member3_email !== "" &&
+        form.member3_sem !== "" &&
+        form.member3_branch !== ""
       }
 
       let condition3 = true;
       if (memberCount > 3) {
         condition3 =
-        form.Member4_name !== "" &&
-        form.Member4_email !== "" &&
-        form.Member4_sem !== "" &&
-        form.Member4_branch !== ""
+        form.member3_name !== "" &&
+        form.member3_email !== "" &&
+        form.member3_sem !== "" &&
+        form.member3_branch !== ""
       }
 
       if (condition1 && condition2 && condition3) {
@@ -145,7 +143,7 @@ const RoboWarsForm = () => {
           delete formData.College_name;
         }
         try {
-          const res = await axios.post(`/server/register?event=RoboWars`, formData, {
+          const res = await axios.post(`${backend}/register?event=RoboWars`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -177,7 +175,7 @@ const RoboWarsForm = () => {
               type="text"
               placeholder={`Member ${i+1} Name`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_name`]}
+              value={form[`member${i}_name`]}
             />
           </li>
           <li>
@@ -187,7 +185,7 @@ const RoboWarsForm = () => {
               type="text"
               placeholder={`Member ${i+1} Email ID`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_email`]}
+              value={form[`Member${i}_email`]}
             />
             
           </li>
@@ -198,7 +196,7 @@ const RoboWarsForm = () => {
               type="text"
               placeholder={`Member ${i+1}'s Branch`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_branch`]}
+              value={form[`Member${i}_branch`]}
             />
           </li>
 
@@ -209,7 +207,7 @@ const RoboWarsForm = () => {
               type="text"
               placeholder={`Member ${i+1}'s Semester`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_sem`]}
+              value={form[`Member${i}_sem`]}
             />
           </li>
         </div>
@@ -239,12 +237,12 @@ const RoboWarsForm = () => {
             <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 
@@ -254,38 +252,38 @@ const RoboWarsForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
+                    name="leader_name"
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_gender"
-                    id="leaderBranch"
+                    name="gender"
+                    id="gender"
                     type="text"
                     placeholder="Leader Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_gender}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderNumber"
+                    name="whatsapp_number"
+                    id="WhatsappNumber"
                     type="text"
-                    name="Leader_whatsapp"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.Leader_whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -293,52 +291,42 @@ const RoboWarsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="email"
                     id="leaderEmail"
                     type="text"
-                    name="Leader_email"
                     placeholder="Leader Email ID"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
-                    type="text"
-                    placeholder="Leader College"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_college}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_program_of_study"
-                    id="leaderBranch"
+                    name="program_of_study"
+                    id="programOfStudy"
                     type="text"
                     placeholder="Program of Study"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_program_of_study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_sem"
-                    id="leaderYear"
+                    name="leader_sem"
+                    id="leaderSem"
                     type="text"
                     placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_sem}
+                    value={form.leader_sem}
                   />
                 </li>
                 

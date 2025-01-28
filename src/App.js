@@ -97,7 +97,7 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/speedCubingForm"
+                path="/events/SpeedCubingForm"
                 element={<SpeedCubingForm />}
               />
               <Route
@@ -178,7 +178,7 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/roboWarsForm"
+                path="/events/RoboWarsForm"
                 element={<RoboWarsForm/>}
               />
               <Route
