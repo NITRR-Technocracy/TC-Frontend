@@ -71,7 +71,7 @@ const WorkShopsForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Workshops`, form, {
+        const res = await axios.post(`${backend}/register?event=Workshops`, form, {
           headers: {
             "Content-Type": "application/json",
           },
