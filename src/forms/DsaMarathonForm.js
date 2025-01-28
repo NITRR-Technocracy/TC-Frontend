@@ -106,7 +106,7 @@ const DsaMarathonForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=DsaMarathon`,
+          `${backend}/register?event=DsaMarathon`,
           form,
           {
             headers: {

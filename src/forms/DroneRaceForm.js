@@ -90,7 +90,7 @@ const DroneRaceForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=DroneRacing`, form, {
+        const res = await axios.post(`${backend}/register?event=DroneRacing`, form, {
           headers: {
             "Content-Type": "application/json",
           },

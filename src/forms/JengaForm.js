@@ -70,7 +70,7 @@ const JengaForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post("/server/register?event=Jenga", form, {
+        const res = await axios.post(`${backend}/register?event=Jenga`, form, {
           headers: {
             "Content-Type": "application/json",
           },

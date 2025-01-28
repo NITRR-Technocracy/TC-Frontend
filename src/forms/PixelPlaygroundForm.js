@@ -89,7 +89,7 @@ const PixelPlaygroundForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=PixelPlayground`, form, {
+        const res = await axios.post(`${backend}/register?event=PixelPlayground`, form, {
           headers: {
             "Content-Type": "application/json",
           },
