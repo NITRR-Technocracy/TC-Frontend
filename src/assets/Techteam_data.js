@@ -84,23 +84,16 @@ export const techteamList = [
       desi: "Executive"
     },
     {
-      id: 5,
-      name: "Gourav Deep Shahni",
-      imgUrl: Gourav_Deep_Shahni,
-      githubUrl:"https://www.github.com/maxcillius",
-      linkedinUrl: "https://www.linkedin.com/in/gouravdeep",
-      instaUrl: "",
-      gmail:"",
-      desi: "Executive"
-    },
-    {
       id: 9,
       name: "Vibhor Shukla",
       imgUrl: "",
       githubUrl:"https://github.com/VibhorShukla-BHRT",
       linkedinUrl: "https://www.linkedin.com/in/vibhor-shukla-a07577237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instaUrl: "https://www.instagram.com/shukla_vibhor/",
+      gmail:"",
+      desi: "Executive",
     },
+    {
       id:6,
       name: "Devesh Agarwal",
       imgUrl: Devesh_Agarwal,
@@ -108,6 +101,6 @@ export const techteamList = [
       linkedinUrl: "https://www.linkedin.com/in/devesh-agarwal-736888292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instaUrl: "https://www.instagram.com/deveshhh_652/",
       gmail:"",
-      desi: "Executive"
+      desi: "Executive",
     },
   ];
