@@ -74,7 +74,7 @@ const OctoberSkyForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=OctoberSky`,
+          `${backend}/register?event=OctoberSky`,
           form,
           {
             headers: {

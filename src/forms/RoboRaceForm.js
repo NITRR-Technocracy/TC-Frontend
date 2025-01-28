@@ -74,7 +74,7 @@ const RoboRaceForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post("/server/register?event=RoboRace", form, {
+        const res = await axios.post(`${backend}/register?event=RoboRace`, form, {
           headers: {
             "Content-Type": "application/json",
           },
