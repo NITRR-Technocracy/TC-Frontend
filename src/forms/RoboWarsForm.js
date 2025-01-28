@@ -172,7 +172,7 @@ const RoboWarsForm = () => {
         <div style={{width: "100%"}} key={i}>
           <li>
             <input
-              name={`Member${i + 1}_name`}
+              name={`member${i}_name`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1} Name`}
@@ -182,7 +182,7 @@ const RoboWarsForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i + 1}_email`}
+              name={`Member${i}_email`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1} Email ID`}
@@ -193,7 +193,7 @@ const RoboWarsForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i + 1}_branch`}
+              name={`Member${i}_branch`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1}'s Branch`}
@@ -204,7 +204,7 @@ const RoboWarsForm = () => {
 
           <li>
             <input
-              name={`Member${i + 1}_sem`}
+              name={`Member${i}_sem`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1}'s Semester`}
