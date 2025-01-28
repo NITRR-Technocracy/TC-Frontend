@@ -18,9 +18,9 @@ const TreasureHuntForm = () => {
     username: "",
     whatsapp_number: "",
     branch: "",
+    program_of_study: "",
     curr_semester: "",
     gender: "",
-    program_of_study: "",
     member1_name: "",
     member1_sem: "",
     member1_branch: "",
@@ -58,16 +58,28 @@ const TreasureHuntForm = () => {
     setSubmit(true);
     console.log(form);
 
-    const isFormValid =
-      Object.values(form).every((value) => value.trim() !== "") &&
-      form.whatsapp_number.length === 10;
+    let condition =
+    form.team_name !== "" &&
+    form.username !== "" &&
+    form.program_of_study !== "" &&
+    form.whatsapp_number !== "" &&
+    form.gender !== "" &&
+    form.branch !== "" &&
+    form.curr_semester !== "" &&
+    form.member1_name !== "" &&
+    form.member1_sem !== "" &&
+    form.member2_branch !== "" &&
+    form.member2_name !== "" &&
+    form.member2_sem !== "" &&
+    form.member2_branch !== "" &&
+    form.whatsapp_number.length == 10;
 
-    if (isFormValid) {
+    if (condition) {
       try {
         const res = await axios.post(
           `${backend}/register?event=MockCid`,
           form,
-          { headers: { "Content-Type": "multipart/form-data" } }
+          { headers: { "Content-Type": "application/json", } }
         );
         alert(res.data.message);
       } catch (err) {
@@ -86,7 +98,7 @@ const TreasureHuntForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Treasure"} noncolor={"Hunt"} />
+      <Title color={"Mock"} noncolor={"CID"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -193,6 +205,33 @@ const TreasureHuntForm = () => {
                     value={form.member1_branch}
                   />
                 </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_name"
+                    type="text"
+                    placeholder="Participant 3 Name"
+                    onChange={handle}
+                    value={form.member2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_sem"
+                    type="text"
+                    placeholder="Participant 3 Semester"
+                    onChange={handle}
+                    value={form.member2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_branch"
+                    type="text"
+                    placeholder="Participant 3 Branch"
+                    onChange={handle}
+                    value={form.member2_branch}
+                  />
+                </li>
                 {/* Add similar fields for other participants */}
               </ul>
             </div>
@@ -227,10 +266,10 @@ const TreasureHuntForm = () => {
                 </h3>
               </div>
               <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
-                <p>A thriller version of Treasure Hunt.</p>
+                <p>A thriller version of Cid.</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Mock CID</h4>
+                <h4>Mock Cid</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
@@ -238,10 +277,15 @@ const TreasureHuntForm = () => {
               <div data-aos="fade-down" className="mint_info">
                 <p>• An interesting on-campus murder story can be created.</p>
                 <p>• Clues are left behind all around the campus.</p>
+                <p>• Some volunteers and team members can act as witnesses.</p>
                 <p>• The one who finds out the real murderer first wins.</p>
-                <p>• Multiple participating teams (3-membered teams).</p>
+                <p>• Multiple participating teams (5-6 teams).</p>
                 <p>
-                  • Clues can be left behind all around the campus (SAC, Bihan Canteen, Workshops etc.).
+                  • Clues can be left behind all around the campus (left garden,
+                  central garden, parking area, in Mandir area, etc.).
+                </p>
+                <p>
+                  • A quiz round first for the selection of participating teams.
                 </p>
                 <p>• Online registrations.</p>
                 <p>
@@ -258,3 +302,4 @@ const TreasureHuntForm = () => {
 };
 
 export default TreasureHuntForm;
+
