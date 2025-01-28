@@ -193,7 +193,7 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/CornholeForm"
+                path="/events/CornHoleForm"
                 element={<CornholeGameForm />}
               />
               <Route
