@@ -99,7 +99,7 @@ const EcopolisForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Ecopolis`, form, {
+        const res = await axios.post(`${backend}/register?event=Ecopolis`, form, {
           headers: {
             "Content-Type": "application/json",
           },

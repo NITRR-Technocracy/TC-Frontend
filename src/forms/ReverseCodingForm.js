@@ -101,7 +101,7 @@ const ReverseCodingForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=ReverseCoding`, form, {
+        const res = await axios.post(`${backend}/register?event=ReverseCoding`, form, {
           headers: {
             "Content-Type": "application/json",
           },

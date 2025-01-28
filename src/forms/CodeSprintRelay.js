@@ -101,7 +101,7 @@ const CodeSprintRelayForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/register?event=CodeSprintRelay`, form, {
+        const res = await axios.post(`${backend}/register?event=CodeSprintRelay`, form, {
           headers: {
             "Content-Type": "application/json",
           },

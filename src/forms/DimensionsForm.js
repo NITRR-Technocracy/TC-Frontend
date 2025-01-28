@@ -74,7 +74,7 @@ const DimensionsForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Dimensions`, form, {
+        const res = await axios.post(`${backend}/register?event=Dimensions`, form, {
           headers: {
             "Content-Type": "application/json",
           },

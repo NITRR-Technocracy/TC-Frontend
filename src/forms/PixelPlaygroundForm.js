@@ -89,7 +89,7 @@ const PixelPlaygroundForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=PixelPlayground`, form, {
+        const res = await axios.post(`${backend}/register?event=PixelPlayground`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -175,7 +175,7 @@ const PixelPlaygroundForm = () => {
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.Leader_whatsapp.length > 10 && (
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
