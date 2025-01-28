@@ -32,9 +32,11 @@ const PixelPlaygroundForm = () => {
     member2_sem: "",
     member2_branch: ""
   };
+
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
@@ -43,14 +45,41 @@ const PixelPlaygroundForm = () => {
     localStorage.setItem("pixelplayground", JSON.stringify(update));
   };
 
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp_number)) {
+      errors.whatsapp_number = "Enter a valid 10-digit phone number.";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.email)) {
+      errors.email = "Enter a valid email address.";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "" && !key.includes("member2") && !key.includes("member1")) {
+        errors[key] = `${key.replace("_", " ")} is required.`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
+  };
+
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
 
   const onLoad = () => {
-    // this reaches out to the hCaptcha JS API and runs the
-    // execute function on it. you can use other functions as
-    // documented here:
-    // https://docs.hcaptcha.com/configuration#jsapi
     captchaRef.current.execute();
   };
 
@@ -58,54 +87,36 @@ const PixelPlaygroundForm = () => {
     if (token) {
       console.log("Captcha verified");
     }
-    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
     }
-    setSubmit(true);
-    let condition =
-    form.leader_name !== ""&&
-    form.gender!== ""&&
-    form.whatsapp_number!== "" &&
-    form.email!== "" && 
-    form.program_of_study!== "" &&
-    form.leader_branch!== ""&&
-    form.leader_sem!== ""&&
-    form.team_name!== ""&&
-    form.member1_name!== ""&&
-    form.member1_email!== ""&&
-    form.member1_sem!== ""&&
-    form.fmember1_branch!== ""&&
-    form.member2_name!== ""&&
-    form.member2_email!== ""&&
-    form.member2_sem!== ""&&
-    form.member2_branch!== ""
 
-    if (condition) {
-      try {
-        const res = await axios.post(`${backend}/register?event=PixelPlayground`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        alert(res.data.message);
-      } catch (err) {
-        console.error(err);
-        alert(err.response.data.message);
-      }
-    } else {
-      alert("Please fill all the necessary details correctly");
+    setSubmit(true);
+
+    // Validate the form before submission
+    if (!validateForm()) {
+      alert("Please fix the errors and try again.");
+      setSubmit(false);
+      return;
+    }
+
+    try {
+      const res = await axios.post(`${backend}/register?event=PixelPlayground`, form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      alert(res.data.message);
+    } catch (err) {
+      console.error(err);
+      alert(err.response?.data?.message || "An error occurred during submission.");
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -122,15 +133,16 @@ const PixelPlaygroundForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-              <li data-aos="fade-down">
+                <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="teamName"
                     type="text"
                     name="team_name"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
                     value={form.team_name}
                   />
+                  {formErrors.team_name && <p style={{ color: "red" }}>{formErrors.team_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -141,41 +153,47 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_name}
                   />
+                  {formErrors.leader_name && <p style={{ color: "red" }}>{formErrors.leader_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="leaderGender"
                     type="text"
                     name="gender"
                     placeholder="Leader Gender"
                     onChange={(e) => handle(e)}
                     value={form.gender}
                   />
+                  {formErrors.gender && <p style={{ color: "red" }}>{formErrors.gender}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
-                    type="text"
                     name="email"
+                    id="leaderEmail"
+                    type="text"
                     placeholder="Email"
                     onChange={(e) => handle(e)}
                     value={form.email}
                   />
+                  {formErrors.email && <p style={{ color: "red" }}>{formErrors.email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="whatsapp_number"
                     id="leaderNumber"
                     type="text"
-                    name="whatsapp_number"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.whatsapp_number}
                   />
-                  <span style={{ fontSize: "0.7rem",color:"white" }}>
+                  <span style={{ fontSize: "0.7rem", color: "white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {
-                    form.whatsapp_number.length > 10 && (
+                  {formErrors.whatsapp_number && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp_number}</p>
+                  )}
+                 {
+                    form.whatsapp_number.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -190,6 +208,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.program_of_study}
                   />
+                  {formErrors.program_of_study && <p style={{ color: "red" }}>{formErrors.program_of_study}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -200,6 +219,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_branch}
                   />
+                  {formErrors.leader_branch && <p style={{ color: "red" }}>{formErrors.leader_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -210,6 +230,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_sem}
                   />
+                  {formErrors.leader_sem && <p style={{ color: "red" }}>{formErrors.leader_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -220,6 +241,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_name}
                   />
+                  {formErrors.member1_name && <p style={{ color: "red" }}>{formErrors.member1_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -230,6 +252,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_email}
                   />
+                  {formErrors.member1_email && <p style={{ color: "red" }}>{formErrors.member1_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -240,6 +263,7 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_branch}
                   />
+                  {formErrors.member1_branch && <p style={{ color: "red" }}>{formErrors.member1_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -250,46 +274,53 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_sem}
                   />
+                  {formErrors.member1_sem && <p style={{ color: "red" }}>{formErrors.member1_sem}</p>}
                 </li>
+
+                {/* Member 2 Form Fields */}
                 <li data-aos="fade-down">
                   <input
                     name="member2_name"
-                    id="P3_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.member2_name}
                   />
+                  {formErrors.member2_name && <p style={{ color: "red" }}>{formErrors.member2_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="member2_email"
-                    id="P3_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Email"
                     onChange={(e) => handle(e)}
                     value={form.member2_email}
                   />
+                  {formErrors.member2_email && <p style={{ color: "red" }}>{formErrors.member2_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="member2_branch"
-                    id="P3_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Branch"
                     onChange={(e) => handle(e)}
                     value={form.member2_branch}
                   />
+                  {formErrors.member2_branch && <p style={{ color: "red" }}>{formErrors.member2_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="member2_sem"
-                    id="P3_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Sem"
                     onChange={(e) => handle(e)}
                     value={form.member2_sem}
                   />
+                  {formErrors.member2_sem && <p style={{ color: "red" }}>{formErrors.member2_sem}</p>}
                 </li>
               </ul>
             </div>
@@ -300,10 +331,6 @@ const PixelPlaygroundForm = () => {
               ref={captchaRef}
             />
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
-              {/* <ReCAPTCHA
-                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
-                ref={recaptchaRef}
-              /> */}
               {!isSubmitting ? (
                 <div
                   target="_blank"
