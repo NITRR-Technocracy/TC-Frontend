@@ -25,12 +25,44 @@ const JengaForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
     localStorage.setItem("jenga", JSON.stringify(update));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp)) {
+      errors.whatsapp = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.email)) {
+      errors.email = "Enter a valid email address!!";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "") {
+        errors[key] = `${key.replace("_", " ")} is required!!`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
   };
 
   const [token, setToken] = useState(null);
@@ -59,16 +91,8 @@ const JengaForm = () => {
       return;
     }
     setSubmit(true);
-    let condition =
-      form.name !== "" &&
-      form.email !== "" &&
-      form.whatsapp !== "" &&
-      form.college !== "" &&
-      form.branch !== "" &&
-      form.yog !== "" &&
-      form.whatsapp.length == 10;
-
-    if (condition) {
+    
+    if (validateForm()) {
       try {
         const res = await axios.post(`${backend}/register?event=Jenga`, form, {
           headers: {
@@ -78,15 +102,15 @@ const JengaForm = () => {
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response.data.message);
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -112,6 +136,7 @@ const JengaForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.name}
                   />
+                   {formErrors.name && <p style={{ color: "red" }}>{formErrors.name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -122,6 +147,7 @@ const JengaForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.email}
                   />
+                  {formErrors.email && <p style={{ color: "red" }}>{formErrors.email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -135,8 +161,11 @@ const JengaForm = () => {
                   <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {
-                    form.whatsapp.length>10 && (
+                  {formErrors.whatsapp && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp}</p>
+                  )}
+                 {
+                    form.whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -151,6 +180,7 @@ const JengaForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.college}
                   />
+                  {formErrors.college && <p style={{ color: "red" }}>{formErrors.college}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -161,6 +191,7 @@ const JengaForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.branch}
                   />
+                  {formErrors.branch && <p style={{ color: "red" }}>{formErrors.branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -171,6 +202,7 @@ const JengaForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.yog}
                   />
+                  {formErrors.yog && <p style={{ color: "red" }}>{formErrors.yog}</p>}
                 </li>
               </ul>
             </div>
