@@ -110,6 +110,27 @@ const EcopolisForm = () => {
         alert(err.response.data.message);
       }
     } else {
+      console.log(form.team_name);
+      console.log(form.leader_name);
+      console.log(form.email);
+      console.log(form.whatsapp_number);
+      console.log(form.program_of_study);
+      console.log(form.leader_branch);
+      console.log(form.leader_sem);
+      console.log(form.gender);
+      console.log(form.member1_name);
+      console.log(form.member1_email);
+      console.log(form.member1_sem);
+      console.log(form.member1_branch);
+      console.log(form.member2_name);
+      console.log(form.member2_email);
+      console.log(form.member2_sem);
+      console.log(form.member2_branch);
+      console.log(form.member3_name);
+      console.log(form.member3_email);
+      console.log(form.member3_sem);
+      console.log(form.member3_branch);
+      console.log(form.whatsapp_number);
       alert("Please fill all the necessary details correctly");
     }
     setSubmit(false);
