@@ -140,7 +140,7 @@ const DimensionsForm = () => {
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.whatsapp_number.length > 10 && (
+                    form.whatsapp_number.length != 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
