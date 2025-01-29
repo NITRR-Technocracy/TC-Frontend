@@ -14,7 +14,6 @@ import img_13 from '../assets/spons_images/sp13.webp';
 import img_14 from '../assets/spons_images/sp14.webp';
 import img_15 from '../assets/spons_images/sp15.webp';
 import img_16 from '../assets/spons_images/sp16.webp';
-import img_17 from '../assets/spons_images/sp17.webp';
 
 const Spons_data = [
     {
@@ -95,11 +94,6 @@ const Spons_data = [
         id: 16,
         dis: "img16",
         url: img_16,
-    },
-    {
-        id: 17,
-        dis: "img17",
-        url: img_17,
     },
 ];
 
