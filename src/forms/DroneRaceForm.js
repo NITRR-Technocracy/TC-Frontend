@@ -67,7 +67,7 @@ const DroneRaceForm = () => {
 
     // Validate all required fields
     Object.keys(form).forEach((key) => {
-      if (form[key] === "" && !key.includes("member2") && !key.includes("member1")) {
+      if (form[key] === "") {
         errors[key] = `${key.replace("_", " ")} is required.`;
       }
     });

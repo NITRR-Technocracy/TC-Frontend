@@ -99,7 +99,7 @@ const RoboWarsForm = () => {
     }
 
     setSubmit(true);
-    if (memberCount < 2) {
+    if (memberCount <= 2) {
       alert("Minimum Team Size: 3");
     } else {
       let condition1 =
@@ -122,7 +122,7 @@ const RoboWarsForm = () => {
         form.member2_branch !== ""
 
       let condition2 = true;
-      if (memberCount > 2) {
+      if (memberCount === 3) {
         condition2 =
         form.member3_name !== "" &&
         form.member3_email !== "" &&
@@ -131,12 +131,12 @@ const RoboWarsForm = () => {
       }
 
       let condition3 = true;
-      if (memberCount > 3) {
+      if (memberCount === 4) {
         condition3 =
-        form.member3_name !== "" &&
-        form.member3_email !== "" &&
-        form.member3_sem !== "" &&
-        form.member3_branch !== ""
+        form.member4_name !== "" &&
+        form.member4_email !== "" &&
+        form.member4_sem !== "" &&
+        form.member4_branch !== ""
       }
 
       if (condition1 && condition2 && condition3) {
@@ -156,7 +156,7 @@ const RoboWarsForm = () => {
           alert(err.response.data.message);
         }
       } else {
-        alert("Please fill all the details correctly!!");
+        alert("Please fill all the details correctly!!!");
       }
     }
     setSubmit(false);
