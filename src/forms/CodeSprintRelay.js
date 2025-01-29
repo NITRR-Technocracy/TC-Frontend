@@ -41,6 +41,7 @@ const CodeSprintRelayForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
@@ -48,6 +49,47 @@ const CodeSprintRelayForm = () => {
     set(update);
     localStorage.setItem("codesprint", JSON.stringify(update));
   };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp_number)) {
+      errors.whatsapp_number = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.email)) {
+      errors.email = "Enter a valid email address!!";
+    }
+    if (!emailRegex.test(form.member2_email)) {
+      errors.member2_email = "Enter a valid email address!!";
+    }
+    if (!emailRegex.test(form.member3_email)) {
+      errors.member3_email = "Enter a valid email address!!";
+    }
+    if (!emailRegex.test(form.member4_email)) {
+      errors.member4_email = "Enter a valid email address!!";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "" && !key.includes("member2") && !key.includes("member3") && !key.includes("member4")) {
+        errors[key] = `${key.replace("_", " ")} is required.`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
+  };
+
 
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
@@ -75,31 +117,8 @@ const CodeSprintRelayForm = () => {
       return;
     }
     setSubmit(true);
-    let condition =
-      form.team_name !== "" &&
-      form.leader_name !== "" &&
-      form.email !== "" &&
-      form.whatsapp_number !== "" &&
-      form.curr_institution !== "" &&
-      form.leader_branch !== "" &&
-      form.leader_sem !== "" &&
-      form.gender !== "" &&
-      form.member2_name !== "" &&
-      form.member2_sem !== "" &&
-      form.member2_branch !== "" &&
-      form.member2_email !== "" &&
-      form.member3_name !== "" &&
-      form.member3_email !== "" &&
-      form.member3_branch !== "" &&
-      form.member3_sem !== "" &&
-      form.member4_name !== "" &&
-      form.member4_email !== "" && 
-      form.member4_branch !== "" &&
-      form.member4_sem !== "" &&
-      form.pref_prog_lang !== "" &&
-      form.whatsapp_number?.length == 10;
 
-    if (condition) {
+    if (validateForm()) {
       try {
         const res = await axios.post(`${backend}/register?event=CodeSprintRelay`, form, {
           headers: {
@@ -109,15 +128,15 @@ const CodeSprintRelayForm = () => {
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response.data.message);
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -143,6 +162,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.team_name}
                   />
+                  {formErrors.team_name && <p style={{ color: "red" }}>{formErrors.team_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -153,6 +173,18 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_name}
                   />
+                  {formErrors.leader_name && <p style={{ color: "red" }}>{formErrors.leader_name}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderGender"
+                    type="text"
+                    name="gender"
+                    placeholder="Leader Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                  {formErrors.gender && <p style={{ color: "red" }}>{formErrors.gender}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -163,16 +195,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.email}
                   />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="gender"
-                    id="gender"
-                    type="text"
-                    placeholder="Gender"
-                    onChange={(e) => handle(e)}
-                    value={form.gender}
-                  />
+                  {formErrors.email && <p style={{ color: "red" }}>{formErrors.email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -186,8 +209,11 @@ const CodeSprintRelayForm = () => {
                   <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {
-                    form.whatsapp_number.length > 10 && (
+                  {formErrors.whatsapp_number && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp_number}</p>
+                  )}
+                 {
+                    form.whatsapp_number.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -202,6 +228,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.curr_institution}
                   />
+                  {formErrors.curr_institution && <p style={{ color: "red" }}>{formErrors.curr_institution}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -212,6 +239,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_branch}
                   />
+                  {formErrors.leader_branch && <p style={{ color: "red" }}>{formErrors.leader_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -222,6 +250,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_sem}
                   />
+                  {formErrors.leader_sem && <p style={{ color: "red" }}>{formErrors.leader_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -232,16 +261,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_name}
                   />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="member2_branch"
-                    id="P2_branch"
-                    type="text"
-                    placeholder="Team Member 2 branch"
-                    onChange={(e) => handle(e)}
-                    value={form.member2_branch}
-                  />
+                  {formErrors.member2_name && <p style={{ color: "red" }}>{formErrors.member2_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -252,6 +272,18 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_email}
                   />
+                  {formErrors.member2_email && <p style={{ color: "red" }}>{formErrors.member2_email}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_branch"
+                    id="P2_branch"
+                    type="text"
+                    placeholder="Team Member 2 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_branch}
+                  />
+                  {formErrors.member2_branch && <p style={{ color: "red" }}>{formErrors.member2_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -262,6 +294,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_sem}
                   />
+                  {formErrors.member2_sem && <p style={{ color: "red" }}>{formErrors.member2_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -272,25 +305,9 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member3_name}
                   />
-                </li><li data-aos="fade-down">
-                  <input
-                    name="member3_sem"
-                    id="P3_sem"
-                    type="text"
-                    placeholder="Team Member 3 sem"
-                    onChange={(e) => handle(e)}
-                    value={form.member3_sem}
-                  />
-                </li><li data-aos="fade-down">
-                  <input
-                    name="member3_branch"
-                    id="P3_branch"
-                    type="text"
-                    placeholder="Team Member 3 branch"
-                    onChange={(e) => handle(e)}
-                    value={form.member3_branch}
-                  />
-                </li><li data-aos="fade-down">
+                  {formErrors.member3_name && <p style={{ color: "red" }}>{formErrors.member3_name}</p>}
+                </li>
+                <li data-aos="fade-down">
                   <input
                     name="member3_email"
                     id="P3_email"
@@ -299,6 +316,29 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member3_email}
                   />
+                  {formErrors.member3_email && <p style={{ color: "red" }}>{formErrors.member3_email}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_branch"
+                    id="P3_branch"
+                    type="text"
+                    placeholder="Team Member 3 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_branch}
+                  />
+                  {formErrors.member3_branch && <p style={{ color: "red" }}>{formErrors.member3_branch}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_sem"
+                    id="P3_sem"
+                    type="text"
+                    placeholder="Team Member 3 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_sem}
+                  />
+                  {formErrors.member3_sem && <p style={{ color: "red" }}>{formErrors.member3_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -309,25 +349,9 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member4_name}
                   />
-                </li><li data-aos="fade-down">
-                  <input
-                    name="member4_sem"
-                    id="P4_sem"
-                    type="text"
-                    placeholder="Team Member 4 sem"
-                    onChange={(e) => handle(e)}
-                    value={form.member4_sem}
-                  />
-                </li><li data-aos="fade-down">
-                  <input
-                    name="member4_branch"
-                    id="P4_branch"
-                    type="text"
-                    placeholder="Team Member 4 branch"
-                    onChange={(e) => handle(e)}
-                    value={form.member4_branch}
-                  />
-                </li><li data-aos="fade-down">
+                  {formErrors.member4_name && <p style={{ color: "red" }}>{formErrors.member4_name}</p>}
+                </li>
+                <li data-aos="fade-down">
                   <input
                     name="member4_email"
                     id="P4_email"
@@ -336,6 +360,29 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member4_email}
                   />
+                  {formErrors.member4_email && <p style={{ color: "red" }}>{formErrors.member4_email}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member4_branch"
+                    id="P4_branch"
+                    type="text"
+                    placeholder="Team Member 4 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member4_branch}
+                  />
+                  {formErrors.member4_branch && <p style={{ color: "red" }}>{formErrors.member4_branch}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member4_sem"
+                    id="P4_sem"
+                    type="text"
+                    placeholder="Team Member 4 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member4_sem}
+                  />
+                  {formErrors.member4_sem && <p style={{ color: "red" }}>{formErrors.member4_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -346,6 +393,7 @@ const CodeSprintRelayForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.pref_prog_lang}
                   />
+                  {formErrors.pref_prog_lang && <p style={{ color: "red" }}>{formErrors.pref_prog_lang}</p>}
                 </li>
               </ul>
             </div>
