@@ -25,14 +25,45 @@ const RoboRaceForm = () => {
     P3_name: "",
   };
   const [form, set] = useState(cachedForm);
-  const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
     localStorage.setItem("roborace", JSON.stringify(update));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.Leader_whatsapp)) {
+      errors.Leader_whatsapp = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.Leader_email)) {
+      errors.Leader_email = "Enter a valid email address!!";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "") {
+        errors[key] = `${key.replace("_", " ")} is required!!`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
   };
 
   const [token, setToken] = useState(null);
@@ -61,18 +92,8 @@ const RoboRaceForm = () => {
       return;
     }
     setSubmit(true);
-    let condition =
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.P2_name !== "" &&
-      form.P3_name !== "" &&
-      form.Leader_whatsapp.length == 10;
-
-    if (condition) {
+    
+    if (validateForm()) {
       try {
         const res = await axios.post(`${backend}/register?event=RoboRace`, form, {
           headers: {
@@ -82,15 +103,15 @@ const RoboRaceForm = () => {
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response.data.message);
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -116,6 +137,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
+                   {formErrors.Leader_name && <p style={{ color: "red" }}>{formErrors.Leader_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -126,6 +148,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
+                  {formErrors.Leader_email && <p style={{ color: "red" }}>{formErrors.Leader_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -139,8 +162,11 @@ const RoboRaceForm = () => {
                   <span style={{ fontSize: "0.7rem" ,color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {
-                    form.Leader_whatsapp.length > 10 && (
+                  {formErrors.Leader_whatsapp && (
+                    <p style={{ color: "red" }}>{formErrors.Leader_whatsapp}</p>
+                  )}
+                 {
+                    form.Leader_whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -155,6 +181,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
                   />
+                  {formErrors.Leader_college && <p style={{ color: "red" }}>{formErrors.Leader_college}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -165,6 +192,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
                   />
+                  {formErrors.Leader_branch && <p style={{ color: "red" }}>{formErrors.Leader_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -175,6 +203,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
                   />
+                  {formErrors.Leader_yog && <p style={{ color: "red" }}>{formErrors.Leader_yog}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -185,6 +214,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
+                  {formErrors.P2_name && <p style={{ color: "red" }}>{formErrors.P2_name}</p>}
                    <span style={{ fontSize: "0.7rem" ,color:"white"}}>
                     * Fill NIL if single Participation
                   </span>
@@ -198,6 +228,7 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
+                  {formErrors.P3_name && <p style={{ color: "red" }}>{formErrors.P3_name}</p>}
                   <span style={{ fontSize: "0.7rem" ,color:"white"}}>
                     * Fill NIL if single Participation
                   </span>
