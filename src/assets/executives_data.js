@@ -15,11 +15,6 @@ export const executivesList = [
     "Domain": "Tech"
   },
   {
-    "id": "4",
-    "Name": "Priyansh Agrawal",
-    "Domain": "Event Management"
-  },
-  {
     "id": "5",
     "Name": "Drishti Yadav",
     "Domain": "Event Management"
@@ -100,24 +95,9 @@ export const executivesList = [
     "Domain": "Sponsorship"
   },
   {
-    "id": "21",
-    "Name": "Pranay Shrivastava",
-    "Domain": "Sponsorship"
-  },
-  {
     "id": "22",
     "Name": "Simardeep Singh",
     "Domain": "Design And Editing"
-  },
-  {
-    "id": "23",
-    "Name": "Kritarth",
-    "Domain": "Documentation"
-  },
-  {
-    "id": "24",
-    "Name": "Abhinav Mishra",
-    "Domain": "Documentation"
   },
   {
     "id": "25",
@@ -230,11 +210,6 @@ export const executivesList = [
     "Domain": "Sponsorship"
   },
   {
-    "id": "47",
-    "Name": "Sumedha",
-    "Domain": "Vigyaan"
-  },
-  {
     "id": "48",
     "Name": "Ansh Khandwe",
     "Domain": "Event Management"
@@ -245,29 +220,14 @@ export const executivesList = [
     "Domain": "Design And Editing"
   },
   {
-    "id": "50",
-    "Name": "Himanshu Kashyap",
-    "Domain": "Media And Public Relation"
-  },
-  {
-    "id": "51",
-    "Name": "Sanskriti Sharma",
-    "Domain": "Vigyaan"
-  },
-  {
     "id": "52",
     "Name": "Mohd Shezan",
     "Domain": "Media And Public Relation"
   },
   {
     "id": "53",
-    "Name": "Shikha Yadav",
-    "Domain": "Media And Public Relation"
-  },
-  {
-    "id": "54",
-    "Name": "Naman Kr. Choudhary",
-    "Domain": "Media And Public Relation"
+    "Name": "Gourav Deep Shahni",
+    "Domain": "Tech"
   },
   {
     "id": "55",
@@ -283,11 +243,6 @@ export const executivesList = [
     "id": "57",
     "Name": "Kritarth Karambelkar",
     "Domain": "Documentation"
-  },
-  {
-    "id": "58",
-    "Name": "Ravi Verma",
-    "Domain": "Event Management"
   },
   {
     "id": "59",
