@@ -31,7 +31,9 @@ const RemoveButton = styled.button`
   padding: 5px 15px;
   font-size: 0.9rem;
   border: none;
+  border-radius:8px;
   cursor: pointer;
+  margin-bottom:10px;
 
   &:hover {
     background-color: #e53935;
@@ -176,7 +178,7 @@ const OpenMicForm = () => {
                   />
                 </li>
                 {/* Leader Details */}
-                <h3>Leader Details</h3>
+                <li data-aos="fade-down" style={{color:"white",fontSize:"1.5rem"}}>Leader Details</li>
                 {["name", "branch", "program_of_study", "semester", "gender", "whatsapp_number"].map((field) => (
                   <li data-aos="fade-down" key={field}>
                     <input
@@ -190,10 +192,10 @@ const OpenMicForm = () => {
                 ))}
 
                 {/* Members Section */}
-                <h3>Additional Members</h3>
+                <li data-aos="fade-down" style={{color:"white",fontSize:"1.5rem"}}>Additional Members</li>
                 {form.members.map((member, index) => (
                   <div key={index}>
-                    <h4>Member {index + 1}</h4>
+                    <h4 style={{marginBottom:"10px"}}>Member {index + 1}</h4>
                     {["name", "branch", "program_of_study", "semester", "gender", "whatsapp_number"].map((field) => (
                       <li data-aos="fade-down" key={`${field}-${index}`}>
                         <input
@@ -205,10 +207,14 @@ const OpenMicForm = () => {
                         />
                       </li>
                     ))}
-                    <RemoveButton onClick={() => handleRemoveMember(index)}>Remove Member</RemoveButton>
+                    <li style={{color:"white",cursor:"pointer"}} className="add-remove" onClick={() => handleRemoveMember(index)}>
+                    - Remove Member
+                    </li>
                   </div>
                 ))}
-                <AddButton onClick={handleAddMember}>+ Add Member</AddButton>
+                <li style={{color:"white",cursor:"pointer"}} className="add-remove" onClick={handleAddMember}>
+                      + Add Member
+                    </li>
               </ul>
             </div>
 

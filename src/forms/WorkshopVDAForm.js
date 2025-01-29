@@ -6,7 +6,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  color: wheat;
+  font-size: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 
 const backend = keys.backend;
 
@@ -22,8 +33,8 @@ const WorkshopVDAForm = () => {
     program_of_study: "",
     leader_branch: "",
     leader_sem: "",
-    gender:"",
-    domain_of_Interest:""
+    gender: "",
+    domain_of_Interest: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -49,9 +60,9 @@ const WorkshopVDAForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
-      // console.log(`hCaptcha Token: ${token}`);
+    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -68,18 +79,22 @@ const WorkshopVDAForm = () => {
       form.whatsapp_number !== "" &&
       form.leader_branch !== "" &&
       form.leader_sem !== "" &&
-      form.gender !== "" && 
+      form.gender !== "" &&
       form.program_of_study !== "" &&
-      form.domain_of_Interest !== "" && 
+      form.domain_of_Interest !== "" &&
       form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`${backend}/register?event=Workshops`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.post(
+          `${backend}/register?event=Workshops`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -91,9 +106,7 @@ const WorkshopVDAForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {
-
-  }
+  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -111,17 +124,18 @@ const WorkshopVDAForm = () => {
             <div className="mint_list">
               <ul>
                 <li data-aos="fade-down">
-                  <input
+                  {/* <input
                     id="leaderName"
                     type="text"
                     name="leader_name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
                     value={form.leader_name}
-                  />
+                  /> */}
+                  <p>Click the below link to register</p>
                 </li>
                 <li data-aos="fade-down">
-                  <input
+                  {/* <input
                     id="leaderNumber"
                     type="text"
                     name="whatsapp_number"
@@ -137,9 +151,15 @@ const WorkshopVDAForm = () => {
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
-                    )}
+                    )} */}
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://motosportsnitrrevents.zohobackstage.in/registration"
+                  >
+                    <StyledDiv>Register Now</StyledDiv>
+                  </a>
                 </li>
-                <li data-aos="fade-down">
+                {/* <li data-aos="fade-down">
                   <input
                     id="leaderemail"
                     type="text"
@@ -198,21 +218,16 @@ const WorkshopVDAForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.domain_of_Interest}
                   />
-                </li>
-                
+                </li> */}
               </ul>
             </div>
-            <HCaptcha
+            {/* <HCaptcha
               sitekey={keys.hcaptcha}
               onClick={onLoad}
               onVerify={setToken}
               ref={captchaRef}
-            />
-            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
-              {/* <ReCAPTCHA
-                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
-                ref={recaptchaRef}
-              /> */}
+            /> */}
+            {/* <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -228,31 +243,33 @@ const WorkshopVDAForm = () => {
                 <>Submitting...</>
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
-            </div>
+            </div> */}
           </div>
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
                 <h4>Workshop on Vehicle Data Acquisition</h4>
-                <h3 className="metaportal_fn_countdown">
-                DESCRIPTION
-                </h3>
+                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                A Certified workshop on the basics of CAN (Controller Area Network) protocol, teaching participants to communicate with vehicle networks, collect data, and analyze it effectively. Gain hands-on experience in data logging and signal extraction, addressing real-world challenges.
+                  A Certified workshop on the basics of CAN (Controller Area
+                  Network) protocol, teaching participants to communicate with
+                  vehicle networks, collect data, and analyze it effectively.
+                  Gain hands-on experience in data logging and signal
+                  extraction, addressing real-world challenges.
+                </p>
+                <p>Total Duration: 5 hours</p>
+                <p>
+                  Theory Session: 3 hours on CAN protocol basics and data
+                  analysis.
                 </p>
                 <p>
-                Total Duration: 5 hours
-                </p>
-                <p>
-                Theory Session: 3 hours on CAN protocol basics and data analysis.
-                </p>
-                <p>
-                Practical Session: 2 hours working with a vehicle to log and analyze data.
+                  Practical Session: 2 hours working with a vehicle to log and
+                  analyze data.
                 </p>
               </div>
-              
+
               {/* <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a> */}
@@ -264,4 +281,4 @@ const WorkshopVDAForm = () => {
   );
 };
 
-export default WorkshopVDAForm
+export default WorkshopVDAForm;
