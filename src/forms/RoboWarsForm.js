@@ -156,7 +156,7 @@ const RoboWarsForm = () => {
           alert(err.response.data.message);
         }
       } else {
-        alert("Please fill all the details correctly!!");
+        alert("Please fill all the details correctly!!!");
       }
     }
     setSubmit(false);
