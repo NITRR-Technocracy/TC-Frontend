@@ -43,12 +43,50 @@ const DsaMarathonForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
     localStorage.setItem("dsamarathonform", JSON.stringify(update));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp_number)) {
+      errors.whatsapp_number = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.email)) {
+      errors.email = "Enter a valid email address!!";
+    }
+    if (!emailRegex.test(form.member1_email)) {
+      errors.member1_email = "Enter a valid email address!!";
+    }
+    if (!emailRegex.test(form.member2_email)) {
+      errors.member2_email = "Enter a valid email address!!";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "" && !key.includes("member2") && !key.includes("member1")) {
+        errors[key] = `${key.replace("_", " ")} is required.`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
   };
 
   const [token, setToken] = useState(null);
@@ -77,33 +115,8 @@ const DsaMarathonForm = () => {
       return;
     }
     setSubmit(true);
-    let condition =
-      form.team_name !== "" &&
-      form.leader_name !== "" &&
-      form.email !== "" &&
-      form.whatsapp_number !== "" &&
-      form.curr_institution !== "" &&
-      form.leader_branch !== "" &&
-      form.leader_sem !== "" &&
-      form.program_of_study !== "" &&
-      form.gender !== "" &&
-      form.leader_hacker_earth_id !== "" &&
-      form.leader_hacker_rank_id !== "" &&
-      form.member1_name !== "" &&
-      form.member1_sem !== "" &&
-      form.member1_branch !== "" &&
-      form.member1_email !== "" &&
-      form.member1_hacker_earth_id !== "" &&
-      form.member1_hacker_rank_id !== "" &&
-      form.member2_name !== "" &&
-      form.member2_email!== "" &&
-      form.member2_branch !== "" &&
-      form.member2_sem!== "" &&
-      form.member2_hacker_earth_id !== "" &&
-      form.member2_hacker_rank_id !== "" &&
-      form.whatsapp_number.length == 10;
 
-    if (condition) {
+    if (validateForm()) {
       try {
         const res = await axios.post(
           `${backend}/register?event=DsaMarathon`,
@@ -117,15 +130,15 @@ const DsaMarathonForm = () => {
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response.data.message);
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -151,6 +164,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.team_name}
                   />
+                  {formErrors.team_name && <p style={{ color: "red" }}>{formErrors.team_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -161,6 +175,18 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_name}
                   />
+                  {formErrors.leader_name && <p style={{ color: "red" }}>{formErrors.leader_name}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderGender"
+                    type="text"
+                    name="gender"
+                    placeholder="Leader Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                  {formErrors.gender && <p style={{ color: "red" }}>{formErrors.gender}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -171,6 +197,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.email}
                   />
+                  {formErrors.email && <p style={{ color: "red" }}>{formErrors.email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -184,8 +211,11 @@ const DsaMarathonForm = () => {
                   <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {
-                    form.whatsapp_number?.length > 10 && (
+                  {formErrors.whatsapp_number && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp_number}</p>
+                  )}
+                 {
+                    form.whatsapp_number.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -200,6 +230,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.curr_institution}
                   />
+                  {formErrors.curr_institution && <p style={{ color: "red" }}>{formErrors.curr_institution}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -210,6 +241,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_branch}
                   />
+                  {formErrors.leader_branch && <p style={{ color: "red" }}>{formErrors.leader_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -220,16 +252,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_sem}
                   />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="gender"
-                    id="gender"
-                    type="text"
-                    placeholder="Gender"
-                    onChange={(e) => handle(e)}
-                    value={form.gender}
-                  />
+                  {formErrors.leader_sem && <p style={{ color: "red" }}>{formErrors.leader_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -240,6 +263,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.program_of_study}
                   />
+                  {formErrors.program_of_study && <p style={{ color: "red" }}>{formErrors.program_of_study}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -250,6 +274,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_hacker_rank_id}
                   />
+                  {formErrors.leader_hacker_rank_id && <p style={{ color: "red" }}>{formErrors.leader_hacker_rank_id}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -260,6 +285,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_hacker_earth_id}
                   />
+                  {formErrors.leader_hacker_earth_id && <p style={{ color: "red" }}>{formErrors.leader_hacker_earth_id}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -270,6 +296,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_name}
                   />
+                  {formErrors.member1_name && <p style={{ color: "red" }}>{formErrors.member1_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -280,6 +307,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_branch}
                   />
+                  {formErrors.member1_branch && <p style={{ color: "red" }}>{formErrors.member1_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -290,6 +318,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_email}
                   />
+                  {formErrors.member1_email && <p style={{ color: "red" }}>{formErrors.member1_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -300,6 +329,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_sem}
                   />
+                  {formErrors.member1_sem && <p style={{ color: "red" }}>{formErrors.member1_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -310,6 +340,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_hacker_rank_id}
                   />
+                  {formErrors.member1_hacker_rank_id && <p style={{ color: "red" }}>{formErrors.hacker_rank_id}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -320,6 +351,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member1_hacker_earth_id}
                   />
+                  {formErrors.member1_hacker_earth_id && <p style={{ color: "red" }}>{formErrors.member1_hacker_earth_id}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -330,6 +362,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_name}
                   />
+                  {formErrors.member2_name && <p style={{ color: "red" }}>{formErrors.member2_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -340,6 +373,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_sem}
                   />
+                  {formErrors.member2_sem && <p style={{ color: "red" }}>{formErrors.member2_sem}</p>}
                 </li><li data-aos="fade-down">
                   <input
                     name="member2_branch"
@@ -349,6 +383,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_branch}
                   />
+                  {formErrors.member2_branch && <p style={{ color: "red" }}>{formErrors.member2_branch}</p>}
                 </li><li data-aos="fade-down">
                   <input
                     name="member2_email"
@@ -358,6 +393,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_email}
                   />
+                  {formErrors.member2_email && <p style={{ color: "red" }}>{formErrors.member2_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -368,6 +404,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_hacker_rank_id}
                   />
+                  {formErrors.member2_hacker_rank_id && <p style={{ color: "red" }}>{formErrors.member2_hacker_rank_id}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -378,6 +415,7 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.member2_hacker_earth_id}
                   />
+                  {formErrors.member2_hacker_earth_id && <p style={{ color: "red" }}>{formErrors.member2_hacker_earth_id}</p>}
                 </li>
               </ul>
             </div>
