@@ -74,10 +74,10 @@ const RoboWarsForm = () => {
 
   const handleRemoveMember = () => {
     if (memberCount > 0) {
-      form[`Member${memberCount + 1}_name`] = "";
-      form[`Member${memberCount + 1}_email`] = "";
-      form[`Member${memberCount + 1}_branch`] = "";
-      form[`Member${memberCount + 1}_sem`] = "";
+      form[`member${memberCount}_name`] = "";
+      form[`member${memberCount}_email`] = "";
+      form[`member${memberCount}_branch`] = "";
+      form[`member${memberCount}_sem`] = "";
 
       setMemberCount(memberCount - 1);
       localStorage.setItem("memberCount", memberCount - 1);
@@ -156,7 +156,7 @@ const RoboWarsForm = () => {
           alert(err.response.data.message);
         }
       } else {
-        alert("Please fill all the necessary details correctly!!");
+        alert("Please fill all the details correctly!!");
       }
     }
     setSubmit(false);
@@ -182,34 +182,34 @@ const RoboWarsForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i}_email`}
+              name={`member${i}_email`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1} Email ID`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i}_email`]}
+              value={form[`member${i}_email`]}
             />
             
           </li>
           <li>
             <input
-              name={`Member${i}_branch`}
+              name={`member${i}_branch`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1}'s Branch`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i}_branch`]}
+              value={form[`member${i}_branch`]}
             />
           </li>
 
           <li>
             <input
-              name={`Member${i}_sem`}
+              name={`member${i}_sem`}
               className="memberName"
               type="text"
               placeholder={`Member ${i+1}'s Semester`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i}_sem`]}
+              value={form[`member${i}_sem`]}
             />
           </li>
         </div>
@@ -285,7 +285,7 @@ const RoboWarsForm = () => {
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.whatsapp_number.length > 10 && (
+                    form.whatsapp_number.length != 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
