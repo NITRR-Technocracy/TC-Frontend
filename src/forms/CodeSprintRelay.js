@@ -75,7 +75,7 @@ const CodeSprintRelayForm = () => {
 
     // Validate all required fields
     Object.keys(form).forEach((key) => {
-      if (form[key] === "" && !key.includes("member2") && !key.includes("member3") && !key.includes("member4")) {
+      if (form[key] === "") {
         errors[key] = `${key.replace("_", " ")} is required.`;
       }
     });

@@ -38,7 +38,6 @@ const EcopolisForm = () => {
     member3_branch: "",
   };
   const [form, set] = useState(cachedForm);
-  const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
@@ -74,7 +73,7 @@ const EcopolisForm = () => {
 
     // Validate all required fields
     Object.keys(form).forEach((key) => {
-      if (form[key] === "" && !key.includes("member2") && !key.includes("member1") && !key.includes("member3")) {
+      if (form[key] === "") {
         errors[key] = `${key.replace("_", " ")} is required.`;
       }
     });

@@ -32,12 +32,44 @@ const TreasureHuntForm = () => {
   const [form, set] = useState(cachedForm);
   const [isSubmitting, setSubmit] = useState(false);
   const [token, setToken] = useState(null);
+  const [formErrors, setFormErrors] = useState({});
   const captchaRef = useRef(null);
 
   const handle = (e) => {
     const update = { ...form, [e.target.name]: e.target.value };
     set(update);
     localStorage.setItem("treasureHuntForm", JSON.stringify(update));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp_number)) {
+      errors.whatsapp_number = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // if (!emailRegex.test(form.email)) {
+    //   errors.email = "Enter a valid email address!!";
+    // }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "") {
+        errors[key] = `${key.replace("_", " ")} is required.`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
   };
 
   const onLoad = () => {
@@ -56,25 +88,8 @@ const TreasureHuntForm = () => {
       return;
     }
     setSubmit(true);
-    console.log(form);
 
-    let condition =
-    form.team_name !== "" &&
-    form.username !== "" &&
-    form.program_of_study !== "" &&
-    form.whatsapp_number !== "" &&
-    form.gender !== "" &&
-    form.branch !== "" &&
-    form.curr_semester !== "" &&
-    form.member1_name !== "" &&
-    form.member1_sem !== "" &&
-    form.member2_branch !== "" &&
-    form.member2_name !== "" &&
-    form.member2_sem !== "" &&
-    form.member2_branch !== "" &&
-    form.whatsapp_number.length == 10;
-
-    if (condition) {
+    if (validateForm()) {
       try {
         const res = await axios.post(
           `${backend}/register?event=MockCid`,
@@ -84,10 +99,12 @@ const TreasureHuntForm = () => {
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response?.data?.message || "Error submitting the form.");
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly.");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
@@ -115,6 +132,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.team_name}
                   />
+                  {formErrors.team_name && <p style={{ color: "red" }}>{formErrors.team_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -124,6 +142,17 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.username}
                   />
+                  {formErrors.username && <p style={{ color: "red" }}>{formErrors.username}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="gender"
+                    type="text"
+                    placeholder="Leader Gender"
+                    onChange={handle}
+                    value={form.gender}
+                  />
+                  {formErrors.gender && <p style={{ color: "red" }}>{formErrors.gender}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -136,11 +165,15 @@ const TreasureHuntForm = () => {
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.whatsapp_number.length > 10 && (
-                    <p style={{ color: "red" }}>
-                      Enter a number of 10 digits only.
-                    </p>
+                  {formErrors.whatsapp_number && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp_number}</p>
                   )}
+                 {
+                    form.whatsapp_number.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -150,6 +183,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.branch}
                   />
+                  {formErrors.branch && <p style={{ color: "red" }}>{formErrors.branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -159,16 +193,9 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.curr_semester}
                   />
+                  {formErrors.curr_semester && <p style={{ color: "red" }}>{formErrors.curr_semester}</p>}
                 </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="gender"
-                    type="text"
-                    placeholder="Leader Gender"
-                    onChange={handle}
-                    value={form.gender}
-                  />
-                </li>
+                
                 <li data-aos="fade-down">
                   <input
                     name="program_of_study"
@@ -177,6 +204,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.program_of_study}
                   />
+                  {formErrors.program_of_study && <p style={{ color: "red" }}>{formErrors.program_of_study}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -186,6 +214,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member1_name}
                   />
+                  {formErrors.member1_name && <p style={{ color: "red" }}>{formErrors.member1_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -195,6 +224,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member1_sem}
                   />
+                  {formErrors.member1_sem && <p style={{ color: "red" }}>{formErrors.member1_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -204,6 +234,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member1_branch}
                   />
+                  {formErrors.member1_branch && <p style={{ color: "red" }}>{formErrors.member1_branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -213,6 +244,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member2_name}
                   />
+                  {formErrors.member2_name && <p style={{ color: "red" }}>{formErrors.member2_name}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -222,6 +254,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member2_sem}
                   />
+                  {formErrors.member2_sem && <p style={{ color: "red" }}>{formErrors.member2_sem}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -231,6 +264,7 @@ const TreasureHuntForm = () => {
                     onChange={handle}
                     value={form.member2_branch}
                   />
+                  {formErrors.member2_branch && <p style={{ color: "red" }}>{formErrors.member2_branch}</p>}
                 </li>
                 {/* Add similar fields for other participants */}
               </ul>

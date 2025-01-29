@@ -29,13 +29,44 @@ const SpeedCubingForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
-  const [isSubmitted, setValue] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
     localStorage.setItem("speedCubingForm", JSON.stringify(update));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+
+    // Validate whatsapp number
+    if (!/^\d{10}$/.test(form.whatsapp_number)) {
+      errors.whatsapp_number = "Enter a valid 10-digit phone number!!";
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.leader_email)) {
+      errors.leader_email = "Enter a valid email address!!";
+    }
+
+    // Validate all required fields
+    Object.keys(form).forEach((key) => {
+      if (form[key] === "") {
+        errors[key] = `${key.replace("_", " ")} is required!!`;
+      }
+    });
+
+    // If any error, return false
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return false;
+    }
+
+    setFormErrors({});
+    return true;
   };
 
   const [token, setToken] = useState(null);
@@ -57,17 +88,8 @@ const SpeedCubingForm = () => {
       return;
     }
     setSubmit(true);
-    let condition =
-      form.username!== "" &&
-      form.leader_email !== "" &&
-      form.whatsapp_number !== "" &&
-      form.gender !== "" &&
-      form.branch !== "" &&
-      form.curr_semester !== "" &&
-      form.program_of_study !== "" &&
-      form.whatsapp_number.length == 10;
 
-    if (condition) {
+    if (validateForm()) {
       try {
         const res = await axios.post(
           `${backend}/register?event=SpeedCubing`,
@@ -78,14 +100,15 @@ const SpeedCubingForm = () => {
             },
           }
         );
-        setValue(true);
         alert(res.data.message);
       } catch (err) {
         console.error(err);
-        alert(err.response.data.message);
+        alert(err.response?.data?.message || "An error occurred during submission!!");
       }
     } else {
-      alert("Please fill all the necessary details correctly");
+      alert("Please fix the errors and try again!!");
+      setSubmit(false);
+      return;
     }
     setSubmit(false);
   };
@@ -114,6 +137,18 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.username}
                   />
+                  {formErrors.username && <p style={{ color: "red" }}>{formErrors.username}</p>}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="gender"
+                    id="gender"
+                    type="text"
+                    placeholder="Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                  {formErrors.gender && <p style={{ color: "red" }}>{formErrors.gender}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -124,6 +159,7 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.leader_email}
                   />
+                  {formErrors.leader_email && <p style={{ color: "red" }}>{formErrors.leader_email}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -137,22 +173,17 @@ const SpeedCubingForm = () => {
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  { form.whatsapp_number.length > 10 && (
-                    <p style={{ color: "red" }}>
-                      Enter a number of 10 digits only.
-                    </p>
+                  {formErrors.whatsapp_number && (
+                    <p style={{ color: "red" }}>{formErrors.whatsapp_number}</p>
                   )}
+                 {
+                    form.whatsapp_number.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
                 </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="gender"
-                    id="gender"
-                    type="text"
-                    placeholder="Gender"
-                    onChange={(e) => handle(e)}
-                    value={form.gender}
-                  />
-                </li>
+                
                 <li data-aos="fade-down">
                   <input
                     name="program_of_study"
@@ -162,6 +193,7 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.program_of_study}
                   />
+                   {formErrors.program_of_study && <p style={{ color: "red" }}>{formErrors.program_of_study}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -172,6 +204,7 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.branch}
                   />
+                  {formErrors.branch && <p style={{ color: "red" }}>{formErrors.branch}</p>}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -182,6 +215,7 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.curr_semester}
                   />
+                  {formErrors.curr_semester && <p style={{ color: "red" }}>{formErrors.curr_semester}</p>}
                 </li>
               </ul>
             </div>
