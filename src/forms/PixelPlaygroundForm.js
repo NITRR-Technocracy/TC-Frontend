@@ -368,6 +368,7 @@ const PixelPlaygroundForm = () => {
                   Day 2.
                 </p>
                 <p>Team Size: 1 to 3</p>
+                <p>Video Submission Deadline:  1/2/25, 4:00 PM</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
                 <h4>Pixel Playground</h4>
