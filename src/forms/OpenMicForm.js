@@ -245,7 +245,7 @@ const OpenMicForm = () => {
             </div>
 
             <HCaptcha sitekey={keys.hcaptcha} onVerify={setToken} />
-            <div className="mint_desc" style={{ paddingTop: "2rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"

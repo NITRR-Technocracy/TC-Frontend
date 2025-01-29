@@ -330,7 +330,7 @@ const PixelPlaygroundForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -398,22 +398,23 @@ const PixelPlaygroundForm = () => {
                   5. Editing Time: Participants will have a total of 4-5 hours
                   on Day 2 to edit and submit their final video.
                 </p>
+                <p>6. Video submission deadline :- 4:00 PM (DAY-2)</p>
                 <p>
-                  6. Software: Participants can use any video editing software
+                  7. Software: Participants can use any video editing software
                   they prefer. However, all editing must be done during the
                   allocated time.
                 </p>
                 <p>
-                  7. Submission: Final videos must be submitted in MP4 format. Late
+                  8. Submission: Final videos must be submitted in MP4 format. Late
                   submissions will not be accepted.
                 </p>
                 <p>
-                  8. Originality: All work must be original. Plagiarism or using
+                  9. Originality: All work must be original. Plagiarism or using
                   templates that undermine creativity will lead to
                   disqualification.
                 </p>
                 <p>
-                  9. Judging Criteria: Videos will be judged based on creativity,
+                  10. Judging Criteria: Videos will be judged based on creativity,
                   storytelling, technical editing skills, and adherence to the
                   theme.
                 </p>

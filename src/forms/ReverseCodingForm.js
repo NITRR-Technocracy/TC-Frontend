@@ -364,7 +364,7 @@ const ReverseCodingForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
                 ref={recaptchaRef}
