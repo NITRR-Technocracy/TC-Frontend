@@ -131,7 +131,7 @@ const EcopolisForm = () => {
       console.log(form.member3_sem);
       console.log(form.member3_branch);
       console.log(form.whatsapp_number);
-      alert("Please fill all the necessary details correctly");
+      alert("Please fill all the necessary details correctly.");
     }
     setSubmit(false);
   };
