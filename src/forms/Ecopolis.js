@@ -203,6 +203,16 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="leader_sem"
+                    id="leaderSem"
+                    type="text"
+                    placeholder="Leader Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="gender"
                     id="gender"
                     type="text"
