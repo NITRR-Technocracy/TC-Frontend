@@ -1,9 +1,9 @@
 import React from "react";
 import title from "../../assets/images/HomePage/title.png";
 import po from "../../assets/images/HomePage/po.png";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import { ScrollTrigger } from "gsap/all";
 import home_hero from "../../assets/videos/home-hero2.mp4";
 import { useNavigate } from "react-router-dom";
 
