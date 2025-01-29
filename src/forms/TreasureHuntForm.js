@@ -241,7 +241,7 @@ const TreasureHuntForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   className="metaportal_fn_button"

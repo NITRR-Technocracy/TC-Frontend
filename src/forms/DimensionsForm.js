@@ -70,7 +70,7 @@ const DimensionsForm = () => {
       form.leader_branch !== "" &&
       form.gender !== "" &&
       form.program_of_study !== "" &&
-      form.whatsapp.length == 10;
+      form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
@@ -151,7 +151,7 @@ const DimensionsForm = () => {
                     name="leader_sem"
                     id="leader_sem"
                     type="text"
-                    placeholder="leader_semester"
+                    placeholder="semester"
                     onChange={(e) => handle(e)}
                     value={form.leader_sem}
                   />
@@ -161,7 +161,7 @@ const DimensionsForm = () => {
                     name="leader_branch"
                     id="leaderleader_branch"
                     type="text"
-                    placeholder="leader_branch"
+                    placeholder="branch"
                     onChange={(e) => handle(e)}
                     value={form.leader_branch}
                   />
@@ -194,7 +194,7 @@ const DimensionsForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem", color:"white" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
                 ref={recaptchaRef}

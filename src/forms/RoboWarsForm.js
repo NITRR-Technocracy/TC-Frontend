@@ -379,7 +379,7 @@ const RoboWarsForm = () => {
                 className="custom-captcha"
               />
             </div>
-            <div className="mint_desc" style={{ paddingTop: "3rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem",color:"white" }}>
             {!isSubmitting ? (
                 <div
                   target="_blank"
