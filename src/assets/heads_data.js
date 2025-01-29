@@ -1,6 +1,7 @@
 import Harsh from "../assets/images/heads/Harsh.webp";
 import Akash_Soni from "../assets/images/heads/Akash_Soni.webp";
 import Lakshya_Raj_Singh from "../assets/images/heads/Lakshya_Raj_Singh.webp";
+import Piyush_Kumar from "../assets/images/TechTeam/Piyush_Kumar.webp";
 import Devesh_Kumar_Pandey from "../assets/images/heads/Devesh_Kumar_Pandey.webp";
 import Amitabh_Shukla from "../assets/images/heads/Amitabh_Shukla.webp";
 import Govind_Purty from "../assets/images/heads/Govind_Purty.webp";
@@ -45,6 +46,16 @@ export const coordinatorsList = [
   },
   {
     id: 5,
+    name: "Piyush Kumar",
+    imgUrl: Piyush_Kumar,
+    linkedinUrl: "https://www.linkedin.com/in/piyush-in/",
+    instaUrl: "https://www.instagram.com/sahu_piyush_/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain: "Tech"
+  },
+  {
+    id: 6,
     name: "Lakshya Raj Singh",
     imgUrl: Lakshya_Raj_Singh,
     linkedinUrl: "https://www.linkedin.com/in/lakshyaarajj",
@@ -54,7 +65,7 @@ export const coordinatorsList = [
     domain:"Media and PR"
   },
   {
-    id: 6,
+    id: 7,
     name: "Harsh",
     imgUrl: Harsh,
     linkedinUrl: "https://www.linkedin.com/in/harsh003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -64,7 +75,7 @@ export const coordinatorsList = [
     domain:"Event Management"
   },
   {
-    id: 7,
+    id: 8,
     name: "Shreyansh Patel",
     imgUrl: Shreyansh_Patel,
     linkedinUrl: "https://www.linkedin.com/in/shreyansh-patel-b10b56280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -74,7 +85,7 @@ export const coordinatorsList = [
     domain:"Event Management"
   },
   {
-    id: 8,
+    id: 9,
     name: "Juhi Dwivedi",
     imgUrl: Juhi_Dwivedi,
     linkedinUrl: "https://www.linkedin.com/in/juhi-dwivedi-80a3a6208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -84,7 +95,7 @@ export const coordinatorsList = [
     domain:"Event Management"
   },
   {
-    id: 9,
+    id: 10,
     name: "Shrushti Kapse ",
     imgUrl: Shrushti_Kapse ,
     linkedinUrl: "https://www.linkedin.com/in/shrushti-kapse-b2806a214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -94,7 +105,7 @@ export const coordinatorsList = [
     domain:"Design & Editing"
   },
   {
-    id: 10,
+    id: 11,
     name: "Govind purty ",
     imgUrl: Govind_Purty,
     linkedinUrl: "https://www.linkedin.com/in/govindpurty",
@@ -104,7 +115,7 @@ export const coordinatorsList = [
     domain:"Design & Editing"
   },
   {
-    id: 11,
+    id: 12,
     name: "Devesh Kumar Pandey",
     imgUrl: Devesh_Kumar_Pandey,
     linkedinUrl: "www.linkedin.com/in/dkp-4b421a238",
@@ -114,7 +125,7 @@ export const coordinatorsList = [
     domain:"Design & Editing"
   },
   {
-    id: 12,
+    id: 13,
     name: "Sachin Saini ",
     imgUrl: Sachin_Saini,
     linkedinUrl: "https://www.linkedin.com/in/sainisachin1316",
@@ -124,7 +135,7 @@ export const coordinatorsList = [
     domain:"Vigyaan"
   },
   {
-    id: 13,
+    id: 14,
     name: "Neha Kariya",
     imgUrl: Neha_Kariya,
     linkedinUrl: "https://www.linkedin.com/in/neha-kariya-0176a222a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -134,7 +145,7 @@ export const coordinatorsList = [
     domain:"Vigyaan"
   },
   {
-    id: 14,
+    id: 15,
     name: "Md Uruj Akbar Rahman ",
     imgUrl: Md_Uruj_Akbar_Rahman,
     linkedinUrl: "https://www.linkedin.com/in/md-uruj-akbar-rahman-88a064288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
