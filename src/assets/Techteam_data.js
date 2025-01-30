@@ -48,13 +48,10 @@ export const techteamList = [
       name: "Aditya Kumar Sah",
       imgUrl: Aditya_Kumar_Shah,
       githubUrl: "https://github.com/Aditya-kumar-sah",
-      linkedinUrl: "https://www.linkedin.com/in/prabhatsharma2508",
-      instaUrl: "https://www.instagram.com/pruhbhat",
-      gmail:"ps25082005@gmail.com",
+      gmail:"",
       linkedinUrl: "https://www.linkedin.com/in/aditya-sah-1932a7284/",
       instaUrl: "https://www.instagram.com/aditya_sah_",
-      gmail:"",
-        desi: "Core Coordinator"
+      desi: "Core Coordinator"
 
     }, 
     {
@@ -62,12 +59,10 @@ export const techteamList = [
       name: "Prabhat Sharma",
       imgUrl: Prabhat_Sharma, 
       githubUrl: "https://github.com/probot-codes",
-      imgUrl: "",
-      githubUrl: "https://github.com/Aditya-kumar-sah",
-      linkedinUrl: "https://www.linkedin.com/in/aditya-sah-1932a7284/",
-      instaUrl: "https://www.instagram.com/aditya_sah_",
-      gmail:"",
-        desi: "Core Coordinator"
+      linkedinUrl: "",
+      instaUrl: "https://www.instagram.com/pruhbhat",
+      gmail:"ps25082005@gmail.com",
+      desi: "Core Coordinator"
     },
     {
       id: 6,
@@ -106,6 +101,8 @@ export const techteamList = [
       githubUrl:"https://github.com/VibhorShukla-BHRT",
       linkedinUrl: "https://www.linkedin.com/in/vibhor-shukla-a07577237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instaUrl: "https://www.instagram.com/shukla_vibhor/",
+      gmail:"",
+      desi: "Executive"
     }
     
   ];
