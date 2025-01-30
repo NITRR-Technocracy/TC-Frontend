@@ -1,39 +1,39 @@
 export const coresList = [
   {
     "id": "1",
-    "Name": "Supriya Mishra",
-    "Branch": "",
-    "Domain": "Event Management"
+    "Name": "Nehil Sahu",
+    "Domain": "Tech",
+    "Branch": ""
   },
   {
     "id": "2",
+    "Name": "B. Deewakar Rao",
+    "Branch": "",
+    "Domain": "Tech"
+  },
+  {
+    "id": "3",
+    "Name": "Prabhat Sharma",
+    "Branch": "",
+    "Domain": "Tech"
+  },
+  {
+    "id": "4",
+    "Name": "Aditya Kumar Sah",
+    "Branch": "",
+    "Domain": "Tech"
+  },
+  {
+    "id:": "5",
     "Name": "Apoorva Kumar Sahu",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
-    "id": "3",
-    "Name": "Aditya Kaushik",
+    "id:": "6",
+    "Name": "Supriya Mishra",
     "Branch": "",
     "Domain": "Event Management"
-  },
-  {
-    "id": "4",
-    "Name": "Shruti Kotkar",
-    "Branch": "",
-    "Domain": "Vigyaan"
-  },
-  {
-    "id:": "5",
-    "Name": "Deewakar Rao",
-    "Branch": "",
-    "Domain": "Tech"
-  },
-  {
-    "id:": "6",
-    "Name": "Nehil Sahu",
-    "Domain": "Tech",
-    "Branch": "",
   },
   {
     "id": "7",
@@ -61,9 +61,9 @@ export const coresList = [
   },
   {
     "id": "11",
-    "Name": "Prabhat Sharma",
+    "Name": "Aditya Kaushik",
     "Branch": "",
-    "Domain": "Tech"
+    "Domain": "Event Management"
   },
   {
     "id": "12",
@@ -181,9 +181,9 @@ export const coresList = [
   },
   {
     "id": "31",
-    "Name": "Aditya Kumar Sah",
+    "Name": "Shruti Kotkar",
     "Branch": "",
-    "Domain": "Tech"
+    "Domain": "Vigyaan"
   },
   {
     "id": "32",
@@ -280,5 +280,11 @@ export const coresList = [
     "Name": "Akshat Jain",
     "Branch": "",
     "Domain": "Design & Editing"
+  },
+  {
+    "id": "48",
+    "Name": "Shivam Vyas",
+    "Branch": "",
+    "Domain": "Sponsor"
   }
 ]
