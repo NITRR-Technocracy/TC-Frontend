@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import pdf from "../../assets/problem_statements/Chemical.pdf";
+import pdf from "../../assets/problem_statements/CHEM.pdf";
 import ScrollButton from "../ScrollButton";
 
 const Chem = () => {

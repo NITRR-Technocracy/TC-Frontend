@@ -3910,317 +3910,343 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .metaportal_fn_mintbox {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	border-radius: 15px;
-	border: 1px solid rgba(255, 255, 255, .15);
-	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
-	margin-bottom: 73px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    margin-bottom: 73px;
+    
+    /* === NEW/UPDATED: Dark, transparent background for the entire box === */
+    background-color: rgba(0, 0, 0, 0.65); 
 }
 
 .metaportal_fn_mintbox .mint_left {
-	width: 40%;
-	padding: 115px 50px 50px;
-	position: relative;
-	border-radius: 15px 0 0 15px;
+    width: 40%;
+    padding: 115px 50px 50px;
+    position: relative;
+    border-radius: 15px 0 0 15px;
+    
+    /* UPDATED: Remove existing background color to let the main box's background show through */
+    background-color: transparent; 
 }
 
 .metaportal_fn_mintbox .mint_right {
-	width: 60%;
-	padding: 60px 50px 25px 50px;
-	border-radius: 0 15px 15px 0;
-	background-color: rgba(255, 255, 255, 0.066);
-	border-left: 1px solid rgba(255, 255, 255, .15);
+    width: 60%;
+    padding: 60px 50px 25px 50px;
+    border-radius: 0 15px 15px 0;
+    
+    /* UPDATED: Remove existing transparent white background color */
+    background-color: transparent; 
+    
+    border-left: 1px solid rgba(255, 255, 255, .15);
 }
 
 .metaportal_fn_mintbox .mint_title {
-	position: absolute;
-	top: 30px;
-	left: -9px;
+    position: absolute;
+    top: 30px;
+    left: -9px;
 }
 
 .metaportal_fn_mintbox .mint_title span {
-	position: relative;
-	font-size: 16px;
-	text-transform: uppercase;
-	color: white;
-	letter-spacing: .5px;
-	font-family: var(--hff);
-	background-color: #964ec3ce;
-	padding-right: 40px;
-	padding-left: 59px;
-	line-height: 48px;
-	font-weight: 600;
-	display: inline-block;
-	white-space: nowrap;
+    position: relative;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .5px;
+    font-family: var(--hff);
+    background-color: #964ec3ce;
+    padding-right: 40px;
+    padding-left: 59px;
+    line-height: 48px;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .metaportal_fn_mintbox .mint_title span:before {
-	content: '';
-	position: absolute;
-	left: 100%;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 48px 0 0 20px;
-	border-color: transparent transparent transparent #964ec3ce;
+    content: '';
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 0 0 20px;
+    border-color: transparent transparent transparent #964ec3ce;
 }
 
 .metaportal_fn_mintbox .mint_list {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .metaportal_fn_mintbox .mint_list label p {
-	/* color: white; */
-	font-size: 14px;
-	padding-top: 1rem;
+    /* color: white; */
+    font-size: 14px;
+    padding-top: 1rem;
+    
+    /* === FINAL FIX: Ensure label text is white === */
+    color: #FFFFFF !important;
 }
 
+/* === FINAL FIX: NEW RULE to target generic labels/spans inside mint_list (like radio button text and instruction span) === */
+.metaportal_fn_mintbox .mint_list label,
+.metaportal_fn_mintbox .mint_list span {
+    color: #FFFFFF !important;
+}
+/* ==================================================================================================================== */
+
 .metaportal_fn_mintbox .mint_list ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	-moz-flex-direction: row;
-	-ms-flex-direction: row;
-	-o-flex-direction: row;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin-left: -40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -40px;
 }
 
 .metaportal_fn_mintbox .mint_list li {
-	width: 100%;
-	padding-left: 40px;
-	margin-bottom: 30px;
+    width: 100%;
+    padding-left: 40px;
+    margin-bottom: 30px;
 }
 
 .metaportal_fn_mintbox .mint_list li input {
-	color: white !important;
-	width: 100% !important;
-	border: 1.5px solid rgba(255, 255, 255, 0.762) !important;
+    color: white !important;
+    width: 100% !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.762) !important;
+    
+    /* NEW: Ensures input background is darker for contrast */
+    background-color: rgba(30, 30, 30, 0.8) !important; 
 }
 
 .metaportal_fn_mintbox .mint_list li input::placeholder {
-	color: rgba(255, 255, 255, 0.762) !important;
+    color: rgba(255, 255, 255, 0.762) !important;
 }
 
 .metaportal_fn_mintbox .mint_list li li {
-	cursor: pointer;
-	width: 50%;
-	font-size: 14px;
-	margin: 0;
-	color: rgba(255, 255, 255, 0.762);
+    cursor: pointer;
+    width: 50%;
+    font-size: 14px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.762);
 }
 
 .metaportal_fn_mintbox .mint_list li li:hover {
-	cursor: pointer;
-	color: white;
+    cursor: pointer;
+    color: white;
 }
 
 
 .metaportal_fn_mintbox .mint_list .item {
-	height: 100%;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-	position: relative;
-	padding-bottom: 10px;
+    height: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .metaportal_fn_mintbox .mint_list .item:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	bottom: 0;
-	height: 1px;
-	background-color: var(--mc1);
-	transition: all .3s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--mc1);
+    transition: all .3s ease;
 }
 
 .metaportal_fn_mintbox .mint_list .item:hover:after {
-	width: 100%;
+    width: 100%;
 }
 
 .metaportal_fn_mintbox .mint_list h4 {
-	font-size: 16px;
-	color: var(--bc);
-	text-transform: uppercase;
-	margin: 0;
-	padding: 0;
-	letter-spacing: .5px;
-	margin-bottom: 1px;
-	font-weight: 400;
+    font-size: 16px;
+    /* color: var(--bc);  <-- This was the problem! */
+    color: #FFFFFF !important; /* FINAL FIX: Ensure h4 headings are white */
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .5px;
+    margin-bottom: 1px;
+    font-weight: 400;
 }
 
 .metaportal_fn_mintbox .mint_list h3 {
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	letter-spacing: 0;
-	font-weight: 400;
-	color: #ddd;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #FFFFFF !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .metaportal_fn_mintbox .mint_desc p {
-	max-width: 400px;
-	font-size: 16px;
-	margin: 0;
-	line-height: 1.5;
-	color: var(--bc);
-	margin-top: 25px;
+    max-width: 400px;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+    /* color: var(--bc); <-- This was the problem! */
+    color: #FFFFFF !important; /* FINAL FIX: Ensure description paragraph text is white */
+    margin-top: 25px;
 }
 
 .metaportal_fn_mintbox .mint_desc {
-	display: flex;
-	/* justify-content: center; */
-	flex-direction: column;
-	/* align-items: center; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .metaportal_fn_mintbox .mint_desc p a {
-	text-decoration: none;
-	color: #ccc;
+    text-decoration: none;
+    color: #ccc;
 }
 
 .metaportal_fn_mintbox .mint_desc p a:hover {
-	color: var(--mc1);
+    color: var(--mc1);
 }
 
 .metaportal_fn_mintbox .mint_time {
-	position: relative;
-	border-bottom: 1px solid rgba(255, 255, 255, .15);
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	margin-top: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 45px;
 }
 
 .metaportal_fn_mintbox .mint_time:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	bottom: 0;
-	height: 1px;
-	background-color: var(--mc1);
-	transition: all .3s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--mc1);
+    transition: all .3s ease;
 }
 
 .metaportal_fn_mintbox .mint_time:hover:after {
-	width: 100%;
+    width: 100%;
 }
 
 .metaportal_fn_mintbox .mint_time h4 {
-	font-size: 16px;
-	color: #b579da;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 0;
-	letter-spacing: .5px;
-	margin-bottom: 1px;
-	font-weight: 600;
+    font-size: 16px;
+    color: #b579da;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .5px;
+    margin-bottom: 1px;
+    font-weight: 600;
 }
 
 .metaportal_fn_mintbox .mint_time h3 {
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	letter-spacing: 0;
-	font-weight: 400;
-	color: #ddd;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .metaportal_fn_mintbox .mright {
-	/* max-width: 275px; */
-	margin: 0 auto;
+    /* max-width: 275px; */
+    margin: 0 auto;
 
 }
 
 .metaportal_fn_mintbox .mint_checked {
-	margin-bottom: 37px;
+    margin-bottom: 37px;
 }
 
 .metaportal_fn_mintbox .mint_checked p {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-wrap: wrap;
-	-ms-align-items: center;
-	align-items: center;
-	margin-bottom: 7px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-align-items: center;
+    align-items: center;
+    margin-bottom: 7px;
 }
 
 .metaportal_fn_mintbox .mint_checked p:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .metaportal_fn_mintbox .mint_checked .text {
-	margin-right: 5px;
-	font-family: var(--hff);
-	font-size: 18px;
-	letter-spacing: 0;
-	color: var(--bc);
+    margin-right: 5px;
+    font-family: var(--hff);
+    font-size: 18px;
+    letter-spacing: 0;
+    /* color: var(--bc); <-- This was the problem! */
+    color: #FFFFFF !important; /* FINAL FIX: Ensure checked text is white */
 }
 
 .metaportal_fn_mintbox .mint_checked .status {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	font-family: var(--hff);
-	color: #ddd;
-	letter-spacing: .5px;
-	text-transform: uppercase;
-	-ms-align-items: center;
-	align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    font-family: var(--hff);
+    color: #ddd;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    -ms-align-items: center;
+    align-items: center;
 }
 
 .metaportal_fn_mintbox .mint_checked .icon {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-ms-align-items: center;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	background-color: #56b201;
-	color: #000;
-	border-radius: 100%;
-	margin-left: 5px;
-	position: relative;
-	top: -2px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    background-color: #56b201;
+    color: #000;
+    border-radius: 100%;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
 }
 
 .metaportal_fn_mintbox .mint_checked .fn__svg {
-	width: 8px;
-	height: 8px;
-	display: block;
+    width: 8px;
+    height: 8px;
+    display: block;
 }
 
 .metaportal_fn_mintbox .mint_info p {
-	margin: 15px 0;
-	font-size: 15px;
-	line-height: 1.5;
-	color: var(--bc);
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    /* color: var(--bc); <-- This was the problem! */
+    color: #FFFFFF !important; /* FINAL FIX: Ensure info paragraphs are white */
 }
 
 .mint_info h4{

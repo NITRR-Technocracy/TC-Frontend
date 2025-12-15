@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import pdf from "../../assets/problem_statements/Meta.pdf";
+import pdf from "../../assets/problem_statements/MME.pdf";
 import ScrollButton from "../ScrollButton";
 
 const Meta = () => {
