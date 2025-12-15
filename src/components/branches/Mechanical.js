@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import pdf from "../../assets/problem_statements/MECH.pdf"
+import pdf from "../../assets/problem_statements/Mech.pdf"
 import ScrollButton from '../ScrollButton'
 
 const Mechanical = () => {

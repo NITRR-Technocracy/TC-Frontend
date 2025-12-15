@@ -10,27 +10,27 @@ import Title from "../components/Title";
 
 import { Link } from "react-router-dom";
 
-import arch from "../../src/assets/problem_statements/Arch.pdf"
+import arch from "../assets/problem_statements/Arch.pdf"
 
-import biomed from "../../src/assets/problem_statements/BME.pdf"
+import biomed from "../assets/problem_statements/BME.pdf"
 
-import biotech from "../../src/assets/problem_statements/Biotech.pdf"
+import biotech from "../assets/problem_statements/BioTech.pdf"
 
-import chem from "../../src/assets/problem_statements/CHEM.pdf"
+import chem from "../assets/problem_statements/CHEM.pdf"
 
-import civil from "../../src/assets/problem_statements/CIVIL.pdf"
+import civil from "../assets/problem_statements/Civil.pdf"
 
-import CsItMca from "../../src/assets/problem_statements/MCSIT.pdf"
+import CsItMca from "../assets/problem_statements/MCSIT.pdf"
 
-import ece from "../../src/assets/problem_statements/ECE-mod.pdf"
+import ece from "../assets/problem_statements/ECE-mod.pdf"
 
-import ee from "../../src/assets/problem_statements/EE.pdf"
+import ee from "../assets/problem_statements/EE.pdf"
 
-import mech from "../../src/assets/problem_statements/MECH.pdf"
+import mech from "../assets/problem_statements/Mech.pdf"
 
-import meta from "../../src/assets/problem_statements/MME.pdf"
+import meta from "../assets/problem_statements/MME.pdf"
 
-import mining from "../../src/assets/problem_statements/MINING.pdf"
+import mining from "../assets/problem_statements/Mining.pdf"
 
 
 
@@ -54,7 +54,7 @@ const ProblemStatement = () => {
 
           
 
-          <a href={arch}  target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white" }}><div data-aos="flip-up" className={styles.branch}>ARCH</div></a>
+          {/* <a href={arch}  target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white" }}><div data-aos="flip-up" className={styles.branch}>ARCH</div></a> */}
 
           
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import pdf from "../../assets/problem_statements/MINING.pdf";
+import pdf from "../../assets/problem_statements/Mining.pdf";
 import ScrollButton from "../ScrollButton";
 
 const Mining = () => {

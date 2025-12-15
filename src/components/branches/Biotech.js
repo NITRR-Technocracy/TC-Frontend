@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import pdf from "../../assets/problem_statements/Biotech.pdf"
+import pdf from "../../assets/problem_statements/BioTech.pdf"
 import ScrollButton from '../ScrollButton'
 
 const Biotech = () => {
