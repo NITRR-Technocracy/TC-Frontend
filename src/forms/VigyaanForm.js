@@ -431,7 +431,7 @@ const VigyaanForm = () => {
                     value="Yes"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
+                  <label htmlFor="yes" style={{ marginLeft: "0.5rem",color: "#ffffff" }}>
                     Yes
                   </label>
                 </li>
@@ -446,12 +446,12 @@ const VigyaanForm = () => {
                     value="No"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>
+                  <label htmlFor="no" style={{ marginLeft: "0.5rem" ,color: "#ffffff"}}>
                     No
                   </label>
                 </li>
 
-                <span style={{ fontSize: "1rem" }}>
+                <span style={{ fontSize: "1rem",color: "#ffffff" }}>
                   * If selected No, then write your College Name and any type of
                   Email accepted.
                 </span>
@@ -818,7 +818,7 @@ const VigyaanForm = () => {
           <ul data-aos="fade-down">
             <li>
               <div className="item">
-                <h4 className="parent_category">9th & 10th September</h4>
+                <h4 className="parent_category">Dates To Be Announced</h4>
                 <h3 className="child_category" title="Black Yukata">
                   Presentation Round (Expected)
                 </h3>
@@ -826,7 +826,7 @@ const VigyaanForm = () => {
             </li>
             <li>
               <div className="item">
-                <h4 className="parent_category">15th & 16th October</h4>
+                <h4 className="parent_category">Dates To Be Announced</h4>
                 <h3 className="child_category" title="Daydreaming">
                   Prototype Round (Expected)
                 </h3>

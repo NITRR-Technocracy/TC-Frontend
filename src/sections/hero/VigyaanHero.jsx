@@ -42,7 +42,8 @@ const VigyaanHero = () => {
             {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
             <a className="cta2">
               {/* <span>CLICK TO REGISTER</span> */}
-              <span >Registration Closed</span>
+              <span >The Wait is Almost Over!
+</span>
               {/* <span>Registrations open</span> */}
             </a>
           </div>

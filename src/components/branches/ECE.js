@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import pdf from "../../assets/problem_statements/ECE.pdf"
+import pdf from "../../assets/problem_statements/ECE-mod.pdf"
 import ScrollButton from '../ScrollButton'
 
 const ECE = () => {
