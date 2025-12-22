@@ -87,10 +87,27 @@
 
 // ------------2026 -------------------------
 import VigyaanStyleWrapper from "./VigyaanHero.style";
+import { useNavigate } from "react-router-dom";
 import titleImg from "../../assets/images/vighero26/font-2.png";
 import chameleonImg from "../../assets/images/vighero26/chameleon.webp";
 
 const VigyaanHero = () => {
+  const navigate = useNavigate();
+
+  const goToProblemStatements = () => {
+    const el = document.getElementById("problem-statements");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    // fallback: navigate to Vigyaan page and try to scroll after navigation
+    navigate("/vigyaan");
+    setTimeout(() => {
+      const e = document.getElementById("problem-statements");
+      if (e) e.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 350);
+  };
+
   return (
     <VigyaanStyleWrapper>
       <div className="container">
@@ -108,7 +125,9 @@ const VigyaanHero = () => {
           </div>
 
           <div className="btncontainer2">
-            <button className="register-btn">The wait is almost over</button>
+            <button className="register-btn" onClick={goToProblemStatements}>
+              The wait is almost over
+            </button>
           </div>
         </div>
       </div>

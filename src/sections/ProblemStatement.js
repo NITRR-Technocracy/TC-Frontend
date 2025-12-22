@@ -44,7 +44,7 @@ const ProblemStatement = () => {
 
   return (
 
-    <div className={styles.container}>
+    <div id="problem-statements" className={styles.container}>
 
       <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
 
