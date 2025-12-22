@@ -42,8 +42,9 @@ const VigyaanStyleWrapper = styled.section`
 
   .chameleon {
     position: absolute;
-    left: 25px; 
-    height: 260px; /* Desktop Size */
+    left: 5px; 
+    top:18%;
+    height: 280px; /* Desktop Size */
     z-index: 10; 
     animation: ${float} 5s ease-in-out infinite;
     pointer-events: none; 
@@ -123,6 +124,7 @@ const VigyaanStyleWrapper = styled.section`
 
   /* Bio-Tech button (replaces .register-btn) */
   .button {
+  margin-top: 40px;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -227,15 +229,17 @@ const VigyaanStyleWrapper = styled.section`
     .title-container {
       margin-top: 40px;
       margin-bottom: 20px;
-      height: 140px; 
+      height: 200px; 
+      width:70%;
+      top:-1%;
     }
 
     .chameleon {
       height: 110px; 
       position: absolute;
       /* MOVED FURTHER LEFT */
-      left: -5%; 
-      top: 40%; 
+      left: -15%; 
+      top: 50%; 
       transform: translateY(-40%);
       z-index: 10;
     }
