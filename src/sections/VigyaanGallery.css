@@ -12,7 +12,6 @@
     margin-bottom: 40px;
     position: relative;
     z-index: 15;
-    /* Updated shadow to match golden theme */
     text-shadow: 0 0 15px rgba(255, 204, 0, 0.4),
                  0 0 30px rgba(255, 153, 0, 0.2);
 }
@@ -100,7 +99,6 @@
     height: 260px;
     margin: 4px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /* CHANGED: Yellowish Golden Gradient Border */
     background: linear-gradient(135deg, #ffcc00 0%, #ff9900 50%, #cc7a00 100%);
     transition: transform 0.3s ease, filter 0.3s ease;
     opacity: 1 !important; 
@@ -109,7 +107,6 @@
 
 .hexagon-inner {
     position: absolute;
-    /* CHANGED: Increased from 3px to 6px for a THICKER border look */
     top: 6px; left: 6px; right: 6px; bottom: 6px; 
     background: #000;
     clip-path: inherit;
@@ -126,7 +123,6 @@
 .hexagon-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* CHANGED: Overlay color to match honey theme */
     background: rgba(255, 174, 0, 0.25);
     display: flex;
     justify-content: center;
@@ -138,7 +134,6 @@
 .hexagon-item:hover {
     transform: scale(1.1) translateY(-5px) !important;
     z-index: 20;
-    /* CHANGED: Glow color to Golden Amber */
     filter: drop-shadow(0 0 25px rgba(255, 153, 0, 0.7));
 }
 
@@ -152,8 +147,48 @@
     font-size: 0.8rem;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Show More Button Styling --- */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    z-index: 20;
+}
 
+.gallery-show-more-btn {
+    width: 220px;
+    height: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border: 3px solid;
+    border-image: linear-gradient(to bottom, #FFD700, #FF9900) 1;
+    
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-show-more-btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #FFD700 0%, #00f2ff 100%);
+    border-image: linear-gradient(135deg, #FFD700, #00f2ff) 1;
+    box-shadow: 0 0 25px rgba(255, 153, 0, 0.5);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* --- Responsive Adjustments --- */
 @media (min-width: 992px) {
     .honeycomb-grid {
         justify-content: flex-start;
@@ -195,12 +230,17 @@
         clear: none !important;
     }
 
-    /* Keep thick border look even on mobile */
     .hexagon-inner {
         top: 4px; left: 4px; right: 4px; bottom: 4px;
     }
 
     .hexagon-item:nth-child(even) {
         margin-top: 20px;
+    }
+
+    .gallery-show-more-btn {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
     }
 }

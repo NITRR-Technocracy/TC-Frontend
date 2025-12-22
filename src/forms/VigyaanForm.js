@@ -6,7 +6,7 @@ import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
-import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
+import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate26.pdf";
 import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -631,11 +631,25 @@ const VigyaanForm = () => {
                 <span className="metaportal_fn_button_2">
                   Upload Idea Submission PPT
                 </span>
-                {uploadedFileName && (
+                {/* {uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
                     Uploaded File: {uploadedFileName}
                   </p>
-                )}
+                )} */}
+                {uploadedFileName && (
+  <p 
+    style={{ 
+      color: "white", 
+      paddingTop: "1rem", 
+      inlineSize: "100%",      // Ensures it respects container width
+      overflowWrap: "break-word", // Modern standard for breaking long strings
+      wordBreak: "break-all",     // Backup for older browsers to force breaks
+      hyphens: "auto"             // Optional: adds hyphens if the language supports it
+    }}
+  >
+    Uploaded File: {uploadedFileName}
+  </p>
+)}
               </label>
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
@@ -678,10 +692,6 @@ const VigyaanForm = () => {
                 <p>
                   2. Each team must designate a team leader and select a team
                   name. (up to 20 characters, for e.g., Tech_Titans)
-                </p>
-                <p>
-                  3. A Team ID will be assigned to the team upon registration,
-                  which will be used for future reference. (for e.g., ECE_A1)
                 </p>
               </div>
               <div

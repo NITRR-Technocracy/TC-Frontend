@@ -212,29 +212,29 @@
 
 // ------------------------2026-------------------------
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import honeyprop from "../assets/vigyaan_images/honeycomb-bee.webp";
 import Title from '../components/Title';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Vigyaan_data from '../assets/vigyaan_data';
 import './VigyaanGallery.css'; 
-import styled from 'styled-components'; // Import styled-components
+import styled from 'styled-components';
 
-// Custom wrapper to target the Title component's font
 const GalleryTitleSection = styled.div`
-  /* Targets the internal h3 of your Title component */
   .fn_title_holder h3 {
     font-family: 'Orbitron', sans-serif !important; 
     font-weight: 800;
     letter-spacing: 6px;
     text-transform: uppercase;
-    /* Adding a subtle glow to match the tech theme */
     text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
     margin-bottom: 30px;
   }
 `;
 
 const VigyaanGallery = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ 
       duration: 1000,
@@ -248,11 +248,8 @@ const VigyaanGallery = () => {
 
   return (
     <div className='Vigyaanscrolled gallery-page-wrapper'>
-      {/* Floating Honey Nest Prop (Right Side) */}
       <div className="honey-nest-container">
         <img src={honeyprop} alt="Honey Nest" className="honey-nest-img" />
-        
-        {/* Vertical Drip System falling from the nest */}
         <div className="drip-system">
           <div className="honey-drip drip-1"></div>
           <div className="honey-drip drip-2"></div>
@@ -262,8 +259,6 @@ const VigyaanGallery = () => {
 
       <div className="metaportal_fn_collectionpage">
         <div className="container">
-          
-          {/* Wrapped Title in the custom Section to change font */}
           <GalleryTitleSection>
             <Title color="VIGYAAN" noncolor="GALLERY"/>
           </GalleryTitleSection>
@@ -280,6 +275,17 @@ const VigyaanGallery = () => {
               </div>
             ))}
           </div>
+
+          {/* Show More Button Section */}
+          <div className="show-more-container">
+            <button 
+              className="gallery-show-more-btn"
+              onClick={() => navigate('/vigyaan/gallery')}
+            >
+              Show More
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
