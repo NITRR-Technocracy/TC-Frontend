@@ -267,8 +267,8 @@ const VigyaanStyleWrapper = styled.section`
 
   .chameleon {
     position: absolute;
-    left: 20px; 
-    top: 20%;
+    left: 25px; 
+    top: 15%;
     height: 350px;
     z-index: 5;
     animation: ${float} 5s ease-in-out infinite;
@@ -287,9 +287,9 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .main-title-img {
-    width: 600px;
+    width: 550px;
     max-width: 80vw;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   .vigyaan-desc {
@@ -300,10 +300,12 @@ const VigyaanStyleWrapper = styled.section`
     border-radius: 40px; 
     padding: 35px 50px;
     color: white;
-    max-width: 850px;
+    font-family: 'VigyaanFont';
+    font-weight:100;
+    max-width: 900px;
     width: 90%;
-    font-size: 1.15rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1.5;
     margin-bottom: 50px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }

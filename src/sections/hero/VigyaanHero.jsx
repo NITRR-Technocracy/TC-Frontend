@@ -87,7 +87,7 @@
 
 // ------------2026 -------------------------
 import VigyaanStyleWrapper from "./VigyaanHero.style";
-import titleImg from "../../assets/images/vighero26/vigyaan_title.webp";
+import titleImg from "../../assets/images/vighero26/font-2.png";
 import chameleonImg from "../../assets/images/vighero26/chameleon.webp";
 
 const VigyaanHero = () => {
