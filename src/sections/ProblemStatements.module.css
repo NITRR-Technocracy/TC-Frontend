@@ -1,15 +1,16 @@
-.headingContainer{
+/* .headingContainer{
     background: #974EC382;
-    height: 68px;
+    height: 68px; 
     /* width: 100vw; */
-    top: 870px;
+    /* top: 870px;
     left: -2px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+*/
 
-.heading2{
+/* .heading2{
     font-family: "kanit";
     font-size: 40px;
     font-weight: bold;
@@ -17,24 +18,26 @@
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
-}
+} 
+*/
 
-.ProblemStatements{
+/* .ProblemStatements{
     display: flex;
     margin: 3rem 3rem 9rem 3rem;
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+*/
 
+/*
 .branch{
     width: 220px;
     height: 50px;
     font-size: 18px;
     
-    /* === Blackish Neon Background === */
-    background-color: rgba(10, 10, 10, 0.7); /* Very dark, slightly transparent background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    background-color: rgba(10, 10, 10, 0.7); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 
     border: 4px solid;
     display: flex;
@@ -43,27 +46,26 @@
     color: #FFF;
     font-weight: 500;
     
-    /* === Neon Text Glow === */
-    text-shadow: 0 0 3px #FE7BE5; /* Soft pink/purple glow */
+    text-shadow: 0 0 3px #FE7BE5; 
     
     border-image: linear-gradient(to right, #4c90d5, #FE7BE5);
     border-image-slice: 1;
     border-image-repeat: stretch;
-    margin: 1rem 0rem;
-    transition: all 0.3s ease; /* Added transition for smooth effects */
+    margin: 1rem 0rem;  
+    transition: all 0.3s ease; 
 }
+*/
 
-
-.branch:hover{
+/* .branch:hover{
     color: white;
-    /* On hover, fill with the border gradient and intensify the glow */
     background: linear-gradient(to right, #4c90d5, #FE7BE5);
-    background-color: transparent; /* Needed to ensure gradient fills completely */
-    text-shadow: 0 0 5px #FFF, 0 0 10px #4c90d5; /* Bright white/blue glow on hover */
-    cursor: pointer;
-}
+    background-color: transparent; 
+    text-shadow: 0 0 5px #FFF, 0 0 10px #4c90d5; 
+    cursor: pointer; 
+} 
+*/
 
-@media(max-width:768px){
+/* @media(max-width:768px){
     .ProblemStatements{
         margin: 3rem 2rem auto 2rem;
     }
@@ -72,14 +74,17 @@
         margin: 0;
     }
 }
+*/
 
+/*
 @media (min-width: 1024px){
     .ProblemStatements{
         margin: 3rem 0rem 3rem 0rem;
     }
-}
+} 
+*/
 
-@media(max-width: 420px){
+/* @media(max-width: 420px){
     .branch{
         width: 140px;
         font-size: 16px;
@@ -88,16 +93,110 @@
         height: 110px;
     }
 }
+*/
 
+/*
 .container{
     padding: 0 5rem;
-}
+} 
+*/
 
-@media(width<600px){
+/* @media(width<600px){
     .container{
         padding: 0;
     }
     .ProblemStatements{
         justify-content: center;
+    }
+} 
+*/
+
+/* === NEW ACTIVE CODE STARTS HERE === */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap');
+
+.container {
+    padding: 0 5rem;
+    position: relative;
+    z-index: 1;
+    /* Ensures the Title component has a base for centering */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProblemStatements {
+    display: flex;
+    margin: 3rem 0;
+    gap: 25px;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.branchLink {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.branch {
+    width: 220px;
+    height: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border: 3px solid;
+    border-image: linear-gradient(to bottom, #FFD700, #FF9900) 1;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    margin: 1rem 0rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.branch:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #FFD700 0%, #00f2ff 100%);
+    border-image: linear-gradient(135deg, #FFD700, #00f2ff) 1;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
+    text-shadow: 0 0 10px #000; 
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Responsive Fixes */
+@media(max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+        text-align: center; /* Centers the Title component content */
+        align-items: center;
+    }
+
+    .ProblemStatements {
+        flex-direction: column;
+        align-items: center; 
+        margin: 2rem 0 5rem 0;
+        gap: 10px;
+    }
+
+    .branchLink {
+        width: 100%; 
+    }
+
+    .branch {
+        width: 85%; 
+        max-width: 300px;
+        font-size: 14px;
+        height: 55px;
+        margin: 0.5rem 0;
     }
 }

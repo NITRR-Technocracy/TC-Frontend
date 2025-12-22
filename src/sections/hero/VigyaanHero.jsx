@@ -100,7 +100,6 @@ const VigyaanHero = () => {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
-    // fallback: navigate to Vigyaan page and try to scroll after navigation
     navigate("/vigyaan");
     setTimeout(() => {
       const e = document.getElementById("problem-statements");
@@ -111,12 +110,12 @@ const VigyaanHero = () => {
   return (
     <VigyaanStyleWrapper>
       <div className="container">
-        {/* Absolute positioned chameleon */}
-        <img className="chameleon" src={chameleonImg} alt="Chameleon" />
+        <div className="title-container">
+          <img className="chameleon" src={chameleonImg} alt="Chameleon" />
+          <img src={titleImg} alt="VIGYAAN" className="main-title-img" />
+        </div>
 
         <div className="hero-content">
-          <img src={titleImg} alt="VIGYAAN" className="main-title-img" />
-          
           <div className="vigyaan-desc">
             Vigyaan, the science exhibition organized during the tech fest,
             showcases groundbreaking innovations, cutting-edge technologies, and
@@ -125,37 +124,12 @@ const VigyaanHero = () => {
           </div>
 
           <div className="btncontainer2">
-            <button className="button" onClick={goToProblemStatements}>
-              <svg
-                className="button-cosm"
-                viewBox="0 0 256 256"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M128 28c-55.1 0-100 44.9-100 100s44.9 100 100 100
-    100-44.9 100-100S183.1 28 128 28zm0 184c-46.3 0-84-37.7-84-84
-    s37.7-84 84-84 84 37.7 84 84-37.7 84-84 84z" />
-              </svg>
-
-              THE WAIT IS ALMOST OVER
-
-              <svg className="highlight" viewBox="0 0 144.7 77.1" preserveAspectRatio="none">
-                <path d="M10 40 Q30 5 50 40 T90 40 T130 40" />
-              </svg>
+            <button className="register-btn" onClick={goToProblemStatements}>
+              The wait is almost over
             </button>
           </div>
         </div>
       </div>
-      <svg width="0" height="0">
-        <filter id="handDrawnNoise">
-          <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8"/>
-          <feDisplacementMap in="SourceGraphic" scale="3"/>
-        </filter>
-
-        <filter id="handDrawnNoise2">
-          <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" seed="77"/>
-          <feDisplacementMap in="SourceGraphic" scale="3"/>
-        </filter>
-      </svg>
     </VigyaanStyleWrapper>
   );
 };

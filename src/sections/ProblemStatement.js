@@ -1,172 +1,172 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 
-import styles from "./ProblemStatements.module.css";
+// import styles from "./ProblemStatements.module.css";
 
-import AOS from "aos";
+// import AOS from "aos";
 
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 
-import Title from "../components/Title";
+// import Title from "../components/Title";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import arch from "../assets/problem_statements/Arch.pdf"
+// import arch from "../assets/problem_statements/Arch.pdf"
 
-import biomed from "../assets/problem_statements/BME.pdf"
+// import biomed from "../assets/problem_statements/BME.pdf"
 
-import biotech from "../assets/problem_statements/BioTech.pdf"
+// import biotech from "../assets/problem_statements/BioTech.pdf"
 
-import chem from "../assets/problem_statements/CHEM.pdf"
+// import chem from "../assets/problem_statements/CHEM.pdf"
 
-import civil from "../assets/problem_statements/Civil.pdf"
+// import civil from "../assets/problem_statements/Civil.pdf"
 
-import CsItMca from "../assets/problem_statements/MCSIT.pdf"
+// import CsItMca from "../assets/problem_statements/MCSIT.pdf"
 
-import ece from "../assets/problem_statements/ECE-mod.pdf"
+// import ece from "../assets/problem_statements/ECE-mod.pdf"
 
-import ee from "../assets/problem_statements/EE.pdf"
+// import ee from "../assets/problem_statements/EE.pdf"
 
-import mech from "../assets/problem_statements/Mech.pdf"
+// import mech from "../assets/problem_statements/Mech.pdf"
 
-import meta from "../assets/problem_statements/MME.pdf"
+// import meta from "../assets/problem_statements/MME.pdf"
 
-import mining from "../assets/problem_statements/Mining.pdf"
+// import mining from "../assets/problem_statements/Mining.pdf"
 
 
 
-const ProblemStatement = () => {
+// const ProblemStatement = () => {
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    AOS.init();
+//     AOS.init();
 
-  }, []);
+//   }, []);
 
-  return (
+//   return (
 
-    <div id="problem-statements" className={styles.container}>
+//     <div id="problem-statements" className={styles.container}>
 
-      <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
+//       <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
 
-      <div className={`${styles.ProblemStatements} ${styles.container}`}>
+//       <div className={`${styles.ProblemStatements} ${styles.container}`}>
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/tatements/${'Arch'}`}> */}
-
-          
-
-          {/* <a href={arch}  target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white" }}><div data-aos="flip-up" className={styles.branch}>ARCH</div></a> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/tatements/${'Arch'}`}> */}
 
           
 
-        {/* </Link> */}
-
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'BioMed'}`}> */}
+//           {/* <a href={arch}  target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white" }}><div data-aos="flip-up" className={styles.branch}>ARCH</div></a> */}
 
           
 
-          <a href={biomed} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>BIO-MED</div></a>
+//         {/* </Link> */}
+
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'BioMed'}`}> */}
 
           
 
-        {/* </Link> */}
-
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Biotech'}`}> */}
+//           <a href={biomed} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>BIO-MED</div></a>
 
           
 
-          <a href={biotech} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>BIOTECH</div></a>
+//         {/* </Link> */}
+
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Biotech'}`}> */}
 
           
 
-        {/* </Link> */}
-
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Chem'}`}> */}
+//           <a href={biotech} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>BIOTECH</div></a>
 
           
 
-          <a href={chem} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>CHEMICAL</div> </a>
+//         {/* </Link> */}
+
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Chem'}`}> */}
+
+          
+
+//           <a href={chem} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>CHEMICAL</div> </a>
 
            
 
           
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Civil'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Civil'}`}> */}
 
           
 
-          <a href={civil} target="_blank"rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}> CIVIL</div></a>
+//           <a href={civil} target="_blank"rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}> CIVIL</div></a>
 
             
 
           
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'CsItMca'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'CsItMca'}`}> */}
 
           
 
-          <a href={CsItMca} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>CSE / IT / MCA</div></a>
+//           <a href={CsItMca} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>CSE / IT / MCA</div></a>
 
             
 
           
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'ECE'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'ECE'}`}> */}
 
           
 
-          <a href={ece} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>ECE</div></a>
+//           <a href={ece} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>ECE</div></a>
 
             
 
           
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'EE'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'EE'}`}> */}
 
          
 
-          <a href={ee} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>EE </div></a>
+//           <a href={ee} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>EE </div></a>
 
             
 
          
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mech'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mech'}`}> */}
 
           
 
-          <a href={mech} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>MECH  </div></a>
+//           <a href={mech} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}><div data-aos="flip-up" className={styles.branch}>MECH  </div></a>
 
         
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Meta'}`}> */}
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Meta'}`}> */}
 
           
 
-          <a href={meta} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>META</div></a>
+//           <a href={meta} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>META</div></a>
 
-        {/* </Link> */}
+//         {/* </Link> */}
 
-        {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mining'}`}> */}
-
-         
-
-          <a href={mining} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>MINING </div></a>
+//         {/* <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mining'}`}> */}
 
          
 
-        {/* </Link> */}
+//           <a href={mining} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color:"white"}}> <div data-aos="flip-up" className={styles.branch}>MINING </div></a>
+
+         
+
+//         {/* </Link> */}
 
 
 
@@ -174,14 +174,87 @@ const ProblemStatement = () => {
 
 
 
+//       </div>
+
+//     </div>
+
+//   );
+
+// };
+
+
+
+// export default ProblemStatement;
+
+
+// -----------------------------------------------2026----------------------------------------------
+
+import React, { useEffect } from "react";
+import styles from "./ProblemStatements.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Title from "../components/Title";
+
+// Asset Imports
+import biomed from "../assets/problem_statements/BME.pdf";
+import biotech from "../assets/problem_statements/BioTech.pdf";
+import chem from "../assets/problem_statements/CHEM.pdf";
+import civil from "../assets/problem_statements/Civil.pdf";
+import CsItMca from "../assets/problem_statements/MCSIT.pdf";
+import ece from "../assets/problem_statements/ECE-mod.pdf";
+import ee from "../assets/problem_statements/EE.pdf";
+import mech from "../assets/problem_statements/Mech.pdf";
+import meta from "../assets/problem_statements/MME.pdf";
+import mining from "../assets/problem_statements/Mining.pdf";
+
+const ProblemStatement = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const branches = [
+    { name: "BIO-MED", link: biomed },
+    { name: "BIOTECH", link: biotech },
+    { name: "CHEMICAL", link: chem },
+    { name: "CIVIL", link: civil },
+    { name: "CSE / IT / MCA", link: CsItMca },
+    { name: "ECE", link: ece },
+    { name: "EE", link: ee },
+    { name: "MECH", link: mech },
+    { name: "META", link: meta },
+    { name: "MINING", link: mining },
+  ];
+
+  return (
+    <div id="problem-statements" className={styles.container}>
+      {/* Title wrapper ensures it spans full width for text-align to work */}
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
       </div>
-
+      
+      <div className={styles.ProblemStatements}>
+        {branches.map((branch, index) => (
+          <a 
+            key={index}
+            href={branch.link} 
+            target="_blank" 
+            rel="noreferrer" 
+            className={styles.branchLink}
+          >
+            <div 
+              data-aos="flip-up" 
+              className={styles.branch}
+            >
+              {branch.name}
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
-
   );
-
 };
-
-
 
 export default ProblemStatement;
