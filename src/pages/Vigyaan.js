@@ -40,17 +40,16 @@ const handleScroll = () => {
 
   return (
     <div className="Vigyaanscrolled"> 
-      <div className={scrolled ? "dark-overlay" : ""}></div>
-          <VigyaanHero />
-          <div className="AavartanContainer">
-          {/*<VigyaanFinalistSection/>*/}
+      {/* This overlay works with the CSS above to hit those 'Shadows -100' vibes */}
+      <div className="dark-overlay"></div>
+      
+      <VigyaanHero />
+      <div className="AavartanContainer">
           <VigyaanGallery />
           <ProblemStatement />
           <VigyaanForm />
-          <h1></h1>
-          </div>
-        </div>
-    
+      </div>
+    </div>
   )
 }
 
