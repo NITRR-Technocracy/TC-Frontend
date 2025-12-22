@@ -7876,24 +7876,51 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Vigyaanscrolled {
-	background: url("./assets/images/vigyaanbg.jpg");
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: top;
-	/* transition: background-color 0.9s ease; */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* This ensures content stays above the background */
+    z-index: 0; 
 }
 
 .Vigyaanscrolled::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.25);
-	/* Adjust the opacity (last value) as needed */
-	z-index: 0;
-	/* Ensure the overlay is above the background image */
+    content: "";
+    position: fixed; /* Keeps it behind everything while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Load your bio_tree image here */
+    background: url("./assets/images/vighero26/bio_tree.webp") no-repeat center center;
+    background-size: cover;
+    
+    /* Apply your requested filters */
+    /* Note: Exposure is simulated via brightness, Shadows/Highlights via contrast/brightness */
+    filter: 
+        brightness(0.5)    /* Exposure -50% */
+        saturate(1.5)      /* Saturation +50% */
+        contrast(1.2);     /* Helping with the Shadow/Highlight depth */
+    
+    /* Opacity 70% as requested */
+    opacity: 0.7;
+    
+    /* Ensures the background stays at the very bottom layer */
+    z-index: -1; 
+    pointer-events: none;
+}
+
+/* Optional: Adding a dark overlay to further deepen the 'Shadows -100' effect */
+.dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darkens the scene */
+    z-index: -1;
+    pointer-events: none;
 }
 
 .Ignitescrolled {
