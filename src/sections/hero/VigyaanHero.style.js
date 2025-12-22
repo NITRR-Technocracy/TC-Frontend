@@ -121,6 +121,107 @@ const VigyaanStyleWrapper = styled.section`
     }
   }
 
+  /* Bio-Tech button (replaces .register-btn) */
+  .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.2em 1.8em;
+    border: 0;
+    border-radius: 2rem;
+
+    background: linear-gradient(135deg, #0fd9b3, #5cffc9);
+    color: #053b33;
+
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.22rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+
+    filter: url(#handDrawnNoise);
+
+    box-shadow: rgba(0, 255, 200, 0.45) 5px 5px 0 1px, inset 0 0 0 1px rgba(255,255,255,0.4);
+
+    animation: idle 1.4s infinite ease-in-out;
+    transition: 0.35s ease;
+  }
+
+  .button:hover {
+    rotate: -2deg;
+    box-shadow: rgba(0, 255, 200, 0.7) 7px 7px 0 1px, inset 0 0 0 1px rgba(0,255,200,0.6);
+    animation: hover 2.5s infinite ease-in-out;
+  }
+
+  .button:active {
+    box-shadow: inset rgba(0,200,180,0.9) 4px 4px 0 1px;
+    animation: active 1s infinite ease-in-out;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.45) 45%, transparent 60%);
+    transform: translateX(-120%);
+    animation: bioFlow 3.2s infinite linear;
+    pointer-events: none;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 1px, transparent 6px, transparent 12px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .button-cosm {
+    fill: #0a5c4f;
+    width: 44px;
+    height: 44px;
+
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.6);
+    transition: 0.3s ease-out;
+  }
+
+  .button:hover .button-cosm { rotate: -25deg; fill: #007e6a; }
+  .button:active .button-cosm { rotate: -140deg; fill: #004d41; }
+
+  .highlight {
+    position: absolute;
+    inset: 0;
+    fill: none;
+    stroke: rgba(0, 120, 100, 0.45);
+    stroke-width: 12;
+    stroke-linecap: round;
+    pointer-events: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+  }
+
+  .button:hover .highlight { stroke-dashoffset: 0; }
+  .button:active .highlight { animation: highlight 5s infinite, col 0.5s forwards; }
+
+  /* Keyframes used by the button */
+  @keyframes bioFlow { 100% { transform: translateX(120%); } }
+  @keyframes idle { 0% { filter: url(#handDrawnNoise); } 50% { rotate: 2deg; filter: url(#handDrawnNoise2);} 100% { filter: url(#handDrawnNoise); } }
+  @keyframes hover { 0% { transform: translate(0,0);} 25% { transform: translate(0,-2px);} 50% { transform: translate(0,2px);} 75% { transform: translate(0,-2px);} 100% { transform: translate(0,0);} }
+  @keyframes active { 0% { transform: translateY(-1px);} 50% { transform: translateY(1px);} 100% { transform: translateY(-1px);} }
+  @keyframes highlight { 0% { stroke-dashoffset: 0;} 25% { stroke-dashoffset: 1000;} 50% { stroke-dashoffset: 1000;} 100% { stroke-dashoffset: 0;} }
+  @keyframes col { 0% { stroke: rgba(0,120,100,0.5);} 100% { stroke: rgba(0,160,255,0.6);} }
+
   /* MOBILE VIEW MODIFICATIONS */
   @media (max-width: 768px) {
     .title-container {
