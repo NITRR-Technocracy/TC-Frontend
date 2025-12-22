@@ -316,57 +316,98 @@ const VigyaanStyleWrapper = styled.section`
     width: 100%;
   }
 
-  .register-btn {
+  /* Replaced register button with Bio-Tech stylized button */
+  .button {
     position: relative;
-    /* Bioluminescent Gradient: Neon Green to Cyan */
-    background: linear-gradient(
-      135deg, 
-      #00ff88 0%, 
-      #00bdff 50%, 
-      #00ff88 100%
-    );
-    background-size: 200% auto;
-    color: #0a1a12; /* High contrast dark text */
-    
-    /* Smaller, sleek pill design */
-    padding: 10px 35px; 
-    font-size: 0.95rem; 
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.2em 1.8em;
+    border: 0;
+    border-radius: 2rem;
+
+    background: linear-gradient(135deg, #0fd9b3, #5cffc9);
+    color: #053b33;
+
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 2.5px; 
-    border-radius: 50px; /* Perfect pill shape */
-    
-    border: none;
+    letter-spacing: 0.22rem;
     text-transform: uppercase;
+
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
-    animation: ${shimmer} 4s linear infinite;
+    user-select: none;
     overflow: hidden;
 
-    /* Subtle glossy highlight */
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(255,255,255,0.2), transparent);
-      opacity: 0.5;
-    }
+    filter: url(#handDrawnNoise);
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 25px rgba(0, 255, 136, 0.6);
-      background-position: right center;
-      letter-spacing: 3.5px; /* Elegant hover expansion */
-    }
+    box-shadow: rgba(0, 255, 200, 0.45) 5px 5px 0 1px, inset 0 0 0 1px rgba(255,255,255,0.4);
 
-    &:active {
-      transform: translateY(0);
-      scale: 0.98;
-    }
+    animation: idle 1.4s infinite ease-in-out;
+    transition: 0.35s ease;
   }
+
+  .button:hover {
+    rotate: -2deg;
+    box-shadow: rgba(0, 255, 200, 0.7) 7px 7px 0 1px, inset 0 0 0 1px rgba(0,255,200,0.6);
+    animation: hover 2.5s infinite ease-in-out;
+  }
+
+  .button:active {
+    box-shadow: inset rgba(0,200,180,0.9) 4px 4px 0 1px;
+    animation: active 1s infinite ease-in-out;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.45) 45%, transparent 60%);
+    transform: translateX(-120%);
+    animation: bioFlow 3.2s infinite linear;
+    pointer-events: none;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 1px, transparent 6px, transparent 12px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .button-cosm {
+    fill: #0a5c4f;
+    width: 44px;
+    height: 44px;
+
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.6);
+    transition: 0.3s ease-out;
+  }
+
+  .button:hover .button-cosm { rotate: -25deg; fill: #007e6a; }
+  .button:active .button-cosm { rotate: -140deg; fill: #004d41; }
+
+  .highlight {
+    position: absolute;
+    inset: 0;
+    fill: none;
+    stroke: rgba(0, 120, 100, 0.45);
+    stroke-width: 12;
+    stroke-linecap: round;
+    pointer-events: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+  }
+
+  .button:hover .highlight { stroke-dashoffset: 0; }
+  .button:active .highlight { animation: highlight 5s infinite, col 0.5s forwards; }
 
   @media (max-width: 1100px) {
     .chameleon {
