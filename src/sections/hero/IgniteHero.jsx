@@ -90,6 +90,10 @@ import VigyaanStyleWrapper from "./IgniteHero.style";
 import { useNavigate } from "react-router-dom";
 import titleImg from "../../assets/images/vighero26/ignite_title-2.png";
 import chameleonImg from "../../assets/images/vighero26/chameleon.webp";
+import snail_head_or from "../../assets/ignite_images/snail_head.webp";
+import snail_head_pur from "../../assets/ignite_images/snail_shell_purple.webp";
+import snail_head_ye from "../../assets/ignite_images/snail_head_yellow.webp";
+import snail_head_gr from "../../assets/ignite_images/snail_head_2.webp";
 
 const VigyaanHero = () => {
   const navigate = useNavigate();
@@ -112,7 +116,7 @@ const VigyaanHero = () => {
     <VigyaanStyleWrapper>
       <div className="container">
         <div className="title-container">
-          <img className="chameleon" src={chameleonImg} alt="Chameleon" />
+          <img className="chameleon" src={snail_head_or} alt="Chameleon" />
           <img src={titleImg} alt="IGNITE" className="main-title-img" />
         </div>
 

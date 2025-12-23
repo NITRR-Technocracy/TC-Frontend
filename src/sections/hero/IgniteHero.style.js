@@ -31,24 +31,42 @@ const VigyaanStyleWrapper = styled.section`
     height: 100%;
   }
 
+  // .title-container {
+  //   display: flex;
+  //   position: relative; 
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  //   margin-bottom: 40px;
+  // }
+
+  // .chameleon {
+  //   position: absolute;
+  //   left: -25px; 
+  //   top:10%;
+  //   height: 250px; /* Desktop Size */
+  //   z-index: 10; 
+  //   animation: ${float} 5s ease-in-out infinite;
+  //   pointer-events: none; 
+  //   filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));
+  // }
+
+  // .main-title-img {
+  //   width: 420px;
+  //   align-self: flex-center;
+  //   max-width: 75vw;
+  //   z-index: 5;
+  // }
   .title-container {
     display: flex;
     position: relative; 
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .chameleon {
-    position: absolute;
-    left: 5px; 
-    top:18%;
-    height: 280px; /* Desktop Size */
-    z-index: 10; 
-    animation: ${float} 5s ease-in-out infinite;
-    pointer-events: none; 
-    filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));
+    /* Increase margin-top to push the whole block down */
+    margin-top: 60px; 
+    /* Decrease margin-bottom to bring it closer to the text */
+    margin-bottom: 20px; 
   }
 
   .main-title-img {
@@ -56,6 +74,20 @@ const VigyaanStyleWrapper = styled.section`
     align-self: flex-center;
     max-width: 75vw;
     z-index: 5;
+    /* Explicitly move the image slightly downward */
+    transform: translateY(10px); 
+  }
+
+  .chameleon {
+    position: absolute;
+    left: -25px; 
+    /* Adjusted top to keep snail aligned with the new title position */
+    top: 15%; 
+    height: 250px; 
+    z-index: 10; 
+    animation: ${float} 5s ease-in-out infinite;
+    pointer-events: none; 
+    filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.3));
   }
 
   .hero-content {
@@ -85,6 +117,39 @@ const VigyaanStyleWrapper = styled.section`
     margin-bottom: 90px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
+//   .vigyaan-desc {
+//     /* KEEPING YOUR ORIGINAL BG SETTINGS */
+//     background: rgba(138, 122, 163, 0.15); 
+//     backdrop-filter: blur(10px);
+//     -webkit-backdrop-filter: blur(10px);
+//     border: 1px solid rgba(255, 255, 255, 0.1);
+//     border-radius: 40px; 
+//     padding: 35px 50px;
+//     max-width: 900px;
+//     width: 90%;
+//     font-family: 'VigyaanFont';
+//     font-weight: 100;
+//     font-size: 1.5rem;
+//     line-height: 1.5;
+//     margin-bottom: 90px;
+//     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+
+//     /* 1. High-Saturation Gradient (matches the snail's core colors) */
+//     background: linear-gradient(to right, #e29cff, #ffbd7a, #ff8c3b);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+
+//     /* 2. Tightened Glow Effect */
+//     /* Reduced radius from 15px to 4px/8px for a crisp neon look */
+//     filter: drop-shadow(0 0 3px rgba(255, 189, 122, 0.5)) 
+//             drop-shadow(0 0 6px rgba(255, 140, 59, 0.3));
+
+//     /* 3. Improved Readability */
+//     /* Bold weight is necessary for the color to hold its ground */
+//     font-weight: 600; 
+//     letter-spacing: 0.5px;
+//     text-align: center;
+// }
 
   .register-btn {
     position: relative;
