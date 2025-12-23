@@ -631,11 +631,22 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 <span className="metaportal_fn_button_2">
                   Upload Idea Submission PPT
                 </span>
-                {uploadedFileName && (
+                {/* {uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
                     Uploaded File: {uploadedFileName}
                   </p>
-                )}
+                )} */}
+                {uploadedFileName && (
+  <p style={{ 
+    color: "white", 
+    paddingTop: "1rem", 
+    wordBreak: "break-all", // This prevents horizontal overflow
+    fontSize: "0.9rem",      // Optional: slightly smaller to fit more
+    lineHeight: "1.2"
+  }}>
+    Uploaded File: {uploadedFileName}
+  </p>
+)}
               </label>
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
