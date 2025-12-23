@@ -674,7 +674,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p> Only first-year [2028 Batch] students from NIT Raipur. </p>
+                <p> Only first-year [2029 Batch] students from NIT Raipur. </p>
               </div>
               <div
                 data-aos="fade-down"

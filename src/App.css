@@ -7924,22 +7924,39 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Ignitescrolled {
-	background: url("./assets/images/vigyaanbg.jpg");
-	background-size: cover;
-	background-attachment: fixed;
-	/* transition: background-color 0.9s ease; */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* This ensures content stays above the background */
+    z-index: 0; 
 }
 
 .Ignitescrolled::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
-	/* Adjust the opacity (last value) as needed */
-	z-index: 0;
+	    content: "";
+    position: fixed; /* Keeps it behind everything while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Load your bio_tree image here */
+    background: url("./assets/images/vighero26/ignite_bg.webp") no-repeat center center;
+    background-size: cover;
+    
+    /* Apply your requested filters */
+    /* Note: Exposure is simulated via brightness, Shadows/Highlights via contrast/brightness */
+    filter: 
+        brightness(0.5)    /* Exposure -50% */
+        saturate(1.5)      /* Saturation +50% */
+        contrast(1.2);     /* Helping with the Shadow/Highlight depth */
+    
+    /* Opacity 70% as requested */
+    opacity: 0.7;
+    
+    /* Ensures the background stays at the very bottom layer */
+    z-index: -1; 
+    pointer-events: none;
 	/* Ensure the overlay is above the background image */
 }
 
@@ -8023,8 +8040,59 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .custom-cursor {
-	cursor: url("./assets/images/cursor.svg") 10 10, auto;
+	/* hide native cursor when using the DOM butterfly cursor */
+	cursor: none !important;
 }
+
+/* keep default cursors for interactive controls so UX isn't broken */
+button, input, textarea, select, a { cursor: auto !important; }
+
+/* Custom DOM-following cursor (animated butterfly) */
+.custom-cursor-el {
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	z-index: 2147483647;
+	transform: translate(-50%, -50%);
+	will-change: left, top;
+}
+.custom-cursor-inner {
+	width: 60px; /* smaller container so butterfly appears smaller */
+	height: 60px;
+	transform-origin: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-box: fill-box;
+	overflow: hidden; /* hide top parts of the SVG */
+}
+
+.custom-cursor-inner svg,
+.butterfly-img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform-box: fill-box;
+	transform-origin: center center;
+}
+
+/* Wing/tilt animation applied to the inlined SVG */
+.butterfly-svg {
+	/* translate down slightly so the small top element is clipped by overflow */
+	transform: translateY(8px) rotate(-18deg) scale(0.95);
+	animation: wingFlutter 1.0s ease-in-out infinite; /* slower wing flutters */
+	transform-origin: center center;
+}
+
+@keyframes wingFlutter {
+	0%   { transform: translateY(8px) rotate(-22deg) scale(0.9); }
+	50%  { transform: translateY(2px) rotate(10deg) scale(1.02); }
+	100% { transform: translateY(8px) rotate(-22deg) scale(0.9); }
+}
+
+/* hide when pointer is inactive or touching */
+body.touch .custom-cursor-el { display: none; }
 
 .goodbtn {
 	width: 220px;
