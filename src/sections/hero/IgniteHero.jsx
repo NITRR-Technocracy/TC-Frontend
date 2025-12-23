@@ -1,126 +1,334 @@
-// import Button from "components/button";
-// import BannerStyleWrapper from "./Banner.style";
+// import planet from "../../assets/images/vighero/minecraft-png-13361.png";
+// import VigyaanStyleWrapper from "./VigyaanHero.style";
+// import font from '../../assets/Aavartan New/VIGYAAN-12-8-2024.png'
+// import prop5 from "../../assets/minecraft-png-13354.png";
+// import prop7 from "../../assets/minecraft-png-13357.png"
+// // import RocketButton from "../../components/RocketButton";
 
-import planet from "../../assets/images/vighero/vig_planet.webp";
-import ring from "../../assets/images/vighero/planet_orbit.webp";
-import IgniteStyleWrapper from "./IgniteHero.style";
-// import prop6 from "../../assets/prop6.webp";
-// import prop7 from "../../assets/prop7.webp";
-import prop8 from "../../assets/prop8.webp";
-import prop5 from "../../assets/prop5.webp";
-// import RocketButton from "../../components/RocketButton";
+// const VigyaanHero = () => {
+//   const scrollToRegistration = () => {
+//     const registrationElement = document.getElementById("registration");
+//     if (registrationElement) {
+//       registrationElement.scrollIntoView({
+//         behavior: "smooth",
+//       });
+//     }
+//   };
+//   return (
+//     <>
+//       <VigyaanStyleWrapper>
+//         <div className="container">
+//           <div className="vigyaan-planet">
+//             <img src={planet} alt="" />
+//             <div className="vigyaan-font">
+//               <img src={font} alt="" />
+//             </div>
+//           </div>
+//           {/* <img className="asto" src={prop8} alt="asto" /> */}
+//           <img className="planet1" src={prop5} alt="pl1" />
+//           <img className="planet3" src={prop7} alt="pl3" />
+//           <div className="vigyaan-desc">
+//             Vigyaan, the science exhibition organized during the tech fest,
+//             showcases groundbreaking innovations, cutting-edge technologies, and
+//             exciting projects, providing a platform for students to delve deeper
+//             into the world of science and explore limitless possibilities.
+//           </div>
+//           {/* <img className="vigyaan-ring" src={ring} alt="name" /> */}
 
-const IgniteHero = () => {
-  const scrollToRegistration = () => {
-    const registrationElement = document.getElementById("registration");
-    if (registrationElement) {
-      registrationElement.scrollIntoView({
-        behavior: "smooth",
-      });
+//           <div className="btncontainer2" style={{ display: "flex" }}>
+//             {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
+//             <a className="cta2">
+//               {/* <span>CLICK TO REGISTER</span> */}
+//               <span >The Wait is Almost Over!
+// </span>
+//               {/* <span>Registrations open</span> */}
+//             </a>
+//           </div>
+
+//           {/* <div className="row">
+//             <div className="col-md-6">
+//               <div className="gamfi_v2_hero_left">
+//                 <h2>
+//                   Welcome to Vigyaan
+//                 </h2>
+//                 <p>
+//                   2023
+//                 </p>
+//               </div>
+//             </div>
+//             <div className="col-md-6">
+//               <div className="gamfi_v2_hero_right">
+//                 <div className="gamfi_v2_hero_thumb">
+//                   <span className="rocket_thumb">
+//                     <img height="200px"  src={rocketThumb} alt="Rocket thumb" />
+//                   </span>
+
+//                   {particles?.map((particle, i) => (
+//                     <span
+//                       key={i}
+//                       className={`rocket_particle particle_${i + 1}`}
+//                     >
+//                       <img src={particle} alt="rocket particle" />
+//                     </span>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+//           </div> */}
+//         </div>
+//       </VigyaanStyleWrapper>
+//     </>
+//   );
+// };
+
+// export default VigyaanHero;
+
+
+
+// ------------2026 -------------------------
+import VigyaanStyleWrapper from "./IgniteHero.style";
+import { useNavigate } from "react-router-dom";
+import titleImg from "../../assets/images/vighero26/ignite_title-2.png";
+import chameleonImg from "../../assets/images/vighero26/chameleon.webp";
+import snail_head_or from "../../assets/ignite_images/snail_head.webp";
+import snail_head_pur from "../../assets/ignite_images/snail_shell_purple.webp";
+import snail_head_ye from "../../assets/ignite_images/snail_head_yellow.webp";
+import snail_head_gr from "../../assets/ignite_images/snail_head_2.webp";
+
+const VigyaanHero = () => {
+  const navigate = useNavigate();
+
+  const goToRegistration = () => {
+    const el = document.getElementById("registration");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
     }
+    // Fallback: navigate to Ignite page then scroll to registration
+    navigate("/ignite");
+    setTimeout(() => {
+      const e = document.getElementById("registration");
+      if (e) e.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 350);
   };
+
   return (
-    <>
-      <IgniteStyleWrapper>
-        <div className="container">
-          <img className="vigyaan-planet" src={planet} alt="vig_planet" />
-          <img className="asto" src={prop8} alt="asto" />
-          <img className="planet1" src={prop5} alt="pl1" />
-          {/* <img className="planet2" src={prop6} alt="pl2" /> */}
-          {/* <img className="planet3" src={prop7} alt="pl3" /> */}
-          <div className="vigyaan-font">
-            <p>VIGYAAN IGNITE</p>
-          </div>
+    <VigyaanStyleWrapper>
+      <div className="container">
+        <div className="title-container">
+          <img className="chameleon" src={snail_head_or} alt="Chameleon" />
+          <img src={titleImg} alt="IGNITE" className="main-title-img" />
+        </div>
+
+        <div className="hero-content">
           <div className="vigyaan-desc">
             Vigyaan, the science exhibition organized during the tech fest,
             showcases groundbreaking innovations, cutting-edge technologies, and
             exciting projects, providing a platform for students to delve deeper
             into the world of science and explore limitless possibilities.
           </div>
-          <img className="vigyaan-ring" src={ring} alt="name" />
-      
-          <div className="btncontainer2" style={{ display: "flex" }}>
-            {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
-            <a className="cta2" onClick={scrollToRegistration} >
-              {/* <span >CLICK TO REGISTER</span> */}
-              <span >Registration Closed</span>
-                {/* <span>Registrations Open</span> */}
-              <span >
-                <svg
-                  width="66px"
-                  height="25px"
-                  viewBox="0 0 66 43"
-                  version="1.1"
-                >
-                 <svg
-                  width="66px"
-                  height="25px"
-                  viewBox="0 0 66 43"
-                  version="1.1"
-                >
-                  <g
-                    id="arrow"
-                    stroke="none"
-                    strokeWidth="1"
-                    fill="none"
-                    fillRule="evenodd"
-                  >
-                    <path
-                      className="one"
-                      d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
-                      fill="#FFFFFF"
-                    ></path>
-                    <path
-                      className="two"
-                      d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
-                      fill="#FFFFFF"
-                    ></path>
-                    <path
-                      className="three"
-                      d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
-                      fill="#FFFFFF"
-                    ></path>
-                  </g>
-                </svg>
-                </svg>
-              </span>
-            </a>
-          </div>
-      
-          {/* <div className="row">
-            <div className="col-md-6">
-              <div className="gamfi_v2_hero_left">
-                <h2>
-                  Welcome to Vigyaan
-                </h2>
-                <p>
-                  2023
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="gamfi_v2_hero_right">
-                <div className="gamfi_v2_hero_thumb">
-                  <span className="rocket_thumb">
-                    <img height="200px"  src={rocketThumb} alt="Rocket thumb" />
-                  </span>
 
-                  {particles?.map((particle, i) => (
-                    <span
-                      key={i}
-                      className={`rocket_particle particle_${i + 1}`}
-                    >
-                      <img src={particle} alt="rocket particle" />
-                    </span>
-                  ))}
+          <div className="btncontainer2">
+            <div className="uiverse-play-btn">
+              <style>{`
+.uiverse-play-btn button {
+  position: relative;
+  width: 14em;
+  height: 4.5em;
+  outline: none;
+  transition: 0.12s;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  color: #ddebf0;
+}
+
+.uiverse-play-btn #clip {
+  --color: #2761c3;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 6px double var(--color);
+  box-shadow: inset 0px 0px 20px #195480;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.uiverse-play-btn .arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #2761c3;
+  top: 32%;
+  width: 13%;
+  height: 36%;
+}
+
+.uiverse-play-btn #leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.uiverse-play-btn #rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+
+.uiverse-play-btn button:hover #rightArrow {
+  background-color: #27c39f;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+.uiverse-play-btn button:hover #leftArrow {
+  background-color: #27c39f;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.uiverse-play-btn .corner {
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  background-color: #2761c3;
+  box-shadow: inset 1px 1px 10px #2781c3;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+.uiverse-play-btn #rightTop {
+  top: -2.6em;
+  left: 92%;
+}
+
+.uiverse-play-btn #leftTop {
+  top: -2.6em;
+  left: -3.6em;
+}
+
+.uiverse-play-btn #leftBottom {
+  top: 2.6em;
+  left: -2.6em;
+}
+
+.uiverse-play-btn #rightBottom {
+  top: 46%;
+  left: 88%;
+}
+
+.uiverse-play-btn button:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.uiverse-play-btn button:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.uiverse-play-btn button:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.uiverse-play-btn button:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.uiverse-play-btn button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+.uiverse-play-btn button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #27c39f;
+}
+
+@keyframes changeColor8 {
+  from { background-color: #2781c3; }
+  to { background-color: #27c39f; }
+}
+
+@keyframes lightEffect8 {
+  from { box-shadow: 1px 1px 5px #27c39f; }
+  to { box-shadow: 0 0 2px #27c39f; }
+}
+
+@keyframes greenLight8 {
+  from { }
+  to { box-shadow: inset 0px 0px 32px #27c39f; }
+}
+
+@keyframes leftArrow8 {
+  from { transform: translate(0px); }
+  to { transform: translateX(10px); }
+}
+
+@keyframes rightArrow8 {
+  from { transform: translate(0px); }
+  to { transform: translateX(-10px); }
+}
+              `}</style>
+
+              <button onClick={goToRegistration}>
+                REGISTER NOW
+                <div id="clip">
+                  <div id="leftTop" className="corner"></div>
+                  <div id="rightBottom" className="corner"></div>
+                  <div id="rightTop" className="corner"></div>
+                  <div id="leftBottom" className="corner"></div>
                 </div>
-              </div>
+                <span id="rightArrow" className="arrow"></span>
+                <span id="leftArrow" className="arrow"></span>
+              </button>
             </div>
-          </div> */}
+          </div>
         </div>
-      </IgniteStyleWrapper>
-    </>
+      </div>
+    </VigyaanStyleWrapper>
   );
 };
 
-export default IgniteHero;
+export default VigyaanHero;
+
+// Include SVG filters used by the button (hand-drawn noise)
+
+// SVG filters appended so `filter: url(#handDrawnNoise)` works for the button
+const SvgFilters = () => (
+  <svg width="0" height="0" style={{position: 'absolute'}} aria-hidden>
+    <filter id="handDrawnNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" />
+      <feDisplacementMap in="SourceGraphic" scale="3" />
+    </filter>
+
+    <filter id="handDrawnNoise2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" seed="77" />
+      <feDisplacementMap in="SourceGraphic" scale="3" />
+    </filter>
+  </svg>
+);
+
+// Insert filters into the DOM when this module is imported
+if (typeof document !== 'undefined') {
+  const container = document.createElement('div');
+  container.style.position = 'absolute';
+  container.style.width = '0';
+  container.style.height = '0';
+  container.setAttribute('aria-hidden', 'true');
+  container.innerHTML = `
+    <svg width="0" height="0">
+      <filter id="handDrawnNoise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
+      </filter>
+      <filter id="handDrawnNoise2">
+        <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="8" seed="77"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
+      </filter>
+    </svg>
+  `;
+  document.body.appendChild(container);
+}
+
