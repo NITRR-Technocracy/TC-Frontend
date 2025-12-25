@@ -6,7 +6,7 @@ import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
-import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate26.pdf";
+import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pptx";
 import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
