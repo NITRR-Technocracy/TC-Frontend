@@ -6,7 +6,7 @@ import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
-import IGNITE_Template from "../assets/Ignite_Idea_Submission_Template/IGNITE_Template.pdf";
+import IGNITE_Template from "../assets/Ignite_Idea_Submission_Template/IGNITE_Template.pptx";
 import IgniteLoader from "../layout/IgniteLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
