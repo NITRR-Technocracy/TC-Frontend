@@ -284,36 +284,57 @@ const VigyaanStyleWrapper = styled.section`
   /* MOBILE VIEW MODIFICATIONS */
   @media (max-width: 768px) {
     .title-container {
-      margin-top: 40px;
-      margin-bottom: 20px;
-      height: 200px; 
-      width:70%;
-      top:-1%;
+      margin-top: 30px; /* Balanced spacing from the top */
+      margin-bottom: 0px; /* Minimal gap to bring text box higher */
+      height: auto; 
+      width: 100%;
+      display: flex;
+      flex-direction: row; 
+      justify-content: center; /* Centers the combined unit */
+      align-items: center;
+      position: relative;
+      /* Shifts the entire group slightly left to counteract the title's weight */
+      transform: translateX(-50px); 
     }
 
     .chameleon {
-      height: 110px; 
-      position: absolute;
-      /* MOVED FURTHER LEFT */
-      left: -15%; 
-      top: 50%; 
-      transform: translateY(-40%);
+      position: static; 
+      height: 120px; /* Increased size as requested */
+      width: auto;
+      transform: rotate(-10deg); /* Dynamic tilt */
       z-index: 10;
+      animation: ${float} 6s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.4));
+      order: 1; 
+      flex-shrink: 0;
+      /* Pulls the title closer so they overlap slightly */
+      margin-right: -60px; 
     }
 
     .main-title-img {
-      width: 250px;
-      max-width: 85vw;
-      margin: 0 auto;
-      /* INCREASED RIGHT SHIFT TO BALANCE THE LEFT CHAMELEON */
-      padding-left: 30px;
+      width: 180px; /* Optimal size for mobile centering */
+      max-width: 55vw;
+      margin: 0;
+      padding: 0;
+      z-index: 5;
+      transform: none;
+      order: 2; 
     }
 
     .vigyaan-desc {
-      font-size: 1rem;
-      padding: 20px;
-      width: 95%;
-      margin-bottom: 90px;
+      font-size: 0.95rem;
+      padding: 15px;
+      width: 90%;
+      margin-top: 5px; /* Pulls text up toward title */
+      margin-bottom: 40px; /* Reduced vertical gap */
+      line-height: 1.4;
+      /* Resets any webkit-text-fill colors that might cause invisibility */
+      -webkit-text-fill-color: white; 
+    }
+
+    .btncontainer2 {
+       margin-top: -10px; /* Pulls Register button closer to description */
+       transform: scale(0.9); /* Prevents button from being too bulky on small screens */
     }
   }
 `;
