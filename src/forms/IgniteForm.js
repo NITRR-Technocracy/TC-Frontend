@@ -62,41 +62,41 @@ const IgniteForm = () => {
 
   const handleCloseAlert = () => {
     setAlert({
-      message:'',
-      show:false,
-      type:'error'
+      message: '',
+      show: false,
+      type: 'error'
     })
   };
 
   // Retrieve the form from localStorage and normalize key names
-let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
-  isnitrr: "yes",
-  team_name: "",
-  College_name: "NIT Raipur",
-  leader_name: "",
-  leader_branch: "",
-  leader_year: "First",
-  leader_email: "",
-  leader_whatsapp: "",
-  member2_name: "",
-  member2_branch: "",
-  member2_year: "",
-  member2_email: "",
-  member2_whatsapp: "",
-  member3_name: "",
-  member3_branch: "",
-  member3_year: "",
-  member3_email: "",
-  member3_whatsapp: "",
-};
+  let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
+    isnitrr: "yes",
+    team_name: "",
+    College_name: "NIT Raipur",
+    leader_name: "",
+    leader_branch: "",
+    leader_year: "First",
+    leader_email: "",
+    leader_whatsapp: "",
+    member2_name: "",
+    member2_branch: "",
+    member2_year: "",
+    member2_email: "",
+    member2_whatsapp: "",
+    member3_name: "",
+    member3_branch: "",
+    member3_year: "",
+    member3_email: "",
+    member3_whatsapp: "",
+  };
 
-// Normalize keys to ensure lowercase consistency
-    cachedForm = Object.keys(cachedForm).reduce((acc, key) => {
-      acc[key.toLowerCase()] = cachedForm[key];
-      return acc;
-    }, {});
+  // Normalize keys to ensure lowercase consistency
+  cachedForm = Object.keys(cachedForm).reduce((acc, key) => {
+    acc[key.toLowerCase()] = cachedForm[key];
+    return acc;
+  }, {});
 
-    // Now, cachedForm will have all lowercase keys
+  // Now, cachedForm will have all lowercase keys
 
 
   useEffect(() => {
@@ -193,7 +193,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
       });
     } else if (memberPhoneNumberValidations.includes(false)) {
     } else {
-      let condition1 =true&&
+      let condition1 = true &&
         form.isnitrr === "yes" &&
         form.team_name !== "" &&
         form.leader_name !== "" &&
@@ -208,7 +208,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
         form.member2_branch !== "" &&
         form.file;
 
-      let isnitrrConditions =true;
+      let isnitrrConditions = true;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -268,8 +268,15 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
     const file = event.target.files[0];
     if (file) {
       const maxSize = 2 * 1024 * 1024;
+
       if (file.size > maxSize) {
-        alert("File size exceeds the 2MB limit. Please choose a smaller file.");
+        setAlert({
+          message: "File size exceeds 2 MB. Please upload a smaller file.",
+          show: true,
+          type: "error"
+        });
+
+        event.target.value = "";
         return;
       }
 
@@ -279,6 +286,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
       setUploadedFileName(file.name);
     }
   };
+
 
   {
     /* Member Details */
@@ -358,7 +366,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               type="text"
               placeholder={`Member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
-              value={form[`member${i + 1}_whatsapp`] || ""}  
+              value={form[`member${i + 1}_whatsapp`] || ""}
             />
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
@@ -368,7 +376,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 <p style={{ color: "red" }}>
                   Enter a number of 10 digits only.
                 </p>
-            )}
+              )}
           </li>
 
         </div>
@@ -436,10 +444,10 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                   </label>
                 </li> */}
 
-                {/* <span style={{ fontSize: "1rem" }}>
+              {/* <span style={{ fontSize: "1rem" }}>
                   * If selected Yes, then only institute mail id accepted.
                 </span> */}
-                {/* <li style={{ marginBottom: "0.5rem" }}>
+              {/* <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
                     name="isnitrr"
@@ -564,23 +572,23 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                   />
                 </li> */}
                 <li data-aos="fade-down">
-                <input
-                  id="leaderNumber"
-                  type="text"
-                  name="leader_whatsapp"
-                  placeholder="Leader Whatsapp Number"
-                  onChange={(e) => handle(e)}
-                  value={form.leader_whatsapp || ""}  
-                />
-                <span style={{ fontSize: "0.7rem" }}>
-                  * Don't include +91 or 0.
-                </span>
-                {form.leader_whatsapp && form.leader_whatsapp.length !== 10 && (
-                  <p style={{ color: "red" }}>
-                    Enter a number of 10 digits only.
-                  </p>
-                )}
-              </li>
+                  <input
+                    id="leaderNumber"
+                    type="text"
+                    name="leader_whatsapp"
+                    placeholder="Leader Whatsapp Number"
+                    onChange={(e) => handle(e)}
+                    value={form.leader_whatsapp || ""}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.leader_whatsapp && form.leader_whatsapp.length !== 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
+                </li>
 
               </ul>
               <h3
@@ -631,22 +639,33 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 <span className="metaportal_fn_button_2">
                   Upload Idea Submission PPT
                 </span>
+                <p
+                  style={{
+                    marginTop: "-0.5rem",
+                    fontSize: "0.75rem",
+                    color: "#b0b0b0",
+                    textAlign: "left",
+                    opacity: "0.9"
+                  }}
+                >
+                  * Maximum file size allowed is <strong>2&nbsp;MB</strong>.
+                </p>
                 {/* {uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
                     Uploaded File: {uploadedFileName}
                   </p>
                 )} */}
                 {uploadedFileName && (
-  <p style={{ 
-    color: "white", 
-    paddingTop: "1rem", 
-    wordBreak: "break-all", // This prevents horizontal overflow
-    fontSize: "0.9rem",      // Optional: slightly smaller to fit more
-    lineHeight: "1.2"
-  }}>
-    Uploaded File: {uploadedFileName}
-  </p>
-)}
+                  <p style={{
+                    color: "white",
+                    paddingTop: "1rem",
+                    wordBreak: "break-all", // This prevents horizontal overflow
+                    fontSize: "0.9rem",      // Optional: slightly smaller to fit more
+                    lineHeight: "1.2"
+                  }}>
+                    Uploaded File: {uploadedFileName}
+                  </p>
+                )}
               </label>
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
@@ -676,7 +695,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               {/* <p>* Read the Rules & Regulations before Submitting</p> */}
             </div>
           </div>
-          <div className="mint_right" style={{width:"100%"}}>
+          <div className="mint_right" style={{ width: "100%" }}>
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
                 <h4>Vigyaan Ignite</h4>
@@ -698,7 +717,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               <div data-aos="fade-down" className="mint_info">
                 <p>▪ A team can have 2-3 members (including team leader). </p>
                 <p>
-                ▪ Each team must designate a team leader and select a team name. 
+                  ▪ Each team must designate a team leader and select a team name.
                 </p>
                 <p>▪ Teams may consist of members from different departments, provided all are students of NIT Raipur. </p>
                 <p>▪ Each participant can only be a part of one team.</p>
@@ -714,11 +733,11 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                 <h3 className="metaportal_fn_countdown">GUIDELINES</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>▪ Identify any real-world problem, its impact, and propose relevant solutions. Students from any 
-                academic stream can submit their issues along with their innovative solutions.</p>
+                <p>▪ Identify any real-world problem, its impact, and propose relevant solutions. Students from any
+                  academic stream can submit their issues along with their innovative solutions.</p>
                 <p>
-                ▪ Judges will evaluate based on the problem's severity, the solution's significance, and the 
-                product's scalability. 
+                  ▪ Judges will evaluate based on the problem's severity, the solution's significance, and the
+                  product's scalability.
                 </p>
                 <p>▪ Plagiarism is strictly prohibited, and any plagiarized submissions will result in disqualification. </p>
                 <p>▪ Each round will be an eliminatory round. </p>
@@ -749,17 +768,17 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                     Round 1: Idea Submission Round
                   </div>
                   <p>
-                  ▪  Create a concise and effective presentation for the idea
+                    ▪  Create a concise and effective presentation for the idea
                     submission round.
                   </p>
                   <p>
-                  ▪  Teams must strictly adhere to the provided template
+                    ▪  Teams must strictly adhere to the provided template
                     without making any modifications. Refer to the template for
                     additional details.
                   </p>
                   <p>▪  File type: .ppt, .pptx or PDF</p>
                   <p>
-                  ▪  Document Name: team_name
+                    ▪  Document Name: team_name
                   </p>
                 </p>
                 <p>
@@ -767,28 +786,28 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                     Round 2: Presentation Round
                   </div>
                   <p>
-                  ▪  Selected teams are required to present their project in
+                    ▪  Selected teams are required to present their project in
                     front of concerned faculty in-charge.
                   </p>
                   <p>
-                  ▪  You will have 10-15 minutes to present, followed by a Q&A
+                    ▪  You will have 10-15 minutes to present, followed by a Q&A
                     session with the judges.
                   </p>
                   <p>▪  File type: .ppt, .pptx or PDF</p>
-                  
+
                 </p>
                 <p>
                   <div style={{ color: "white" }}>Round 3: Prototype Round</div>
                   <p>
-                  ▪  Shortlisted teams will need to develop a functional
+                    ▪  Shortlisted teams will need to develop a functional
                     prototype based on their proposed approach, ensuring that
                     the prototype demonstrates core features and functionalities
                     effectively.
                   </p>
-                  
+
                 </p>
               </div>
-              
+
             </div>
 
             <div
@@ -802,23 +821,23 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
               </h3>
             </div>
             <div data-aos="fade-down" className="mint_info" >
-             <p>
-             Relevance, feasibility and practical significance of the problem.
-             </p>
+              <p>
+                Relevance, feasibility and practical significance of the problem.
+              </p>
             </div>
-            
+
             <div
               data-aos="fade-down"
               style={{ paddingTop: "2rem" }}
               className="mint_time"
             >
-             <a style={{ textDecoration: "none" }} href={IGNITE_Template}>
+              <a style={{ textDecoration: "none" }} href={IGNITE_Template}>
                 <span className="metaportal_fn_button_4">
                   Idea Submission Template
                 </span>
               </a>
             </div>
-            
+
             <div
               data-aos="fade-down"
               style={{ paddingTop: "2rem" }}
@@ -832,8 +851,8 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
             <div data-aos="fade-down" className="mint_info">
               <p>▪ Prizes will be awarded to the top teams based on the evaluation criteria. </p>
               <p>
-              ▪ A digital Certificate of Appreciation will be awarded to all teams who presented their project 
-              in the VIGYAAN Exhibition. 
+                ▪ A digital Certificate of Appreciation will be awarded to all teams who presented their project
+                in the VIGYAAN Exhibition.
               </p>
             </div>
           </div>

@@ -62,9 +62,9 @@ const VigyaanForm = () => {
 
   const handleCloseAlert = () => {
     setAlert({
-      message:'',
-      show:false,
-      type:'error'
+      message: '',
+      show: false,
+      type: 'error'
     })
   };
 
@@ -269,8 +269,15 @@ const VigyaanForm = () => {
     const file = event.target.files[0];
     if (file) {
       const maxSize = 2 * 1024 * 1024;
+
       if (file.size > maxSize) {
-        alert("File size exceeds the 2MB limit. Please choose a smaller file.");
+        setAlert({
+          message: "File size exceeds 2 MB. Please upload a smaller file.",
+          show: true,
+          type: "error"
+        });
+
+        event.target.value = "";
         return;
       }
 
@@ -280,6 +287,7 @@ const VigyaanForm = () => {
       setUploadedFileName(file.name);
     }
   };
+
 
   {
     /* Member Details */
@@ -431,7 +439,7 @@ const VigyaanForm = () => {
                     value="Yes"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="yes" style={{ marginLeft: "0.5rem",color: "#ffffff" }}>
+                  <label htmlFor="yes" style={{ marginLeft: "0.5rem", color: "#ffffff" }}>
                     Yes
                   </label>
                 </li>
@@ -446,12 +454,12 @@ const VigyaanForm = () => {
                     value="No"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="no" style={{ marginLeft: "0.5rem" ,color: "#ffffff"}}>
+                  <label htmlFor="no" style={{ marginLeft: "0.5rem", color: "#ffffff" }}>
                     No
                   </label>
                 </li>
 
-                <span style={{ fontSize: "1rem",color: "#ffffff" }}>
+                <span style={{ fontSize: "1rem", color: "#ffffff" }}>
                   * If selected No, then write your College Name and any type of
                   Email accepted.
                 </span>
@@ -631,25 +639,37 @@ const VigyaanForm = () => {
                 <span className="metaportal_fn_button_2">
                   Upload Idea Submission PPT
                 </span>
+                <p
+                  style={{
+                    marginTop: "-0.5rem",
+                    fontSize: "0.75rem",
+                    color: "#b0b0b0",
+                    textAlign: "left",
+                    opacity: "0.9"
+                  }}
+                >
+                  * Maximum file size allowed is <strong>2&nbsp;MB</strong>.
+                </p>
+
                 {/* {uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
                     Uploaded File: {uploadedFileName}
                   </p>
                 )} */}
                 {uploadedFileName && (
-  <p 
-    style={{ 
-      color: "white", 
-      paddingTop: "1rem", 
-      inlineSize: "100%",      // Ensures it respects container width
-      overflowWrap: "break-word", // Modern standard for breaking long strings
-      wordBreak: "break-all",     // Backup for older browsers to force breaks
-      hyphens: "auto"             // Optional: adds hyphens if the language supports it
-    }}
-  >
-    Uploaded File: {uploadedFileName}
-  </p>
-)}
+                  <p
+                    style={{
+                      color: "white",
+                      paddingTop: "1rem",
+                      inlineSize: "100%",      // Ensures it respects container width
+                      overflowWrap: "break-word", // Modern standard for breaking long strings
+                      wordBreak: "break-all",     // Backup for older browsers to force breaks
+                      hyphens: "auto"             // Optional: adds hyphens if the language supports it
+                    }}
+                  >
+                    Uploaded File: {uploadedFileName}
+                  </p>
+                )}
               </label>
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
