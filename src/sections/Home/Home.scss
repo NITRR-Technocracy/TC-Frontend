@@ -1,14 +1,22 @@
 .homecontainer {
-  background-image: url("../../assets/images/HomePage/section1BG.jpeg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-
   display: flex;
   flex-direction: column;
-  gap: 25vmax;
+  // gap: 25vmax;
+
+
+
+  background: transparent;
 }
+
+// .homecontainer {
+//   background: transparent;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .hero-vid{
   position: absolute;
@@ -423,5 +431,199 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
     width: 80%;
     height: 50px;
     font-size: 22.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   HOME HERO SECTION
+========================= */
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Image */
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+
+  filter: brightness(1.18) contrast(1.12) saturate(1.2);
+}
+
+/* Overlay */
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.08),
+      rgba(0, 0, 0, 0.55)
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6)
+    );
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.home-hero-title {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero-title img {
+  width: min(900px, 85%);
+  opacity: 0;
+  animation: titleReveal 1.2s ease-out forwards,
+             titleFloat 6s ease-in-out infinite,
+             titleGlow 4s ease-in-out infinite;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.home-hero-buttons {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.hero-btn {
+  width: 260px;
+  height: 70px;
+  font-size: 32px;
+  font-family: "chisled", monospace;
+  border-radius: 50px;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+/* VIGYAAN */
+.vigyaan-btn {
+  border: 4px solid #57ff2a;
+  color: #57ff2a;
+  box-shadow:
+    0 0 25px rgba(87, 255, 42, 0.7),
+    inset 0 0 12px rgba(87, 255, 42, 0.25);
+}
+
+.vigyaan-btn:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 55px rgba(87, 255, 42, 1),
+    inset 0 0 18px rgba(87, 255, 42, 0.4);
+}
+
+/* IGNITE */
+.ignite-btn {
+  border: 4px solid #00f0ff;
+  color: #00f0ff;
+  box-shadow:
+    0 0 25px rgba(0, 240, 255, 0.7),
+    inset 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+.ignite-btn:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 55px rgba(0, 240, 255, 1),
+    inset 0 0 18px rgba(0, 240, 255, 0.4);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes titleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes titleGlow {
+  0% {
+    filter:
+      drop-shadow(0 0 20px rgba(0, 240, 255, 0.55))
+      drop-shadow(0 0 40px rgba(0, 180, 255, 0.35));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 45px rgba(0, 240, 255, 0.9))
+      drop-shadow(0 0 75px rgba(0, 180, 255, 0.6));
+  }
+  100% {
+    filter:
+      drop-shadow(0 0 20px rgba(0, 240, 255, 0.55))
+      drop-shadow(0 0 40px rgba(0, 180, 255, 0.35));
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .home-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    bottom: 6%;
+  }
+
+  .hero-btn {
+    width: 80%;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .home-hero-title img {
+    width: 90%;
   }
 }

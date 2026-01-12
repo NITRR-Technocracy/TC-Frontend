@@ -1,63 +1,63 @@
-.faq-section {
+/* .faq-section {
   position: relative;
   max-width: 1300px;
   margin: auto;
   padding-bottom: 120px;
   color: #fff;
-}
+} */
 
 /* TITLE */
-.faq-title {
+/* .faq-title {
   text-align: center;
   font-size: 6rem;
   color: #ff1a1a;
   margin-bottom: 100px;
   text-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
+} */
 
 /* LAYOUT */
-.faq-layout {
+/* .faq-layout {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 60px;
-}
+} */
 
 /* LEFT DECOR */
-.faq-left {
+/* .faq-left {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
   font-size: 5rem;
   opacity: 0.5;
-}
+} */
 
-.question-mark {
+/* .question-mark {
   animation: float 6s ease-in-out infinite;
-}
+} */
 
 /* FAQ COLUMNS */
-.faq-columns {
+/* .faq-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-}
+} */
 
-.faq-card {
+/* .faq-card {
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(14px);
   border-radius: 18px;
   padding: 20px 24px;
   box-shadow: 0 0 30px rgba(255,120,80,0.35);
-}
+} */
 
-.faq-header {
+/* .faq-header {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-}
+} */
 
-.faq-header h3 {
+/* .faq-header h3 {
   font-size: 1rem;
 }
 
@@ -74,16 +74,16 @@
 .faq-body.open {
   max-height: 300px;
   margin-top: 10px;
-}
+} */
 
 /* DECORATIVE ANIMALS */
-.faq-decor {
+/* .faq-decor {
   position: absolute;
   pointer-events: none;
   filter: drop-shadow(0 0 25px rgba(255,200,120,0.45));
-}
+} */
 
-.snake {
+/* .snake {
   top: 10%;
   left: 0;
   width: 200px;
@@ -93,17 +93,17 @@
   top: 0;
   right: 10%;
   width: 220px;
-}
+} */
 
 /* FLOAT */
-@keyframes float {
+/* @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-18px); }
   100% { transform: translateY(0); }
-}
+} */
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .faq-layout {
     grid-template-columns: 1fr;
   }
@@ -112,5 +112,144 @@
   }
   .faq-left {
     display: none;
+  }
+} */
+
+
+
+.faq-section {
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+  color: white;
+  background: transparent;
+}
+
+.faq-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: .85;
+  filter: drop-shadow(0 0 25px rgba(255,180,120,.45));
+  animation: float 7s ease-in-out infinite;
+}
+
+.snake { top: 10%; left: 0; width: 220px; }
+.tiger { top: 0; right: 10%; width: 240px; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .faq-decor { width: 140px; opacity: .4; }
+}
+
+
+
+/* =========================
+   FAQ TITLE – BIOMIMICRY
+========================= */
+
+.faq-title span {
+  color: #7CFFB2; /* bio-green base */
+  text-shadow:
+    0 0 12px rgba(124, 255, 178, 0.6),
+    0 0 28px rgba(0, 255, 200, 0.35);
+}
+
+/* Middle A slightly stronger */
+.faq-middle {
+  position: relative;
+  color: #4DFFF3;
+  text-shadow:
+    0 0 18px rgba(77, 255, 243, 0.8),
+    0 0 40px rgba(0, 220, 255, 0.45);
+}
+
+/* Lion image */
+.faq-lion {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 0 18px rgba(0, 255, 220, 0.6))
+    drop-shadow(0 0 40px rgba(0, 180, 255, 0.35));
+
+  animation: lionFloat 6s ease-in-out infinite;
+}
+
+/* Floating life-like motion */
+@keyframes lionFloat {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -14px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .faq-lion {
+    width: 75px;
+    top: -70px;
+  }
+}
+
+
+.faq_col_cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+.faq_col {
+  width: 100%;
+  min-width: 400px;   /* 🔑 prevents collapse */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+.fn_cs_accordion {
+  width: 100%;
+  display: block;
+}
+
+
+.acc_item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.acc_content {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+
+@media (max-width: 900px) {
+  .faq_col_cont {
+    grid-template-columns: 1fr;
+  }
+
+  .faq_col {
+    min-width: 100%;
   }
 }
