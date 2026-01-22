@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
@@ -93,7 +94,7 @@
     color: #eee;
 }
 
-/* thumbnail */
+
 .thumbnail {
     position: absolute;
     bottom: 50px;
@@ -135,7 +136,7 @@
     font-weight: 300;
 }
 
-/* arrows */
+
 .arrows {
     position: absolute;
     top: 80%;
@@ -157,7 +158,7 @@
     color: #000;
     font-family: monospace;
     font-weight: bold;
-    transition: .3s; /* Reduced transition duration */
+    transition: .3s; 
 }
 
 .arrows button:hover {
@@ -165,12 +166,12 @@
     color: #fff;
 }
 
-/* animation */
+
 .carousel .list .item:nth-child(1) {
     z-index: 1;
 }
 
-/* animation text in first item */
+
 .carousel .list .item:nth-child(1) .content .author,
 .carousel .list .item:nth-child(1) .content .title,
 .carousel .list .item:nth-child(1) .content .topic,
@@ -179,10 +180,10 @@
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .3s 0.5s linear 1 forwards; /* Shortened duration and delay */
+    animation: showContent .3s 0.5s linear 1 forwards;
 }
 
-/* Speeding up animations */
+
 @keyframes showContent {
     to {
         transform: translateY(0px);
@@ -207,22 +208,22 @@
 }
 
 .carousel .list .item:nth-child(1) .content .title {
-    animation-delay: 0.2s!important; /* Reduced delay */
+    animation-delay: 0.2s!important; 
 }
 
 .carousel .list .item:nth-child(1) .content .topic {
-    animation-delay: 0.4s!important; /* Reduced delay */
+    animation-delay: 0.4s!important; 
 }
 
 .carousel .list .item:nth-child(1) .content .des {
-    animation-delay: 0.6s!important; /* Reduced delay */
+    animation-delay: 0.6s!important; 
 }
 
 .carousel .list .item:nth-child(1) .content .buttons {
-    animation-delay: 0.8s!important; /* Reduced delay */
+    animation-delay: 0.8s!important; 
 }
 
-/* create animation when next click */
+
 .carousel.next .list .item:nth-child(1) img {
     width: 150px;
     height: 220px;
@@ -230,7 +231,7 @@
     bottom: 50px;
     left: 50%;
     border-radius: 30px;
-    animation: showImage .3s linear 1 forwards; /* Shortened duration */
+    animation: showImage .3s linear 1 forwards; 
 }
 
 @keyframes showImage {
@@ -245,7 +246,7 @@
 
 .carousel.next .thumbnail .item:nth-last-child(1) {
     overflow: hidden;
-    animation: showThumbnail .3s linear 1 forwards; /* Shortened duration */
+    animation: showThumbnail .3s linear 1 forwards; 
 }
 
 .carousel.prev .list .item img {
@@ -260,7 +261,7 @@
 }
 
 .carousel.next .thumbnail {
-    animation: effectNext .3s linear 1 forwards; /* Shortened duration */
+    animation: effectNext .3s linear 1 forwards; 
 }
 
 .carousel .time {
@@ -275,16 +276,16 @@
 
 .carousel.next .time,
 .carousel.prev .time {
-    animation: runningTime 2s linear 1 forwards; /* Shortened duration */
+    animation: runningTime 2s linear 1 forwards; 
 }
 
-/* prev click */
+
 .carousel.prev .list .item:nth-child(2) {
     z-index: 2;
 }
 
 .carousel.prev .list .item:nth-child(2) img {
-    animation: outFrame 0.3s linear 1 forwards; /* Shortened duration */
+    animation: outFrame 0.3s linear 1 forwards;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -303,12 +304,12 @@
 .carousel.prev .thumbnail .item:nth-child(1) {
     overflow: hidden;
     opacity: 0;
-    animation: showThumbnail .3s linear 1 forwards; /* Shortened duration */
+    animation: showThumbnail .3s linear 1 forwards;
 }
 
 .carousel.next .arrows button,
 .carousel.prev .arrows button {
-    pointer-events: auto; /* Allow immediate clicks */
+    pointer-events: auto; 
 }
 
 .carousel.prev .list .item:nth-child(2) .content .author,
@@ -316,7 +317,7 @@
 .carousel.prev .list .item:nth-child(2) .content .topic,
 .carousel.prev .list .item:nth-child(2) .content .des,
 .carousel.prev .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1s linear 1 forwards!important; /* Shortened duration */
+    animation: contentOut 1s linear 1 forwards!important; 
 }
 
 @keyframes contentOut {
@@ -358,3 +359,7 @@
         font-size: 20px;
     }
 }
+
+
+
+

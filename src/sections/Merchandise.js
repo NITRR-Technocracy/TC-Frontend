@@ -1,99 +1,175 @@
+// import React from "react";
+// import Title from "../components/Title";
+// import videoBg from "../assets/videos/tshirt.webm";
+// import styles from "./Merchandise.module.css";
+// import MerchIMG from "../assets/aavartan_images/MerchandiseIMG.webp"
+// const Merchandise = () => {
+
+//     const videostyles = {
+//         // position:"absolute",
+//         // top:"0",
+//         // left:"0",
+//         // width:"100%",
+//         // height:"100%",
+//         // objectFit:"cover",
+//         width:"100%"
+//       }
+//   return (
+//     <div className="container collectionContainer" style={{paddingBottom:"3rem", zIndex:"20"}}>
+//       <Title color={"OUR"} noncolor={"MERCHANDISE"} />
+//       <div className={styles.MerchSection}>
+//       <div className={styles.discription}>
+//       <div  className="fn_cs_desc">
+//           <p>
+//           Slay the college fest season in a Techy look and embrace the engineer within you! ✨
+
+// Tech would flow through your blood and come out through your sweat as  Team Technocracy launches its very own Merchandise for you all! 🚀 
+
+// Be a part of the gigantic Tech Fest AAVARTAN'24-25 and have some imprints of it on yourselves! 
+
+// The comfortable and trendy attire awaits you! Hurry up and Order now through the given link! 🔗
+// <br />
+//  Last date to Order: 
+// <br />
+// Price: Rs 350
+
+//           </p>
+//           <div className="btn-container" style={{ display: "flex",zIndex:1 }}>
+//                  <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
+//                 <span>BUY NOW</span>
+//                 <span>
+//                   <svg
+//                     width="66px"
+//                     height="25px"
+//                     viewBox="0 0 66 43"
+//                     version="1.1"
+//                   >
+//                     <g
+//                       id="arrow"
+//                       stroke="none"
+//                       strokeWidth="1"
+//                       fill="none"
+//                       fillRule="evenodd"
+//                     >
+//                       <path
+//                         className="one"
+//                         d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+//                         fill="#FFFFFF"
+//                       ></path>
+//                       <path
+//                         className="two"
+//                         d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+//                         fill="#FFFFFF"
+//                       ></path>
+//                       <path
+//                         className="three"
+//                         d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+//                         fill="#FFFFFF"
+//                       ></path>
+//                     </g>
+//                   </svg>
+//                 </span>
+//               </a>
+//               </div>
+//         </div>
+//       </div>
+//       <img src={MerchIMG} className={styles.Merchimage} alt="" />
+//       <div className={styles.MerchContainer}>
+//       <div data-aos="fade-up" className="container">
+//         <div className="fn_cs_news container">
+//           <div className="news_part">
+//             <div className="left_items" style={{ margin: "0" }}>
+//               <div className="blog__item">
+//                 <video autoPlay muted loop style={videostyles}>
+//                   <source src={videoBg} type="video/webm" />
+//                   Your browser does not support the video tag.
+//                 </video>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       {/*<div className={styles.MerchButtons}>
+//         <div className={styles.merch}>T-Shirt</div>
+//         <div className={styles.merch}>Hoodie</div>
+//   </div>*/}
+//       </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Merchandise;
+
+
+
+
+
+
+// --------------------------------2026-------------------------------
 import React from "react";
 import Title from "../components/Title";
 import videoBg from "../assets/videos/tshirt.webm";
 import styles from "./Merchandise.module.css";
-import MerchIMG from "../assets/aavartan_images/MerchandiseIMG.webp"
+import MerchIMG from "../assets/aavartan_images/MerchandiseIMG.webp";
+
 const Merchandise = () => {
+  const videostyles = {
+    width: "100%",
+    borderRadius: "15px",
+    border: "2px solid rgba(255, 255, 255, 0.1)",
+    boxShadow: "0 0 30px rgba(0, 0, 0, 0.5)"
+  };
 
-    const videostyles = {
-        // position:"absolute",
-        // top:"0",
-        // left:"0",
-        // width:"100%",
-        // height:"100%",
-        // objectFit:"cover",
-        width:"100%"
-      }
   return (
-    <div className="container collectionContainer" style={{paddingBottom:"3rem", zIndex:"20"}}>
+    <div className="container collectionContainer" style={{ paddingBottom: "5rem", zIndex: "20" }}>
       <Title color={"OUR"} noncolor={"MERCHANDISE"} />
+      
       <div className={styles.MerchSection}>
-      <div className={styles.discription}>
-      <div  className="fn_cs_desc">
-          <p>
-          Slay the college fest season in a Techy look and embrace the engineer within you! ✨
-
-Tech would flow through your blood and come out through your sweat as  Team Technocracy launches its very own Merchandise for you all! 🚀 
-
-Be a part of the gigantic Tech Fest AAVARTAN'24-25 and have some imprints of it on yourselves! 
-
-The comfortable and trendy attire awaits you! Hurry up and Order now through the given link! 🔗
-<br />
- Last date to Order: 
-<br />
-Price: Rs 350
-
-          </p>
-          <div className="btn-container" style={{ display: "flex",zIndex:1 }}>
-                 <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
+        <div className={styles.discription} data-aos="fade-up">
+            <p>
+              Slay the college fest season in a Techy look and embrace the engineer within you! ✨
+              <br /><br />
+              Tech would flow through your blood and come out through your sweat as 
+              <strong> Team Technocracy</strong> launches its very own Merchandise for you all! 🚀
+              <br /><br />
+              Be a part of the gigantic Tech Fest <strong>AAVARTAN'24-25</strong> and have some imprints of it on yourselves!
+              <br /><br />
+              <strong>Price: Rs 350</strong>
+            </p>
+            
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <a className={styles.cta} href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
                 <span>BUY NOW</span>
-                <span>
-                  <svg
-                    width="66px"
-                    height="25px"
-                    viewBox="0 0 66 43"
-                    version="1.1"
-                  >
-                    <g
-                      id="arrow"
-                      stroke="none"
-                      strokeWidth="1"
-                      fill="none"
-                      fillRule="evenodd"
-                    >
-                      <path
-                        className="one"
-                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
-                        fill="#FFFFFF"
-                      ></path>
-                      <path
-                        className="two"
-                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
-                        fill="#FFFFFF"
-                      ></path>
-                      <path
-                        className="three"
-                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
-                        fill="#FFFFFF"
-                      ></path>
-                    </g>
+                <span className={styles.arrow_icon}>
+                  <svg width="30" height="20" viewBox="0 0 66 43">
+                    <path 
+                      d="M40.15 3.89l3.82-3.75a.5.5 0 01.7 0l21.02 20.64a1 1 0 010 1.42L44.67 42.86a.5.5 0 01-.7 0l-3.82-3.75a.5.5 0 010-.71L56.99 21.86a.5.5 0 000-.71L40.15 4.6a.5.5 0 010-.71z" 
+                      fill="#FFFFFF"
+                    />
                   </svg>
                 </span>
               </a>
-              </div>
+            </div>
         </div>
-      </div>
-      <img src={MerchIMG} className={styles.Merchimage} alt="" />
-      <div className={styles.MerchContainer}>
-      <div data-aos="fade-up" className="container">
-        <div className="fn_cs_news container">
-          <div className="news_part">
-            <div className="left_items" style={{ margin: "0" }}>
-              <div className="blog__item">
-                <video autoPlay muted loop style={videostyles}>
-                  <source src={videoBg} type="video/webm" />
-                  Your browser does not support the video tag.
-                </video>
+
+        <img src={MerchIMG} className={styles.Merchimage} alt="Merchandise" data-aos="zoom-in" />
+
+        <div className={styles.MerchContainer} data-aos="fade-up">
+          <div className="container">
+            <div className="fn_cs_news container">
+              <div className="news_part">
+                <div className="left_items" style={{ margin: "0" }}>
+                  <div className="blog__item">
+                    <video autoPlay muted loop style={videostyles}>
+                      <source src={videoBg} type="video/webm" />
+                    </video>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/*<div className={styles.MerchButtons}>
-        <div className={styles.merch}>T-Shirt</div>
-        <div className={styles.merch}>Hoodie</div>
-  </div>*/}
-      </div>
       </div>
     </div>
   );
