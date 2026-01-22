@@ -7802,7 +7802,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 
-.Aavartanscrolled {
+/* .Aavartanscrolled {
 	background: url("./assets/Aavartan New/bgavartan.jpg") no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -7871,9 +7871,77 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	/* background-color: rgba(0, 0, 0, 0.5); */
 	/* background:url("./assets/Aavartan New/AB2.webp"); */
 	/* Adjust the opacity (last value) as needed */
-	z-index: 1;
+	/* z-index: 1; */
 	/* Ensure the overlay is above the background image */
+/* } */ 
+/* //2026 */
+/* Replace your existing .Aavartanscrolled styles */
+/*To apply filters exclusively to your background image without affecting the foreground components (text, titles, or cards), you must separate the background into its own layer. This is best achieved using a ::before pseudo-element on the .Aavartanscrolled class.
+
+Below is the modified CSS to achieve the specific filter values you requested while keeping all content clear.
+
+Updated CSS for .Aavartanscrolled
+CSS*/
+
+/* Background Image Layer */
+.Aavartanscrolled {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    /* Ensure child components stay above the background layer */
+    z-index: 0; 
 }
+
+/* Background Layer */
+.Aavartanscrolled::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Background Image */
+    background: url("./assets/AAVARTAN26/bg_aavartan_3.png") no-repeat center center;
+    
+    /* CHANGE 1: Use 'contain' if you want the whole image visible, 
+       OR keep 'cover' but ensure the container doesn't overflow */
+    background-size: 100% 100%; /* Forces the image to stretch to exactly fit the width/height */
+    
+    /* YOUR FILTERS: Adjusted for visibility as discussed */
+    filter: brightness(0.6) contrast(1.4) saturate(1.3) hue-rotate(-5deg);
+    
+    /* Put this layer behind all content */
+    z-index: -2; 
+}
+
+/* Shadow and Highlight Simulation Layer */
+.Aavartanscrolled::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Shadow overlay that doesn't obscure the sides */
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02) 0%, 
+        rgba(0, 0, 0, 0.6) 100% 
+    );
+    
+    pointer-events: none;
+    z-index: -1; 
+}
+
+/* Responsive fix for smaller/larger screens */
+@media (max-width: 1200px) {
+    .Aavartanscrolled::before {
+        background-size: cover; /* Revert to cover on mobile to avoid stretching */
+    }
+}
+
 
 .Vigyaanscrolled {
     position: relative;

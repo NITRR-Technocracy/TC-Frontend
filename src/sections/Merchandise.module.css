@@ -1,3 +1,4 @@
+/*
 .MerchSection{
     display: flex;
     flex-direction: column-reverse;
@@ -21,15 +22,14 @@
     width: 180px;
     height: 50px;
     font-size:18px;
-    /* border-radius: 20px; */
     border: 4px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF;
     font-weight: 500;
-    border-image: linear-gradient(to right, #4c90d5, #FE7BE5); /* Define your linear gradient colors here */
-    border-image-slice: 1; /* Keeps the entire gradient within the border */
+    border-image: linear-gradient(to right, #4c90d5, #FE7BE5); 
+    border-image-slice: 1; 
     border-image-repeat: stretch; 
     margin: 1rem 0rem;
 }
@@ -58,4 +58,97 @@
        height: 320px;
     }
     
+}
+
+*/
+
+/* --------------------------2026-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.MerchSection {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+.discription {
+    width: 100%;
+    font-family: 'Poppins', sans-serif !important;
+    max-width: 850px;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(18, 10, 25, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+}
+
+.discription p, 
+.discription strong {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Fixed Buy Now Button */
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 14px 45px;
+    background: linear-gradient(90deg, #155b04 0%, #6be862 100%);
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 15px rgba(107, 232, 98, 0.3);
+    margin-top: 1.5rem;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(107, 232, 98, 0.5);
+}
+
+/* Fixed Arrow Alignment */
+.arrow_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.arrow_icon svg {
+    display: block;
+    width: 35px; /* Scaled for better proportion */
+    height: auto;
+}
+
+.cta:hover .arrow_icon {
+    transform: translateX(6px);
+}
+
+.Merchimage {
+    width: 350px;
+    height: auto;
+    margin-top: 2rem;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1)); /* Neutral shadow */
+    transition: all 0.4s ease;
+}
+
+@media(max-width: 900px) {
+    .Merchimage { width: 260px; }
+    .cta { padding: 12px 35px; }
 }
