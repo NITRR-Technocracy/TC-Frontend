@@ -163,7 +163,7 @@
 //         z-index: 0;
 //         height: 25vw;
 //       } */
-  
+
 //   .decrp {
 //   color: white;
 //   font-weight: 300;
@@ -210,7 +210,7 @@
 //       top: 8%;
 //       left:23%;
 //     }
-  
+
 // }
 // @media only screen and (min-width: 600px) and (max-width: 1024px) {
 //   .decrp {
@@ -372,6 +372,7 @@ const AavartanStyleWrapper = styled.section`
   .container {
     z-index: 10;
     position: relative;
+    margin-top:-30px;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -423,7 +424,8 @@ const AavartanStyleWrapper = styled.section`
   .decrp {
     width: 100%;
     text-align: center;
-    color: white;
+     font-family: 'VigyaanFont';
+     color: white;
     background: rgba(18, 10, 25, 0.75); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -433,6 +435,7 @@ const AavartanStyleWrapper = styled.section`
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
     font-size: 1.45rem;
     line-height: 1.6;
+    font-weight: 500;
     margin-bottom: 40px;
   }
 
