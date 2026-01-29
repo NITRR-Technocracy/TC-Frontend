@@ -21,7 +21,6 @@ code {
 }
 
 
-<<<<<<< Updated upstream
 .hm-title.biomimicry-title span {
   background: linear-gradient(
     120deg,
@@ -103,7 +102,7 @@ code {
   .toastBody {
     font-size: 1rem;
   }
-=======
+}
 /* ================= TEAM PAGE BACKGROUND ================= */
 
 .team-bg {
@@ -129,5 +128,4 @@ code {
 .team-content {
   position: relative;
   z-index: 1;
->>>>>>> Stashed changes
 }
