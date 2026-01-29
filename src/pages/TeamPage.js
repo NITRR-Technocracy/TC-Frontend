@@ -1,32 +1,31 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Contact from '../sections/Contact';
-import Team from '../sections/Team';
-// import SpheresBackground from './SpheresBackground';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Contact from "../sections/Contact";
+import Team from "../sections/Team";
+import teamBg from "../assets/images/team-bg.webp"; // 👈 your background image
 
 const TeamPage = () => {
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className='TeamScrolled' style={{ position: 'relative' ,zIndex: '1'}}>
-      {/* Render Spheres in the background */}
-      <div style={{}}>
-      {/* <SpheresBackground style={{opacity: '1'}}/> */}
-      </div>
-      
-      <div style={{ position: 'relative' , background: 'transparent'}}> {/* Adjust z-index to be above the spheres */}
+    <div
+      className="team-bg"
+      style={{
+        backgroundImage: `url(${teamBg})`,
+      }}
+    >
+      <div className="team-bg-overlay"></div>
+
+      <div className="team-content">
         <Team />
-      </div>
-      <div style={{ position: 'relative' , background: 'transparent' }}> {/* Adjust z-index to be above the spheres */}
         <Contact />
       </div>
     </div>
   );
 };
 
-export default TeamPage;        
+export default TeamPage;

@@ -95,6 +95,12 @@ const Spons_data = [
         dis: "img16",
         url: img_16,
     },
+    
 ];
 
 export default Spons_data;
+
+
+
+
+

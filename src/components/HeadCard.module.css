@@ -1,4 +1,4 @@
-.card {
+/* .card {
   position: relative;
   height: 300px;
   width: 230px;
@@ -188,4 +188,170 @@
   transition-delay: 0.6s;
 }
 
+ */
 
+
+
+
+/*  - -- - 2 0 2 6  - - --  */
+
+
+/* Perspective wrapper */
+.parent {
+  width: 290px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  /* background: linear-gradient(
+    90deg,
+    rgba(227, 23, 23, 0.318) 20%,
+    rgba(8, 177, 244, 0.811) 100%
+  ); */
+  background: rgba(8, 177, 244, 0.386); 
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform-style: preserve-3d;
+  transition: all 0.8s ease-in-out;
+  box-shadow:
+    rgba(0, 0, 0, 0.93) 0px 20px 30px,
+    rgb(241, 7, 183) 0px 10px 15px;
+}
+.card:hover{
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  box-shadow: 0 20px 40px rgba(0, 255, 179, 0.432);
+  transition: 0.4s;
+}
+/* Glass layer */
+.glass {
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(117, 116, 116, 0.35) 20%,
+    rgba(221, 68, 132, 0.769) 100%
+  );
+  transform: translateZ(25px);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Content */
+.content {
+  padding: 30px;
+  text-align: center;
+  transform: translateZ(26px);
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #060226;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.8s ease-in-out;
+}
+
+.designation {
+  font-size: 14px;
+  font-weight: 600;
+  color: #060226a2;
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.4s ease 0.1s;
+}
+
+/* Profile image */
+.profileImage {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(189, 182, 182, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: translateZ(10px);
+}
+.parent:hover .profileImage{
+  transform: translate3d(0, -5px, 60px) scale(1.05);
+  box-shadow: 5px 15px 30px rgb(2, 0, 0);
+  border: 4px solid #fcf9f9b3;
+  transition: all 0.4s;
+}
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Socials */
+.bottom {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  transform: translateZ(26px);
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(237, 42, 237, 0.416);
+  border: none;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  box-shadow: rgba(237, 233, 9, 0.21) 0px 6px 10px;
+  transition: all 0.2s ease;
+}
+
+.socialBtn img {
+  width: 18px;
+  background-color: rgba(251, 248, 248, 0.147);
+  border-radius: 5px;
+}
+
+.socialBtn:hover {
+  background: rgba(11, 14, 1, 0.473);
+}
+
+/* .socialBtn:hover img {
+  filter: invert(1);
+} */
+
+/* Hover 3D effect */
+.parent:hover .card {
+  transform: rotate3d(-0.1, 0, 0, 7deg);
+}
+
+.parent:hover .name,
+.parent:hover .designation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parent:hover .bottom {
+  opacity: 1;
+}

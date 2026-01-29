@@ -1,4 +1,4 @@
-.card {
+/* .card {
   position: relative;
   height: 300px;
   width: 230px;
@@ -187,5 +187,200 @@
   bottom: 0;
   transition-delay: 0.6s;
 }
+
+ */
+
+
+
+
+
+/*  -- -  2 0 2 6  - - -  */
+
+
+/* Container */
+.parent {
+  width: 300px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 45px;
+  /* background: linear-gradient(5deg, rgba(211, 12, 211, 0.466) 0%, rgb(205, 146, 19) 100%); */
+  background: rgba(29, 118, 167, 0.193); 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(44px);
+
+  transition: all 0.8s ease-in-out;
+  transform-style: preserve-3d ;
+  box-shadow:
+    rgba(241, 44, 4, 0.141)-5px 0px 0px 0px,
+    rgba(247, 3, 3, 0.455) 10px 15px 25px -2px;
+}
+.card:hover{
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 20px 40px rgba(0, 255, 179, 0.486);
+}
+/* Glass layer */
+.glass {
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(
+    25deg,
+    rgba(89, 11, 144, 0.743) 0%,
+    rgba(246, 166, 46, 0.68) 100%
+  );
+  transform: translateZ(20px);
+  border-left: 1px solid rgba(6, 194, 236, 0.754);
+  border-bottom: 1px solid rgba(6, 194, 236, 0.754);
+  transition: all 1s ease-in-out;
+}
+
+/* Content */
+.content {
+  padding: 30px 30px 0;
+  transform: translateZ(26px);
+  text-align: center;
+}
+
+.name {
+  display: block;
+  color: #000000e3;
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 1s ease-in-out;
+}
+
+.designation {
+  display: block;
+  color: #000000b7;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+/* Profile image */
+.profileImage {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #838080fc;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateZ(5px);
+}
+.parent:hover .profileImage{
+  transform: translate3d(0, -5px, 60px) scale(1.05);
+  box-shadow: 5px 15px 30px rgb(2, 0, 0);
+  border: 4px solid #fcf9f9b3;
+  transition: all 0.4s;
+}
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom social section */
+.bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  transform: translateZ(30px);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out 0.1s;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease-in-out 0.2s;
+}
+
+.socialBtn {
+  width: 40px;
+  aspect-ratio: 1;
+  background: rgba(249, 193, 51, 0.456);
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  box-shadow: rgba(6, 6, 6, 0.679) 0px 7px 5px -5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialBtn svg {
+  width: 20px;
+  fill: #feffff;
+}
+
+.socialBtn:hover {
+  background: rgba(0, 0, 0, 0.454);
+}
+
+.socialBtn:hover svg {
+  fill: white;
+}
+
+/* Hover Effects */
+/* .parent:hover .card { */
+  /* transform: rotateX(50deg);
+  transform: rotateY(10deg); */
+  
+  /* transform: scale(1) translate(10%, 0%); */
+  /* box-shadow:
+    rgba(5, 47, 71, 0.3) -30px 50px 25px -40px,
+    rgba(5, 71, 17, 0.15) 0px 25px 30px 0px;
+} */
+/* Left cards (1st & 3rd & 5th) */
+.parent:nth-child(1):hover .card,
+.parent:nth-child(3):hover .card,
+.parent:nth-child(5):hover .card {
+  transform: rotate3d(-0.5, 0.5, -0.5, 15deg);
+}
+
+/* Middle card (2nd & 4th) */
+.parent:nth-child(2):hover .card,
+.parent:nth-child(4):hover .card {
+  transform: rotate3d(-0.5, -0.5, 0.5, 15deg);
+}
+
+.parent:hover .name,
+.parent:hover .designation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parent:hover .bottom {
+  opacity: 1;
+}
+
+.parent:hover .socials {
+  transform: translateY(0);
+}
+
+
+
+
 
 

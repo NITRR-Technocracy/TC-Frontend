@@ -16,7 +16,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 .top h1{
   font-size: 3rem;
   margin: 2rem;
@@ -96,3 +95,6 @@
     margin: 3rem 0;
   }
 } 
+
+
+
