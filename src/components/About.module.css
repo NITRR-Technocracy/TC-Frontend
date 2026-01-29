@@ -188,6 +188,54 @@
     }
 }   */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about_container {
   position: relative;
   display: flex;
@@ -245,7 +293,6 @@
 .abox_Title {
   font-size: 1.2rem;
   letter-spacing: 2px;
-  
   color: #ddedec;
   text-shadow: #ffffc7 0.5px 0.5px;
 }
@@ -262,9 +309,9 @@
   }
 }
 
-/* ======================
-   DECOR IMAGES
-====================== */
+/* ==========================
+   DECOR IMAGES (DESKTOP)
+========================== */
 
 .about_decor {
   position: absolute;
@@ -274,16 +321,8 @@
   animation: float 8s ease-in-out infinite;
 }
 
-.bird {
-  top: 8%;
-  left: 4%;
-  width: 140px;
-}
-.fox {
-  bottom: 12%;
-  left: 6%;
-  width: 160px;
-}
+.bird { top: 8%; left: 4%; width: 140px; }
+.fox { bottom: 12%; left: 6%; width: 160px; }
 .lotus {
   top: 45%;
   left: 50%;
@@ -291,16 +330,8 @@
   transform: translateX(-50%);
   opacity: 0.6;
 }
-.monkey {
-  top: 18%;
-  right: 6%;
-  width: 150px;
-}
-.rhino {
-  bottom: 10%;
-  right: 8%;
-  width: 180px;
-}
+.monkey { top: 18%; right: 6%; width: 150px; }
+.rhino { bottom: 10%; right: 8%; width: 180px; }
 
 .about_title_img {
   width: 120px;
@@ -309,23 +340,129 @@
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0);
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+  100% { transform: translateY(0); }
+}
+
+/* ==================================================
+   ✅ MOBILE RESPONSIVENESS ONLY (NO DESKTOP CHANGES)
+================================================== */
+
+@media (max-width: 768px) {
+
+  /* Bigger + clearer props */
+  .about_decor {
+    opacity: 0.65;
+    filter: drop-shadow(0 0 14px rgba(255, 200, 150, 0.45));
   }
-  50% {
-    transform: translateY(-16px);
+
+  .bird {
+    width: 110px;
+    top: 6%;
+    left: 2%;
   }
-  100% {
-    transform: translateY(0);
+
+  .fox {
+    width: 140px; /* 🔥 bigger fox */
+    bottom: 8%;
+    left: 4%;
+  }
+
+  .monkey {
+    width: 130px;
+    top: 14%;
+    right: 4%;
+  }
+
+  .rhino {
+    width: 160px; /* 🔥 more visible */
+    bottom: 6%;
+    right: 4%;
+  }
+
+  .lotus {
+    width: 90px;
+    top: 42%;
+    opacity: 0.45;
+  }
+
+  /* ABOUT title animal */
+  .about_title_img {
+    width: 90px;
+  }
+
+  /* Content breathing space */
+  .about_cont_in {
+    padding: 0 14px;
+  }
+
+  .about_des_in p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* Stats cards layout */
+  .about_boxes {
+    gap: 16px;
+    padding-bottom: 6vmax;
+  }
+
+  .about_box {
+    width: 44%;
+    padding: 12px;
+    margin-top: 1.2rem;
+  }
+
+  .abox_icon {
+    width: 34%;
+  }
+
+  .abox_num {
+    font-size: 1.8rem;
+  }
+
+  .abox_Title {
+    font-size: 0.9rem;
+    text-align: center;
   }
 }
 
-@media (max-width: 768px) {
-  .about_decor {
-    width: 80px !important;
-    opacity: 0.35;
+/* Small phones */
+@media (max-width: 425px) {
+
+  .about_des_in p {
+    font-size: 0.85rem;
   }
+
   .about_box {
-    width: 40%;
+    width: 46%;
+    border-radius: 22px;
+  }
+
+  .abox_num {
+    font-size: 1.6rem;
+  }
+
+  .abox_Title {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  .about_title_img {
+    width: 75px;
   }
 }
+
+/* Extra small phones */
+@media (max-width: 360px) {
+
+  .about_box {
+    width: 100%;
+  }
+
+  .abox_num {
+    font-size: 1.4rem;
+  }
+}
+

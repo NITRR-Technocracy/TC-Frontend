@@ -158,6 +158,14 @@
 
 
 
+
+
+
+
+
+
+
+
 import React from "react";
 import styles from "./About.module.css";
 import prizeIcon from "../assets/images/HomePage/trophy.png";

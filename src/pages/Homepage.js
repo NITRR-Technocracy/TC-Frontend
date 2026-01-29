@@ -8,7 +8,6 @@ import Timeline from "../sections/Timeline";
 import Faq from "../sections/Faq";
 import FullPageLoader from "../layout/FullPageLoader";
 
-/* ✅ IMPORT THE WRAPPER */
 import AboutFaqWrapper from "../sections/Home/AboutFaqWrapper";
 
 import "../sections/Home/Home.scss";
@@ -49,3 +48,11 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+
+
+
+
+
+
+

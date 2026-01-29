@@ -51,7 +51,6 @@ $gray: #616161;
 .slide-content {
   text-align: center;
   color: rgb(255, 255, 255);
-  // max-width: 300px;
   font-size: 1.5rem;
   text-shadow: #000000 2px 2px;
   font-family: "chisled";
@@ -138,14 +137,9 @@ $gray: #616161;
 }
 
 
-/* =========================================
-   BIOMIMICRY BREATHING GLOW — EDGE FIXED
-========================================= */
 
 .timeline-left img {
   position: relative;
-
-  /* Edge smoothing */
   -webkit-mask-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 1) 70%,
@@ -168,7 +162,6 @@ $gray: #616161;
   animation: timelineGlowSoft 6.5s ease-in-out infinite;
 }
 
-/* Smooth breathing glow (no hard edges) */
 @keyframes timelineGlowSoft {
   0% {
     filter:
@@ -198,5 +191,102 @@ $gray: #616161;
     animation-duration: 8s;
     filter:
       drop-shadow(0 0 7px rgba(0, 255, 200, 0.15));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .swip-cont {
+    padding: 15px;
+    border-radius: 30px;
+  }
+  
+  .slide-title {
+    font-size: 2rem;
+  }
+  
+  .slide-content {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-left > img {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+/* Small Mobile - Enhance existing */
+@media (max-width: 425px) {
+  .timeline-cont-inn {
+    width: 95%;
+  }
+  
+  .swip-cont {
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 2vmax;
+  }
+  
+  .innn-swipe-cont {
+    width: 75%;
+  }
+  
+  .slide-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .slide-content {
+    font-size: 0.75rem;
+  }
+  
+  .year {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .timeline-left > img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .btn-prev,
+  .btn-next {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 320px) {
+  .slide-title {
+    font-size: 0.9rem;
+  }
+  
+  .slide-content {
+    font-size: 0.7rem;
+  }
+  
+  .timeline-left > img {
+    height: 80px;
+    width: 80px;
   }
 }

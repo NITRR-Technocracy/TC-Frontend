@@ -53,11 +53,59 @@
 //   );
 // }
 
+// import React from "react";
+// import { useNavigate } from "react-router-dom";
+
+// import bg from "../../assets/images/HomePage/home-bg.png";
+// import title from "../../assets/images/HomePage/home-title.png";
+
+// import "./Home.scss";
+
+// const Section1 = () => {
+//   const navigate = useNavigate();
+
+//   return (
+//     <section className="home-hero">
+//       {/* Background */}
+//       <img src={bg} alt="home background" className="home-hero-bg" />
+
+//       {/* Overlay */}
+//       <div className="home-hero-overlay" />
+
+//       {/* Title */}
+//       <div className="home-hero-title">
+//         <img src={title} alt="Technocracy" />
+//       </div>
+
+//       {/* Buttons */}
+//       <div className="home-hero-buttons">
+//         <button
+//           className="hero-btn vigyaan-btn"
+//           onClick={() => navigate("/vigyaan")}
+//         >
+//           VIGYAAN
+//         </button>
+
+//         <button
+//           className="hero-btn ignite-btn"
+//           onClick={() => navigate("/ignite")}
+//         >
+//           IGNITE
+//         </button>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Section1;
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import bg from "../../assets/images/HomePage/home-bg.png";
+/* VIDEO BACKGROUND */
+import heroVideo from "../../assets/videos/hero-video-bg.mp4";
+
+/* TITLE IMAGE */
 import title from "../../assets/images/HomePage/home-title.png";
 
 import "./Home.scss";
@@ -67,18 +115,26 @@ const Section1 = () => {
 
   return (
     <section className="home-hero">
-      {/* Background */}
-      <img src={bg} alt="home background" className="home-hero-bg" />
+      {/* 🎥 VIDEO BACKGROUND */}
+      <video
+        className="home-hero-bg hero-video"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+      />
 
-      {/* Overlay */}
+      {/* DARK OVERLAY */}
       <div className="home-hero-overlay" />
 
-      {/* Title */}
+      {/* TITLE */}
       <div className="home-hero-title">
         <img src={title} alt="Technocracy" />
       </div>
 
-      {/* Buttons */}
+      {/* BUTTONS */}
       <div className="home-hero-buttons">
         <button
           className="hero-btn vigyaan-btn"

@@ -17,6 +17,20 @@
 // export default AboutFaqWrapper;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import styles from "./AboutFaqWrapper.module.scss";
 
@@ -30,3 +44,14 @@ const AboutFaqWrapper = ({ children }) => {
 };
 
 export default AboutFaqWrapper;
+
+
+
+
+
+
+
+
+
+
+

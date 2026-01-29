@@ -20,11 +20,7 @@ code {
   font-size: 1.2rem;
 }
 
-/* ================================
-   BIOMIMICRY TITLE THEME (GLOBAL)
-================================ */
 
-/* Base title */
 .hm-title.biomimicry-title span {
   background: linear-gradient(
     120deg,
@@ -42,12 +38,10 @@ code {
   transition: all 0.4s ease;
 }
 
-/* Strong override (kills old red/white styles) */
 .hm-title.biomimicry-title span {
   color: transparent !important;
 }
 
-/* Animal above title */
 .hm-title .title-animal {
   width: 90px;
   margin-left: 8px;
@@ -57,7 +51,6 @@ code {
   animation: floatBio 6s ease-in-out infinite;
 }
 
-/* Floating animation */
 @keyframes floatBio {
   0% { transform: translateY(0); }
   50% { transform: translateY(-14px); }
@@ -69,4 +62,44 @@ code {
   color: #000000 !important;
   text-shadow: none !important;
   -webkit-text-fill-color: #000000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .hm-title .title-animal {
+    width: 60px;
+  }
+  
+  .hm-title.biomimicry-title span {
+    text-shadow:
+      0 0 6px rgba(0, 255, 200, 0.3),
+      0 0 15px rgba(0, 200, 255, 0.2);
+  }
+}
+
+@media (max-width: 425px) {
+  .hm-title .title-animal {
+    width: 45px;
+  }
+  
+  .toastBody {
+    font-size: 1rem;
+  }
 }
