@@ -1,290 +1,290 @@
 export const coresList = [
   {
     "id": "1",
-    "Name": "Nehil Sahu",
+    "Name": "Abhay Kumar",
     "Domain": "Tech",
     "Branch": ""
   },
   {
     "id": "2",
-    "Name": "B. Deewakar Rao",
+    "Name": "Ayush Patel",
     "Branch": "",
     "Domain": "Tech"
   },
   {
     "id": "3",
-    "Name": "Prabhat Sharma",
+    "Name": "Gourav Deep Shahni",
     "Branch": "",
     "Domain": "Tech"
   },
   {
     "id": "4",
-    "Name": "Aditya Kumar Sah",
+    "Name": "Vibhor Shukla",
     "Branch": "",
     "Domain": "Tech"
   },
   {
     "id:": "5",
-    "Name": "Apoorva Kumar Sahu",
+    "Name": "Anandita Shahi",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id:": "6",
-    "Name": "Supriya Mishra",
+    "Name": "Anmol",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "7",
-    "Name": "Satvik Baranwal",
+    "Name": "Anurag Kashyap",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "8",
-    "Name": "Saumya Shrivastav",
+    "Name": "Ansh khandwe",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "9",
-    "Name": "Akshat Jain",
+    "Name": "Swastik Gupta",
     "Branch": "",
     "Domain": "Design & Editing"
   },
   {
     "id": "10",
-    "Name": "Vishal Kumar Singh",
+    "Name": "Armaan Singh",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "11",
-    "Name": "Aditya Kaushik",
+    "Name": "Apurv Shekhar",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "12",
-    "Name": "Kailash Mistry",
+    "Name": "Raksha Sahu",
     "Branch": "",
     "Domain": "Documentation"
   },
   {
     "id": "13",
-    "Name": "Aashish Shukla",
+    "Name": "Ruchismita Deheri",
     "Branch": "",
     "Domain": "Documentation"
   },
   {
     "id": "14",
-    "Name": "Chirag Ruchandani",
+    "Name": "Nihal Vyas",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "15",
-    "Name": "Prafulla Mishra",
+    "Name": "Sanskar",
     "Branch": "",
     "Domain": "Design & Editing"
   },
   {
     "id": "16",
-    "Name": "Varsha Jaiswal",
+    "Name": "Abhyudaya Choudhary ",
     "Branch": "",
     "Domain": "Sponsor"
   },
   {
     "id": "17",
-    "Name": "Apoorva Pandey",
+    "Name": "Mohd Shezan",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "18",
-    "Name": "Aviraj Mehar",
+    "Name": "N M SUBBRAMANYAN",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "19",
-    "Name": "Shantanu Tripathy",
+    "Name": "Naval Deshpande",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "20",
-    "Name": "Deedhit Parihar",
+    "Name": "Siddharth Jha",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "21",
-    "Name": "Anshu Sharma",
+    "Name": "Ayush Jha",
     "Branch": "",
     "Domain": "Sponsor"
   },
   {
     "id": "22",
-    "Name": "Md Danish Khan",
+    "Name": "Veerta Shrivastava",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "23",
-    "Name": "Bhoomika Ahuja",
+    "Name": "Sundram Rai ",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "24",
-    "Name": "Surjyanshi Mishra",
+    "Name": "Pragati",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "25",
-    "Name": "Mayank Sahu",
+    "Name": "Shruti",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "26",
-    "Name": "Ayush Ranjan Sinha",
+    "Name": "Amit Kumar",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "27",
-    "Name": "Anisha Sharma",
+    "Name": "Pranav Mane",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "28",
-    "Name": "Deepankita Sachdeva",
+    "Name": "B.Shubham",
     "Branch": "",
     "Domain": "Design & Editing"
   },
   {
     "id": "29",
-    "Name": "Surjyanshi Mishra",
+    "Name": "D Rahul Chaitanya",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "30",
-    "Name": "Nimesh Kumar Kashyap",
+    "Name": "Vinay Das",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "31",
-    "Name": "Shruti Kotkar",
+    "Name": "Sachin Kumar",
     "Branch": "",
-    "Domain": "Vigyaan"
+    "Domain": "Event Management"
   },
   {
     "id": "32",
-    "Name": "Rudrapratap Patel",
+    "Name": "Swara Mandale",
     "Branch": "",
     "Domain": "Sponsor"
   },
   {
     "id": "33",
-    "Name": "Saumya Shrivastav",
+    "Name": "Priyansh Agrawal",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "34",
-    "Name": "CH Likitha Sai",
+    "Name": "Neeraj Verma",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "35",
-    "Name": "Muskan Sarkar",
+    "Name": "Ravi Verma",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "36",
-    "Name": "Chirag Ruchandani",
+    "Name": "Rudra Verma",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Media & PR"
   },
   {
     "id": "37",
-    "Name": "Sanskar Sonwani",
+    "Name": "Sakshi Goswami",
     "Branch": "",
     "Domain": "Sponsor"
   },
   {
     "id": "38",
-    "Name": "Bheema",
+    "Name": "Rudra Narayan Panda",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "39",
-    "Name": "Aditya Kaushik",
+    "Name": "Prashast Sidhant",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "40",
-    "Name": "Adarsh Kumar",
+    "Name": "SANDESH KUMAR",
     "Branch": "",
     "Domain": "Event Management"
   },
   {
     "id": "41",
-    "Name": "Anisha Sharma",
+    "Name": "Tanish  Dhavale",
     "Branch": "",
     "Domain": "Vigyaan"
   },
   {
     "id": "42",
-    "Name": "Geeta G",
+    "Name": "Anirudh Pratap Singh",
     "Branch": "",
     "Domain": "Documentation"
   },
   {
     "id": "43",
-    "Name": "Ankush Jaiswal",
+    "Name": "Shubham KD",
     "Branch": "",
     "Domain": "Design & Editing"
   },
   {
     "id": "44",
-    "Name": "Shrutikshan P Kumar",
+    "Name": "Mohit Vishwakarma",
     "Branch": "",
     "Domain": "Sponsor"
   },
   {
     "id": "45",
-    "Name": "Md Danish Khan",
+    "Name": "RAHUL SINGH",
     "Branch": "",
-    "Domain": "Vigyaan"
+    "Domain": "Tech"
   },
   {
     "id": "46",
-    "Name": "Shreya Tripathi",
+    "Name": "Raghav Mahajan",
     "Branch": "",
-    "Domain": "Media and PR"
+    "Domain": "Event Management"
   },
   {
     "id": "47",
-    "Name": "Akshat Jain",
+    "Name": "Taruna Sahu",
     "Branch": "",
     "Domain": "Design & Editing"
   },
-  {
-    "id": "48",
-    "Name": "Shivam Vyas",
-    "Branch": "",
-    "Domain": "Sponsor"
-  }
+  // {
+  //   "id": "48",
+  //   "Name": "Shivam Vyas",
+  //   "Branch": "",
+  //   "Domain": "Sponsor"
+  // }
 ]
