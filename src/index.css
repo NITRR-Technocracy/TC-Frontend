@@ -113,7 +113,7 @@ code {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  filter: brightness(0.7) contrast(1.05) saturate(1.25);
+  filter: brightness(0.9) contrast(1.11) saturate(1.2);
   image-rendering: auto;
 }
 

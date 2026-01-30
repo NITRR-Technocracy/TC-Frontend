@@ -212,20 +212,20 @@
   border-radius: 45px;
   /* background: linear-gradient(5deg, rgba(211, 12, 211, 0.466) 0%, rgb(205, 146, 19) 100%); */
   background: rgba(29, 118, 167, 0.193); 
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(44px);
 
   transition: all 0.8s ease-in-out;
   transform-style: preserve-3d ;
   box-shadow:
-    rgba(241, 44, 4, 0.141)-5px 0px 0px 0px,
-    rgba(247, 3, 3, 0.455) 10px 15px 25px -2px;
+    rgba(234, 237, 238, 0.776)-5px 0px 0px 0px,
+    rgba(247, 3, 3, 0.519) 10px 15px 25px -2px;
 }
 .card:hover{
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(15px);
 
-  box-shadow: 0 20px 40px rgba(0, 255, 179, 0.486);
+  box-shadow: 0 20px 40px rgba(55, 255, 0, 0.711);
 }
 /* Glass layer */
 .glass {
@@ -354,8 +354,7 @@
 } */
 /* Left cards (1st & 3rd & 5th) */
 .parent:nth-child(1):hover .card,
-.parent:nth-child(3):hover .card,
-.parent:nth-child(5):hover .card {
+.parent:nth-child(3):hover .card{
   transform: rotate3d(-0.5, 0.5, -0.5, 15deg);
 }
 
@@ -363,6 +362,10 @@
 .parent:nth-child(2):hover .card,
 .parent:nth-child(4):hover .card {
   transform: rotate3d(-0.5, -0.5, 0.5, 15deg);
+}
+/* Last card */
+.parent:nth-child(5):hover .card {
+  transform: rotateX(6deg) scale(1.03);
 }
 
 .parent:hover .name,
