@@ -18,7 +18,7 @@
     padding: 5px 20px;
     
     /* Create a semi-transparent background */
-    background-color: rgba(34, 49, 67, 0.765);
+    background-color: rgba(24, 34, 47, 0.864);
     
     /* Add backdrop filter for blur effect */
     backdrop-filter: blur(10px);
@@ -28,7 +28,7 @@
     border-radius: 8px;
     
     /* Add a subtle text shadow for better contrast */
-    text-shadow: 1px 1px 2px rgba(255, 254, 254, 1);
+    text-shadow: 1px 1px 2px rgba(255, 254, 254, 0.147);
   }
 
   

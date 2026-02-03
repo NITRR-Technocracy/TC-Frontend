@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from "../sections/Contact";
 import Team from "../sections/Team";
-import teamBg from "../assets/images/team-bg.webp"; // 👈 your background image
+import teamBg from "../assets/images/team-bg5.webp";
 
 const TeamPage = () => {
   useEffect(() => {

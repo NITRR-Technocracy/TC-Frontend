@@ -20,6 +20,11 @@
     column-gap: 12vw;
     row-gap: 6vw;
 }
+.OverallHeadSection >:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 
 .HeadSection{
     display: flex;
@@ -213,7 +218,7 @@
   padding: 0.8rem 1.8rem;
   border-radius: 12px;
   border: none;
-  background: rgba(0, 0, 0, 0.847);
+  background: rgba(0, 0, 0, 0.876);
   color: #fffffff4;
   font-weight: 900;
   cursor: pointer;
@@ -238,11 +243,11 @@
   width: 100%;
   max-width: 1100px; /* ⬅ allows side-by-side columns */
   margin: 0 auto 4rem;
-  background: #3e2e3f62;
-  backdrop-filter: blur(15px);
+  background: #03edf548;
+  backdrop-filter: blur(25px);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 20px 50px rgba(208, 12, 12, 0.491);
+  box-shadow: 0 20px 50px rgba(0, 255, 221, 0.628);
 }
 
 /* 🔥 GRID LAYOUT – THIS IS THE KEY FIX */
@@ -278,7 +283,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #08d8fc);
+  background: linear-gradient(135deg, #eceef0d0, #725d02eb);
   transition: all 0.3s ease;
 }
 
@@ -291,7 +296,7 @@
 .execName {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #cccaca;
+  color: #000000e4;
   transition: all 0.3s ease;
 }
 
