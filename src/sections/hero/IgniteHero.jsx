@@ -114,180 +114,76 @@ const VigyaanHero = () => {
 
   return (
     <VigyaanStyleWrapper>
-      <div className="container">
-        <div className="title-container">
-          <img className="chameleon" src={snail_head_or} alt="Chameleon" />
-          <img src={titleImg} alt="IGNITE" className="main-title-img" />
-        </div>
+  <div className="container">
+    <div className="title-container">
+      <img className="chameleon" src={snail_head_or} alt="Chameleon" />
+      <img src={titleImg} alt="IGNITE" className="main-title-img" />
+    </div>
 
-        <div className="hero-content">
-          <div className="vigyaan-desc">
-            Vigyaan, the science exhibition organized during the tech fest,
-            showcases groundbreaking innovations, cutting-edge technologies, and
-            exciting projects, providing a platform for students to delve deeper
-            into the world of science and explore limitless possibilities.
-          </div>
-
-          <div className="btncontainer2">
-            <div className="uiverse-play-btn">
-              <style>{`
-.uiverse-play-btn button {
-  position: relative;
-  width: 14em;
-  height: 4.5em;
-  outline: none;
-  transition: 0.12s;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  font-weight: 800;
-  color: #ddebf0;
-}
-
-.uiverse-play-btn #clip {
-  --color: #2761c3;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border: 6px double var(--color);
-  box-shadow: inset 0px 0px 20px #195480;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
-
-.uiverse-play-btn .arrow {
-  position: absolute;
-  transition: 0.2s;
-  background-color: #2761c3;
-  top: 32%;
-  width: 13%;
-  height: 36%;
-}
-
-.uiverse-play-btn #leftArrow {
-  left: -13.5%;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
-}
-
-.uiverse-play-btn #rightArrow {
-  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
-  left: 102%;
-}
-
-.uiverse-play-btn button:hover #rightArrow {
-  background-color: #27c39f;
-  left: -15%;
-  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-}
-
-.uiverse-play-btn button:hover #leftArrow {
-  background-color: #27c39f;
-  left: 103%;
-  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-}
-
-.uiverse-play-btn .corner {
-  position: absolute;
-  width: 5em;
-  height: 5em;
-  background-color: #2761c3;
-  box-shadow: inset 1px 1px 10px #2781c3;
-  transform: scale(1) rotate(45deg);
-  transition: 0.2s;
-}
-
-.uiverse-play-btn #rightTop {
-  top: -2.6em;
-  left: 92%;
-}
-
-.uiverse-play-btn #leftTop {
-  top: -2.6em;
-  left: -3.6em;
-}
-
-.uiverse-play-btn #leftBottom {
-  top: 2.6em;
-  left: -2.6em;
-}
-
-.uiverse-play-btn #rightBottom {
-  top: 46%;
-  left: 88%;
-}
-
-.uiverse-play-btn button:hover #leftTop {
-  animation: 0.1s ease-in-out 0.05s both changeColor8,
-  0.2s linear 0.4s both lightEffect8;
-}
-
-.uiverse-play-btn button:hover #rightTop {
-  animation: 0.1s ease-in-out 0.15s both changeColor8,
-  0.2s linear 0.4s both lightEffect8;
-}
-
-.uiverse-play-btn button:hover #rightBottom {
-  animation: 0.1s ease-in-out 0.25s both changeColor8,
-  0.2s linear 0.4s both lightEffect8;
-}
-
-.uiverse-play-btn button:hover #leftBottom {
-  animation: 0.1s ease-in-out 0.35s both changeColor8,
-  0.2s linear 0.4s both lightEffect8;
-}
-
-.uiverse-play-btn button:hover .corner {
-  transform: scale(1.25) rotate(45deg);
-}
-
-.uiverse-play-btn button:hover #clip {
-  animation: 0.2s ease-in-out 0.55s both greenLight8;
-  --color: #27c39f;
-}
-
-@keyframes changeColor8 {
-  from { background-color: #2781c3; }
-  to { background-color: #27c39f; }
-}
-
-@keyframes lightEffect8 {
-  from { box-shadow: 1px 1px 5px #27c39f; }
-  to { box-shadow: 0 0 2px #27c39f; }
-}
-
-@keyframes greenLight8 {
-  from { }
-  to { box-shadow: inset 0px 0px 32px #27c39f; }
-}
-
-@keyframes leftArrow8 {
-  from { transform: translate(0px); }
-  to { transform: translateX(10px); }
-}
-
-@keyframes rightArrow8 {
-  from { transform: translate(0px); }
-  to { transform: translateX(-10px); }
-}
-              `}</style>
-
-              <button onClick={goToRegistration}>
-                REGISTER NOW
-                <div id="clip">
-                  <div id="leftTop" className="corner"></div>
-                  <div id="rightBottom" className="corner"></div>
-                  <div id="rightTop" className="corner"></div>
-                  <div id="leftBottom" className="corner"></div>
-                </div>
-                <span id="rightArrow" className="arrow"></span>
-                <span id="leftArrow" className="arrow"></span>
-              </button>
-            </div>
-          </div>
-        </div>
+    <div className="hero-content">
+      <div className="vigyaan-desc">
+        Vigyaan, the science exhibition organized during the tech fest,
+        showcases groundbreaking innovations, cutting-edge technologies, and
+        exciting projects, providing a platform for students to delve deeper
+        into the world of science and explore limitless possibilities.
       </div>
-    </VigyaanStyleWrapper>
+
+<div className="closed-status-container">
+  <style>{`
+    .closed-status-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 40px 10px;
+      background: transparent; /* The outer area remains transparent */
+      box-sizing: border-box;
+    }
+
+    .closed-label-solid {
+      /* Fluid typography for responsiveness */
+      font-size: clamp(1rem, 4.5vw, 1.8rem); 
+      font-weight: 900;
+      color: #ff0000;
+      
+      /* Pure Black Background for the label box */
+      background-color: #000000;
+      
+      /* Neon Border */
+      border: 2px solid #ff0000;
+      padding: clamp(10px, 2.5vw, 18px) clamp(25px, 6vw, 50px);
+      
+      text-transform: uppercase;
+      letter-spacing: clamp(2px, 1.2vw, 6px);
+      border-radius: 4px;
+      text-align: center;
+      
+      /* Strong Neon Glows */
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), inset 0 0 10px rgba(255, 0, 0, 0.2);
+      
+      width: fit-content;
+      max-width: 90%;
+      user-select: none;
+      line-height: 1.2;
+      
+      /* Animation to keep that 'Vigyaan' tech energy */
+      animation: neonPulse 3s infinite alternate;
+    }
+
+    @keyframes neonPulse {
+      0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); transform: scale(1); }
+      100% { box-shadow: 0 0 25px rgba(255, 0, 0, 0.7); transform: scale(1.02); }
+    }
+  `}</style>
+  
+  <div className="closed-label-solid">
+    REGISTRATION CLOSED!
+  </div>
+</div>
+    </div>
+  </div>
+</VigyaanStyleWrapper>
   );
 };
 
