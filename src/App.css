@@ -484,6 +484,7 @@ input[type="text"]:focus {
 
 .mw300 {
 	max-width: 300px;
+	
 }
 
 /*------------------------------------------------------------------*/
@@ -825,16 +826,6 @@ a.full_link {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Totop Button */
 .metaportal_fn_totop {
 	display: block;
@@ -981,6 +972,129 @@ a.full_link {
 }
 
 
+
+
+/* Special send contact button class css */
+/* ================= BUTTON BASE ================= */
+
+.metaportal_fn_protected input[type="submit"],
+.metaportal_fn_button_contact {
+  display: flex;                     /* FIX CENTERING */
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+  height: 50px;
+  padding: 0 34px;
+
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  font-family: var(--hff);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+
+  background: transparent;
+  outline: none;
+  border: none;
+  overflow: hidden;                  /* IMPORTANT */
+}
+
+/* ================= FULL WIDTH VERSION ================= */
+
+.metaportal_fn_button_contact.full {
+  width: 100%;
+  height: 80px;
+}
+
+/* ================= TEXT LAYER ================= */
+
+.message_button {
+  position: relative;
+  z-index: 5;                        /* ABOVE BORDER */
+  pointer-events: none;
+
+  text-shadow:
+    0 0 8px rgba(0, 255, 170, 0.7),
+    0 0 16px rgba(0, 255, 170, 0.4);
+}
+
+/* ================= GLOW BACKGROUND ================= */
+
+.metaportal_fn_button_contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+
+  opacity: 0.25;
+  background: rgba(0, 255, 170, 0.12);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 170, 0.7),
+    0 0 40px rgba(0, 255, 170, 0.35);
+
+  pointer-events: none;
+}
+
+/* ================= NEON BORDER ================= */
+
+.metaportal_fn_button_contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  border: 3px solid transparent;
+
+  background: linear-gradient(
+    45deg,
+    #00ff88,
+    #00ffcc,
+    #39ff14,
+    #00ffcc,
+    #00ff88
+  ) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+
+  background-size: 400% 400%;
+  animation: animatedgradient 3.5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.metaportal_fn_button_contact:hover::before {
+  opacity: 0.45;
+  box-shadow:
+    0 0 30px rgba(0, 255, 170, 1),
+    0 0 60px rgba(0, 255, 170, 0.8);
+}
+
+/* ================= ACTIVE (CLICK) ================= */
+
+.metaportal_fn_button_contact:active {
+  transform: scale(0.97);
+}
+
+/* ================= GRADIENT ANIMATION ================= */
+
+@keyframes animatedgradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
 
 
@@ -2696,10 +2810,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   
   /* Update the .fn_cs_contact_form class */
   .fn_cs_contact_form {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(23, 22, 22, 0.743);
 	padding: 40px;
 	border-radius: 10px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(239, 7, 7, 0.678);
   }
   
   /* Update the input and textarea styles */
@@ -2717,7 +2831,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   
   .fn_cs_contact_form textarea:focus,
   .fn_cs_contact_form input[type="text"]:focus {
-	border-color: var(--mc1);
+	border-color: rgba(157, 228, 16, 0.955);
 	box-shadow: 0 0 10px rgba(var(--mc1-rgb), 0.5);
   }
   
@@ -8048,7 +8162,7 @@ CSS*/
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 0;
+	z-index: -0.9;
 }
 .Eventscrolled {
 	background: url("./assets/event.webp");
@@ -8433,3 +8547,5 @@ path.two {
 		fill: white;
 	}
 }
+
+

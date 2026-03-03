@@ -18,24 +18,24 @@
     padding: 5px 20px;
     
     /* Create a semi-transparent background */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(24, 34, 47, 0.864);
     
     /* Add backdrop filter for blur effect */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px); /* For Safari */
     
     /* Rounded corners for a softer look */
     border-radius: 8px;
     
     /* Add a subtle text shadow for better contrast */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(255, 254, 254, 0.147);
   }
 
   
   .ptitle h1{
     font-size: 2.8rem;
-    color: rgb(255, 200, 0);
-    text-decoration: solid blue 2px;
+    color: rgb(140, 225, 13);
+    text-decoration: solid rgb(17, 17, 174) 2px;
     font-family: 'Minion';
   }
   
@@ -50,8 +50,8 @@
               font-family: 'Minion';
               /* font-style: yellow;  */
               
-              background: linear-gradient(to bottom, #ffffff 20%,
-                    #ffffff 100%);
+              background: linear-gradient(to bottom, #06b9f4a7 20%,
+                    #fe0404 100%);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
 

@@ -58,7 +58,7 @@ const Contact = () => {
                     <a
                       id={styles.send_message}
                       href="/"
-                      className="metaportal_fn_button full"
+                      className="metaportal_fn_button_contact full"
                     >
                       <span className={styles.message_button}>Send Message</span>
                     </a>
