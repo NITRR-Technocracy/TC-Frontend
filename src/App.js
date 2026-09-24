@@ -16,6 +16,8 @@ import TeamPage from "./pages/TeamPage";
 import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 import TechTeam from "./pages/TechTeam";
 import BlogPage from "./pages/BlogPage";
@@ -223,6 +225,10 @@ function App() {
               />
               <Route exact="true" path="/sponsors" element={<SponsorsPage />} />
               <Route exact="true" path="/tech-team" element={<TechTeam />} />
+              <Route exact="true" path="/privacy" element={<PrivacyPolicy />} />
+              <Route exact="true" path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route exact="true" path="/terms" element={<TermsOfService />} />
+              <Route exact="true" path="/terms-of-service" element={<TermsOfService />} />
               {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
             </Routes>
             <Footer />

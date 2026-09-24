@@ -36,6 +36,8 @@ function Footer (){
 								<li><a href="/ignite">Ignite</a></li>
 								<li><a href="/sponsors">Sponsors</a></li>
 								<li><a href="/team">Team</a></li>
+								<li><a href="/privacy">Privacy Policy</a></li>
+								<li><a href="/terms">Terms of Service</a></li>
 							</ul>
 						</div>
 						<div className={styles.footercol}>
