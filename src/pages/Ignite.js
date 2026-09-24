@@ -41,9 +41,9 @@ const handleScroll = () => {
     <div className="Ignitescrolled"> 
       <div className={scrolled ? "dark-overlay" : ""}></div>
           <IgniteHero />
-          <div className="AavartanContainer">
+          {/* <div className="AavartanContainer">
           <IgniteForm />
-          </div>
+          </div> */}
         </div>
     
   )
