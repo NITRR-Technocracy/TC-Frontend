@@ -1,13 +1,13 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
-import keys from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-const backend = keys.backend;
+const backend = config.backend;
 
 const PixelPlaygroundForm = () => {
   useEffect(() => {
@@ -325,7 +325,7 @@ const PixelPlaygroundForm = () => {
               </ul>
             </div>
             <HCaptcha
-              sitekey={keys.hcaptcha}
+              sitekey={config.hcaptcha}
               onClick={onLoad}
               onVerify={setToken}
               ref={captchaRef}

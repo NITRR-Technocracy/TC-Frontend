@@ -1,14 +1,13 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import keys from "../keys.json";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 
-const backend = urls.backend;
+const backend = config.backend;
 
 const RoboWarsForm = () => {
   useEffect(() => {
@@ -372,7 +371,7 @@ const RoboWarsForm = () => {
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
               <HCaptcha
-                sitekey={keys.hcaptcha}
+                sitekey={config.hcaptcha}
                 onClick={onLoad}
                 onVerify={setToken}
                 ref={captchaRef}

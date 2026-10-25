@@ -1,0 +1,9 @@
+const config = {
+  backend:
+    process.env.REACT_APP_BACKEND_URL || "https://technocracy.nitrr.ac.in",
+  hcaptcha:
+    process.env.REACT_APP_HCAPTCHA_SITE_KEY ||
+    "10000000-ffff-ffff-ffff-000000000001",
+};
+
+export default config;

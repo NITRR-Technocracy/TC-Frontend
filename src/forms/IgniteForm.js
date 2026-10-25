@@ -1,10 +1,9 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import keys from "../keys.json";
 import "aos/dist/aos.css";
 import IGNITE_Template from "../assets/Ignite_Idea_Submission_Template/IGNITE_Template.pptx";
 import IgniteLoader from "../layout/IgniteLoader";
@@ -13,7 +12,7 @@ import toast from "react-hot-toast";
 import AlertScreen from "../components/alertScreen";
 
 
-const backend = urls.backend;
+const backend = config.backend;
 
 const IgniteForm = () => {
   useEffect(() => {
@@ -670,7 +669,7 @@ const IgniteForm = () => {
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
               <HCaptcha
-                sitekey={keys.hcaptcha}
+                sitekey={config.hcaptcha}
                 onClick={onLoad}
                 onVerify={setToken}
                 ref={captchaRef}
