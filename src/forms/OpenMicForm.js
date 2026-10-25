@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import keys from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import styled from "styled-components";
 
-const backend = keys.backend;
+const backend = config.backend;
 
 const AddButton = styled.button`
   background-color: green;
@@ -218,7 +218,7 @@ const OpenMicForm = () => {
               </ul>
             </div>
 
-            <HCaptcha sitekey={keys.hcaptcha} onVerify={setToken} />
+            <HCaptcha sitekey={config.hcaptcha} onVerify={setToken} />
             <div className="mint_desc" style={{ paddingTop: "2rem" }}>
               {!isSubmitting ? (
                 <div className="metaportal_fn_button" style={{ cursor: "pointer" }} onClick={submit} disabled={isSubmitting}>

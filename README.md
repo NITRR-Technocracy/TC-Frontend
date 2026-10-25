@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Local configuration
+
+The forms use the backend URL and hCaptcha site key from environment variables.
+Copy `.env.example` to `.env` before running the app and replace the hCaptcha
+value with the site's development key when form submissions need to be tested.
+The example values allow the frontend to start without the previously required
+untracked `keys.json` file.
+
 In the project directory, you can run:
 
 ### `npm start`
