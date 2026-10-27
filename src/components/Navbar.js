@@ -23,17 +23,18 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
 
     useEffect(() => {
         setActiveLink(location.pathname);
-                        // Add event listener for scroll
-                        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll, { passive: true });
 
-                        // Cleanup the event listener on unmount
-                        return () => {
-                            window.removeEventListener("scroll", handleScroll);
-                        };
+        // Cleanup the event listener on unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, [location.pathname]);
 
     const handleScroll = () => {
-        if (window.scrollY > 85) {
+        if (window.scrollY > 20) {
             setScrolled(true); // User has scrolled down
         } else {
             setScrolled(false); // User is at the top
@@ -74,6 +75,11 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                         <li className={activeLink === "/ignite" ? "active-link" : ""}>
                             <NavLink to="/ignite" activeclassname="active-link" onClick={closeNavbar}>
                                 IGNITE
+                            </NavLink>
+                        </li>
+                        <li className={activeLink === "/case-ops" ? "active-link" : ""}>
+                            <NavLink to="/case-ops" activeclassname="active-link" onClick={closeNavbar}>
+                                CASE-OPS
                             </NavLink>
                         </li>
                         <li className={activeLink === "/sponsors" ? "active-link" : ""}>

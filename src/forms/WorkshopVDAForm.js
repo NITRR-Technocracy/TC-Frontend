@@ -1,7 +1,7 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import keys from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
@@ -19,7 +19,7 @@ const StyledDiv = styled.div`
   }
 `;
 
-const backend = keys.backend;
+const backend = config.backend;
 
 const WorkshopVDAForm = () => {
   useEffect(() => {
@@ -222,7 +222,7 @@ const WorkshopVDAForm = () => {
               </ul>
             </div>
             {/* <HCaptcha
-              sitekey={keys.hcaptcha}
+              sitekey={config.hcaptcha}
               onClick={onLoad}
               onVerify={setToken}
               ref={captchaRef}

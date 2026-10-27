@@ -1,12 +1,12 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../keys.json";
+import config from "../config";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 
-const backend = urls.backend;
+const backend = config.backend;
 
 const EventForm = () => {
   useEffect(() => {

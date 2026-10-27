@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Aavartan from "./pages/Aavartan";
 import Vigyaan from "./pages/Vigyaan";
 import Ignite from "./pages/Ignite";
+import CaseOps from "./pages/CaseOps";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Navigation from "./layout/Navigation";
@@ -217,6 +218,8 @@ function App() {
 
               <Route exact="true" path="/vigyaan" element={<Vigyaan />} />
               <Route exact="true" path="/ignite" element={<Ignite />} />
+              <Route exact="true" path="/case-ops" element={<CaseOps />} />
+              <Route exact="true" path="/caseops" element={<CaseOps />} />
               <Route exact="true" path="/team" element={<TeamPage />} />
               <Route
                 exact="true"

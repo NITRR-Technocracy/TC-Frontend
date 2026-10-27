@@ -8276,6 +8276,16 @@ button, input, textarea, select, a { cursor: auto !important; }
 /* hide when pointer is inactive or touching */
 body.touch .custom-cursor-el { display: none; }
 
+/* Restore normal native cursor when requested by a page (e.g. CaseOps) */
+body.normal-cursor .custom-cursor-el {
+	display: none !important;
+}
+
+body.normal-cursor,
+body.normal-cursor .custom-cursor {
+	cursor: auto !important;
+}
+
 .goodbtn {
 	width: 220px;
 	height: 50px;

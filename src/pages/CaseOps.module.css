@@ -1,0 +1,1335 @@
+/* ==========================================================================
+   CASE OPS 2027 — Dedicated Event Stylesheet
+   Direction: Editorial Strategic Intelligence & Problem-Solving
+   Designed to eliminate generic AI tropes, card-soup, and gratuitous ornaments.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --co-bg-ground: #080c14;
+  --co-bg-surface: #0f1726;
+  --co-bg-subtle: #131d2e;
+  --co-bg-elevated: #162238;
+  --co-ink-primary: #f8fafc;
+  --co-ink-secondary: #cbd5e1;
+  --co-ink-muted: #94a3b8;
+  --co-accent: #0284c7;
+  --co-accent-focus: #38bdf8;
+  --co-amber: #f59e0b;
+  --co-amber-surface: #1e1b13;
+}
+
+/* Scoped body adjustments on CaseOps route to eliminate inherited tells */
+:global(body.caseops-page) {
+  font-family: 'Albert Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background-color: #080c14 !important;
+}
+
+:global(body.caseops-page) :global(h1),
+:global(body.caseops-page) :global(h2),
+:global(body.caseops-page) :global(h3),
+:global(body.caseops-page) :global(h4),
+:global(body.caseops-page) :global(h5),
+:global(body.caseops-page) :global(h6),
+:global(body.caseops-page) :global(p),
+:global(body.caseops-page) :global(span),
+:global(body.caseops-page) :global(a),
+:global(body.caseops-page) :global(button) {
+  text-shadow: none !important; /* taste-skill-ignore */
+}
+
+:global(body.caseops-page) :global(#navbar li a) {
+  font-family: 'Albert Sans', sans-serif !important;
+  text-shadow: none !important; /* taste-skill-ignore */
+}
+
+:global(body.caseops-page) :global(.creative_link) {
+  background-image: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #f1f5f9 !important;
+  color: #f1f5f9 !important;
+}
+
+:global(body.caseops-page) :global(.creative_link:before) {
+  background: #38bdf8 !important;
+}
+
+:global(body.caseops-page) :global(footer *) {
+  font-family: 'Albert Sans', sans-serif !important;
+  text-shadow: none !important; /* taste-skill-ignore */
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.caseOpsContainer {
+  min-height: 100svh;
+  background-color: #080c14;
+  color: #f8fafc;
+  font-family: 'Albert Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+  cursor: default !important;
+}
+
+:global(body.normal-cursor) :global(.custom-cursor-el) {
+  display: none !important;
+}
+
+:global(body.normal-cursor) :global(.custom-cursor),
+:global(body.normal-cursor) {
+  cursor: auto !important;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 6.5rem 2rem 0;
+}
+
+/* ==========================================================================
+   Notice Banner (Tentative Framework Status)
+   ========================================================================== */
+.noticeBanner {
+  margin-bottom: 2rem;
+  background-color: #0f1726;
+  border-left: 4px solid #f59e0b;
+  border-radius: 6px;
+  padding: 1.1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.noticeLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.noticeBadge {
+  background-color: #1e1b13;
+  color: #f59e0b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.noticeText {
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.noticeStatusTag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Section 1: Hero
+   ========================================================================== */
+.heroSection {
+  padding: 1rem 0 4.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.75rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroTitle {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: clamp(3.2rem, 7.2vw, 5.8rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.heroInstitution {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.heroTagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 540px;
+}
+
+/* Quick Facts Grid */
+.quickFactsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  background-color: #0f1726;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.factCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.factLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.factValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Hero Actions */
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.primaryBtn {
+  background-color: #0369a1;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.65rem;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.primaryBtn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.btnArrow {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.primaryBtn:hover .btnArrow {
+  transform: translateY(2px);
+}
+
+.secondaryBtn {
+  background-color: #162238;
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #1c2b47;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.tertiaryBtn {
+  background: transparent;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tertiaryBtn:hover {
+  color: #38bdf8;
+}
+
+.tertiaryBtn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+/* Hero Visual & Interactive Matrix */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matrixCard {
+  width: 100%;
+  background-color: #0f1726;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.matrixTopBar {
+  background-color: #131d2e;
+  padding: 0.85rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.matrixTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.matrixTabGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #080c14;
+  padding: 0.3rem;
+  border-radius: 6px;
+}
+
+.matrixTab {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.matrixTab:focus-visible {
+  outline: 2px solid #38bdf8;
+}
+
+.matrixTabActive {
+  background-color: #0369a1;
+  color: #ffffff;
+}
+
+.matrixBody {
+  padding: 1.25rem;
+  background-color: #080c14;
+}
+
+.heroGraphicImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.matrixLiveSummary {
+  margin-top: 1rem;
+  background-color: #0f1726;
+  border-radius: 6px;
+  padding: 0.95rem 1.25rem;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.summaryBadge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background-color: #080c14;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.summaryText {
+  color: #cbd5e1;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+/* ==========================================================================
+   Common Section Headers
+   ========================================================================== */
+.sectionHeader {
+  margin-bottom: 2.75rem;
+}
+
+.sectionTitle {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.sectionDescription {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 680px;
+  text-wrap: pretty;
+}
+
+/* ==========================================================================
+   Section 2: What Is Case-Ops?
+   ========================================================================== */
+.overviewSection {
+  padding: 5rem 0;
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.editorialLeadBlock {
+  background-color: #0f1726;
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.editorialLeadText {
+  font-size: 1.18rem;
+  color: #f1f5f9;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  font-weight: 400;
+}
+
+.leadImageWrap {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #080c14;
+}
+
+.editorialLeadPhoto {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.editorialMetaNote {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.editorialPillarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pillarItem {
+  background-color: #0f1726;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.pillarHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pillarIcon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.pillarTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.pillarText {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Section 3: Planned Tracks
+   ========================================================================== */
+.tracksSection {
+  padding: 5rem 0;
+}
+
+.tracksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.trackCard {
+  background-color: #0f1726;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.trackCard:hover {
+  background-color: #131d2e;
+  transform: translateY(-3px);
+}
+
+.trackImageBanner {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background-color: #080c14;
+}
+
+.trackHeaderPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caseTrackHeaderPhoto {
+  object-position: center 25%;
+}
+
+.prototypeHeaderPhoto {
+  object-position: center 48%;
+}
+
+.trackContentWrap {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.trackTopHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.trackIdTag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.trackStateTag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f59e0b;
+  background-color: #1e1b13;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.trackHeadingWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.trackVectorIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.trackName {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.trackDescription {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.trackDeliverablesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.trackDeliverable {
+  background-color: #080c14;
+  color: #f1f5f9;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+}
+
+.trackAudienceStrip {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.audiencePrefix {
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+}
+
+.crossTrackCallout {
+  margin-top: 2rem;
+  background-color: #0f1726;
+  border-radius: 8px;
+  padding: 1.25rem 1.65rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.crossTrackIcon {
+  font-size: 1.4rem;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.crossTrackText {
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.crossTrackText strong {
+  color: #f8fafc;
+}
+
+/* ==========================================================================
+   Section 4: Proposed Event Rounds (Differentiated Pipeline Flow)
+   ========================================================================== */
+.roundsSection {
+  padding: 5rem 0;
+}
+
+.pipelineFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.qualificationPhaseRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.roundStepCard {
+  background-color: #0f1726;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.roundStepCard:hover {
+  background-color: #131d2e;
+  transform: translateY(-3px);
+}
+
+.roundTopMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.roundNumber {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+.roundStageTag {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.roundTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.roundIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.roundTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.roundDesc {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.roundShortlistPill {
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  background-color: #080c14;
+  padding: 0.55rem 0.95rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.culminationPhaseRow {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+}
+
+.sprintCard {
+  background-color: #0f1726;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sprintCard:hover {
+  background-color: #131d2e;
+  transform: translateY(-3px);
+}
+
+.finaleHighlightCard {
+  background-color: #0f1726;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.finaleHighlightCard:hover {
+  background-color: #131d2e;
+  transform: translateY(-3px);
+}
+
+.finaleImageContainer {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: #080c14;
+}
+
+.finaleCampusPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.finaleContent {
+  padding: 1.75rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.roundNumberHighlight {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #f59e0b;
+}
+
+.roundStageTagGold {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fde68a;
+  background-color: #1e1b13;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.roundShortlistPillHighlight {
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f59e0b;
+  background-color: #1e1b13;
+  padding: 0.55rem 0.95rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Section 5: Rules & Evaluation (Tiered Institutional Integrity)
+   ========================================================================== */
+.rulesSection {
+  padding: 5rem 0;
+}
+
+.rulesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.safeguardsCol,
+.rubricCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.colSectionHeading {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem;
+}
+
+.safeguardsTierList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.safeguardTier {
+  background-color: #0f1726;
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.safeguardItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.safeguardIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.safeguardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.safeguardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.safeguardDesc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.rubricTablesWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rubricCard {
+  background-color: #0f1726;
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.rubricHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+.rubricTrackTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.rubricTrackTag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #38bdf8;
+  background-color: #080c14;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+}
+
+.rubricTable {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rubricEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rubricCriteria {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #f1f5f9;
+}
+
+.rubricDetail {
+  margin: 0;
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Section 6: Tentative Timeline (Structured Roadmap)
+   ========================================================================== */
+.timelineSection {
+  padding: 5rem 0;
+}
+
+.timelineContainer {
+  background-color: #0f1726;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+}
+
+.timelineScheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.timelineRow {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.timelineRowFinale {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.timelinePhaseTag {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.timelinePhaseTagGold {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.timelineRowBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.timelineTitle {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.timelineText {
+  font-size: 0.96rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.timelineDisclaimer {
+  margin-top: 2rem;
+  background-color: #1e1b13;
+  border-radius: 8px;
+  padding: 1.25rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.disclaimerIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.disclaimerText {
+  color: #fde68a;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Section 7: Event Dossier Bridge & Navigation
+   ========================================================================== */
+.eventNavBridge {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.bridgeInfoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bridgeEventLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.bridgeTitle {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bridgeOrganiser {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.bridgeNavActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bridgeLinkBtn {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.bridgeLinkBtn:hover {
+  color: #ffffff;
+  background-color: #0f1726;
+}
+
+.bridgeLinkBtn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.bridgeTopBtn {
+  background-color: #162238;
+  border: none;
+  color: #f1f5f9;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bridgeTopBtn:hover {
+  background-color: #1c2b47;
+}
+
+.bridgeTopBtn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .qualificationPhaseRow,
+  .culminationPhaseRow {
+    grid-template-columns: 1fr;
+  }
+
+  .quickFactsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineRow,
+  .timelineRowFinale {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 4.5rem 1.25rem 0;
+  }
+
+  .editorialGrid,
+  .tracksGrid,
+  .rulesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .noticeBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .quickFactsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    justify-content: center;
+  }
+
+  .eventNavBridge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .editorialLeadBlock {
+    padding: 1.75rem;
+  }
+
+  .editorialLeadPhoto {
+    height: 280px;
+  }
+
+  .trackImageBanner {
+    height: 260px;
+  }
+
+  .finaleImageContainer {
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentWrapper {
+    padding: 3.8rem 1rem 0;
+  }
+
+  .noticeBanner {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .noticeText {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .heroTitle {
+    font-size: 2.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .heroInstitution {
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+  }
+
+  .heroTagline {
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .heroSubtitle {
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .quickFactsGrid {
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .factCell {
+    padding: 0.7rem;
+  }
+
+  .editorialLeadBlock {
+    padding: 1.25rem;
+  }
+
+  .editorialLeadPhoto {
+    height: 250px;
+  }
+
+  .trackImageBanner {
+    height: 240px;
+  }
+
+  .finaleImageContainer {
+    height: 210px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .caseOpsContainer * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
