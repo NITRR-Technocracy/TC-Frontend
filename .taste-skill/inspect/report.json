@@ -1,0 +1,1787 @@
+{
+ "url": "http://localhost:3000/case-ops",
+ "at": "2026-10-27T09:53:17.115Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.41,
+    0.54,
+    0.49,
+    0.45,
+    0.57,
+    0.52,
+    0.72
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 1,
+    "transitions": 38,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6229,
+     "screens": 6.9,
+     "words": 751,
+     "img": 39,
+     "video": 0,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "team-collaboration.1b859730eb674129d7bc.webp",
+      "jury-defense.a15ee84cd70550b4e92e.webp",
+      "prototype-showcase.ba6a6b6bd686c2288d5e.webp",
+      "campus-inauguration.8b9501b9bd0da29f2686.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "chars": 13,
+     "lines": 2,
+     "size": 92.8,
+     "vw": 6.4,
+     "font": "Albert Sans",
+     "weight": 800,
+     "tracking": -0.04,
+     "leading": 0.98,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 234,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "lines": 2,
+     "size": 92.8,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "CASE OPS 2027",
+      "words": 3,
+      "chars": 13,
+      "lines": 2,
+      "size": 92.8,
+      "vw": 6.4,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 234,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What is Case-Ops?",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1106,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Two Planned Tracks for 2027",
+      "words": 5,
+      "chars": 27,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 2040,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Proposed Round Structure",
+      "words": 3,
+      "chars": 24,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 3084,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Evaluation & Guidelines",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 4107,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tentative Timeline",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 5018,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "kanit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.02,
+       "mono": false
+      },
+      {
+       "family": "font1",
+       "share": 0,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      44,
+      93
+     ],
+     "sizeCount": 13,
+     "notLoaded": [
+      "font1"
+     ],
+     "body": {
+      "font": "Albert Sans",
+      "size": 15.7,
+      "leading": 1.5,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 61,
+     "max": {
+      "size": 92.8,
+      "vw": 6.4,
+      "font": "Albert Sans",
+      "text": "CASE OPS 2027"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#080c14",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.43,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#080c14",
+       "top": 0,
+       "hsl": {
+        "h": 220,
+        "s": 0.43,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0f1726",
+       "top": 5179,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.58
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#f1f5f9",
+       "share": 0.13
+      },
+      {
+       "color": "#38bdf8",
+       "share": 0.03
+      },
+      {
+       "color": "#fde68a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#162238",
+      "hsl": {
+       "h": 219,
+       "s": 0.44,
+       "l": 0.15
+      },
+      "fg": "#f1f5f9"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 6,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore Planned Tracks ↓",
+      "Proposed Round Structure"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 19,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.11
+     }
+    ],
+    "nav": {
+     "links": 8,
+     "fixed": true,
+     "height": 83,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "kanit",
+     "albert sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6229,
+    "margins": {
+     "left": 132,
+     "right": 158
+    },
+    "sections": [
+     {
+      "sel": "main.CaseOps_caseOpsContainer__+EE-j",
+      "tag": "main",
+      "top": 0,
+      "height": 5785,
+      "words": 768,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "CASE OPS 2027",
+       "size": 93,
+       "tag": "h1"
+      },
+      "left": 132,
+      "right": 132,
+      "textLeft": 132,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 5785,
+      "height": 444,
+      "words": 33,
+      "media": 1,
+      "middle": 90,
+      "heading": {
+       "text": "TECHNOCRACY",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 104,
+      "right": 182,
+      "textLeft": 120,
+      "textRight": 182,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "CASE OPS 2027",
+      "size": 93,
+      "top": 234,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 132,
+      "n": 13
+     },
+     {
+      "x": 162,
+      "n": 6
+     },
+     {
+      "x": 194,
+      "n": 6
+     },
+     {
+      "x": 396,
+      "n": 4
+     },
+     {
+      "x": 208,
+      "n": 2
+     },
+     {
+      "x": 768,
+      "n": 2
+     },
+     {
+      "x": 857,
+      "n": 2
+     },
+     {
+      "x": 909,
+      "n": 2
+     },
+     {
+      "x": 220,
+      "n": 1
+     },
+     {
+      "x": 711,
+      "n": 1
+     },
+     {
+      "x": 740,
+      "n": 1
+     },
+     {
+      "x": 754,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.08,
+    "voidBox": {
+     "x": 540,
+     "y": 180,
+     "w": 900,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.59,
+    0.55,
+    0.51,
+    0.79,
+    0.67,
+    0.62,
+    0.6,
+    0.65,
+    0.76
+   ],
+   "motion": {
+    "elements": 38,
+    "css": 1,
+    "transitions": 37,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9205,
+     "screens": 9,
+     "words": 749,
+     "img": 39,
+     "video": 0,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "team-collaboration.1b859730eb674129d7bc.webp",
+      "jury-defense.a15ee84cd70550b4e92e.webp",
+      "prototype-showcase.ba6a6b6bd686c2288d5e.webp",
+      "campus-inauguration.8b9501b9bd0da29f2686.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "chars": 13,
+     "lines": 1,
+     "size": 55.3,
+     "vw": 7.2,
+     "font": "Albert Sans",
+     "weight": 800,
+     "tracking": -0.04,
+     "leading": 0.98,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 188,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "lines": 1,
+     "size": 55.3,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "CASE OPS 2027",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 55.3,
+      "vw": 7.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 188,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What is Case-Ops?",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1724,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Two Planned Tracks for 2027",
+      "words": 5,
+      "chars": 27,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 3033,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Proposed Round Structure",
+      "words": 3,
+      "chars": 24,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 4646,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Evaluation & Guidelines",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 6223,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tentative Timeline",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 7642,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "kanit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      32,
+      55
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 15.7,
+      "leading": 1.5,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 55.3,
+      "vw": 7.2,
+      "font": "Albert Sans",
+      "text": "CASE OPS 2027"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#080c14",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.43,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#130f15",
+       "top": 0,
+       "hsl": {
+        "h": 280,
+        "s": 0.17,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#080c14",
+       "top": 0,
+       "hsl": {
+        "h": 220,
+        "s": 0.43,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0f1726",
+       "top": 854,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.58
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#f1f5f9",
+       "share": 0.13
+      },
+      {
+       "color": "#38bdf8",
+       "share": 0.03
+      },
+      {
+       "color": "#fde68a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#162238",
+      "hsl": {
+       "h": 219,
+       "s": 0.44,
+       "l": 0.15
+      },
+      "fg": "#f1f5f9"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 6,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore Planned Tracks ↓",
+      "Proposed Round Structure"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 2,
+     "roundedBoxes": 18,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 83,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "kanit",
+     "albert sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9205,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "main.CaseOps_caseOpsContainer__+EE-j",
+      "tag": "main",
+      "top": 0,
+      "height": 8518,
+      "words": 768,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "CASE OPS 2027",
+       "size": 55,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 8518,
+      "height": 687,
+      "words": 33,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "TECHNOCRACY",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 51,
+      "right": 176,
+      "textLeft": 51,
+      "textRight": 176,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "CASE OPS 2027",
+      "size": 55,
+      "top": 188,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 14
+     },
+     {
+      "x": 43,
+      "n": 9
+     },
+     {
+      "x": 60,
+      "n": 6
+     },
+     {
+      "x": 82,
+      "n": 6
+     },
+     {
+      "x": 96,
+      "n": 6
+     },
+     {
+      "x": 108,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.67,
+    0.55,
+    0.82,
+    0.6,
+    0.81,
+    0.86,
+    0.53,
+    0.69,
+    0.57,
+    0.89,
+    0.58,
+    0.73
+   ],
+   "motion": {
+    "elements": 36,
+    "css": 1,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11160,
+     "screens": 13.2,
+     "words": 753,
+     "img": 39,
+     "video": 0,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "team-collaboration.1b859730eb674129d7bc.webp",
+      "jury-defense.a15ee84cd70550b4e92e.webp",
+      "prototype-showcase.ba6a6b6bd686c2288d5e.webp",
+      "campus-inauguration.8b9501b9bd0da29f2686.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "chars": 13,
+     "lines": 1,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Albert Sans",
+     "weight": 800,
+     "tracking": -0.04,
+     "leading": 0.98,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 193,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "CASE OPS 2027",
+     "words": 3,
+     "lines": 1,
+     "size": 44,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "LOGIN",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "kanit",
+      "weight": 700,
+      "tracking": 0.023,
+      "leading": 1.22,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.79,
+      "top": 100,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "CASE OPS 2027",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 193,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What is Case-Ops?",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1698,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Two Planned Tracks for 2027",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3320,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Case Competition Track",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 23.2,
+      "vw": 5.9,
+      "font": "Albert Sans",
+      "weight": 700,
+      "tracking": 0.022,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.61,
+      "top": 3808,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Product Development Track",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 23.2,
+      "vw": 5.9,
+      "font": "Albert Sans",
+      "weight": 700,
+      "tracking": 0.022,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.61,
+      "top": 4610,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "⇄",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.05,
+      "top": 5204,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Proposed Round Structure",
+      "words": 3,
+      "chars": 24,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5459,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Evaluation & Guidelines",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 7249,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tentative Timeline",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.22,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 9066,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "kanit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      32,
+      44
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 29,
+     "max": {
+      "size": 44,
+      "vw": 11.3,
+      "font": "Albert Sans",
+      "text": "CASE OPS 2027"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.08,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#080c14",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.43,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#130f15",
+       "top": 0,
+       "hsl": {
+        "h": 280,
+        "s": 0.17,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#080c14",
+       "top": 0,
+       "hsl": {
+        "h": 220,
+        "s": 0.43,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0f1726",
+       "top": 989,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.58
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#f1f5f9",
+       "share": 0.13
+      },
+      {
+       "color": "#38bdf8",
+       "share": 0.03
+      },
+      {
+       "color": "#fde68a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#0369a1",
+      "hsl": {
+       "h": 201,
+       "s": 0.96,
+       "l": 0.32
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 6,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore Planned Tracks ↓",
+      "Proposed Round Structure"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 2,
+     "roundedBoxes": 20,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 83,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "kanit",
+     "albert sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11160,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "main.CaseOps_caseOpsContainer__+EE-j",
+      "tag": "main",
+      "top": 0,
+      "height": 10187,
+      "words": 746,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "CASE OPS 2027",
+       "size": 44,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 10187,
+      "height": 973,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "TECHNOCRACY",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 41,
+      "right": 41,
+      "textLeft": 41,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 1440,
+      "height": 256
+     },
+     {
+      "top": 3056,
+      "height": 260
+     },
+     {
+      "top": 9844,
+      "height": 408
+     }
+    ],
+    "h1s": [
+     {
+      "text": "CASE OPS 2027",
+      "size": 44,
+      "top": 193,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 14
+     },
+     {
+      "x": 48,
+      "n": 14
+     },
+     {
+      "x": 92,
+      "n": 6
+     },
+     {
+      "x": 79,
+      "n": 5
+     },
+     {
+      "x": 104,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 41,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Albert Sans, kanit, Arial).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-fallback",
+   "width": 1440,
+   "message": "Typeface(s) declared but not loaded, so a fallback is rendering: font1",
+   "fix": "Fix the font URL / family name, or the screenshots you are judging are not the design."
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "13 different font sizes (13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 44, 93).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15.7px.",
+   "fix": "Body copy 16–20px.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 132px on the left, 158px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (132px, 162px, 194px, 396px, 208px, 768px, 857px); the three most used hold only 58% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 768,
+   "message": "2 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 390,
+   "message": "A 408px stretch at 9844px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 390,
+   "message": "The h1 is a bare name (\"CASE OPS 2027\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\desktop-page-01.jpg",
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\tablet-page-01.jpg",
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\mobile-page-01.jpg",
+    "C:\\Users\\samya\\Desktop\\Technocracy Work\\TC-Frontend-Samyak\\.taste-skill\\inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
